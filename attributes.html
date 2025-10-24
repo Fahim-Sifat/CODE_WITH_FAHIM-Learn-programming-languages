@@ -1,0 +1,322 @@
+<!--          HTML PAGE_6-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Attributes</title>
+     <h1>CODE WITH FAHIM</h1>
+    <h3>HTML Attributes</h3>
+    
+    <link rel="stylesheet" href="attributes.css"/>
+
+ </head>
+ <body>
+    <p>
+       <span class="first"> 🌐 What Are HTML Attributes?</span><br><br>
+
+HTML attributes are like the settings or details you add inside an HTML tag to control how it behaves or looks. <br>
+
+Think of tags as things, and attributes as their properties. <br>
+    </p>
+    <p>
+        Every HTML element can have attributes that modify its default behavior or give it data. <br>
+       <br>
+        General format: <br>
+        <span class="general-form"> &lt;tagname attributeName="attributeValue">Content&lt;/tagname> <br>
+        <br>
+       <span class="examples"> Example:</span> <br>
+      <span class="example">  &lt;p align="center">Hello World&lt;/p> </span><br>
+        Here, align is the attribute, and "center" is its value. <br><br><br>
+        There are different “flavors” of attributes depending on what they do. <br>
+        <ul>
+            <li>id — gives a unique name to an element.</li>
+            <li>class — lets you apply CSS or JavaScript to specific groups.</li>
+            <li>style — adds inline CSS.</li>
+            <li>title — tooltip text.</li>
+        </ul>
+        <br>
+
+    <span class="examples">Example:</span>
+     <br><br>
+     <span class="example">   &lt;p id="intro" class="highlight" style="color: blue;" title="Intro paragraph">
+  Welcome to HTML!
+&lt;/p></span> <br><br>
+#Global Attributes: <br>
+These work on any HTML element, like: <br>
+id,class,hidden,lang,style,tabindex,title,contenteditable,draggable etc. <br><br><br><br>
+Some attributes only work with specific tags. <br><br>
+<table class="table">
+    <tr>
+        <th>Tags</th>
+        <th>Attributes</th>
+        <th>Descriptions</th>
+    </tr>
+    <tr>
+        <td>&lt;img></td>
+        <td>src, alt, width, height</td>
+        <td>Defines image source and size</td>
+    </tr>
+    <tr>
+        <td>&lt;a></td>
+        <td>href, target, rel</td>
+        <td>Controls link behavior</td>
+    </tr>
+    <tr>
+        <td>&lt;input></td>
+        <td>type, value, placeholder, required</td>
+        <td>Controls form inputs</td>
+    </tr>
+    <tr>\
+        <td>&lt;form></td>
+        <td>action, method, enctype</td>
+        <td>Defines how data is submitted</td>
+    </tr>
+    <tr>
+        <td>&lt;video></td>
+        <td>controls, autoplay, loop, poster</td>
+        <td>Controls media playback</td>
+    </tr>
+</table>
+<br><br>
+<ul class="why">#Why attributes matter? <br>
+    They are not just decoration.They- <br>
+    <li>Make web pages interactive and dynamic</li>
+    <li>Help browsers, search engines, and assistive tools understand content</li>
+    <li>Control behavior (like autoplay videos, links opening in new tabs, etc.)</li>
+    <li>Connect HTML with CSS and JavaScript</li>
+
+</ul> <br> <br> <br>
+<p>Each attribute adds a layer of purpose — like a mini superpower. 💪</p>
+<p class="more">More attributes: <br><br>
+<ol type="A" class="ol">
+<li>accept - defines the file types accepted by &lt;input type="file">. <br>
+
+accept-charset - defines character encodings for forms. <br>
+
+accesskey → defines a shortcut key to activate an element. <br>
+
+action → URL where form data is sent. <br>
+
+alt → alternative text for images. <br>
+
+async → loads scripts asynchronously. <br>
+
+autocapitalize → controls text capitalization in inputs. <br>
+
+autocomplete → enables/disables autofill. <br>
+
+autofocus → focuses an element automatically on page load. <br>
+
+autoplay → starts playing media automatically.</li> <br> <br>
+<li>
+background (deprecated) → sets a background image. <br>
+
+bgcolor (deprecated) → sets background color. <br>
+
+border → defines border width for tables/images. <br>
+</li> <br><br><br>
+<li>
+charset → defines the character encoding. <br>
+
+checked → marks checkbox/radio as pre-selected. <br>
+
+cite → specifies a reference URL for a quote or cite. <br>
+
+class → defines one or more class names for styling. <br>
+
+cols → defines column count in &lt;textarea> or &lt;frameset>. <br>
+
+colspan → number of columns a cell spans in a table. <br>
+
+content → used inside <meta> for metadata values. <br>
+
+contenteditable → makes an element editable. <br>
+
+controls → adds media controls like play/pause to &lt;audio> or &lt;video>. <br>
+
+coords → coordinates for image maps.
+</li> <br><br><br>
+<li>
+data-* → custom attributes (e.g., data-id="123"). <br>
+
+datetime → defines date/time value (in &lt;time> or &lt;del>). <br>
+
+default → marks an option as default in &lt;track>. <br>
+
+defer → delays script execution until HTML parsing is complete. <br>
+
+dir → text direction (ltr or rtl). <br>
+
+disabled → disables an element. <br>
+
+download → allows a link to trigger a download. <br>
+</li> <br><br><br>
+<li>
+    enctype → encoding type for form submission.
+</li> <br><br><br>
+<li>
+    for → links a &lt;label> to an &lt;input>. <br>
+
+form → links an element to a specific form. <br>
+
+formaction → overrides form’s action for submit buttons.
+</li> <br><br><br>
+<li>
+</li> <br><br><br>
+<li>
+    href → specifies link target URL. <br>
+
+hreflang → defines language of linked document. <br>
+
+http-equiv → simulates an HTTP header (used in &lt;meta>). <br>
+
+</li> <br><br><br>
+<li>
+
+id → unique identifier for an element. <br>
+
+inputmode → defines virtual keyboard type. <br>
+
+ismap → indicates image is part of a server-side map.
+</li> <br><br><br>
+<li>
+</li> <br><br><br>
+<li>
+kind → defines track kind (like subtitles, captions) in &lt;track>.
+</li><br><br><br>
+<li>
+    label → text label for &lt;optgroup>, &lt;option>, or &lt;track>. <br>
+
+lang → defines language of element content. <br>
+
+list → connects input to a &lt;datalist>. <br>
+</li> <br><br><br>
+<li>
+    max → maximum value for inputs or &lt;meter>. <br>
+
+maxlength → maximum number of characters in an input. <br>
+
+media → defines what device the resource is for. <br>
+
+method → HTTP method for form submission (get or post). <br>
+
+min → minimum value. <br>
+
+multiple → allows multiple selections in &lt;select> or &lt;input type="file">. <br>
+
+muted → starts media muted.
+</li> <br><br><br>
+<li>
+    name → defines element name (for forms, scripts, etc.). <br>
+
+novalidate → disables form validation. <br>
+
+nonce → security token for inline scripts. <br>
+</li> <br><br><br>
+<li>
+    open → keeps &lt;details> expanded by default. <br>
+
+optimum → defines optimal value in &lt;meter>.
+</li> <br><br><br>
+<li>
+    pattern → regex pattern for input validation. <br>
+
+placeholder → hint text in input fields. <br>
+
+playsinline → plays video inline (not fullscreen) on mobile. <br>
+
+poster → image shown before a video plays. <br>
+
+preload → how browser loads media (auto, metadata, none).
+</li> <br><br><br>
+<li>
+    quota → (very rare), used in web storage contexts (not standard HTML).
+</li> <br><br><br>
+<li>
+    readonly → makes input uneditable. <br>
+
+referrerpolicy → controls referrer info sent with requests. <br>
+
+rel → relationship between current and linked document. <br>
+
+required → marks field as mandatory. <br>
+
+reversed → reverses list order in &lt;ol>. <br>
+
+rows → number of rows in &lt;textarea>. <br>
+
+rowspan → number of rows spanned in a table cell. <br>
+</li> <br><br><br>
+<li>
+    sandbox → adds restrictions to an &lt;iframe>. <br>
+
+scope → defines cell scope in tables. <br>
+
+selected → pre-selects an option. <br>
+
+shape → defines area shape in image maps. <br>
+
+size → width (for inputs) or visible items (for &lt;select>). <br>
+
+slot → defines slot name in web components. <br>
+
+span → defines number of columns in &lt;col> or &lt;colgroup>. <br>
+
+spellcheck → enables/disables spell checking. <br>
+
+src → specifies resource URL (image, script, video, etc.). <br>
+
+srcdoc → inline HTML for &lt;iframe>. <br>
+
+srclang → language of track text. <br>
+
+srcset → responsive image sources. <br>
+
+start → starting number in ordered lists. <br>
+
+step → legal number intervals for inputs. <br>
+
+style → inline CSS. <br>
+
+summary (deprecated) → summary of table content.
+</li> <br><br><br>
+<li>
+    tabindex → defines tab order. <br>
+
+target → specifies where to open a link. <br>
+
+title → tooltip text. <br>
+
+translate → tells browser whether to translate element text. <br>
+
+type → defines input type, button type, or script type. <br>
+</li> <br><br><br>
+<li>
+    usemap → links image to an image map.
+</li> <br><br><br>
+<li>
+    value → defines input’s value or <option> value.
+</li> <br><br><br>
+<li>
+    width → defines element width.
+</li> <br><br><br>
+<li></li>
+<li></li>
+<li>z-index → 🚫 not an attribute (it’s CSS), but often confused as one!</li>
+</ol>
+</p>
+
+
+
+
+    </p>
+    
+ </body>
+ <footer>
+     <button type="button" class="btn btn-default"><a href="headings&paragraphs.html" class="next-page">Next>></a></button>
+  <br>
+  <button type="button" class="btn btn-default"><a href="structure.html" class="previous">&lt;Previous</a></button>
+
+ </footer>
+ </html>         

@@ -1,0 +1,79 @@
+h1{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    background-color: black;
+    text-align: center;
+    text-shadow: 2px 2px 5px red, 5px 5px 25px blueviolet; 
+    position: sticky;
+    
+}
+h3{
+    text-align: center;
+    text-decoration: underline solid white;
+    text-shadow: 2px 2px 5px blue;
+    position: sticky;
+    top: 0;
+}
+body{
+    font-family: 'Times New Roman', Times, serif,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,Georgia, 'Times New Roman', Times, serif,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,Verdana, Geneva, Tahoma, sans-serif,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: black;
+    color: antiquewhite;
+    text-shadow: 2px 2px 2px blue;
+}
+.div1{
+    width: 70%;
+    float: left;
+}
+.div2{
+    width: 30%;
+    float: right;
+    
+}
+p{
+    font-size: 20px;
+}
+.code{
+    color: green;
+}
+.span1{
+    font-size: 40px;
+    color: red;
+}
+.span2{
+    color: blue;
+}
+img{
+    margin-left: 100px;
+}
+.span3{
+    color: blueviolet;
+}
+.aftercode{
+    font-size: 20px;
+}
+
+.soyeah{
+    font-size: 35px;
+}
+.span4{
+    color: aqua;
+}
+.btn-default{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+.next-page{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+.previuos{
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    text-decoration: none;
+}

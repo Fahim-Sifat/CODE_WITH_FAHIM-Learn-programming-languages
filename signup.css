@@ -1,0 +1,68 @@
+body{
+    font-family: 'Times New Roman', Times, serif,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,Georgia, 'Times New Roman', Times, serif,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,Verdana, Geneva, Tahoma, sans-serif,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(signup.png);
+    background-size: cover;
+    background-repeat: none;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    box-shadow: 20px;
+    padding-bottom: 45px;
+    text-shadow: 5px 5px 10px blue,6px 6px 7px red,7px 8px 9px black;
+}
+h1{
+    color: antiquewhite;
+    font-size: 40px;
+    text-align: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px red, 5px 5px 25px blueviolet; 
+}
+p{
+    color:antiquewhite;
+    text-align: center;
+    font-size: 25px;
+      
+}
+
+.p2{
+    color: antiquewhite;
+}
+.email{
+    color: white;
+    background-color: rgba(12, 12, 12,0.5);
+    font-size: 20px;
+    overflow: scroll;
+    
+
+}
+.password{
+    color: white;
+    background-color: rgba(12, 12, 12,0.5);
+    font-size: 20px;
+
+    
+}
+.btn-info{
+    color: antiquewhite;
+    background-color: green;
+    font-size: 20px;
+    padding: 0px 70px;
+    border-radius: 20px;
+}
+.btn-info:hover{
+    color: black;
+    background-color: red;
+    cursor:pointer;
+    transition-delay: 0.5s;
+}
+.register{
+    text-decoration: none;
+    color: black
+}
+.p-register{
+    font-size: 19px;
+}

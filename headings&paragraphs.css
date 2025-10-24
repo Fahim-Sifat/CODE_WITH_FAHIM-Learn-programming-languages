@@ -1,0 +1,93 @@
+h1{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    background-color: black;
+    text-align: center;
+    text-shadow: 2px 2px 5px red, 5px 5px 25px blueviolet; 
+    
+    
+}
+h3{
+    text-align: center;
+    text-decoration: underline solid white;
+    text-shadow: 2px 2px 5px blue;
+    position: sticky;
+    top: 0;
+}
+body{
+    font-family: 'Times New Roman', Times, serif,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,Georgia, 'Times New Roman', Times, serif,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,Verdana, Geneva, Tahoma, sans-serif,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    background-color: black;
+    color: antiquewhite;
+    
+}
+h5{
+    text-align: center;
+    text-shadow: 2px 2px 2px red;
+    text-decoration: underline;
+}
+
+.code1{
+    background-color: white;
+    opacity: 0.5;
+    margin-right: 600px;
+    color: blue;
+}
+.code2{
+    background-color: white;
+    margin-right: 600px;
+    color: blue;
+}
+.img2{
+    max-width: 1200px;
+    max-height: 300px;
+}
+table{
+    border-collapse: collapse;
+}
+tr{
+    color: blue;
+    border-collapse: collapse;
+}
+
+th,td{
+    border: 1px solid crimson;
+    border-collapse: collapse;
+}
+.span1{
+    color: yellow;
+}
+.span2{
+    color: red;
+}
+.keypoints{
+    color: green;
+}
+.span3{
+    color: aquamarine;
+}
+.p-code{
+    color: blueviolet;
+}
+.bigcode{
+    color: blueviolet;
+}
+.btn-default{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+.next-page{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+.previuos{
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
