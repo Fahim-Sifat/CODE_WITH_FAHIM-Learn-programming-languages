@@ -19,5 +19,46 @@ h1{
 h3{
     text-align: center;
     text-decoration: underline solid white ;
-    ;
+    
+}
+.div1::first-letter{
+    font-size: xx-large;
+     color: red;    
+}
+.div2{
+    background-color: antiquewhite;
+    color: black;
+    max-width: 800px;
+}
+.div3{
+    color: red;
+}
+ 
+table{
+    border: 2px solid blue;
+    border-collapse: collapse;
+}
+td,th,tr{
+    color: aqua;
+    border: 2px solid red;
+    text-align: center;
+}
+
+
+
+.btn-default{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+.next-page{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+.previuos{
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    text-decoration: none;
 }
