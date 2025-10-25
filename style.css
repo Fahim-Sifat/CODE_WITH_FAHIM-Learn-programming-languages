@@ -121,3 +121,16 @@ text-decoration: none;
  text-align: right;
  
  }
+
+ .footer{
+     font-family: 'Times New Roman', Times, serif,Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 2.5em 2.5em 5px,red;
+    font-style: italic;
+    text-align: center;
+    background-color: blueviolet;
+    opacity: 0.8;
+    max-width: 2000px;
+ }
+ 
