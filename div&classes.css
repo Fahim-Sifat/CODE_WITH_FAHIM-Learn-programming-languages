@@ -24,7 +24,45 @@ body{
     color: antiquewhite;
     
 }
+.div2::first-line{
+    color: red;
+    text-decoration: underline solid;
+}
+.ul1{
+    color: aqua;
+}
+.div3{
+    background-color: white;
+    color: black;
+    max-width: 70%;
+}
+.divlast{
+    color: coral;
+}
+.div4::first-line{
+    color: greenyellow;
+    text-decoration: underline solid;
+}
+.ul2{
+    color: aqua;
+}
+.div5{
+    color: black;
+    background-color: white;
+     max-width: 70%;
+}
+.div7::first-line{
+    color: crimson;
+}
 
+.span1{
+    color: yellow;
+}
+.span2{
+    background-color: white;
+    color: black;
+    max-width: 70%;
+}
 
 
 
