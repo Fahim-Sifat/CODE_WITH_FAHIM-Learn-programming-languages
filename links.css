@@ -49,3 +49,36 @@ body{
     font-size: 20px;
     
 }
+
+.pagination-lg{
+    list-style-type: none;
+    
+    
+
+}
+.page-item{
+    display: inline-block;
+    gap: 20%;
+    padding: 5px;
+    flex-wrap: wrap;
+    max-width: 60%;
+}
+.page-link{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    
+}
+.page-link:hover{
+   background-color: red;
+   color: green;
+}
+.pageactive-link{
+    color: white;
+    background-color: green;
+}
+.goto{
+    font-size: larger;
+}
+
+

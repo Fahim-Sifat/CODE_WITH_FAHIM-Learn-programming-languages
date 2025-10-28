@@ -102,3 +102,14 @@ img{
     text-decoration: none;
     
 }
+.page-link:hover{
+   background-color: red;
+   color: green;
+}
+.pageactive-link{
+    color: white;
+    background-color: green;
+}
+.goto{
+    font-size: larger;
+}
