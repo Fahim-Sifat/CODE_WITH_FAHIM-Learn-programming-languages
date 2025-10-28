@@ -31,19 +31,23 @@ h5{
 }
 
 .code1{
-    background-color: white;
-    opacity: 0.5;
+    background-color: black;
+
     margin-right: 600px;
-    color: blue;
+    color: yellow;
+}
+.pic1,.pic2{
+    max-width: 100%;
+    height: auto;
 }
 .code2{
-    background-color: white;
+    background-color: black;
     margin-right: 600px;
-    color: blue;
+    color: yellow;
 }
 .img2{
-    max-width: 1200px;
-    max-height: 300px;
+    max-width: 100%;
+    height: auto;
 }
 table{
     border-collapse: collapse;

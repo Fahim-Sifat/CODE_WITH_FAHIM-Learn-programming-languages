@@ -28,7 +28,12 @@ h3{
 .div2{
     background-color: antiquewhite;
     color: black;
-    max-width: 800px;
+    max-width: 100%;
+    height: auto;
+}
+.imgoutput{
+    max-width: 100%;
+    height: auto;
 }
 .div3{
     color: red;
@@ -37,6 +42,8 @@ h3{
 table{
     border: 2px solid blue;
     border-collapse: collapse;
+    max-width: 100%;
+    height: auto;
 }
 td,th,tr{
     color: aqua;

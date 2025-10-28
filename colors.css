@@ -34,7 +34,8 @@ ol>li::first-line{
 .byname{
     color: black;
     background-color: white;
-    max-width: 60%;
+    max-width: 100%;
+    height: auto;
 }
 .color{
     color: none;
@@ -60,13 +61,15 @@ ol>li::first-line{
 .rgb{
     color: black;
     background-color: white;
-    max-width: 60%;
-    max-height: auto;
+    max-width: 100%;
+    height: auto;
 }
 table{
     border: 2px solid blueviolet;
     border-collapse: collapse;
     border-radius: 15%;
+    max-width: 100%;
+    height: auto;
 }
 tr,th,td{
     color: yellowgreen;
@@ -77,7 +80,7 @@ tr,th,td{
 .hex,.rgba,.hsla{
     color: black;
     background-color: white;
-    max-width: 60%;
+    max-width: 100%;
     height: auto;
 }
 .shorthand{

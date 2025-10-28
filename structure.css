@@ -21,6 +21,11 @@ h3{
     text-decoration: underline solid white ;
     ;
 }
+.structure1,.structure2,.structure3{
+    max-width: 100%;
+    height: auto;
+}
+
 .olli{
     color: crimson;
 }

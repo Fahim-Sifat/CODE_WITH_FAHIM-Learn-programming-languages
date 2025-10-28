@@ -34,7 +34,8 @@ body{
 .div3{
     background-color: white;
     color: black;
-    max-width: 70%;
+    max-width: 100%;
+    height: auto;
 }
 .divlast{
     color: coral;
@@ -49,7 +50,8 @@ body{
 .div5{
     color: black;
     background-color: white;
-     max-width: 70%;
+     max-width: 100%;
+     height: auto;
 }
 .div7::first-line{
     color: crimson;
