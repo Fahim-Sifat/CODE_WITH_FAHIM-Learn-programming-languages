@@ -24,41 +24,13 @@ body{
     color: antiquewhite;
     
 }
-.div1::first-line{
-    color: blueviolet;
-    opacity: 0.5;
-}
-.div2,.div6{
-    background-color: white;
-    color: black;
-    max-width: 60%;
-    height: auto;
 
-}
-.div3{
-    color: yellow;
-}
-table{
-    border: 2px solid wheat;
-    border-collapse: collapse;
-    border-radius: 20%;
-}
-tr,th,td{
-    border: 1px solid lightblue;
-}
-.img1{
-    max-width: 30px;
-    height: auto;
-}
-.span1{
-    color: burlywood;
-}
-.span2{
-    color: darkkhaki;
-}
-.span3{
-    color: greenyellow;
-}
+
+
+
+
+
+
 
 
 
