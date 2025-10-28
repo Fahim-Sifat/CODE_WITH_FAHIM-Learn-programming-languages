@@ -29,8 +29,8 @@ h3{
     width: 700px;
 }
 .voidtag{
-    width: 700px;
-    max-height: 200px ;
+    max-width: 100%;
+    height: auto ;
 }
 table{
     color: white;
@@ -110,4 +110,8 @@ td{
     font-size: larger;
 }
 
-
+@media only screen and (max-width=600px){
+    .voidtag{
+        max-width: 95%;
+    }
+}
