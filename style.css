@@ -135,3 +135,8 @@ text-decoration: none;
     opacity: 0.8;
     width: 100%;
  }
+ .termsconditions,.privacypolicy{
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+ }
