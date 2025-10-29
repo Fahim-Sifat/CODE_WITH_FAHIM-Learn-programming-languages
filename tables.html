@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="google-adsense-account" content="ca-pub-3930264175657320">
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+    <link rel="stylesheet" href="tables.css">
+    <h1>CODE WITH FAHIM</h1>
+    <h3>HTML Table</h3>
+     <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-998EK9SFH6"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-998EK9SFH6'); </script>
+     
+</head>
+<body>
+    <div class="div1">
+        <br><br>
+        🍽️An HTML table is used to organize data into rows and columns — just like a spreadsheet. Think of it as the OG data grid before Excel got cool. <br><br>
+        It’s like a mini spreadsheet built with code — perfect for showing things like results, schedules, price lists, or rankings. <br><br>
+
+🔍 In plain words: <br><br>
+
+It organizes information neatly, so instead of this: <br><br>
+Name: X, Subject: Physics, Marks: 95 <br>
+Name: Y, Subject: Chemistry, Marks: 89 <br><br><br>
+You get this: <br><br>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Subject</th>
+        <th>Marks</th>
+    </tr>
+    <tr>
+        <td>X</td>
+        <td>Physics</td>
+        <td>95</td>
+    </tr>
+     
+    <tr>
+        <td>Y</td>
+        <td>Chemistry</td>
+        <td>89</td>
+    </tr>
+</table> <br><br><br>
+🧩 Breakdown: <br><br>
+<table>
+    <tr>
+        <th>Tag</th>
+        <th>Meaning</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>&lt;table></td>
+        <td>Table</td>
+        <td>The container that holds all rows and cells</td>
+    </tr>
+    <tr>
+        <td>&lt;tr></td>
+        <td>Table Row</td>
+        <td>Defines a single row</td>
+    </tr>
+    <tr>
+        <td>&lt;th></td>
+        <td>Table Header</td>
+        <td>Defines a header cell (bold + centered by default)</td>
+    </tr>
+    <tr>
+        <td>&lt;td></td>
+        <td>Table Data</td>
+        <td>Defines a normal data cell</td>
+    </tr>
+</table> <br><br><br>
+🪄 Optional (but useful) attributes: <br><br>
+<table>
+    <tr>
+        <th>Attribute</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td>border</td>
+        <td>Adds border</td>
+        <td>&lt;table border="1">&lt;/table></td>
+    </tr>
+    <tr>
+        <td>cellpadding</td>
+        <td>Adds padding inside cells</td>
+        <td>&lt;table cellpadding="10">&lt;/table></td>
+    </tr>
+    <tr>
+        <td>cellspacing</td>
+        <td>Adds space between cells</td>
+        <td>&lt;table cellspacing="5">&lt;/table></td>
+    </tr>
+    <tr>
+        <td>colspan</td>
+        <td>Merge column</td>
+        <td>&lt;td colspan="2"></td>
+    </tr>
+    <tr>
+        <td>rowspan</td>
+        <td>Merge row</td>
+        <td>&lt;td rowspan="2"></td>
+    </tr>
+</table> <br><br><br><br>
+Description of these attributes: <br><br>
+<span class="span1">Cellspacing:</span> <br><br>
+Cellspacing is an HTML attribute used in the &lt;table> tag. It controls the space between table cells — basically the little gaps between each box in the table grid. <br><br>
+🧱 Think of it like this: <br><br>
+
+i.cellspacing = space outside each cell
+<br>
+ii.cellpadding = space inside each cell <br><br><br>
+<div class="div2">
+🧪 Example: <br><br>
+&lt;table border="1" cellspacing="10"> <br>
+  &lt;tr> <br>
+    &lt;th>Name&lt;/th> <br>
+    &lt;th>Subject&lt;/th> <br>
+  &lt;/tr> <br>
+  &lt;tr> <br>
+    &lt;td>Fahim&lt;/td> <br>
+    &lt;td>Math&lt;/td> <br>
+  &lt;/tr> <br>
+&lt;/table></div> <br><br><br>
+Output: <br><br>
+
+<table cellspacing="10">
+  <tr>
+    <th>Name</th>
+    <th>Subject</th>
+  </tr>
+  <tr>
+    <td>Fahim</td>
+    <td>Math</td>
+  </tr>
+</table> </div><br><br>
+Here, cellspacing="10" means there’s 10 pixels of space between the cells. <br>
+<br><br><br>
+<span class="span1">Cellpadding:</span> <br><br>
+Cellpadding is another attribute for <table>, but it’s all about the space inside each cell — like the cell’s personal bubble. 😄 <br><br><br>
+<div class="div2">
+    &lt;table border="1" cellpadding="10"> <br>
+  &lt;tr> <br>
+    &lt;th>Name&lt;/th> <br>
+    &lt;th>Subject&lt;/th> <br>
+  &lt;/tr> <br>
+  &lt;tr> <br>
+    &lt;td>Fahim&lt;/td> <br>
+    &lt;td>Math&lt;/td> <br>
+  &lt;/tr> <br>
+&lt;/table> </div><br><br><br>
+Output: <br><br>
+<table  cellpadding="15">
+  <tr>
+    <th>Name</th>
+    <th>Subject</th>
+  </tr>
+  <tr>
+    <td>Fahim</td>
+    <td>Physics</td>
+  </tr>
+</table> <br><br><br>
+Here, cellpadding="15" adds 15 pixels of padding inside each cell, making the content look less cramped and more readable. <br><br><br><br>
+<span class="span2">Colspan & Rowspan:</span> <br><br>
+When you create a table, every &lt;tr> (table row) normally has the same number of &lt;td> or &lt;th> cells — that’s how the grid stays aligned. <br>
+But sometimes, you want one cell to stretch across more than one column or row — that’s where colspan and rowspan come in. <br><br>
+<span class="span1">Colspan-(Merge columns-left to right)</span> <br><br>
+Definition: <br>
+The colspan attribute tells the browser: <br><br>
+
+“Hey, this cell should take up more than one column.” <br><br>
+<div class="div2">
+Example: <br><br>
+&lt;table border="1" cellpadding="10"> <br>
+  &lt;tr> <br>
+    &lt;th colspan="3">Student Report&lt;/th> <br>
+  &lt;/tr> <br>
+  &lt;tr> <br>
+    &lt;th>Name&lt;/th> <br>
+    &lt;th>Subject&lt;/th> <br>
+    &lt;th>Marks&lt;/th> <br>
+  &lt;/tr> <br>
+  &lt;tr> <br>
+    &lt;td>Fahim&lt;/td> <br>
+    &lt;td>Math&lt;/td> <br>
+    &lt;td>95&lt;/td> <br>
+  &lt;/tr> <br>
+&lt;/table></div> <br><br>
+Output: <br>
+<table border="1" cellpadding="10">
+  <tr>
+    <th colspan="3">Student Report</th>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <th>Subject</th>
+    <th>Marks</th>
+  </tr>
+  <tr>
+    <td>Fahim</td>
+    <td>Math</td>
+    <td>95</td>
+  </tr>
+</table> <br><br>
+🧠 Explanation:
+<br><br>
+colspan="3" merges 3 columns (Name + Subject + Marks) into a single header cell called “Student Report”.
+<br><br>
+So that one cell now covers 3 cells’ worth of horizontal space.
+ <br><br><br><br>
+<span class="span1">Rowspan-(merge rows=>top to bottom)</span> <br> <br><br>
+Rowspan is an attribute you use inside a table cell (&lt;td> or &lt;th>) to make that cell stretch vertically — across multiple rows. <br><br>
+
+In short: <br><br>
+
+rowspan = how many rows this one cell will cover. <br><br>
+
+<div class="div2">
+&lt;table border="1" cellpadding="10"> <br>
+  &lt;tr> <br>
+    &lt;th rowspan="2">Name&lt;/th> <br>
+    &lt;th>Subject&lt;/th> <br>
+    &lt;th>Marks&lt;/th> <br>
+  &lt;/tr> <br>
+  &lt;tr> <br>
+    &lt;th>Math&lt;/th> <br>
+    &lt;th>95&lt;/th> <br>
+  &lt;/tr> <br>
+&lt;/table></div>
+<br><br>
+Output: <br><br>
+<table border="1" cellpadding="10">
+  <tr>
+    <th rowspan="2">Name</th>
+    <th>Subject</th>
+    <th>Marks</th>
+  </tr>
+  <tr>
+    <th>Math</th>
+    <th>95</th>
+  </tr>
+</table> <br><br><br>
+🧠 Explanation: <br><br>
+
+rowspan="2" makes the Name cell cover two rows vertically. <br><br>
+
+So the “Name” header aligns with both “Subject” and “Marks”. <br><br>
+Colspan and rowspan both works on &td> &&lt;th> tag. <br><br>
+    </div> <br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+<footer>
+     <button type="button" class="btn btn-default"><a href="tables.html" class="next-page">Next>></a></button>
+  <br>
+  <button type="button" class="btn btn-default"><a href="links.html" class="previous">&lt;Previous</a></button>
+
+<br><br>
+<span class="goto">Go to:</span> <br>
+<div class="pagination">
+<nav aria-label="...">
+  <ul class="pagination pagination-lg">
+    <li class="page-item"><a class="page-link" href="introduction-to-html.html">1</a></li>
+    <li class="page-item"><a class="page-link" href="code-editor.html">2</a></li>
+    <li class="page-item"><a class="page-link" href="tags.html">3</a></li> 
+    <li class="page-item"><a class="page-link" href="structure.html">4</a></li>
+    <li class="page-item"><a class="page-link" href="attributes.html">5</a></li>
+     <li class="page-item"><a class="page-link" href="headings&paragraphs.html">6</a></li>
+    <li class="page-item"><a class="page-link" href="html-styles.html">7</a></li>
+     <li class="page-item"><a class="page-link" href="text-formation.html">8</a></li>
+    <li class="page-item"><a class="page-link" href="comments.html">9</a></li>
+     <li class="page-item"><a class="page-link" href="div&classes.html">10</a></li>
+    <li class="page-item"><a class="page-link" href="colors.html">11</a></li>
+    <li class="page-item"><a class="page-link" href="links.html">12</a></li>
+    <li class="page-item"><a  class="page-link" href="lists.html">13</a></li>
+    <li class="page-item active" >
+      <a class="pageactive-link" aria-current="page">14</a>
+    </li>
+    
+    <li class="page-item"><a class="page-link" href="images.html">15</a></li>
+     <li class="page-item"><a class="page-link" href="audio-video.html">16</a></li>
+    <li class="page-item"><a class="page-link" href="input-types.html">17</a></li>
+     <li class="page-item"><a class="page-link" href="forms.html">18</a></li>
+    <li class="page-item"><a class="page-link" href="emojis.html">19</a></li>
+    
+  </ul>
+</nav>
+</div>
+</footer>
+</html>
