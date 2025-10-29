@@ -13,22 +13,236 @@
     
 </head>
 <body>
+<div class="div1">
+  <br><br>
+ <span class="span1"> 💡 What’s an HTML List? </span><br><br>
 
+An HTML list is a way to organize multiple items in a structured format — kind of like how you’d write a grocery list or a to-do list, but for the web. Lists make your content easier to read and more visually organized. <br><br>
+
+There are three main types of lists in HTML: <br><br> <br><br>
+<ul type="square">
+  <li ><span class="ol">Ordered List:(&lt;ol>)</span></li> <br><br>
+    💡 What is &lt;ol>? <br><br><br>
+
+The &lt;ol> tag in HTML stands for Ordered List. <br>
+It’s used when the order of items matters — like ranking, instructions, or sequences. <br><br>
+
+Think of it as: <br>
+
+“Step 1, Step 2, Step 3…” instead of random bullets. <br><br>
+  <ul class="ul1"><li> list is numbered.</li>
+  <li>The order matters, like steps in a recipe or ranking.</li>
+  <li>Each item inside uses &lt;li> (list item).</li>
+  </ul> <br><br>
+  Example: <br><br>
+  <div class="div2">
+  &lt;ol> <br>
+  &lt;li>Wake up&lt;/li> <br>
+  &lt;li>Brush your teeth&lt;/li> <br>
+  &lt;li>Code something cool&lt;/li> <br>
+&lt;/ol> <br><br><br></div> <br><br>
+Output: <br><br> <br>
+<div class="div2">
+1.Wake up <br><br>
+
+2.Brush your teeth <br><br>
+
+3.Code something cool <br><br>
+</div><br><br><br>
+⚙️ Attributes You Can Use with &lt;ol>: <br><br><br>
+<table>
+  <tr>
+    <th>Attribute</th>
+    <th>Example</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>type</td>
+    <td>&lt;ol type="A"></td>
+    <td>Changes numbering style (1, A, a, I, i)</td>
+  </tr>
+  <tr>
+    <td>start</td>
+    <td>&lt;ol start="5"</td>
+    <td>Starts numbering from a specific value</td>
+  </tr>
+  <tr>
+    <td>reversed</td>
+    <td>&lt;ol="reversed"</td>
+    <td>Reverses order (counts down)</td>
+  </tr>
+</table> <br><br><br><br><br><br><br><br><br>
+
+  <li>
+   <span class="ul"> Unordered List (&lt;ul>) </span></li><br><br><br>
+    If &lt;ol> is the “step-by-step” guy, then &lt;ul> is the chill one who just lists stuff without caring about order. <br><br><br>
+
+💡 What is &lt;ul>? <br><br><br>
+
+&lt;ul> stands for Unordered List. <br>
+It’s used when the order doesn’t matter — like a list of features, groceries, or hobbies. <br><br>
+Each item is wrapped in an &lt;li> tag (list item). <br><br><br>
+    <ul class="ul1">
+      <li>This one uses bullets (•) instead of numbers.</li>
+      <li>The order doesn’t matter, like a list of favorite snacks.</li>
+    </ul> <br><br><br>
+    Example: <br><br>
+   <div class="div2">
+    &lt;ul> <br>
+  &lt;li>Pizza&lt;/li> <br>
+  &lt;li>Burger&lt;/li> <br>
+  &lt;li>French Fries&lt;/li>  <br>
+&lt;/ul> </div><br><br><br>
+Output:
+<div class="div2">
+<ul>
+  <li>Pizza</li>
+  <li>Burger</li>
+  <li>French Fries</li>
+</ul> </div><br><br><br>
+⚙️Unordered List Styles: <br><br><br>
+<table>
+  <tr>
+    <th>Style</th>
+    <th>Example Code</th>
+    <th>Type</th>
+  </tr>
+  <tr>
+    <td>disc</td>
+    <td>&lt;ul style="list-style-type: disc;">&lt; /ul></td>
+    <td><li>(default)<ul style="list-style-type: disc;"><li></li></ul></td>
+  </tr>
+  <tr>
+    <td>circle</td>
+    <td>&lt;ul style="list-style-type: circle;">&lt;/ul></td>
+    <td><ul style="list-style-type: circle;"><li></li></ul></td>
+  </tr>
+  <tr>
+    <td>square</td>
+    <td>&lt;ul style="list-style-type: square;">&lt;/ul></td>
+    <td><ul style="list-style-type: square;"><li></li></ul></td>
+  </tr>
+  <tr>
+    <td>none</td>
+    <td>&lt;ul style="list-style-type: none;">&lt;/ul></td>
+    <td>No bullets (great for menus)</td>
+  </tr>
+</table> <br><br><br>
+
+  </li> <br><br><br><br><br><br><br><br>
+  <li><span class="dl">Description List or Definition List:(&lt;dl>)</span></li> <br><br>
+  💡 What is &lt;dl>? <br><br><br>
+
+&lt;dl> stands for Definition List. <br>
+It’s used for pairs of terms and definitions — like word meanings, FAQs, or even key–value data. It’s like the glossary or dictionary of HTML — used when you want to present terms and their explanations.<br><br>
+
+Inside a &lt;dl>, we use two special tags: <br><br>
+<ul class="ul1"><li>&lt;dt> → Definition Term (the “word” or “title”)</li>
+
+<li>&lt;dd> → Definition Description (the “explanation” or “detail”)</li>
+</ul> <br><br><br>
+Basic Structure: <br><br><br>
+<div class="div2">
+&lt;dl> <br>
+  &lt;dt>HTML&lt;/dt> <br>
+  &lt;dd>The standard language for creating web pages.&lt;/dd>
+<br>
+  &lt;dt>CSS&lt;/dt> <br>
+  &lt;dd>Used to style and layout web pages.&lt;/dd>
+<br>
+  &lt;dt>JavaScript&lt;/dt> <br>
+  &lt;dd>Adds interactivity and logic to websites.&lt;/dd> <br>
+&lt;/dl> </div><br><br>
+Output of the code: <br><br>
+<div class="div2">
+HTML – The standard language for creating web pages. <br>
+CSS – Used to style and layout web pages. <br>
+JavaScript – Adds interactivity and logic to websites. </div><br><br><br>
+⚙️ Key Parts Explained: <br><br>
+<table>
+  <tr>
+    <th>Tag</th>
+    <th>Full Form</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>&lt;dl></td>
+    <td>Definition list</td>
+    <td>The container that holds everything</td>
+  </tr>
+  <tr>
+    <td>&lt;dt></td>
+    <td>Definition Term</td>
+    <td>The “word” or “title” you’re defining</td>
+  </tr>
+  <tr>
+    <td>&lt;dd></td>
+    <td>Definition Description</td>
+    <td>The explanation or meaning</td>
+  </tr>
+</table> <br><br><br><br><br><br><br><br>
+#Nested Lists: <br><br>
+💡 What Are Nested Lists? <br><br><br>
+
+A nested list means putting one list (&lt;ul> or &lt;ol>) inside another &lt;li>. <br>
+You can mix and match: <br><br>
+
+a &lt;ul> inside an &lt;ol>, <br> <br>
+
+an &lt;ol> inside a &lt;ul>, <br> <br>
+
+or even stack multiple levels deep. <br><br>
+
+It’s super handy for menus, categories, or multi-step breakdowns. <br><br><br>
+Example of Mixing &lt;ul> and &lt;ol>: <br><br>
+<div class="div2">
+&lt;ul> <br>
+  &lt;li>Daily Routine
+    &lt;ol> <br>
+      &lt;li>Wake up&lt;/li> <br>
+      &lt;li>Eat breakfast&lt;/li> <br>
+      &lt;li>Go to work&lt;/li> <br>
+    &lt;/ol> <br>
+  &lt;/li> <br>
+  &lt;li>Evening Routine <br>
+    &lt;ul> <br>
+      &lt;li>Workout&lt;/li> <br>
+      &lt;li>Dinner&lt;/li> <br>
+      &lt;li>Relax&lt;/li> <br>
+    &lt;/ul>
+  &lt;/li>
+&lt;/ul>
+</div>
+
+<br><br><br>
+Output: <br><br>
+<div class="div2">
+<ul>
+  <li>Daily Routine
+    <ol>
+      <li>Wake up</li>
+      <li>Eat breakfast</li>
+      <li>Go to work</li>
+    </ol>
+  </li>
+  <li>Evening Routine
+    <ul>
+      <li>Workout</li>
+      <li>Dinner</li>
+      <li>Relax</li>
+    </ul>
+  </li>
+</ul>
+<br><br><br>
+
+</div>
+</ul>
+</div> <br><br><br><br>
     
 
 
 
-
-
-
-
-
-
-
-
-
-
-</body>
+</body> <br><br><br><br><br><br><br><br>
 
 <footer>
      <button type="button" class="btn btn-default"><a href="tables.html" class="next-page">Next>></a></button>

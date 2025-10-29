@@ -25,7 +25,29 @@ body{
     
 }
 
-
+.span1{
+    color: cadetblue;
+}
+.ul1{
+    color: greenyellow;
+}
+.ol,.ul,.dl{
+    font-size: 2.3rem;
+    color: yellow;
+    text-decoration: underline;
+}
+.div2{
+    color: black;
+    background-color: white;
+    max-width: 100%;
+    height: auto;
+}
+table,tr,th,td{
+    border: 2px solid blue;
+    border-collapse: collapse;
+    max-width: 100%;
+    height: auto;
+}
 
 
 
