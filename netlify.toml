@@ -1,0 +1,4 @@
+[[plugins]]
+package ="netlify/plugins-sitemap"
+
+[plugins.inputs]
