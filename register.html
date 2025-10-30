@@ -22,15 +22,26 @@
 <body>
     <div class="div1">
     <h3>REGISTER</h3><br><br>
-   <form>
-    <ul>
-        <li>FIRST NAME : <input type="text" placeholder="Enter first name" class="list"></li><br>
-        <li>LAST NAME : <input type="text" placeholder="Enter last name" class="list"></li><br>
-        <li>E-MAIL <span>  </span> : <input type="email" class="list"></li><br>
-        <li>PASSWORD : <input type="password" class="list"></li><br>
-        <li>CONFIRM PASSWORD : <input type="password" class="list"></li><br>
-        <li>NATIONALITY : <input type="text"class="list"></li><br>
-        <li>DATE OF BIRTH : <input type="date" class="list"></li><br>
+   <form action="register-cwf.php" method="post">
+    <label for="FIRST NAME">
+        FIRST NAME : <input type="text" placeholder="Enter first name" class="first-name" name="first_name"><br></label> <br>
+        <label for="LAST NAME">
+        LAST NAME : <input type="text" placeholder="Enter last name" class="last_name" name="last-name"></label><br> <br>
+        <label for="email">
+        E-MAIL: <input type="email" class="email" name="email" placeholder="Enter valid e-mail address"></label><br> <br>
+        <label for="password">
+        PASSWORD : <input type="password" class="password" name="password" placeholder="At least 8 characters"></label><br> <br>
+        <label for="cpassword">
+        CONFIRM PASSWORD : <input type="password" class="cpassword" name="cpassword" placeholder="At least 8 characters"></label><br> <br>
+        <label for="gender">
+            Gender: <input type="radio" class="gender" name="gender">
+            Male
+            <input type="radio">Female
+            <input type="radio">Other
+        </label> <br><br>
+        <label for="nationality"></label>
+        NATIONALITY : <input type="text" class="nationality" name="nationality" placeholder="Country-name"><br> <br>
+        DATE OF BIRTH : <input type="date" class="dateofbirth" name="dateofbirth"><br>
 
         <br><br><br><br>
         <button type="button" class="btn btn-success">REGISTER</button><br><br>
