@@ -35,14 +35,14 @@ input{
     background-color: black;
     font-size: medium;
 }
-.btn-success{
+.submit{
     font-size: xx-large;
     color: green;
     background-color: black;
     border: 2px solid red;
     border-radius: 50%;
 }
-.btn-success:hover{
+.submit:hover{
     cursor: pointer;
     background-color: white;
     color: black;
