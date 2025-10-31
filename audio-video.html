@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="google-adsense-account" content="ca-pub-3930264175657320">
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Audio & Video</title>
+    <link rel="stylesheet" href="images.css">
+    <h1>CODE WITH FAHIM</h1>
+    <h3>HTML Audio & Video</h3>
+    <link rel="stylesheet" href="audio-video.css">
+    
+    
+<!--Current mt tag-->
+ <script>(function(s){s.dataset.zone='10118204',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+
+
+
+</head>
+<body> 
+ 
+    <br><br>
+   <div class="div1"></div>
+ 🎵<span class="span1">  HTML &lt;audio> Tag:</span> <br><br>
+The tag in HTML is used to embed sound files — like songs, podcasts, background sound effects, or even voice messages — directly into your web page. <br><br>
+
+Basic syntax: <br><br>
+<div class="div2">
+&lt;audio controls> <br>
+  &lt;source src="music.mp3" type="audio/mpeg"> <br>
+  Your browser does not support the audio element. <br>
+&lt;/audio> </div><br><br>
+Explanation: <br><br>
+<div class="divexp">
+I. &lt;audio> — main tag.
+<br>
+II. controls — shows play, pause, and volume buttons. <br>
+
+III. &lt;source> — tells the browser where the file is. <br><br>
+
+IV. Fallback text — shown if browser can’t play the file. </div><br><br><br>
+🎧 Supported audio formats: <br><br>
+<div class="div3">
+MP3 → audio/mpeg <br>
+
+OGG → audio/ogg <br>
+
+WAV → audio/wav </div><br><br> <br>
+Let's hear a scary sound using the &lt;audio> tag: <br><br>
+<div class="div2">
+&lt;audio autoplay > <br>
+  &lt;source src="scary-sound.mp3" <br> type="audio"> <br>
+&lt;/audio> <br>
+</div>
+<br><br>
+Output: <br><br>
+<audio controls autoplay loop muted >
+  <source src="scary-audio.mp3" type="audio/mpeg">
+</audio > <br><br><br>
+<span class="browser-support">🌐Browser Support:</span> <br><br>
+
+The &lt;audio> tag is part of HTML5, and all modern browsers support it: <br><br>
+
+Browser	Supported Since	Works Smoothly <br><br>
+<table>
+    <tr>
+        <th>Browser</th>
+        <th>Supported since</th>
+    </tr>
+    <tr>
+<td>✅ Google Chrome</td>
+<td>4.0+</td>
+</tr>
+<tr>
+    <td>✅ Mozilla Firefox</td>	
+    <td>3.5+</td>
+    </tr>
+    <tr>
+<td>✅ Microsoft Edge</td>	
+<td>9.0+</td>
+</tr>	
+<tr>
+<td>✅ Safari</td>	
+<td>4.0+</td> 
+</tr>
+<tr>
+<td>✅ Opera</td>
+<td>10.5+</td>
+</tr>
+<tr>	
+<td>✅ Mobile Browsers</td>
+
+    <td>iOS Safari, Chrome for Android, Samsung Internet, etc.
+</td>
+</tr>
+    </table> <br><br>
+So yeah — every major browser supports &lt;audio> these days. <br><br><br><br> <br>
+<span class="span1">
+🎥 HTML &lt;video> Tag: </span><br><br>
+
+The &lt;video> tag in HTML5 is used to embed videos directly in a webpage — no need for Flash or third-party players (thank goodness 😅). <br><br>
+Basic syntax: <br><br>
+<div class="div2">
+&lt;video width="640" height="360" controls> <br>
+  &lt;source src="movie.mp4" type="video/mp4"> <br>
+  Your browser does not support the video tag.
+&lt;/video> </div><br><br><br>
+Explanation: <br><br>
+<div class="divexp">
+i.&lt;video> → The container that holds the video.
+<br><br>
+ii.width & height → Set the display size of the video. <br><br>
+
+iii.controls → Adds built-in controls (play, pause, volume, fullscreen). <br><br>
+
+iv.&lt;source> → Specifies the file and its format.
+<br><br><br>
+Fallback text → Appears if the browser doesn’t support video.</div> <br><br><br><br>
+Now,let's implement the code to watch a video. <br><br>
+<div class="div2">
+&lt;video width="640" height="360" controls>&lt;/video> <br>
+&lt;source src="tajmahal.mp4 type="mp4">
+Your browser doesn’t support video tag(Fallback text) <br>
+
+&lt;/video> </div><br><br><br>
+Output: <br><br>
+<video width="640" height="360" controls autoplay>
+<source src="tajmahal.mp4" type="video/mp4"></video>
+<br> <br><br>
+
+🎬 Supported Video Formats: <br><br>
+<div class="div3">
+MP4=( Chrome,Safari,Firefox,Opera) <br>
+WebM=( Chrome,Firefox,Opera) <br>
+OGG=( Chrome,Safari,Firefox,Opera)</div> <br>
+ <br><br><br><br>
+ 🪄 Common Attributes Between Audio & Video Tag: <br><br>
+ <table>
+    <tr>
+        <th>Attribute</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+    
+<tr>
+    <td>Controls</td>
+    <td>Adds play/pause/volume bar</td>
+    <td>&lt;video controls></td>
+</tr>
+<tr>
+    <td>autoplay</td>
+    <td>Starts playing automatically (muted required)</td>
+    <td>&lt;video autoplay></td>
+</tr>
+<tr>
+    <td>loop</td>
+    <td>Repeats automatically</td>
+    <td>&lt;video loop></td>
+</tr>
+<tr>
+    <td>muted</td>
+    <td>Starts muted</td>
+    <td>&lt;video muted</td>
+</tr></table>
+
+<br><br>
+
+
+
+
+</div> <br>
+</body> <br><br><br><br><br><br>
+  <footer>
+ <button type="button" class="btn btn-default"><a href="input-types.html" class="next-page">Next>></a></button>
+  <br>
+  <button type="button" class="btn btn-default"><a href="images.html" class="previous">&lt;Previous</a></button>
+
+<br><br>
+<span class="goto">Go to:</span> <br>
+<div class="pagination">
+<nav aria-label="...">
+  <ul class="pagination pagination-lg">
+    <li class="page-item"><a class="page-link" href="introduction-to-html.html">1</a></li>
+    <li class="page-item"><a class="page-link" href="code-editor.html">2</a></li>
+    <li class="page-item"><a class="page-link" href="tags.html">3</a></li> 
+    <li class="page-item"><a class="page-link" href="structure.html">4</a></li>
+    <li class="page-item"><a class="page-link" href="attributes.html">5</a></li>
+     <li class="page-item"><a class="page-link" href="headings&paragraphs.html">6</a></li>
+    <li class="page-item"><a class="page-link" href="html-styles.html">7</a></li>
+     <li class="page-item"><a class="page-link" href="text-formation.html">8</a></li>
+    <li class="page-item"><a class="page-link" href="comments.html">9</a></li>
+     <li class="page-item"><a class="page-link" href="div&classes.html">10</a></li>
+    <li class="page-item"><a class="page-link" href="colors.html">11</a></li>
+    <li class="page-item"><a class="page-link" href="links.html">12</a></li>
+    <li class="page-item"><a  class="page-link" href="lists.html">13</a></li>
+    <li class="page-item"><a  class="page-link" href="tables.html">14</a></li> 
+    
+     <li class="page-item"><a class="page-link" href="images.html">15</a></li>
+     <li class="page-item active" >
+      <a class="pageactive-link" aria-current="page">16</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="input-types.html">17</a></li>
+     <li class="page-item"><a class="page-link" href="forms.html">18</a></li>
+    <li class="page-item"><a class="page-link" href="emojis.html">19</a></li>
+    
+  </ul>
+</nav>
+</div>
+</footer>
+</html>  

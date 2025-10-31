@@ -1,0 +1,119 @@
+
+h1{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    background-color: black;
+    text-align: center;
+    text-shadow: 2px 2px 5px red, 5px 5px 25px blueviolet; 
+    
+    
+}
+h3{
+    text-align: center;
+    text-decoration: underline solid white;
+    text-shadow: 2px 2px 5px blue;
+    position: sticky;
+    top: 0;
+}
+body{
+    font-family: 'Times New Roman', Times, serif,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,Georgia, 'Times New Roman', Times, serif,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,Verdana, Geneva, Tahoma, sans-serif,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    background-color: black;
+    color: antiquewhite;
+    
+}
+.span1{
+
+    font-size: 2.5rem;
+    background-color: black;
+    color: chocolate;
+    text-decoration: underline;
+}
+.div2{
+    color: black;
+    background-color: wheat;
+}
+.div3{
+    color: yellow;
+}
+.divexp{
+    color: yellowgreen;
+}
+.browser-support{
+    color: aquamarine;
+}
+video{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-default{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+.next-page{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+.previuos{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    
+}
+
+.pagination-lg{
+    list-style-type: none;
+    
+    
+
+}
+.page-item{
+    display: inline-block;
+    gap: 20%;
+    padding: 5px;
+    flex-wrap: wrap;
+    max-width: 60%;
+}
+.page-link{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    
+}
+.page-link:hover{
+   background-color: red;
+   color: green;
+}
+.pageactive-link{
+    color: white;
+    background-color: green;
+}
+.goto{
+    font-size: larger;
+}
