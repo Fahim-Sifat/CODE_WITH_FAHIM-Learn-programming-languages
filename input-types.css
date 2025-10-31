@@ -25,34 +25,47 @@ body{
     color: antiquewhite;
     
 }
-.span1{
-
-    font-size: 2.5rem;
-    background-color: black;
-    color: chocolate;
-    text-decoration: underline;
-}
-.div2{
-    color: black;
-    background-color: wheat;
-}
-.div3{
-    color: yellow;
-}
-.divexp{
+.div1::first-line{
     color: yellowgreen;
 }
-.browser-support{
-    color: aquamarine;
+
+.table1{
+    color: aqua;
+    border: 2px solid black;
+    border-radius: 5px;
+    border-collapse: collapse;
 }
-video{
-    max-width: 100%;
-    height: auto;
-    border-radius: 5%;
+tr,td,th{
+    border: 2px solid wheat;
+    border-collapse: collapse;
+}
+.table2{
+    color: blueviolet;
+    border: 2px solid saddlebrown;
+    border-collapse: collapse;
+}
+.table3{
+    color: yellow;
+    border: 2px solid salmon;
+    border-collapse: collapse;
+}
+.table4{
+    color: orangered;
+    border: 2px solid blue;
+    border-collapse: collapse;
+}
+.table5{
+    color: orange;
+    border: 2px solid red;
+    border-collapse: collapse;
+}
+.span1{
+    color: orchid;
 }
 
-
-
+.span2{
+    color: yellow;
+}
 
 
 

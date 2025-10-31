@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="google-adsense-account" content="ca-pub-3930264175657320">
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Input types</title>
+    
+    <h1>CODE WITH FAHIM</h1>
+    <h3>HTML Input Types</h3>
+    <link rel="stylesheet" href="input-types.css">
+    
+    <!--Current mt tag-->
+ <script>(function(s){s.dataset.zone='10118204',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+
+
+</head>    
+<body>
+   <br><br>
+   <div class="div1">
+      The HTML &lt;input> tag is used inside a form to collect data from the user — like their name, email, password, date of birth, etc. <br><br>
+<span class="span1">
+And the type attribute of &lt;input> tells the browser what kind of input to expect.input types define how the browser should display and handle the data a user enters. <br>
+So basically, <br>
+👉 type = “what this box does.” <br><br>
+</span> <br><br>
+🌍 What &lt;input> Actually Does: <br><br>
+<span class="span2">
+i. It’s a self-closing tag (no closing &lt;/input>).
+<br>
+ii.Used inside a &lt;form> element.
+<br><br>
+ Has attributes like:
+<br>
+i. type → defines what kind of input.
+<br>
+ii.vname → gives it an identifier when sending data to a server.
+<br>
+iii.value → the data it holds or displays by default.
+<br>
+iv.placeholder → grey hint text inside the box.
+<br>
+v.required → makes the field mandatory.
+<br>
+vi.readonly → user can’t change it.
+<br>
+vii.disabled → completely unclickable or inactive. </span><br><br><br>
+
+
+<br><br>
+🧾 Basic Text Inputs: <br><br><br>
+
+<table class="table1">
+    <tr>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td>text</td>
+        <td>Standard one-line text box</td>
+        <td>&lt;input type="text"></td>
+    </tr>
+    <tr>
+        <td>password</td>
+        <td>Hides typed characters</td>
+        <td><input type="password"></td>
+    </tr>
+    <tr>
+        <td>email</td>
+        <td>For email addresses (includes validation)</td>
+        <td>&lt;input type="email"></td>
+    </tr>
+    <tr>
+        <td>tel</td>
+        <td>For phone numbers</td>
+        <td>&lt;input type="tel"></td>
+    </tr>
+    <tr>
+        <td>url</td>
+        <td>For website url</td>
+        <td>&lt;input type="url"></td>
+    </tr>
+    <tr>
+        <td>search</td>
+        <td>For search boxes (styled slightly different)</td>
+        <td>&lt;input type="search"></td>
+    </tr>
+</table> <br><br>
+🔢 Numbers & Ranges: <br><br>
+
+<table class="table2">
+<tr>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Example</th>
+</tr>
+<tr>
+    <td>number</td>
+    <td>Allows numeric input (with optional min/max)</td>
+    <td>&lt;input type="number"min="1"max="10"></td>
+</tr>
+<tr>
+    <td>range</td>
+    <td>Slider control</td>
+    <td>&lt;input type="range"min="1"max="100"></td>
+</tr>
+</table> <br><br><br>
+📅 Date & Time Pickers: <br><br>
+<table class="table3">
+    <tr>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td>date</td>
+        <td>Select a date</td>
+        <td>&lt;input type="date"></td>
+    </tr>
+    <tr>
+        <td>datetime-local</td>
+        <td>Date + time (local timezone)</td>
+        <td>&lt;input type="datetime-local"></td>
+    </tr>
+    <tr>
+        <td>time</td>
+        <td>Select a time</td>
+        <td>&lt;input type="time"></td>
+    </tr>
+    <tr>
+        <td>week</td>
+        <td>Select a week</td>
+        <td>&lt;input type="week"></td>
+    </tr>
+    <tr>
+        <td>month</td>
+        <td>Select a month</td>
+        <td>&lt;input type="month"></td>
+    </tr>
+</table> <br><br><br>
+✅ Choices & Selection: <br><br>
+<table class="table4">
+    <tr>
+        <td>Type</td>
+        <td>Description</td>
+        <td>Example</td>
+    </tr>
+    <tr>
+        <td>checkbox</td>
+        <td>Multiple options, can select many</td>
+        <td>&lt;input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td>radio</td>
+        <td>Single choice from a group</td>
+        <td>&lt;input type="radio"name="gender"></td>
+    </tr>
+    <tr>
+        <td>color</td>
+        <td>Color picker</td>
+        <td>&lt;input type="color"></td>
+    </tr>
+</table> <br><br><br>
+📎 File & Button Inputs: <br><br>
+<table class="table5">
+    <tr>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td>file</td>
+        <td>Upload a file</td>
+        <td>&lt;input type="file"></td>
+    </tr>
+    <tr>
+        <td>submit</td>
+        <td>Submits the form</td>
+        <td>&lt;input type="submit"value="Send"></td>
+    </tr>
+    <tr>
+        <td>reset</td>
+        <td>Resets the form fields</td>
+        <td>&lt;input type="reset"></td>
+    </tr>
+    <tr>
+        <td>button</td>
+        <td>Custom button (no default behavior)</td>
+        <td>&lt;input type="button"value="Click Me"></td>
+    </tr>
+    <tr>
+        <td>image</td>
+        <td>Submit button using an image</td>
+        <td>&lt;input type="image" src="btn.png"></td>
+    </tr>
+    <tr>
+        <td>hidden</td>
+        <td>Hidden data sent with form (not visible)</td>
+        <td>&lt;input type="hidden"value="123"></td>
+    </tr>
+</table> <br><br><br>
+We will create a sample form using most of these input types in the "HTML Forms Chapter".
+   </div> 
+
+</body> <br><br><br><br><br><br><br><br><br><br>
+<footer>
+  <button type="button" class="btn btn-default"><a href="forms.html" class="next-page">Next>></a></button>
+  <br>
+  <button type="button" class="btn btn-default"><a href="audio-video.html" class="previous">&lt;Previous</a></button>
+
+<br><br>
+<span class="goto">Go to:</span> <br>
+<div class="pagination">
+<nav aria-label="...">
+  <ul class="pagination pagination-lg">
+    <li class="page-item"><a class="page-link" href="introduction-to-html.html">1</a></li>
+    <li class="page-item"><a class="page-link" href="code-editor.html">2</a></li>
+    <li class="page-item"><a class="page-link" href="tags.html">3</a></li> 
+    <li class="page-item"><a class="page-link" href="structure.html">4</a></li>
+    <li class="page-item"><a class="page-link" href="attributes.html">5</a></li>
+     <li class="page-item"><a class="page-link" href="headings&paragraphs.html">6</a></li>
+    <li class="page-item"><a class="page-link" href="html-styles.html">7</a></li>
+     <li class="page-item"><a class="page-link" href="text-formation.html">8</a></li>
+    <li class="page-item"><a class="page-link" href="comments.html">9</a></li>
+     <li class="page-item"><a class="page-link" href="div&classes.html">10</a></li>
+    <li class="page-item"><a class="page-link" href="colors.html">11</a></li>
+    <li class="page-item"><a class="page-link" href="links.html">12</a></li>
+    <li class="page-item"><a  class="page-link" href="lists.html">13</a></li>
+    <li class="page-item"><a  class="page-link" href="tables.html">14</a></li> 
+    
+     <li class="page-item"><a class="page-link" href="images.html">15</a></li>
+    <li class="page-item"><a class="page-link" href="audio-video.html">16</a></li>
+    
+     <li class="page-item active" >
+      <a class="pageactive-link" aria-current="page">17</a>
+    </li>
+     <li class="page-item"><a class="page-link" href="forms.html">18</a></li>
+    <li class="page-item"><a class="page-link" href="emojis.html">19</a></li>
+    
+  </ul>
+</nav>
+</div>
+</footer>
+
+
+
+
+</html>
