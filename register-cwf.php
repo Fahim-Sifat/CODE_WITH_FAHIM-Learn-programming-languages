@@ -6,10 +6,10 @@
 
 // Define constants for database connection 
 // *** IMPORTANT: Replace 'your_db_password' with your actual MySQL root password ***
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', ''); // <-- CHANGE THIS!
-define('DB_NAME', 'cwf_db');  // Match the database name you created
+define('DB_SERVER', 'sql100.infinityfree.com');
+define('DB_USERNAME', 'if0_40307453');
+define('DB_PASSWORD', 'FSSIFAT02112004'); // <-- CHANGE THIS!
+define('DB_NAME', 'if0_40307453_cwf_db');  // Match the database name you created
 
 // Attempt to connect to MySQL database
 $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
     
     // Collect and sanitize data by trimming whitespace
     $first_name  = trim($_POST['first_name']);
-    $last_name   = trim($_POST['last-name']);
+    $last_name   = trim($_POST['last_name']);
     $email       = trim($_POST['email']);
     $password    = $_POST['password']; 
     $cpassword   = $_POST['cpassword'];
