@@ -72,7 +72,7 @@ if (isset($_POST['login_submit'])) {
                             $_SESSION['first_name'] = $first_name;
                             
                             // Success: Redirect to the secure dashboard page
-                            header("location: dashboard.php");
+                            header("location: index.html");
                             exit;
                             
                         } else {
