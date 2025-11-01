@@ -34,30 +34,47 @@ body{
     border: 2px solid black;
     border-radius: 5px;
     border-collapse: collapse;
+    max-width: 100%;
+    height: auto;
+ 
 }
 tr,td,th{
     border: 2px solid wheat;
     border-collapse: collapse;
+    max-width: 100%;
+    height: auto;
 }
 .table2{
     color: blueviolet;
     border: 2px solid saddlebrown;
     border-collapse: collapse;
+    max-width: 100%;
+    height: auto;
+
 }
 .table3{
     color: yellow;
     border: 2px solid salmon;
     border-collapse: collapse;
+    max-width: 100%;
+    height: auto;
+
 }
 .table4{
     color: orangered;
     border: 2px solid blue;
     border-collapse: collapse;
+    max-width: 100%;
+    height: auto;
+
 }
 .table5{
     color: orange;
     border: 2px solid red;
     border-collapse: collapse;
+    max-width: 100%;
+    height: auto;
+
 }
 .span1{
     color: orchid;
