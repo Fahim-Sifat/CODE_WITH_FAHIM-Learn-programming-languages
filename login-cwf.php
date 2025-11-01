@@ -3,14 +3,16 @@
 session_start();
 
 // =======================================================================
-// 1. DATABASE CONNECTION SETUP
+// 1. DATABASE CONNECTION SETUP (Confirmed InfinityFree Credentials)
 // =======================================================================
 
-// Define constants for database connection (Using confirmed InfinityFree credentials)
+// Hostname confirmed from your InfinityFree panel
 define('DB_SERVER', 'sql100.infinityfree.com'); 
+// Username confirmed from your InfinityFree panel
 define('DB_USERNAME', 'if0_30307453');         
 // DB_PASSWORD: The password you set for your database user
-define('DB_PASSWORD', 'FSSIFAT02112004'); // <-- YOU MUST CHANGE THIS! 
+define('DB_PASSWORD', 'FSSIFAT02112004'); // <-- REPLACE THIS WITH YOUR ACTUAL PASSWORD!
+// Database Name confirmed from your InfinityFree panel
 define('DB_NAME', 'if0_30307453_cwf_db');       
 
 // Attempt to connect to MySQL database
@@ -18,7 +20,8 @@ $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
 // Check connection
 if ($conn->connect_error) {
-    die("ERROR: Could not connect to the database. " . $conn->connect_error);
+    // Fatal error if connection fails (likely a password/host issue)
+    die("ERROR: Could not connect to the database. Check your DB credentials. " . $conn->connect_error);
 }
 
 // =======================================================================
@@ -27,7 +30,7 @@ if ($conn->connect_error) {
 
 $errors = [];
 
-// Check if the form was submitted (the 'login_submit' button's name from login.html)
+// Check if the form was submitted (based on the 'login_submit' name in login.html)
 if (isset($_POST['login_submit'])) {
     
     // Collect and sanitize data
@@ -40,8 +43,7 @@ if (isset($_POST['login_submit'])) {
 
     if (empty($errors)) {
         
-        // Prepare a SELECT statement to retrieve the user's data by email
-        // We retrieve the id and first_name to store in the session, and the password hash for verification.
+        // Prepare a SELECT statement using Prepared Statements for security
         $sql = "SELECT id, first_name, password FROM users WHERE email = ?";
         
         if ($stmt = $conn->prepare($sql)) {
@@ -60,16 +62,16 @@ if (isset($_POST['login_submit'])) {
                     
                     if ($stmt->fetch()) {
                         
-                        // Verify the password against the stored hash
+                        // Verify the password against the stored hash securely
                         if (password_verify($password, $hashed_password)) {
                             
-                            // Password is correct, start a new session
-                            session_regenerate_id(true); // Security: regenerate ID
+                            // Password is correct, start a new secure session
+                            session_regenerate_id(true); 
                             $_SESSION['loggedin'] = true;
                             $_SESSION['id'] = $id;
                             $_SESSION['first_name'] = $first_name;
                             
-                            // Success: Redirect to the dashboard
+                            // Success: Redirect to the secure dashboard page
                             header("location: dashboard.php");
                             exit;
                             
@@ -92,13 +94,13 @@ if (isset($_POST['login_submit'])) {
         }
     }
 } else {
-    // If someone accesses this file directly without submitting the form
+    // Prevent direct access to the script
     $errors[] = "Access Denied: Please use the login form.";
 }
 
 $conn->close();
 
-// If there are any errors, display them here
+// Display any accumulated errors to the user
 if (!empty($errors)) {
     echo "<h2>Login Failed!</h2>";
     echo "<ul>";
