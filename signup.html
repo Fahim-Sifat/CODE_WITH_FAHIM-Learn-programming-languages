@@ -3,7 +3,7 @@
   <meta name="google-adsense-account" content="ca-pub-3930264175657320">
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width,initial scale=1.0"/>
-    <title>SIGN UP</title>
+    <title>SIGN IN</title> <!-- Changed title to SIGN IN -->
 
     <head>
         <link rel="stylesheet" href="signup.css"/>
@@ -24,16 +24,27 @@
     </head>
     <body>
     <h1>CODE WITH FAHIM</h1>
-   <p class="p1">SIGN IN</p><br><br><br><p></p>
-   <form action="login-cwf.php"method="post"></p>
-   <p class="p2">  E-MAIL :<input class="email" type="email" placeholder="Enter your e-mail"name="email"></p>
-    <br>
-    <br>
-    <p>PASSWORD :<input type="password" class="password" placeholder="Enter password"name="password"><br><br><br>
+    <p class="p1">SIGN IN</p>
     
-    <p><input type="submit"value="Login"name="login_submit" class="login_submit"></p>
-    </form><br></p>
-    <p class="p-register">Don't have an account?<a href="register.html"class="register">Register</a></p>
+    <!-- CRITICAL: Removed extraneous <p> tags inside the form declaration -->
+    <form action="login-cwf.php" method="post">
+        
+        <p class="p2">  
+            E-MAIL :<input class="email" type="email" placeholder="Enter your e-mail" name="email">
+        </p>
+        <br><br>
+        <p>
+            PASSWORD :<input type="password" class="password" placeholder="Enter password" name="password">
+        </p>
+        <br><br><br>
+        
+        <!-- The submit button sends the form data to login-cwf.php -->
+        <p><input type="submit" value="Login" name="login_submit" class="login_submit"></p>
+        
+    </form>
+    
+    <br>
+    <p class="p-register">Don't have an account?<a href="register.html" class="register">Register</a></p>
     <br>
     <p> <a href="html.html">Back</a></p>
     </body>

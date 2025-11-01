@@ -1,4 +1,9 @@
 <?php
+// CRITICAL DEBUGGING LINES - These will display errors if the script crashes
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // Start the session at the very top of the script
 session_start();
 
@@ -11,7 +16,7 @@ define('DB_SERVER', 'sql100.infinityfree.com');
 // Username confirmed from your InfinityFree panel
 define('DB_USERNAME', 'if0_30307453');         
 // DB_PASSWORD: The password you set for your database user
-define('DB_PASSWORD', 'FSSIFAT02112004'); // <-- REPLACE THIS WITH YOUR ACTUAL PASSWORD!
+define('DB_PASSWORD', 'FSSIFAT02112004'); // <-- !!! CONFIRM THIS PASSWORD IS CORRECT !!!
 // Database Name confirmed from your InfinityFree panel
 define('DB_NAME', 'if0_30307453_cwf_db');       
 
@@ -25,13 +30,23 @@ if ($conn->connect_error) {
 }
 
 // =======================================================================
-// 2. LOGIN LOGIC
+// 2. REDIRECTION CHECK (Moved to immediately after connection)
+// =======================================================================
+
+// If the user is already logged in, redirect them immediately to index.html
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+    header("location: index.html"); 
+    exit;
+}
+
+// =======================================================================
+// 3. LOGIN LOGIC
 // =======================================================================
 
 $errors = [];
 
-// Check if the form was submitted (based on the 'login_submit' name in login.html)
-if (isset($_POST['login_submit'])) {
+// NEW: Use isset($_POST['email']) to check for form submission, as the email field MUST be present.
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
     
     // Collect and sanitize data
     $email = trim($_POST['email']);
@@ -71,7 +86,7 @@ if (isset($_POST['login_submit'])) {
                             $_SESSION['id'] = $id;
                             $_SESSION['first_name'] = $first_name;
                             
-                            // Success: Redirect to the secure dashboard page
+                            // Success: Redirect to index.html
                             header("location: index.html");
                             exit;
                             
@@ -85,7 +100,7 @@ if (isset($_POST['login_submit'])) {
                     $errors[] = "No account found with that email address.";
                 }
             } else {
-                 $errors[] = "Database query failed. Please try again.";
+                 $errors[] = "Database query failed. Please try again. SQL Error: " . $stmt->error;
             }
 
             $stmt->close();
@@ -93,10 +108,8 @@ if (isset($_POST['login_submit'])) {
             $errors[] = "Error preparing statement: " . $conn->error;
         }
     }
-} else {
-    // Prevent direct access to the script
-    $errors[] = "Access Denied: Please use the login form.";
-}
+} 
+// If it's a GET request or not a valid POST, we just skip the logic above.
 
 $conn->close();
 
@@ -108,7 +121,8 @@ if (!empty($errors)) {
         echo "<li>" . htmlspecialchars($error) . "</li>";
     }
     echo "</ul>";
-    echo "<p><a href='login.html'>Go back to login</a></p>";
+    // NOTE: The logout.php file redirects to 'login.html', so the error link should match that convention.
+    echo "<p><a href='signup.html'>Go back to login</a></p>";
 }
 
 ?>
