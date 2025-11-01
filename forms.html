@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="forms.css">
+    <h1>CODE WITH FAHIM</h1>
+    <h3>HTML Forms</h3>
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'G-MZ1JHY721H');
+</script>
+
+
+  
+   
+</head>
+<body> <br><br>
+    <div class="div1">
+        <div class="span1">
+An HTML form is a way to collect and submit data from users on a webpage. When you fill out things like search bars, login fields, contact forms, or sign-up pages, you are interacting with an HTML form.</div> <br><br>
+<div class="span2">
+Here’s what it does:</div> <br><br>
+<div class="span3">
+i.Collects user input: Forms allow users to type in text, select options, upload files, or choose items (like checkboxes or radio buttons). <br><br>
+
+ii.Sends data: Once submitted, the form sends the collected data to a server for processing. This could be to sign up for a website, post a comment, or make a purchase.</div> <br><br>
+For example: <br><br>
+
+1. <span class="span4"> Login form</span>: Collects your username and password, sends it to the server for verification. <br><br>
+
+2.<span class="span4">Contact form</span>: Lets you send a message to the website admin (name, email, message).
+<br><br>
+3.<span class="span4">Search bar:</span> Allows you to search for content on the site. <br><br><br>
+structure: <br><br>
+<div class="div2">
+&lt;form action="/submit" method="post"> <br>
+  &lt;label for="name">Name:&lt;/label> <br>
+  &lt;input type="text" id="name" name="username"><br><br>
+
+  &lt;input type="submit" value="Send"> <br>
+&lt;/form></div> <br><br><br>
+Explanation of the tags: <br><br>
+<div class="div3">
+<ul>
+    <li>&lt;form>: The container that defines the form.</li>
+    <li>action: The URL where the form data is sent.</li>
+    <li>method: How data is sent — GET (visible in URL) or POST (hidden)</li>
+    <li>&lt;input>: The element for user input.</li>
+    <li><label>: Describes the input field for accessibility.</li>
+</ul> </div><br><br><br>
+⚙️ Form Attributes Summary: <br><br>
+<div class="div4">
+action=> URL to send the form data to <br>
+method=> HTTP method: get or post <br>
+enctype=> Encoding type (e.g., multipart/form-data=> for file uploads) <br>
+target=> Where to open response (_self, _blank, etc.) <br>
+autocomplete=>	Enable or disable browser auto-fill,</div> <br><br><br>
+The required, minlength, and maxlength attributes enforce client-side validation. <br><br><br>
+Sample Form: Using All Types of &lt;input> Elements=>
+ <br><br>
+ <div class="div2">
+&lt;!DOCTYPE html> <br>
+&lt;html lang="en"> <br>
+&lt;head> <br>
+    &lt;meta charset="UTF-8"> <br>
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"> <br>
+    &lt;title>Sample Form with All Input Types&lt;/title> <br>
+&lt;/head> <br>
+&lt;body>
+<br><br>
+    &lt;h1>Sample Form&lt;/h1> <br>
+    &lt;form action="/submit" method="POST" enctype="multipart/form-data">
+        <br><br>
+       <span class="span5">
+        &lt;!-- Text Input --></span> <br>
+        &lt;label for="text">Text Input (Name):&lt;/label> <br>
+        &lt;input type="text" id="text" name="name" placeholder="Enter your name" required><br><br>
+<span class="span5">
+        &lt;!-- Password Input --></span> <br>
+        &lt;label for="password">Password:&lt;/label> <br>
+        &lt;input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
+<span class="span5">
+        &lt;!-- Email Input --></span> <br>
+        &lt;label for="email">Email:&lt;/label> <br>
+        &lt;input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+<span class="span5">
+        &lt;!-- Number Input --></span> <br>
+        &lt;label for="age">Age (Number):&lt;/label> <br>
+        &lt;input type="number" id="age" name="age" min="0" max="120" placeholder="Enter your age" required><br><br>
+<span class="span5">
+        &lt;!-- Date Input --></span> <br>
+        &lt;label for="birthdate">Birthdate:&lt;/label> <br>
+        &lt;input type="date" id="birthdate" name="birthdate" required><br><br>
+<span class="span5">
+        &lt;!-- Time Input --></span> <br>
+        &lt;label for="appt">Appointment Time:&lt;/label> <br>
+        &lt;input type="time" id="appt" name="appt"><br><br>
+<span class="span5">
+        &lt;!-- Color Input --></span>
+        &lt;label for="favcolor">Favorite Color:&lt;/label> <br>
+        &lt;input type="color" id="favcolor" name="favcolor"><br><br>
+<span class="span5">
+        &lt;!-- File Input --></span> <br>
+        &lt;label for="file">Upload a File:&lt;/label> <br>
+        &lt;input type="file" id="file" name="file"><br><br>
+<span class="span5">
+        &lt;!-- Radio Buttons --></span> <br>
+        &lt;p>Gender:&lt;/p> <br>
+        &lt;input type="radio" id="male" name="gender" value="male" required> <br>
+        &lt;label for="male">Male&lt;/label> <br>
+        &lt;input type="radio" id="female" name="gender" value="female"> <br>
+        &lt;label for="female">Female&lt;/label><br><br>
+<span class="span5">
+        &lt;!-- Checkbox Input --> </span><br>
+        &lt;input type="checkbox" id="subscribe" name="subscribe" value="yes"> <br>
+        &lt;label for="subscribe">Subscribe to Newsletter&lt;/label><br><br>
+<span class="span5">
+        &lt;!-- Dropdown Select Input --></span> <br>
+        &lt;label for="country">Select Country:&lt;/label> <br>
+        &lt;select id="country" name="country">
+<br>
+        &lt;option value="us">USA&lt;/option> <br>
+            <option value="uk">UK</option>
+            &lt;option value="in">India&lt;/option> <br>
+            &lt;option value="ca">Canada&lt;/option> <br>
+            &lt;option value="bd">Bangladesh&lt;/option> <br>
+        &lt;/select><br><br>
+<span class="span5">
+        &lt;!-- Textarea Input --></span> <br>
+        &lt;label for="message">Your Message:&lt;/label><br>
+        &lt;textarea id="message" name="message" rows="4" cols="50" placeholder="Write your message here...">&lt;/textarea>
+<br><br>
+<span class="span5">
+        &lt;!-- Range Input --></span> <br>
+        &lt;label for="volume">Volume:&lt;/label> <br>
+        &lt;input type="range" id="volume" name="volume" min="0" max="100" value="50"><br><br>
+<span class="span5">
+        &lt;!-- Hidden Input --></span> <br>
+        &lt;input type="hidden" id="userID" name="userID" value="12345">
+<br><br>
+<span class="span5">
+        &lt;!-- Submit Button --></span> <br>
+        &lt;input type="submit" value="Submit Form"> <br>
+    &lt;/form> <br>
+<br><br>
+&lt;/body> <br>
+&lt;/html></div> <br>
+ <br><br><br>
+Output: <br><br>
+
+<div class="div2">
+
+    <h2>Sample Form</h2>
+    <form action="/submit" method="POST" enctype="multipart/form-data">
+        
+        <!-- Text Input -->
+        <label for="text">Text Input (Name):</label>
+        <input type="text" id="text" name="name" placeholder="Enter your name" required><br><br>
+
+        <!-- Password Input -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
+
+        <!-- Email Input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+        <!-- Number Input -->
+        <label for="age">Age (Number):</label>
+        <input type="number" id="age" name="age" min="0" max="120" placeholder="Enter your age" required><br><br>
+
+        <!-- Date Input -->
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate" required><br><br>
+
+        <!-- Time Input -->
+        <label for="appt">Appointment Time:</label>
+        <input type="time" id="appt" name="appt"><br><br>
+
+        <!-- Color Input -->
+        <label for="favcolor">Favorite Color:</label>
+        <input type="color" id="favcolor" name="favcolor"><br><br>
+
+        <!-- File Input -->
+        <label for="file">Upload a File:</label>
+        <input type="file" id="file" name="file"><br><br>
+
+        <!-- Radio Buttons -->
+        <p>Gender:</p>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+        <!-- Checkbox Input -->
+        <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+        <label for="subscribe">Subscribe to Newsletter</label><br><br>
+
+        <!-- Dropdown Select Input -->
+        <label for="country">Select Country:</label>
+        <select id="country" name="country">
+            <option value="us">USA</option>
+            <option value="uk">UK</option>
+            <option value="in">India</option>
+            <option value="ca">Canada</option>
+            <option value="bd">Bangladesh</option>
+        </select><br><br>
+
+        <!-- Textarea Input -->
+        <label for="message">Your Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" placeholder="Write your message here..."></textarea><br><br>
+
+        <!-- Range Input -->
+        <label for="volume">Volume:</label>
+        <input type="range" id="volume" name="volume" min="0" max="100" value="50"><br><br>
+
+        <!-- Hidden Input -->
+        <input type="hidden" id="userID" name="userID" value="12345">
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Form">
+    </form>
+</div>
+
+
+    </div>
+    
+</body> <br><br><br><br><br><br>
+
+
+
+<footer>
+    <button type="button" class="btn btn-default"><a href="forms.html" class="next-page">Next>></a></button>
+  <br>
+  <button type="button" class="btn btn-default"><a href="audio-video.html" class="previous">&lt;Previous</a></button>
+
+<br><br>
+<span class="goto">Go to:</span> <br>
+<div class="pagination">
+<nav aria-label="...">
+  <ul class="pagination pagination-lg">
+    <li class="page-item"><a class="page-link" href="introduction-to-html.html">1</a></li>
+    <li class="page-item"><a class="page-link" href="code-editor.html">2</a></li>
+    <li class="page-item"><a class="page-link" href="tags.html">3</a></li> 
+    <li class="page-item"><a class="page-link" href="structure.html">4</a></li>
+    <li class="page-item"><a class="page-link" href="attributes.html">5</a></li>
+     <li class="page-item"><a class="page-link" href="headings&paragraphs.html">6</a></li>
+    <li class="page-item"><a class="page-link" href="html-styles.html">7</a></li>
+     <li class="page-item"><a class="page-link" href="text-formation.html">8</a></li>
+    <li class="page-item"><a class="page-link" href="comments.html">9</a></li>
+     <li class="page-item"><a class="page-link" href="div&classes.html">10</a></li>
+    <li class="page-item"><a class="page-link" href="colors.html">11</a></li>
+    <li class="page-item"><a class="page-link" href="links.html">12</a></li>
+    <li class="page-item"><a  class="page-link" href="lists.html">13</a></li>
+    <li class="page-item"><a  class="page-link" href="tables.html">14</a></li> 
+    
+     <li class="page-item"><a class="page-link" href="images.html">15</a></li>
+    <li class="page-item"><a class="page-link" href="audio-video.html">16</a></li>
+    
+     <li class="page-item"><a class="page-link" href="input-types.html">17</a></li>
+     <li class="page-item active" >
+      <a class="pageactive-link" aria-current="page">18</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="emojis.html">19</a></li>
+    
+  </ul>
+</nav>
+</div>
+</footer>
+</html>
