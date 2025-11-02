@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<!-- Generated based on project files (2025-11-02) -->
+
+<!-- Homepage -->
+<url>
+  <loc>https://code-with-fahim.wuaze.com/</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>1.00</priority>
+  <changefreq>daily</changefreq>
+</url>
+
+<!-- Main Course/Topic Pages -->
+<url>
+  <loc>https://code-with-fahim.wuaze.com/introduction-to-html.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/code-editor.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.70</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/tags.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/structure.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/attributes.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/headings&paragraphs.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/html-styles.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/text-formation.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/comments.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/div&classes.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/colors.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/links.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/lists.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/tables.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/images.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/audio-video.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/input-types.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/paragraph.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>monthly</changefreq>
+</url>
+
+<!-- Utility/Account Pages -->
+<url>
+  <loc>https://code-with-fahim.wuaze.com/login.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.60</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/register.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.60</priority>
+  <changefreq>yearly</changefreq>
+</url>
+<url>
+  <loc>https://code-with-fahim.wuaze.com/privacy.policy.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.50</priority>
+  <changefreq>yearly</changefreq>
+</url>
+
+</urlset>
