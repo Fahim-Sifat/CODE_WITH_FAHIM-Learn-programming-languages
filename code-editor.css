@@ -1,98 +1,268 @@
-body{
-    font-family: 'Times New Roman', Times, serif,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,Georgia, 'Times New Roman', Times, serif,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,Verdana, Geneva, Tahoma, sans-serif,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: black;
-    color: antiquewhite;
-    font-size: 20px;
-    text-shadow: 1px 1px blue;
-}
-h1{
-    text-align: center;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    font-family: 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
-    background-color: black;
-    text-align: center;
-    text-shadow: 2px 2px 5px red, 5px 5px 25px blueviolet; 
-}
-h3{
-    text-align: center;
-    text-decoration: underline solid white ;
-    ;
-}
-.div1{
-    width: 70%;
-    float: left;
-}
-.div2{
-    width: 30%;
-    float: right;
-    margin-top: -50px;
-}
-.img1{
-    margin-left: 100px ;
-}
-.div3{
-    margin-top: 120px;
-    width: 30%;
-    float: right;
-}
-.img2{
-    margin-left: 100px;
-}
-.download{
-    text-decoration: none;
-    color: blueviolet;
-}
-.vs{
-    color: blue;
-}
-.np{
-    color: green;
-}
-.headsup{
-    color: crimson;
-}
-.btn-default{
-    background-color: black;
-    color: white;
-    text-decoration: none;
+/* --- Global Styles & Body --- */
+:root {
+    /* Define a color palette for consistency */
+    --color-dark-bg: #1e1e2e;       /* Dark background */
+    --color-content-bg: #282a36;    /* Slightly lighter container background (Dracula theme-inspired) */
+    --color-light-text: #f8f8f2;    /* Light text */
+    --color-accent-blue: #50fa7b;   /* Green accent (for VS Code link/VS list) */
+    --color-accent-red: #ff5555;    /* Red accent (for Notepad++ link/NP list) */
+    --color-hyperlink: #bd93f9;     /* Purple for regular links */
+    --color-headsup: #ffb86c;       /* Orange for warnings/headsup */
 }
 
-.pagination{
-    font-size: 2.1rem;
+body {
+    font-family: 'Consolas', 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-dark-bg);
+    color: var(--color-light-text);
+    line-height: 1.6;
+    padding: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Header Styles --- */
+.header-with-logo {
+    display: flex; /* Use flexbox to align logo and h1 */
+    align-items: center; /* Vertically align them */
+    justify-content: center; /* Center them horizontally */
+    background-color: #1a1a2e;
+    border-radius: 8px;
+    margin: 0 0 15px 0;
+    padding: 15px 0;
+}
+
+.header-logo {
+    height: 60px; /* Increased size for a more prominent logo */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between logo and h1 */
+    vertical-align: middle; /* Align with text baseline */
+    box-shadow: 0 0 10px rgba(189, 147, 249, 0.7); /* Subtle glow for the logo */
+    border-radius: 5px; /* Slightly rounded corners for the logo */
+}
+
+h1 {
+    margin: 0; /* Remove default h1 margin to align with logo */
+    font-family: 'Impact', 'Arial Narrow Bold', sans-serif;
+    color: var(--color-light-text);
+    text-shadow: 0 0 10px var(--color-accent-blue), 0 0 20px var(--color-accent-red);
+    letter-spacing: 3px;
+    /* Removed background-color and border-radius from h1 as it's now on .header-with-logo */
+}
+
+h3 {
+    text-align: center;
     text-decoration: none;
-    
-
+    color: var(--color-hyperlink);
+    padding: 10px 0 20px 0;
+    font-size: 1.6rem;
 }
-.pagination-lg{
-    list-style-type: none;
-    
-    
 
-}
-.page-item{
-    display: inline-block;
-    gap: 20%;
-    padding: 5px;
+/* --- Layout (Flexbox) --- */
+.main-content-wrapper {
+    display: flex;
+    gap: 30px;
     flex-wrap: wrap;
-    max-width: 60%;
+    align-items: flex-start;
 }
-.page-link{
-    background-color: white;
-    color: black;
+
+.div1 {
+    /* Main Content Area */
+    flex: 2; /* Takes up more space */
+    min-width: 300px;
+    padding: 25px;
+    background-color: var(--color-content-bg);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar {
+    /* Sidebar for Images */
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 25px;
+}
+
+/* --- List & Typography Styles --- */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+ol, ul {
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+.vs {
+    color: var(--color-accent-blue);
+    font-size: 1.4rem;
+    font-weight: bold;
+    list-style-type: '🚀 ';
+}
+
+.np {
+    color: var(--color-accent-red);
+    font-size: 1.4rem;
+    font-weight: bold;
+    list-style-type: '📝 ';
+}
+
+.headsup {
+    color: var(--color-headsup);
+    font-style: italic;
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px dashed var(--color-headsup);
+    border-radius: 5px;
+}
+
+/* --- Image Styles --- */
+.div2, .div3 {
+    display: flex;
+    justify-content: center;
+}
+
+.img1, .img2 {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid var(--color-hyperlink);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(189, 147, 249, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+.img1:hover, .img2:hover {
+    transform: scale(1.05);
+}
+
+/* --- Link & Button Styles --- */
+.download {
     text-decoration: none;
-    
+    color: var(--color-accent-blue);
+    font-weight: bold;
+    border-bottom: 2px dotted var(--color-accent-blue);
+    transition: color 0.3s;
 }
-.page-link:hover{
-   background-color: red;
-   color: green;
+
+.download:hover {
+    color: var(--color-hyperlink);
+    border-bottom-color: var(--color-hyperlink);
 }
-.pageactive-link{
-    color: white;
-    background-color: green;
+
+.btn-default {
+    background-color: var(--color-hyperlink);
+    border: none;
+    padding: 10px 20px;
+    margin: 15px 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
-.goto{
-    font-size: larger;
+
+.btn-default:hover {
+    background-color: #e6e6fa; /* Light color on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.next-page, .previous {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--color-dark-bg);
+    font-weight: bold;
+    display: block;
+    padding: 0;
+}
+
+/* Custom Previous Button */
+button[href="introduction-to-html.html"] {
+    background-color: var(--color-content-bg);
+    border: 1px solid var(--color-hyperlink);
+}
+button[href="introduction-to-html.html"]:hover {
+    background-color: #44475a;
+}
+button[href="introduction-to-html.html"] a {
+    color: var(--color-light-text);
+}
+
+
+/* --- Pagination Styles --- */
+.goto {
+    font-size: 1.3rem;
+    margin-top: 40px;
+    display: block;
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-accent-blue);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.pagination-lg {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.page-link, .pageactive-link {
+    display: inline-block;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid transparent;
+}
+
+.page-link {
+    background-color: var(--color-dark-bg);
+    color: var(--color-accent-blue);
+    border: 1px solid var(--color-accent-blue);
+}
+
+.page-link:hover {
+   background-color: var(--color-accent-blue);
+   color: var(--color-dark-bg);
+}
+
+.pageactive-link {
+    /* Active page */
+    color: var(--color-dark-bg);
+    background-color: var(--color-hyperlink);
+    border: 1px solid var(--color-hyperlink);
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    .main-content-wrapper {
+        flex-direction: column;
+    }
+    .div1, .sidebar {
+        width: 100%;
+        min-width: unset;
+        padding: 15px;
+    }
+    .sidebar {
+        flex-direction: row; /* Puts images side-by-side on mobile */
+        justify-content: space-around;
+    }
+    .img1, .img2 {
+        max-width: 45%;
+    }
+    .header-logo {
+        height: 45px; /* Increased size for a more prominent logo on mobile */
+        margin-right: 10px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
 }
