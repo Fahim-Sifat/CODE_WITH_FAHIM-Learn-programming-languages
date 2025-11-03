@@ -3,11 +3,436 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Basic completed</title>
+    <title>🎉 CWF Mastery Achieved! 🎉</title> 
+    
+    <style>
+        /* 1. KEYFRAME ANIMATIONS */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0px rgba(0, 150, 136, 0.7); }
+    100% { box-shadow: 0 0 0 20px rgba(0, 150, 136, 0); }
+}
+
+@keyframes confetti-fall {
+    0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes jiggle {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px) rotate(-1deg); }
+    50% { transform: translateX(5px) rotate(1deg); }
+    75% { transform: translateX(-3px) rotate(-0.5deg); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0) translateX(0) scale(1); opacity: 0.8; }
+    50% { transform: translateY(-20px) translateX(10px) scale(1.1); opacity: 1; }
+    100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.8; }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #FFEB3B; }
+}
+
+
+/* 2. COLOR PALETTE & GLOBAL STYLES */
+:root {
+    --primary-color: #673AB7; /* Deep Purple */
+    --secondary-color: #FFEB3B; /* Soft Yellow/Amber for accent */
+    --success-color: #009688; /* Bright Teal for Success/Button */
+    --text-color: #333;
+    --card-background: #ffffff;
+    
+    /* --- UPDATED BACKGROUND COLOR --- */
+    --background-color: #001f3f; /* Deep Midnight Blue */
+    /* -------------------------------- */
+}
+
+body {
+    background: var(--background-color); 
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    /* Removed overflow: hidden so content is viewable on small screens if necessary */
+    position: relative; 
+}
+
+/* 3. IMAGE STYLING */
+#badge-icon {
+    width: 80px; 
+    height: auto; 
+    vertical-align: middle; 
+    margin-left: 15px;
+    animation: pulse 2s infinite, float 4s ease-in-out infinite alternate;
+}
+
+/* Utility styles for animations (Confetti, Sparkle, Particles) */
+.confetti, .sparkle, .floating-particle {
+    position: absolute;
+    z-index: 1; 
+    /* To make confetti/sparkles visible against the dark background, we can give them a bright border/shadow */
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
+}
+
+/* 4. CONTAINER AND TYPOGRAPHY (Desktop/Default Styles) */
+.container {
+    background-color: var(--card-background);
+    padding: 60px; 
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); /* Stronger shadow for better contrast on dark background */
+    max-width: 700px;
+    width: 90%;
+    z-index: 10; 
+    animation: fadeIn 1.2s ease-out;
+    border: 3px solid var(--primary-color); 
+}
+.container:hover {
+    animation: jiggle 0.5s ease-in-out;
+}
+
+h1 {
+    color: var(--primary-color); 
+    font-size: 3.5em; 
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    overflow: hidden; 
+    white-space: nowrap; 
+    display: inline-block; 
+    border-right: none; 
+}
+
+/* Wrap the heading text and badge in a div to center it all */
+.heading-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* The actual text part for typing effect */
+.typing-text {
+    overflow: hidden; 
+    white-space: nowrap; 
+    border-right: .15em solid #FFEB3B; 
+    animation: typing 2s steps(14, end), blink-caret .75s step-end infinite;
+    display: inline-block;
+}
+
+
+.subtitle {
+    color: var(--success-color); 
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    animation: fadeIn 1.2s ease-out 0.8s backwards; 
+}
+
+p {
+    color: var(--text-color);
+    font-size: 1.2em;
+    margin-bottom: 50px;
+    animation: fadeIn 1.2s ease-out 1.2s backwards; 
+}
+
+/* 3D Button styles */
+.button-link {
+    display: inline-block;
+    position: relative;
+    background-color: var(--success-color); 
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 10px; 
+    font-weight: bold;
+    font-size: 1.3em;
+    transition: all 0.1s ease;
+    box-shadow: 0 8px 0 #00695c; 
+    animation: pulse 2s infinite; 
+}
+
+.button-link:hover {
+    background-color: #00695c; 
+    transform: translateY(2px);
+    box-shadow: 0 6px 0 #00695c;
+}
+
+.button-link:active {
+    transform: translateY(6px);
+    box-shadow: 0 2px 0 #00695c;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--secondary-color);
+    margin: 30px 0;
+    animation: fadeIn 1.2s ease-out 1s backwards;
+}
+
+/* 5. MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 768px) {
+    .container { padding: 40px; }
+    h1 { font-size: 2.5em; }
+    #badge-icon { width: 60px; height: auto; margin-left: 10px; } 
+    .subtitle { font-size: 1.5em; }
+    p { font-size: 1.1em; }
+    .button-link { padding: 12px 30px; font-size: 1.2em; }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 30px 15px; }
+    h1 { font-size: 1.8em; letter-spacing: 1px; }
+    #badge-icon { width: 50px; height: auto; margin-left: 5px; } 
+    .subtitle { font-size: 1.2em; }
+    p { font-size: 1em; }
+    .button-link { padding: 10px 20px; font-size: 1em; }
+    .confetti, .sparkle, .floating-particle { display: none; }
+}
+        /* 1. KEYFRAME ANIMATIONS */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0px rgba(0, 150, 136, 0.7); }
+            100% { box-shadow: 0 0 0 20px rgba(0, 150, 136, 0); }
+        }
+        
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+
+        @keyframes jiggle {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px) rotate(-1deg); }
+            50% { transform: translateX(5px) rotate(1deg); }
+            75% { transform: translateX(-3px) rotate(-0.5deg); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0) scale(1); opacity: 0.8; }
+            50% { transform: translateY(-20px) translateX(10px) scale(1.1); opacity: 1; }
+            100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.8; }
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #FFEB3B; }
+        }
+
+
+        /* 2. COLOR PALETTE & GLOBAL STYLES */
+        :root {
+            --primary-color: #673AB7; /* Deep Purple */
+            --secondary-color: #FFEB3B; /* Soft Yellow/Amber for accent */
+            --success-color: #009688; /* Bright Teal for Success/Button */
+            --text-color: #333;
+            --card-background: #ffffff;
+            --background-color: #FFFDE7; /* Very light yellow for body */
+        }
+
+        body {
+            background: var(--background-color); 
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden; 
+            position: relative; 
+        }
+        
+        /* 3. IMAGE STYLING */
+        #badge-icon {
+            width: 80px; 
+            height: auto; 
+            vertical-align: middle; 
+            margin-left: 15px;
+            animation: pulse 2s infinite, float 4s ease-in-out infinite alternate;
+        }
+
+        /* Utility styles for animations (Confetti, Sparkle, Particles) remain the same */
+        .confetti, .sparkle, .floating-particle {
+            position: absolute;
+            z-index: 1; 
+        }
+        
+        /* 4. CONTAINER AND TYPOGRAPHY (Desktop/Default Styles) */
+        .container {
+            background-color: var(--card-background);
+            padding: 60px; 
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25); 
+            max-width: 700px;
+            width: 90%;
+            z-index: 10; 
+            animation: fadeIn 1.2s ease-out;
+            border: 3px solid var(--primary-color); 
+        }
+        .container:hover {
+            animation: jiggle 0.5s ease-in-out;
+        }
+
+        h1 {
+            color: var(--primary-color); 
+            font-size: 3.5em; 
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 800;
+            overflow: hidden; 
+            white-space: nowrap; 
+            display: inline-block; 
+            border-right: none; 
+        }
+        
+        /* Wrap the heading text and badge in a div to center it all */
+        .heading-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        /* The actual text part for typing effect */
+        .typing-text {
+            overflow: hidden; 
+            white-space: nowrap; 
+            border-right: .15em solid #FFEB3B; 
+            animation: typing 2s steps(14, end), blink-caret .75s step-end infinite;
+            display: inline-block;
+        }
+        
+
+        .subtitle {
+            color: var(--success-color); 
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            animation: fadeIn 1.2s ease-out 0.8s backwards; 
+        }
+        
+        p {
+            color: var(--text-color);
+            font-size: 1.2em;
+            margin-bottom: 50px;
+            animation: fadeIn 1.2s ease-out 1.2s backwards; 
+        }
+        
+        /* 3D Button styles (Kept for consistency) */
+        .button-link {
+            display: inline-block;
+            position: relative;
+            background-color: var(--success-color); 
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 10px; 
+            font-weight: bold;
+            font-size: 1.3em;
+            transition: all 0.1s ease;
+            box-shadow: 0 8px 0 #00695c; 
+            animation: pulse 2s infinite; 
+        }
+
+        .button-link:hover {
+            background-color: #00695c; 
+            transform: translateY(2px);
+            box-shadow: 0 6px 0 #00695c;
+        }
+        
+        .button-link:active {
+            transform: translateY(6px);
+            box-shadow: 0 2px 0 #00695c;
+        }
+        
+        hr {
+            border: none;
+            height: 2px;
+            background-color: var(--secondary-color);
+            margin: 30px 0;
+            animation: fadeIn 1.2s ease-out 1s backwards;
+        }
+
+        /* ---------------------------------------------------- */
+        /* 5. MEDIA QUERIES FOR RESPONSIVENESS */
+        /* ---------------------------------------------------- */
+        @media (max-width: 768px) {
+            .container { padding: 40px; }
+            h1 { font-size: 2.5em; }
+            #badge-icon { width: 60px; height: auto; margin-left: 10px; } 
+            .subtitle { font-size: 1.5em; }
+            p { font-size: 1.1em; }
+            .button-link { padding: 12px 30px; font-size: 1.2em; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 30px 15px; }
+            h1 { font-size: 1.8em; letter-spacing: 1px; }
+            #badge-icon { width: 50px; height: auto; margin-left: 5px; } 
+            .subtitle { font-size: 1.2em; }
+            p { font-size: 1em; }
+            .button-link { padding: 10px 20px; font-size: 1em; }
+            .confetti, .sparkle, .floating-particle { display: none; }
+        }
+    </style>
 </head>
 <body>
-    Congrastulations! <br>
-    You have succefully mastered HTML Basics!
-    <a href="html.html">Go to HTML Basics homepage</a>
+    
+    <div class="confetti" style="left: 10%;"></div>
+    <div class="sparkle" style="top: 15%; left: 5%;"></div>
+    <div class="floating-particle" style="width: 20px; height: 20px; top: 10%; left: 10%;"></div>
+
+
+    <div class="container">
+        
+        <div class="heading-wrapper">
+            <h1>
+                <span class="typing-text">Congratulation!</span>
+            </h1>
+            <img src="logo.png.png" alt="CWF Mastery Badge" id="badge-icon"> 
+        </div>
+        
+        <p class="subtitle">Your Mastery is Complete!</p>
+        
+        <p>
+            You have successfully **mastered HTML Basics**! <br> 
+            Your dedication has paid off—you are ready for the next level.
+        </p>
+        
+        <hr>
+        
+        <a href="html.html" class="button-link">Go to HTML Basics homepage</a>
+        
+        <hr style="opacity: 0;">
+        
+        <p style="font-size: 1em; color: var(--primary-color);">The Journey to HTML Expert continues!</p>
+    </div>
 </body>
 </html>
