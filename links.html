@@ -6,11 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Links</title>
-    <link rel="stylesheet" href="links.css"/>
-     <h1>CODE WITH FAHIM</h1>
-    <h3>HTML Links</h3>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+    <link rel="stylesheet" href="introduction-to-html.css"/>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -19,113 +16,102 @@
   gtag('config', 'G-MZ1JHY721H');
 </script>
 
-  <!--Current mt tag-->
- <script>(function(s){s.dataset.zone='10118204',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+  <script>(function(s){s.dataset.zone='10118204',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 
    
-  </head>
+</head>
 <body>
-<div class="div1">
-  🔗 What Are HTML Links? <br><br>
-
-HTML links (or hyperlinks) are what connect one webpage to another — kinda like digital bridges between pages, sites, files, or even specific parts of a page.Without links, the web would just be… a bunch of disconnected pages floating in space 🌌. <br><br>
-
-They’re created using the &lt;a> tag, short for “anchor.” <br>
-</div> <br><br>
-<div class="div2">
-  Example: <br><br>
-  &lt;a href="https://www.youtube.com"><a href="https://www.youtube.com/">Youtube homepage</a>&lt;/a></div> <br><br><br>
-<br>Another Example: <br>
-&lt;a href="https://otieu.com/4/10118232">A Trading Website&lt;/a> <br>
-Output: <br>
-<a href="https://otieu.com/4/10118232">A Trading Website</a>
- <br><br><br>
-
-  Here- <br><br>
-<div class="div3">  
-&lt;a> = The anchor (link) tag. <br>
-href =	The attribute that holds the destination URL.(Forgetting the href — it won’t be clickable.) <br>
-Youtube homepage =	The clickable text (what users see). <br>
-&lt;/a> =	Closing tag.
-</div> <br><br><br>
-<div class="div4">
- <span class="span1"> 💡 Types of Links: <br><br></span>
-  <table>
-    <tr>
-      <th>Type</th>
-      <th>Example</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>External Link</td>
-      <td>&lt;a href="https://www.google.com"><a href="https://www.google.com">Google</a>&lt;/a></td>
-      <td>Goes to another website</td>
-    </tr>
-    <tr>
-      <td>Internal Link</td>
-      <td>&lt;a href="basics.html"><a href="html.html">Html Basics</a>&lt;/a></td>
-      <td>Goes to another page on your own site</td>
-    </tr>
-    <tr>
-      <td>Anchor Link</td>
-      <td>&lt;a href="#top"><a href="#top">Go to Top</a>&lt;/a></td>
-      <td>Jumps to a section within the same page</td>
-    </tr>
-    <tr>
-      <td>Email Link</td>
-      <td>&lt;a href="mailto:someone@example.com">Email Us&lt;/a></td>
-      <td>Opens user’s email app</td>
-    </tr>
-    <tr>
-      <td>Phone Link</td>
-      <td>&lt;a href="tel:+880123456789">Call Now&lt;/a></td>
-      <td>Dials a number (mobile only)</td>
-    </tr>
-  </table>
-</div> <br><br><br>
-<div class="div5">
-  <span class="span2">⚙️ Common Attributes:</span> <br><br>
-  <table>
-    <tr>
-      <th>Attribute</th>
-      <th>Purpose</th>
-      <th>Example></th>
-    </tr>
-    <tr>
-      <td>target="_blank"</td>
-      <td>Opens the link in a new tab</td>
-      <td>&lt;a href="..." target="_blank">&lt;/a></td>
-    </tr>
-    <tr>
-      <td>title</td>
-      <td>Adds a tooltip when you hover</td>
-      <td>&lt;a href="..." title="Go to site">&lt;/a></td>
-    </tr>
-  </table>
-</div> <br><br><br>
-
- <span class="span3"> 🎨 Bonus Tip: <br><br></span>
-<div class="div6">
-You can turn images, buttons, or even icons into links too: <br><br>
-&lt;a href="home.html"><a href="index.html"><img src="home-links.png" alt="home-links" class="img1"></a>&lt;/a>
-</div> <br><br><br><br><br><br><br>
-
+   <img src="header-logo.png" alt="header-logo"> <h1>CODE WITH FAHIM</h1>
+    <h3>HTML Links</h3>
     
+<div class="div1">
+  
+  <span class="span1">🔗 What are HTML Links?</span><br><br>
 
+  HTML links, or **hyperlinks**, are one of the most fundamental components of the web. They allow users to navigate between pages on a website or jump to completely different websites. <br><br>
 
-</body>
+  HTML uses the anchor tag `<a>` to create a hyperlink.<br><br>
 
+  <span class="span2">The Anchor Tag `<a>`</span><br><br>
 
-<footer>
-     <button type="button" class="btn btn-default"><a href="lists.html" class="next-page">Next>></a></button>
-  <br>
-  <button type="button" class="btn btn-default"><a href="colors.html" class="previous">&lt;Previous</a></button>
+  The anchor tag `<a>` is used to define a hyperlink. The most important attribute of the `<a>` tag is `href`, which specifies the destination address (URL) of the link.<br><br>
+
+  **General Syntax:**<br>
+  
+  <div class="div2">
+    <span class="span3">&lt;a href="url"&gt;link text&lt;/a&gt;</span>
+  </div><br>
+    
+  <span class="span4">Attributes of &lt;a&gt; tag</span><br>
+    
+  The `<a>` tag supports several important attributes that modify the link's behavior:<br>
+
+  <ul>
+    <li>**`href`**: Specifies the URL of the page the link goes to. (Required)</li>
+    <li>**`target`**: Specifies where to open the linked document.</li>
+    <li>**`title`**: Specifies extra information about the element (shown as a tooltip).</li>
+    <li>**`download`**: Specifies that the target will be downloaded when a user clicks on the hyperlink.</li>
+  </ul>
+<br>
+
+  <span class="span5">The `target` Attribute</span><br><br>
+
+  The `target` attribute specifies where to open the linked document. The following values are supported:<br>
+  
+  <table>
+    <tr>
+        <th>Value</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>`_self`</td>
+        <td>**Default.** Opens the document in the same window/tab where it was clicked.</td>
+    </tr>
+    <tr>
+        <td>`_blank`</td>
+        <td>Opens the document in a new window or tab.</td>
+    </tr>
+    <tr>
+        <td>`_parent`</td>
+        <td>Opens the document in the parent frame.</td>
+    </tr>
+    <tr>
+        <td>`_top`</td>
+        <td>Opens the document in the full body of the window.</td>
+    </tr>
+  </table><br>
+
+  <span class="span6">Example of External Link</span><br>
+
+  This link will open Google's homepage in a new browser tab:<br>
+  
+  <div class="div4">
+    <span class="span7">&lt;a href="https://www.google.com" target="_blank"&gt;Visit Google&lt;/a&gt;</span>
+  </div><br>
+  
+  **Result:** <a href="https://www.google.com" target="_blank" class="link-example">Visit Google</a><br><br>
+
+  <span class="span8">Creating a Download Link</span><br><br>
+
+  To make a link force a download of the target file instead of navigating to it, use the `download` attribute.<br>
+  
+  <div class="div5">
+    <span class="span9">&lt;a href="images/my-image.jpg" download&gt;Download Image&lt;/a&gt;</span>
+  </div><br><br>
+
+  <span class="span10">Link to an Email Address (Mailto)</span><br><br>
+
+  You can use `mailto:` in the `href` attribute to create a link that automatically opens the user's email client, allowing them to send an email to a specified address.<br>
+
+  <div class="div6">
+    <span class="span11">&lt;a href="mailto:support@example.com"&gt;Email Us&lt;/a&gt;</span>
+  </div><br>
+
+</div>
 
 <br><br>
-<span class="goto">Go to:</span> <br>
-<div class="pagination">
-<nav aria-label="...">
-  <ul class="pagination pagination-lg">
+
+<ul class="pagination-list">
     <li class="page-item"><a class="page-link" href="introduction-to-html.html">1</a></li>
     <li class="page-item"><a class="page-link" href="code-editor.html">2</a></li>
     <li class="page-item"><a class="page-link" href="tags.html">3</a></li> 
@@ -146,12 +132,23 @@ You can turn images, buttons, or even icons into links too: <br><br>
     <li class="page-item"><a class="page-link" href="images.html">15</a></li>
      <li class="page-item"><a class="page-link" href="audio-video.html">16</a></li>
     <li class="page-item"><a class="page-link" href="input-types.html">17</a></li>
-     <li class="page-item"><a class="page-link" href="forms.html">18</a></li>
-    <li class="page-item"><a class="page-link" href="emojis.html">19</a></li>
-    
-  </ul>
-</nav>
-</div>   
-</footer>
+    <li class="page-item"><a class="page-link" href="forms.html">18</a></li>
+    <li class="page-item"><a class="page-link" href="semantic-elements.html">19</a></li>
+    <li class="page-item"><a class="page-link" href="symbols&emojis.html">20</a></li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+<br>
 
+<div class="previuos-next-page-btns">
+  <div class="div-previuos">
+    <a href="colors.html" class="previuos"><button class="btn-default">PREVIOUS PAGE</button></a>
+  </div>
+  <div class="div-next">
+    <a href="lists.html" class="next-page"><button class="btn-default">NEXT PAGE</button></a>
+  </div>
+</div>
+</body>
 </html>

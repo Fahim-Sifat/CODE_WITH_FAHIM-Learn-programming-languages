@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Colors</title>
-    <link rel="stylesheet" href="colors.css"/>
-     <h1>CODE WITH FAHIM</h1>
-    <h3>HTML Colors</h3>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+    <link rel="stylesheet" href="colors.css"> 
+    
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -21,188 +18,192 @@
 </script>
 
 
-
     
-<!--js no 3 monetag-->
- <script src="https://fpyf8.com/88/tag.min.js" data-zone="181708" async data-cfasync="false"></script>
+<script src="https://fpyf8.com/88/tag.min.js" data-zone="181708" async data-cfasync="false"></script>
 
 </head>
 <body>
-    <div class="div1">
-        🎨 What Are HTML Colors? <br><br>
-      In HTML (HyperText Markup Language), colors are used to style elements on a webpage — for example, setting the background, text, or border color. <br><br>
 
-HTML colors can be defined in several ways: <br><br><br>
-    </div>
-    <div class="div2">
-      <ol>
-        <li>By Name:</li>
+    <header class="header-with-logo">
+        <img class="header-logo" src="header-logo.png" alt="CODE WITH FAHIM Logo">
+        <h1>CODE WITH FAHIM</h1>
+    </header>
+    <h3>HTML Colors</h3>
+    <div class="main-content-wrapper">
         
-            HTML recognizes 140 standard color 
-            names, like: <br><br>
-            <p class="byname">
-            &lt;p style="color: red;">This is red text.&lt;/p> <br>
-&lt;p style="background-color: lightblue;">Light blue background&lt;/p> <br><br><br>
+        <div class="content-area">
+            
+            <span class="span1">🎨 What Are HTML Colors?</span>
+            <p>
+                In HTML (HyperText Markup Language), colors are used to style elements on a webpage — for example, setting the background, <span class="span2">text color</span>, or border color. 
+            </p>
+            <p>
+                HTML colors can be specified using different formats:
+            </p>
 
-        </p>
-        Some examples of named colors: <br><br>
-<ul class="color">
-<li class="red">red</li>
+            <span class="soyeah">1. Color Names:</span>
+            <p>
+                There are <span class="span3">140+</span> standard color names recognized by all browsers. Here are a few examples:
+            </p>
 
-<li class="blue">blue</li>
+            <p>
+                <span class="span4">Red, Blue, Green, Lightgray, Orange, Purple</span>
+            </p>
+            
+            <span class="soyeah">2. RGB (Red, Green, Blue) Values:</span>
+            <p>
+                The RGB model is based on mixing different intensities of red, green, and blue light. Each color's intensity is specified by a number between <span class="span4">0</span> and <span class="span4">255</span> (inclusive).
+            </p>
+            
+            <p>The syntax for RGB is:</p>
+            <pre class="code-block">color: rgb(red, green, blue);</pre>
+            
+            <p>
+                <span style="color: red; font-weight: bold;">color: rgb(255, 0, 0);</span><br>
+                <span style="color: blue; font-weight: bold;">color: rgb(0, 0, 255);</span><br>
+                <span style="color: green; font-weight: bold;">color: rgb(0, 255, 0);</span>
+            </p>
 
-<li class="green">green</li>
+            <span class="soyeah">3. Hexadecimal (HEX) Values:</span>
+            <p>
+                A hexadecimal color is specified with <span class="span3">#rrggbb</span>. <br>
+                <span class="span4">#</span> represents the pound sign (hashtag). <br>
+                <span class="span2">rr</span> (red), <span class="span2">gg</span> (green), and <span class="span2">bb</span> (blue) are hexadecimal values between <span class="span3">00</span> and <span class="span3">ff</span> (decimal 0 to 255).
+            </p>
+            
+            <p>
+                Hexadecimal is a shorthand for RGB.
+            </p>
+            <p>The syntax for a HEX color is:</p>
+            <pre class="code-block">color: #rrggbb;</pre>
+            
+            <p>
+                <span style="color: red; font-weight: bold;">color: #FF0000;</span><br>
+                <span style="color: blue; font-weight: bold;">color: #0000FF;</span><br>
+                <span style="color: green; font-weight: bold;">color: #00FF00;</span>
+            </p>
+            
+            <span class="soyeah">Shorthand Hex:</span>
+            <p>
+                If all pairs of digits are the same, you can use a shorthand: <span class="span3">#rgb</span>. 
+            </p>
+            
+            <p>
+                <span style="color: lightgray; font-weight: bold;">#ccc is the same as #cccccc.</span><br>
+                <span style="color: orange; font-weight: bold;">#f80 is the same as #ff8800.</span><br>
+                <span style="color: purple; font-weight: bold;">#808 is the same as #880088.</span>
+            </p>
 
-<li class="lightgray">lightgray</li>
+            <span class="soyeah">4. RGBA (Red, Green, Blue, Alpha) Values:</span>
+            <p>
+                RGBA is an extension of RGB with an <span class="span2">alpha channel (a)</span> for specifying opacity. <br>
+                The alpha value is a number between <span class="span4">0.0</span> (fully transparent) and <span class="span4">1.0</span> (fully opaque).
+            </p>
+            
+            <p>The syntax for RGBA is:</p>
+            <pre class="code-block">color: rgba(red, green, blue, alpha);</pre>
+            
+            <p>
+                <span style="color: rgba(255, 0, 0, 0.5); font-weight: bold;">color: rgba(255, 0, 0, 0.5);</span> /* 50% transparent red */<br>
+                <span style="color: rgba(0, 0, 255, 0.8); font-weight: bold;">color: rgba(0, 0, 255, 0.8);</span> /* 80% opaque blue */
+            </p>
 
-<li class="orange">orange</li>
+            <span class="soyeah">5. HSLA (Hue, Saturation, Lightness, Alpha) Values:</span>
+            <p>
+                HSLA defines colors based on: 
+            </p>
+            <ul>
+                <li class="ulli"><span class="span4">H:</span> Hue (0 to 360 degrees on the color wheel).</li>
+                <li class="ulli"><span class="span3">S:</span> Saturation (0% to 100% - the intensity of the color).</li>
+                <li class="ulli"><span class="span2">L:</span> Lightness (0% to 100% - how bright the color is).</li>
+                <li class="ulli"><span class="span2">A:</span> Alpha (0.0 to 1.0 - for opacity).</li>
+            </ul>
+            
+            <p>The syntax for HSLA is:</p>
+            <pre class="code-block">color: hsla(hue, saturation, lightness, alpha);</pre>
+            
+            <p>
+                <span style="color: hsla(0, 100%, 50%, 1); font-weight: bold;">color: hsla(0, 100%, 50%, 1);</span> /* Full Red, 100% opaque */<br>
+                <span style="color: hsla(240, 100%, 50%, 0.7); font-weight: bold;">color: hsla(240, 100%, 50%, 0.7);</span> /* Blue, 70% opaque */
+            </p>
+            
+            <span class="goto">Go To Page</span>
+            <ul class="pagination-lg">
+                <li class="page-item"><a class="page-link" href="introduction-to-html.html">1</a></li>
+                <li class="page-item"><a class="page-link" href="code-editor.html">2</a></li>
+                <li class="page-item"><a class="page-link" href="tags.html">3</a></li>
+                
+                <li class="page-item"><a class="page-link" href="structure.html">4</a></li>
+                <li class="page-item"><a class="page-link" href="attributes.html">5</a></li>
+                <li class="page-item"><a class="page-link" href="headings&paragraphs.html">6</a></li>
+                <li class="page-item"><a class="page-link" href="html-styles.html">7</a></li>
+                <li class="page-item"><a class="page-link" href="text-formation.html">8</a></li>
+                <li class="page-item"><a class="page-link" href="comments.html">9</a></li>
+                <li class="page-item"><a class="page-link" href="div&classes.html">10</a></li>
+                <li class="page-item active" >
+                    <a class="pageactive-link" aria-current="page">11</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="links.html">12</a></li>
+                <li class="page-item"><a class="page-link" href="lists.html">13</a></li>
+                <li class="page-item"><a class="page-link" href="tables.html">14</a></li>
+                <li class="page-item"><a class="page-link" href="images.html">15</a></li>
+                <li class="page-item"><a class="page-link" href="audio-video.html">16</a></li>
+                <li class="page-item"><a class="page-link" href="input-types.html">17</a></li>
+                <li class="page-item"><a class="page-link" href="input-attributes.html">18</a></li>
+                <li class="page-item"><a class="page-link" href="form-elements.html">19</a></li>
+                <li class="page-item"><a class="page-link" href="semantic-elements.html">20</a></li>
+            </ul>
 
-<li class="purple">purple</li>
-</ul> <br><br><br>
-<li>By RGB Value:(RGB=Red,Green,Blue)</li>
-<p>
-    You can define colors by their Red, Green, Blue components: <br><br>
+            <div style="margin-top: 30px; display: flex; justify-content: space-between;">
+                <button class="btn-default previous">
+                    <a class="previous" href="div&classes.html">Previous Page</a>
+                </button>
+                <button class="btn-default">
+                    <a class="next-page" href="links.html">Next Page</a>
+                </button>
+            </div>
+        </div>
 
-</p>
-<p class="rgb">
-    &lt;p style="color: rgb(255, 0, 0);">Red text&lt;/p> <br>
-&lt;p style="background-color: rgb(0, 0, 255);">Blue background&lt;/p> <br> <br> <br>
-In HTML/CSS, you can mix these colors to make any color you want. <br><br>
-Each of the three values (red, green, blue) can be: <br><br>
-<ul>
-    <li>An integer between 0 and 255</li>
-     <li>Or a percentage between 0% and 100%</li>
-</ul> <br><br> <br> <br>
-🧩 Examples: <br><br>
-<table>
-    <tr>
-        <th>Color</th>
-        <th>RGB code</th>
-    </tr>
-    <tr>
-        <td>Red</td>
-        <td>rgb(255, 0, 0)</td>
-    </tr>
-    <tr>
-        <td>Green</td>
-        <td>rgb(0, 255, 0)</td>
-    </tr>
-    <tr>
-        <td>Blue</td>
-        <td>rgb(0, 0, 255)</td>
-    </tr>
-    <tr>
-        <td>Black</td>
-        <td>rgb(0, 0, 0)</td>
-    </tr>
-    <tr>
-        <td>white</td>
-        <td>rgb(255, 255, 255)</td>
-    </tr>
-    <tr>
-        <td>Gray</td>
-        <td>rgb(128,128,128)</td>
-    </tr>
-    <tr>
-        <td>Yellow</td>
-        <td>rgb(255, 255, 0)</td>
-    </tr>
-    <tr>
-        <td>Magenta</td>
-        <td>rgb(255, 0, 255)</td>
-    </tr>
-    <tr>
-        <td>Cyan</td>
-        <td>rgb(0, 255, 255)</td>
-    </tr>
-</table> 
-
-</p> <br><br><br> <br>
-<li>By HEX Code: <br><br></li> <br>
-A hexadecimal (HEX) color code starts with #, followed by 6 digits (0 to 9, A to F): <br>
-Each pair (RR, GG, BB) is a hexadecimal number from 00 to FF (0–255 in decimal). <br><br>
-<p class="hex">
-    &lt;p style="color: #FF0000;">This is red text.&lt;/p> <br>
-&lt;p style="background-color: #00FF00;">Green background&lt;/p>
-
-</p> <br><br>
-<ul>
-    <li>#FF0000 = red</li>
-    <li>#00FF00 = green</li>
-    <li>#0000FF = blue</li>
-    <li>#FFFFFF = white</li>
-    <li>#000000=black</li>
-</ul> <br><br> <br><br>
-<p class="shorthand">
-🧩 Short HEX Codes: <br><br></p>
-If all the pairs are the same (like #FF0000 → #F00), you can shorthand it to 3 digits: <br>
-Example: #0F0=Green
- <br><br><br><br><br>
-<li>By RGBA Value:</li>
-RGBA adds transparency (alpha): <br>
-<p class="rgba">
-    &lt;p style="background-color: rgba(255, 0, 0, 0.5);">
-  Semi-transparent red background
-&lt;/p> <br><br> <br>
-<p>
-The fourth value (0–1) controls opacity:</p> <br>
-<ul>
-<li>1 = fully opaque;</li>
-
-<li>0.5 = 50% transparent;</li>
-
-<li>0 = fully transparent;</li>
-
-</p> <br><br><br></ul>
-<li>By HSL / HSLA:  [HSLA=Hue, Saturation, Lightness (and Alpha):]</li>
-<p class="hsla">
-    &lt;p style="color: hsl(120, 100%, 50%);">Bright green&lt;/p> <br>
-&lt;p style="background-color: hsla(240, 100%, 50%, 0.3);">
-  Semi-transparent blue
-&lt;/p>  <br>
-
-</p>
-      </ol>
-
-    </div>    <br><br><br><br> 
-</body>
-
-
-<footer>
-     <button type="button" class="btn btn-default"><a href="links.html" class="next-page">Next>></a></button>
-  <br>
-  <button type="button" class="btn btn-default"><a href="div&classes.html" class="previous">&lt;Previous</a></button>
-
-  <br><br>
-<span class="goto">Go to:</span> <br>
-<div class="pagination">
-<nav aria-label="...">
-  <ul class="pagination pagination-lg">
-    <li class="page-item"><a class="page-link" href="introduction-to-html.html">1</a></li>
-    <li class="page-item"><a class="page-link" href="code-editor.html">2</a></li>
-    <li class="page-item"><a class="page-link" href="tags.html">3</a></li>
-    
-     <li class="page-item"><a class="page-link" href="structure.html">4</a></li>
-    <li class="page-item"><a class="page-link" href="attributes.html">5</a></li>
-     <li class="page-item"><a class="page-link" href="headings&paragraphs.html">6</a></li>
-    <li class="page-item"><a class="page-link" href="html-styles.html">7</a></li>
-     <li class="page-item"><a class="page-link" href="text-formation.html">8</a></li>
-    <li class="page-item"><a class="page-link" href="comments.html">9</a></li>
-     <li class="page-item"><a class="page-link" href="div&classes.html">10</a></li>
-    <li class="page-item active" >
-      <a class="pageactive-link" aria-current="page">11</a>
-    </li>
-     <li class="page-item"><a class="page-link" href="links.html">12</a></li>
-    <li class="page-item"><a class="page-link" href="lists.html">13</a></li>
-     <li class="page-item"><a class="page-link" href="tables.html">14</a></li>
-    <li class="page-item"><a class="page-link" href="images.html">15</a></li>
-     <li class="page-item"><a class="page-link" href="audio-video.html">16</a></li>
-    <li class="page-item"><a class="page-link" href="input-types.html">17</a></li>
-     <li class="page-item"><a class="page-link" href="forms.html">18</a></li>
-    <li class="page-item"><a class="page-link" href="emojis.html">19</a></li>
-    
-  </ul>
-</nav>
-</div>
-   
-</footer>
+        <div class="sidebar-area">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Color Name</th>
+                        <th>Hex Code</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Color Name">Red</td>
+                        <td data-label="Hex Code">#FF0000</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Color Name">Green</td>
+                        <td data-label="Hex Code">#008000</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Color Name">Blue</td>
+                        <td data-label="Hex Code">#0000FF</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Color Name">Yellow</td>
+                        <td data-label="Hex Code">#FFFF00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Color Name">White</td>
+                        <td data-label="Hex Code">#FFFFFF</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Color Name">Black</td>
+                        <td data-label="Hex Code">#000000</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Color Name">Gray</td>
+                        <td data-label="Hex Code">#808080</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </body>
+</html>

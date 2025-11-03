@@ -1,143 +1,316 @@
-h1{
+:root{
+    /* Define a color palette for consistency */
+    --color-dark-bg: #1a1a2e;       /* Deep Indigo/Dark Background */
+    --color-light-text: #e9e9f2;    /* Off-White/Light Text */
+    --color-accent-red: #ff416c;    /* Vibrant Red Accent */
+    --color-accent-blue: #2a73ff;   /* Bright Blue Accent */
+    --color-code-text: #4caf50;     /* Green for Code */
+    --color-tag-blue: #4dd0e1;      /* Aqua for Tags */
+    --color-hyper-text: #a742ff;    /* Purple for Hyper Text */
+}
+
+body {
+    /* Use a simple, clean font-stack and the dark background color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-dark-bg);
+    color: var(--color-light-text);
+    line-height: 1.6; /* Improved readability */
+    padding: 20px;
+}
+
+/* --- Header Styles --- */
+h1 {
     text-align: center;
+    margin: 0 0 10px 0;
+    padding: 15px 0;
+    font-family: 'Impact', sans-serif;
+    color: var(--color-light-text);
+    background-color: #0d0d1b; /* Slightly darker header background */
+    text-shadow: 0 0 10px var(--color-accent-red), 0 0 20px var(--color-accent-blue);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    letter-spacing: 2px;
+    border-radius: 8px;
+}
+
+h3 {
+    text-align: center;
+    text-decoration: none; /* Removed default underline */
+    color: var(--color-accent-red);
+    text-shadow: 0 0 5px var(--color-accent-blue);
+    padding: 10px 0;
+    position: sticky;
+    top: 70px; /* Below H1 */
+    z-index: 99;
+    background-color: var(--color-dark-bg);
+}
+
+/* Base paragraph style */
+p {
+    font-size: 20px;
+}
+
+/* ==================================== */
+/* 2. HEADER STYLES */
+/* ==================================== */
+
+/* Unified Header Container */
+.header-with-logo {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-logo {
+    height: 50px; /* Adjust as needed */
+    margin-right: 15px;
+}
+
+h1 {
+    /* Primary Heading Style (used for 'CODE WITH FAHIM') */
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
-    background-color: black;
     text-align: center;
-    text-shadow: 2px 2px 5px red, 5px 5px 25px blueviolet; 
-    
-    
+    text-shadow: 2px 2px 5px red, 5px 5px 25px blueviolet;
+    font-size: 30px; /* Adjusted font size for use in a smaller header */
+    flex-grow: 1; /* Allows it to take up available space */
 }
-h3{
+
+h3 {
+    /* Secondary Heading Style (used for Lesson Title) */
     text-align: center;
     text-decoration: underline solid white;
     text-shadow: 2px 2px 5px blue;
-    position: sticky;
-    top: 0;
+    padding-bottom: 10px;
+    margin-top: 20px;
 }
-body{
-    font-family: 'Times New Roman', Times, serif,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,Georgia, 'Times New Roman', Times, serif,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,Verdana, Geneva, Tahoma, sans-serif,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: larger;
-    background-color: black;
-    color: antiquewhite;
-    
+
+/* ==================================== */
+/* 3. LAYOUT (New Flexbox Structure) */
+/* ==================================== */
+
+.main-content-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin: 20px;
 }
-.div1::first-line{
-    color: yellow;
+
+.content-area {
+    width: 70%;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
-ol>li::first-line{
-    color: aqua;
-    font-size: larger;
+
+.sidebar-area {
+    width: 30%;
+    box-sizing: border-box;
+    padding-left: 20px;
 }
-.byname{
-    color: black;
-    background-color: white;
-    max-width: 100%;
-    height: auto;
+
+/* Responsive adjustment for small screens */
+@media (max-width: 900px) {
+    .content-area, .sidebar-area {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
 }
-.color{
-    color: none;
-}
-.red{
+
+/* ==================================== */
+/* 4. UTILITY & COLOR CLASSES */
+/* ==================================== */
+
+/* Primary Lesson Topic/Header Text Highlight (used for the first header) */
+.span1 {
+    font-size: 40px;
     color: red;
 }
-.blue{
+
+/* Main Highlight Color - Blue */
+.span2 {
     color: blue;
 }
-.green{
-    color: green;
+
+/* Secondary Highlight Color - Purple/Violet */
+.span3 {
+    color: blueviolet;
 }
-.lightgray{
-    color: lightgray;
+
+/* Tertiary Highlight Color - Aqua/Cyan */
+.span4 {
+    color: aqua;
 }
-.orange{
-    color: orange;
+
+/* Sub-section Heading Style */
+.soyeah {
+    display: block; /* Ensures it starts on a new line */
+    font-size: 35px;
+    color: yellow;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
-.purple{
-    color: purple;
+
+/* Code block container */
+.code-block {
+    background-color: #1a1a1a;
+    color: #00ff00; /* Neon Green for code */
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 5px solid red;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
 }
-.rgb{
-    color: black;
-    background-color: white;
-    max-width: 100%;
-    height: auto;
+
+/* List Item Styles */
+.ulli {
+    color: yellow;
 }
-table{
-    border: 2px solid blueviolet;
+.olli {
+    color: crimson;
+}
+
+/* ==================================== */
+/* 5. TABLE STYLES (Used in Sidebar) */
+/* ==================================== */
+
+.sidebar-area table {
+    width: 100%;
     border-collapse: collapse;
-    border-radius: 15%;
-    max-width: 100%;
-    height: auto;
+    border: 2px solid blueviolet;
+    margin-top: 20px;
 }
-tr,th,td{
-    color: yellowgreen;
+
+.sidebar-area th, .sidebar-area td {
+    padding: 10px;
     border: 1px solid red;
-    border-radius: 20%;
-    padding: 0px 90px;
-}
-.hex,.rgba,.hsla{
-    color: black;
-    background-color: white;
-    max-width: 100%;
-    height: auto;
-}
-.shorthand{
-    color: greenyellow;
+    text-align: center;
 }
 
-
-
-
-
-
-
-
-.btn-default{
-    background-color: black;
-    color: white;
-    text-decoration: none;
-}
-.next-page{
-    text-decoration: none;
-    font-size: 20px;
+.sidebar-area thead th {
+    background-color: #333;
     color: white;
 }
-.previuos{
-    text-decoration: none;
-    color: white;
-    background-color: black;
-    font-size: 20px;
-    
-}
-.pagination-lg{
-    list-style-type: none;
-    
-    
 
+.sidebar-area tbody tr {
+    color: yellowgreen;
 }
-.page-item{
-    display: inline-block;
-    gap: 20%;
-    padding: 5px;
+
+/* Mobile Table Responsiveness (Optional: for a clearer look on small screens) */
+@media (max-width: 600px) {
+    /* Makes the table stack vertically instead of side-by-side */
+    .sidebar-area table, 
+    .sidebar-area thead, 
+    .sidebar-area tbody, 
+    .sidebar-area th, 
+    .sidebar-area td, 
+    .sidebar-area tr { 
+        display: block; 
+    }
+    .sidebar-area thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .sidebar-area tr { border: 1px solid #ccc; }
+    .sidebar-area td { 
+        border: none;
+        border-bottom: 1px solid #eee; 
+        position: relative;
+        padding-left: 50%; 
+        text-align: right;
+    }
+    .sidebar-area td:before { 
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: aqua;
+        /* Use the data-label attribute for the title */
+        content: attr(data-label);
+    }
+}
+
+
+/* ==================================== */
+/* 6. NAVIGATION & BUTTON STYLES */
+/* ==================================== */
+
+.goto {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    color: yellow;
+    margin-top: 30px;
+}
+
+.pagination-lg {
+    display: flex;
     flex-wrap: wrap;
-    max-width: 60%;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
 }
-.page-link{
-    background-color: white;
-    color: black;
+
+.page-item {
+    margin: 5px;
+}
+
+.page-link, .pageactive-link {
+    display: block;
+    padding: 8px 12px;
     text-decoration: none;
-    
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    transition: background-color 0.3s, color 0.3s;
 }
-.page-link:hover{
-   background-color: red;
-   color: green;
-}
-.pageactive-link{
+
+.page-link {
+    background-color: #1a1a1a;
     color: white;
-    background-color: green;
 }
-.goto{
-    font-size: larger;
+
+.page-link:hover {
+    background-color: #333;
+    color: aqua;
+}
+
+.page-item.active .pageactive-link {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-color: red;
+}
+
+.btn-default {
+    background-color: black;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-default:hover {
+    background-color: #333;
+    border-color: red;
+}
+
+.next-page, .previous {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block; /* Ensure the link fills the button */
 }

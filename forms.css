@@ -1,28 +1,49 @@
-h1{
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    font-family: 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
-    background-color: black;
-    text-align: center;
-    text-shadow: 2px 2px 5px red, 5px 5px 25px blueviolet; 
-    
-    
+:root{
+    /* Define a color palette for consistency */
+    --color-dark-bg: #1a1a2e;       /* Deep Indigo/Dark Background */
+    --color-light-text: #e9e9f2;    /* Off-White/Light Text */
+    --color-accent-red: #ff416c;    /* Vibrant Red Accent */
+    --color-accent-blue: #2a73ff;   /* Bright Blue Accent */
+    --color-code-text: #4caf50;     /* Green for Code */
+    --color-tag-blue: #4dd0e1;      /* Aqua for Tags */
+    --color-hyper-text: #a742ff;    /* Purple for Hyper Text */
 }
-h3{
+
+body {
+    /* Use a simple, clean font-stack and the dark background color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-dark-bg);
+    color: var(--color-light-text);
+    line-height: 1.6; /* Improved readability */
+    padding: 20px;
+}
+
+/* --- Header Styles --- */
+h1 {
     text-align: center;
-    text-decoration: underline solid white;
-    text-shadow: 2px 2px 5px blue;
+    margin: 0 0 10px 0;
+    padding: 15px 0;
+    font-family: 'Impact', sans-serif;
+    color: var(--color-light-text);
+    background-color: #0d0d1b; /* Slightly darker header background */
+    text-shadow: 0 0 10px var(--color-accent-red), 0 0 20px var(--color-accent-blue);
     position: sticky;
     top: 0;
+    z-index: 100;
+    letter-spacing: 2px;
+    border-radius: 8px;
 }
-body{
-    font-family: 'Times New Roman', Times, serif,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,Georgia, 'Times New Roman', Times, serif,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,Verdana, Geneva, Tahoma, sans-serif,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: larger;
-    background-color: black;
-    color: antiquewhite;
-    
+
+h3 {
+    text-align: center;
+    text-decoration: none; /* Removed default underline */
+    color: var(--color-accent-red);
+    text-shadow: 0 0 5px var(--color-accent-blue);
+    padding: 10px 0;
+    position: sticky;
+    top: 70px; /* Below H1 */
+    z-index: 99;
+    background-color: var(--color-dark-bg);
 }
 
 .span1{
@@ -54,70 +75,118 @@ body{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-.btn-default{
-    background-color: black;
-    color: white;
-    text-decoration: none;
-}
-.next-page{
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-}
-.previuos{
-    color: white;
-    background-color: black;
-    font-size: 20px;
-    text-decoration: none;
+/* --- Button Styling --- */
+.btn-default {
+    background-color: var(--color-accent-red);
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.pagination{
-    font-size: 2.1rem;
-    text-decoration: none;
-    
-
+.btn-default:hover {
+    background-color: #e6395e; /* Slightly darker red on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
-.pagination-lg{
+
+.next-page, .previous {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--color-light-text);
+    font-weight: bold;
+    display: block; /* Makes the anchor cover the whole button */
+    padding: 0;
+}
+
+/* Custom styling for the previous button to distinguish */
+button[href="html.html"] {
+    background-color: #24243e; /* Darker background */
+    border: 1px solid var(--color-accent-red);
+}
+button[href="html.html"]:hover {
+    background-color: #313150;
+}
+
+
+/* --- Pagination Styling --- */
+.goto {
+    font-size: 1.3rem;
+    margin-top: 40px;
+    display: block;
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-accent-blue);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.pagination-lg {
     list-style-type: none;
-    
-    
-
-}
-.page-item{
-    display: inline-block;
-    gap: 20%;
-    padding: 5px;
+    padding: 0;
+    display: flex; /* Use flexbox for the list */
     flex-wrap: wrap;
-    max-width: 60%;
+    gap: 8px; /* Space between links */
 }
-.page-link{
-    background-color: white;
-    color: black;
+
+.page-item {
+    padding: 0;
+    margin: 0;
+}
+
+.page-link, .pageactive-link {
+    display: inline-block;
+    padding: 8px 12px;
     text-decoration: none;
-    
-}
-.page-link:hover{
-   background-color: red;
-   color: green;
-}
-.pageactive-link{
-    color: white;
-    background-color: green;
-}
-.goto{
-    font-size: larger;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid transparent;
 }
 
+.page-link {
+    background-color: var(--color-dark-bg);
+    color: var(--color-accent-blue);
+    border: 1px solid var(--color-accent-blue);
+}
 
+.page-link:hover {
+   background-color: var(--color-accent-blue);
+   color: var(--color-dark-bg);
+}
+
+.pageactive-link {
+    /* Active page */
+    color: var(--color-light-text);
+    background-color: var(--color-accent-red);
+    border: 1px solid var(--color-accent-red);
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    .div-container {
+        flex-direction: column; /* Stacks content and image vertically */
+    }
+    .div1, .div2 {
+        width: 100%;
+        float: none;
+        min-width: unset;
+        padding: 15px;
+    }
+    img {
+        margin-left: 0;
+        max-width: 70%; /* Smaller image on mobile */
+    }
+    h1 {
+        font-size: 1.8rem;
+        padding: 10px 0;
+    }
+    .span1 {
+        font-size: 2.5rem;
+    }
+    .soyeah {
+        font-size: 1.5rem;
+    }
+}

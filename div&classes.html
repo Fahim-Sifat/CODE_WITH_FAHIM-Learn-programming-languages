@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <link rel="canonical" href="https://code-with-fahim.wuaze.com/" />
+    <link rel="canonical" href="https://code-with-fahim.wuaze.com/" />
   <meta name="google-adsense-account" content="ca-pub-3930264175657320">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Div & classes</title>
-     <h1>CODE WITH FAHIM</h1>
-    <h3>Div & Classes</h3>
-    <link rel="stylesheet" href="div&classes.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+    <title>Div & Classes</title>
+
+    <link rel="stylesheet" href="div&classes.css"/>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -18,126 +17,170 @@
 
   gtag('config', 'G-MZ1JHY721H');
 </script>
-
-
-
-    <!--Monetag-->
- <script src="https://3nbf4.com/act/files/tag.min.js?z=10118148" data-cfasync="false" async></script>
-
+    <script src="https://3nbf4.com/act/files/tag.min.js?z=10118148" data-cfasync="false" async></script>
+    
   </head>
 <body>
-    <div class="div1">
-      In HTML, the concepts of &lt;div> and classes are two of the most common building blocks for structuring and styling web pages.
-    </div> <br><br>
-    <div class="div2">
-        🧱 1. The &lt;div> element: <br><br>
-<ul class="ul1">
-<li>Definition: A &lt;div> (short for division) is a container element used to group together other HTML elements. </li>
 
-<li>Purpose: It helps organize your HTML into sections, making it easier to style with CSS or manipulate with JavaScript.</li>
-    </div>  <br><br><br>
-    <div class="div3">
-   &lt;div> <br>
-  &lt;h2>About Me&lt;/h2> <br>
-  &lt;p>I’m learning web development!&lt;/p> <br>
-  &lt;/div>
-   <br> <br>
-    </div> <br><br>
-       Here, the &lt;div> wraps the heading and paragraph together into one logical section. <br><br><br>
+    <div class="header-with-logo">
+        <img src="header-logo.png" alt="Code with Fahim Logo" class="header-logo">
+        <h1>CODE WITH FAHIM</h1>
+    </div>
+    <h3>Div & Classes</h3>
 
-    Key points: <br>
-    <div class="divlast">
-       
+    <div class="main-content-wrapper">
+        
+        <div class="content-area">
+            
+            <p>
+                In HTML, the concepts of &lt;div> and classes are two of the most <span class="span1">fundamental tools</span> you will use for structuring and styling your web page. Think of them as the building blocks for organizing and applying unique designs to your content.
+            </p>
 
-1.Block-level element (it starts on a new line and takes up the full width available).
-<br>
-2.Commonly used as a wrapper for other elements (e.g., text, images, buttons).
-<br>
-3.Often paired with CSS for styling and JavaScript for interactivity. <br>
-    </div> <br><br><br>
-    <div class="div4">
-      🎨 2. The class attribute: <br><br>
-<ul class="ul2">
-<li>Definition: The class attribute lets you assign one or more class names to an HTML element.</li> <br>
+            <span class="span1">The &lt;div> Element</span>
+            <p>
+                The &lt;div> element is the most <span class="span2">generic container</span> in HTML. It is a block-level element, which means it starts on a new line and takes up the full width available. Its primary use is to <span class="span3">group other HTML elements</span> together, making it easy to apply CSS styles or JavaScript to that group.
+            </p>
 
-<li>Purpose: Classes are mainly used to apply CSS styles or select elements with JavaScript.</li></ul>
-    </div> <br><br>
-    <div class="div5">
-      &lt;div class="profile"> <br>
-  &lt;h2 class="name">Alex&lt;/h2> <br>
-  &lt;p class="bio">Web developer & designer.&lt;/p> <br>
-&lt;/div> <br> <br>
+            <span class="span2">Uses of &lt;div></span>
+            <ul class="vs">
+                <li class="ulli">
+                    <span class="span2">Layout and Structure:</span> You use divs to define sections of a webpage, such as the header, footer, sidebar, and main content area.
+                </li>
+                <li class="ulli">
+                    <span class="span2">Styling:</span> By giving a &lt;div> a specific class or ID, you can apply a set of CSS properties to all the elements inside it.
+                </li>
+            </ul>
 
+            <span class="span1">Example Code of &lt;div></span>
+            <div class="headsup">
+                The &lt;div> element does not carry any specific visual meaning on its own. Its purpose is entirely for grouping and structure.
+            </div>
 
-    </div> <br> <br><br>
-    <div class="div6">
-      🧩 How they work together: <br><br>
-<ul>
-<li>The &lt;div> gives structure.</li> <br>
+            <pre class="code-block">
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+    &lt;title>The Div Element&lt;/title>
+    &lt;style>
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+    &lt;/style>
+&lt;/head>
+&lt;body>
 
-<li>The class gives identity or style.</li> <br></ul>
-    </div> <br><br><br>
-    <div class="div7">
-     🪄 Related Concepts: <br>
-<span class="span1">1. id Attribute:</span>
-<ul>
-<li>Similar to class, but used to give a unique identifier to one specific element.</li>
+    &lt;div class="header">
+        &lt;h1>Website Header&lt;/h1>
+    &lt;/div>
 
-<li>Should be unique on a page (unlike classes, which can repeat).</li></ul>
-    </div> <br><br>
-    Example: <br>
-  <span class="span2">  &lt;div id="main-content">...&lt;/div></span>
-<br><br>
-<span class="span1"> Semantic Elements (alternatives to &lt;div>)</span> <br><br>
+    &lt;div class="main-content">
+        &lt;p>This is the main content area.&lt;/p>
+    &lt;/div>
 
-While &lt;div> is generic, HTML5 introduced semantic elements that have built-in meaning: <br>
+&lt;/body>
+&lt;/html>
+            </pre>
+            
+            <hr>
 
-i.&lt;header> – top section or navigation. <br>
+            <span class="span1">HTML Classes</span>
+            <p>
+                The <span class="span3">class attribute</span> is used to assign a name to one or more HTML elements. This name, or "class," can then be referenced by CSS to apply specific styles to all elements with that class name.
+            </p>
+            <p>
+                Classes are incredibly important because they allow you to <span class="span4">reuse the same style</span> across multiple different elements (e.g., a button, a paragraph, and an image can all have the class "highlight").
+            </p>
 
-ii.&lt;footer> – bottom section of a page. <br>
+            <span class="span2">Key Points about Classes</span>
+            <ul class="vs">
+                <li class="ulli">
+                    <span class="span2">Reusability:</span> The same class can be used on multiple HTML elements.
+                </li>
+                <li class="ulli">
+                    <span class="span2">Multiple Classes:</span> An HTML element can have multiple classes. You separate them with a space.
+                </li>
+                <li class="ulli">
+                    <span class="span2">CSS Selector:</span> In CSS, you select a class using a period (`.`) followed by the class name (e.g., <span class="code-block">.highlight { color: red; }</span>).
+                </li>
+            </ul>
 
-iii.&lt;section> – a general section of content. <br>
-iv.&lt;span> = inline-level (only takes up as much space as its content). <br>
+            <span class="span1">Example Code of Classes</span>
+            <pre class="code-block">
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+    &lt;title>HTML Classes&lt;/title>
+    &lt;style>
+        .warning {
+            color: red;
+            font-weight: bold;
+        }
+        .message {
+            border: 1px solid gray;
+            padding: 10px;
+        }
+    &lt;/style>
+&lt;/head>
+&lt;body>
 
-v.&lt;article> – a self-contained piece of content. <br>
+    &lt;p class="warning">This is a warning message.&lt;/p>
+    &lt;div class="warning message">
+        This is a warning message with a border.
+    &lt;/div>
 
-vi.&lt;aside> – sidebar or secondary info. <br>
-</body> <br><br><br><br>
-<footer>
-     <button type="button" class="btn btn-default"><a href="colors.html" class="next-page">Next>></a></button>
-  <br>
-  <button type="button" class="btn btn-default"><a href="comments.html" class="previous">&lt;Previous</a></button>
+&lt;/body>
+&lt;/html>
+            </pre>
 
-  <br><br>
-<span class="goto">Go to:</span> <br>
-<div class="pagination">
-<nav aria-label="...">
-  <ul class="pagination pagination-lg">
-    <li class="page-item"><a class="page-link" href="introduction-to-html.html">1</a></li>
-    <li class="page-item"><a class="page-link" href="code-editor.html">2</a></li>
-    <li class="page-item"><a class="page-link" href="tags.html">3</a></li>
-     <li class="page-item"><a class="page-link" href="structure.html">4</a></li>
-    <li class="page-item"><a class="page-link" href="attributes.html">5</a></li>
-     <li class="page-item"><a class="page-link" href="headings&paragraphs.html">6</a></li>
-    <li class="page-item"><a class="page-link" href="html-styles.html">7</a></li>
-     <li class="page-item"><a class="page-link" href="text-formation.html">8</a></li>
-    <li class="page-item"><a class="page-link" href="comments.html">9</a></li>
-    <li class="page-item active" >
-      <a class="pageactive-link" aria-current="page">10</a>
-    </li>
-        <li class="page-item"><a class="page-link" href="colors.html">11</a></li>
-     <li class="page-item"><a class="page-link" href="links.html">12</a></li>
-    <li class="page-item"><a class="page-link" href="lists.html">13</a></li>
-     <li class="page-item"><a class="page-link" href="tables.html">14</a></li>
-    <li class="page-item"><a class="page-link" href="images.html">15</a></li>
-     <li class="page-item"><a class="page-link" href="audio-video.html">16</a></li>
-    <li class="page-item"><a class="page-link" href="input-types.html">17</a></li>
-     <li class="page-item"><a class="page-link" href="forms.html">18</a></li>
-    <li class="page-item"><a class="page-link" href="emojis.html">19</a></li>
+            <div class="soyeah">
+                So, you'll often see the &lt;div> element and the <span class="span4">class attribute</span> working hand-in-hand to create well-structured, easy-to-style sections of a webpage.
+            </div>
+
+            <div class="btn-default">
+                <a class="previous" href="comments.html">Previous</a>
+            </div>
+            <div class="btn-default">
+                <a class="next-page" href="colors.html">Next</a>
+            </div>
+
+        </div>
+        
+        <div class="sidebar-area">
+            <span class="goto">Go to Page:</span>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination-lg">
+                    <li class="page-item"><a class="page-link" href="introduction-to-html.html">1</a></li>
+                    <li class="page-item"><a class="page-link" href="code-editor.html">2</a></li>
+                    <li class="page-item"><a class="page-link" href="tags.html">3</a></li>
+                    <li class="page-item"><a class="page-link" href="structure.html">4</a></li>
+                    <li class="page-item"><a class="page-link" href="attributes.html">5</a></li>
+                    <li class="page-item"><a class="page-link" href="headings&paragraphs.html">6</a></li>
+                    <li class="page-item"><a class="page-link" href="html-styles.html">7</a></li>
+                    <li class="page-item"><a class="page-link" href="text-formation.html">8</a></li>
+                    <li class="page-item"><a class="page-link" href="comments.html">9</a></li>
+                    <li class="page-item active" >
+                        <a class="pageactive-link" aria-current="page">10</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="colors.html">11</a></li>
+                    <li class="page-item"><a class="page-link" href="links.html">12</a></li>
+                    <li class="page-item"><a class="page-link" href="lists.html">13</a></li>
+                    <li class="page-item"><a class="page-link" href="tables.html">14</a></li>
+                    <li class="page-item"><a class="page-link" href="images.html">15</a></li>
+                    <li class="page-item"><a class="page-link" href="audio-video.html">16</a></li>
+                    <li class="page-item"><a class="page-link" href="input-types.html">17</a></li>
+                    <li class="page-item"><a class="page-link" href="forms.html">18</a></li>
+                    <li class="page-item"><a class="page-link" href="iframes.html">19</a></li>
+                    <li class="page-item"><a class="page-link" href="sematics.html">20</a></li>
+                    <li class="page-item"><a class="page-link" href="character-set.html">21</a></li>
+                    <li class="page-item"><a class="page-link" href="url-encoding.html">22</a></li>
+                    <li class="page-item"><a class="page-link" href="html-summary.html">23</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
     
-  </ul>
-</nav>
-</div>
-
-</footer>
+</body>
 </html>
