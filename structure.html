@@ -1,4 +1,3 @@
-<!--      HTML PAGE_5-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Structure</title>
-<!-- Google tag (gtag.js) -->
+<link rel="stylesheet" href="structure.css"> 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-998EK9SFH6"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -16,89 +15,98 @@
 
   gtag('config', 'G-998EK9SFH6');
 </script>
-<!--Current mt tag-->
- <script>(function(s){s.dataset.zone='10118204',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+<script>(function(s){s.dataset.zone='10118204',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 
 </head>
-<link rel="stylesheet" href="structure.css">
-<h1>CODE WITH FAHIM</h1>
 <body>
-    <h3>Structure of HTML</h3>
-    <p>The structure of an HTML document are the backbone of every web page 🌐
 
-Here’s the basic skeleton (every HTML file starts kinda like this):</p>
-<p><img src="structure1.png" alt="structure1" class="structure1"></p>
-<p>Now let’s break it down step-by-step like a web surgeon 🧠💻</p>
-<p>
-    <ol>
-        <li class="olli">&lt;!DOCTYPE html&gt;</li>
-        <ul>
-            <li>Tells the browser this is an HTML5 document.</li>
-            <li>It’s like saying, “Hey browser, interpret this page with modern standards!”</li>
-        </ul> <br>
-  <li class="olli">&lt;html&gt; ... &lt;/html&gt;</li>
-  <ul>
-    <li>The root element of your page.</li>
-    <li>Everything inside it is part of your website.</li>
-    <li>It usually has a lang attribute like &lt;html lang="en">.</li>
-  </ul> <br>
-  <li class="olli">&lt;head> ... &lt;/head></li>
-    <ul>
-        <li>This is where you keep information about your page, not what’s displayed on it.</li>
-        <li>Includes: 
-<ul>
-<li class="ulli">&lt;title> = page name shown on browser tab.</li>
+<header>
+  <div class="header-with-logo">
+    <img src="header-logo.png" alt="CWF Logo" class="header-logo"> 
+    <h1>CODE WITH FAHIM</h1>
+  </div>
+  <h3>Structure of HTML</h3>
+</header>
 
-<li class="ulli">&lt;meta> = info like keywords, description, charset.</li>
-
-<li class="ulli">&lt;link> = connects CSS or icons.</li>
-
-<li class="ulli">&lt;script> = adds JavaScript (if used).</li></ul></li>
+<div class="main-content-wrapper">
+    <div class="content-area">
+        <p>The structure of an HTML document is the backbone of every web page 🌐. Here’s the basic skeleton (every HTML file starts kinda like this):</p>
         
-    </ul> <br>
-    <p><img src="structure2.png" alt="structure2" class="structure2"></p> <br>
-    <li class="olli">&lt;body> ... &gt;/body></li>
-    <ul>
-        <li>The visible part of your website — what users actually see.</li>
-        <li>Includes text, images, videos, buttons, links, etc.</li>
-    </ul> <br>
-    <p><img src="structure3.png" alt="structure3" class="structure3"></p> <br>
+        <img src="structure1.png" alt="Basic HTML Structure" class="structure1">
+        <p>Now let’s break it down step-by-step like a web surgeon 🧠💻</p>
+        
+        <ol>
+            <li class="olli">&lt;!DOCTYPE html&gt;</li>
+            <ul>
+                <li>Tells the browser this is an HTML5 document.</li>
+                <li>It’s like saying, “Hey browser, interpret this page with modern standards!”</li>
+            </ul> 
+            
+            <li class="olli">&lt;html&gt; ... &lt;/html&gt;</li>
+            <ul>
+                <li>The root element of your page.</li>
+                <li>Everything inside it is part of your website.</li>
+                <li>It usually has a lang attribute like &lt;html lang="en">.</li>
+            </ul> 
+            
+            <li class="olli">&lt;head> ... &lt;/head></li>
+            <ul>
+                <li>This is where you keep information about your page, **not** what’s displayed on it.</li>
+                <li>Includes: 
+                <ul>
+                    <li class="ulli">&lt;title> = page name shown on browser tab.</li>
+                    <li class="ulli">&lt;meta> = info like keywords, description, charset, and viewport (for responsiveness!).</li>
+                    <li class="ulli">&lt;link> = connects CSS or icons.</li>
+                    <li class="ulli">&lt;script> = adds JavaScript (if used).</li>
+                </ul>
+                </li>
+            </ul> 
+            
+            
+            <img src="structure2.png" alt="HTML Head Example" class="structure2">
+            
+            <li class="olli">&lt;body> ... &gt;/body></li>
+            <ul>
+                <li>The visible part of your website — **what users actually see**.</li>
+                <li>Includes text, images, videos, buttons, links, etc.</li>
+            </ul>
+            
+            
+            <img src="structure3.png" alt="HTML Body Example" class="structure3">
+        </ol>
 
-</ol>
-<div>
-    <p>So,In short- 
-        <br>
+        <p>So, in short:</p>
         <table border="1" cellspacing="0">
             <tr>
                 <th>Section </th>
                 <th>Purpose</th>
             </tr>
             <tr>
-                <td>&lt;!DOCTYPE html></td>
-                <td>Defines HTML version</td>
+                <td data-label="Section">&lt;!DOCTYPE html></td>
+                <td data-label="Purpose">Defines HTML version</td>
             </tr>
             <tr>
-                <td>&lt;html></td>
-                <td>Root element</td>
+                <td data-label="Section">&lt;html></td>
+                <td data-label="Purpose">Root element</td>
             </tr>
             <tr>
-                <td>&lt;head></td>
-                <td>Metadata, styles, scripts</td>
+                <td data-label="Section">&lt;head></td>
+                <td data-label="Purpose">Metadata, styles, scripts</td>
             
             </tr>
             <tr>
-                <td>&lt;body></td>
-                <td>Visible content</td>
+                <td data-label="Section">&lt;body></td>
+                <td data-label="Purpose">Visible content</td>
             </tr>
         </table>
-    </p>
+    </div>
+    
+    <div class="sidebar-area"></div> 
 </div>
     
-</p>
 <footer>
-     <button type="button" class="btn btn-default"><a href="attributes.html" class="next-page">Next>></a></button>
-  <br>
-  <button type="button" class="btn btn-default"><a href="tags.html" class="previous">&lt;Previous</a></button>
+     <button type="button" class="btn-default"><a href="attributes.html" class="next-page">Next>></a></button>
+  <button type="button" class="btn-default"><a href="tags.html" class="previous">&lt;Previous</a></button>
 <br><br>
 <span class="goto">Go to:</span> <br>
 <div class="pagination">

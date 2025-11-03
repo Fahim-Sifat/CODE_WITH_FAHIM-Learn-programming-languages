@@ -1,120 +1,350 @@
-h1{
-    text-align: center;
+/*
+|--------------------------------------------------------------------------
+| UNIFIED LESSON STYLE (DARK MODE / RESPONSIVE)
+|--------------------------------------------------------------------------
+| This CSS file combines and refactors all necessary styles for a consistent, 
+| modern, and fully responsive design across all HTML lesson pages.
+*/
+
+/* --- Global Variables (Color Palette: Dracula-inspired Dark Mode) --- */
+:root {
+    --color-dark-bg: #1e1e2e;       /* Deep dark background */
+    --color-content-bg: #282a36;    /* Container/Card background */
+    --color-light-text: #f8f8f2;    /* Primary text color */
+    --color-accent-blue: #50fa7b;   /* Green accent (for highlights/links) */
+    --color-accent-red: #ff5555;    /* Red accent (for warnings/highlights) */
+    --color-hyperlink: #bd93f9;     /* Purple for active links/buttons */
+    --color-headsup: #ffb86c;       /* Orange for emphasis */
+}
+
+/* --- Base Body & Text Styles --- */
+body {
+    font-family: 'Consolas', 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-dark-bg);
+    color: var(--color-light-text);
+    line-height: 1.6;
+    padding: 20px;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle depth */
+}
+
+/* --- Header & Title Styles (Center Aligned) --- */
+.header-with-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* <<< CENTERING THE LOGO AND H1 */
+    background-color: #1a1a2e;
+    border-radius: 8px;
+    margin: 0 0 15px 0;
+    padding: 15px 0;
+}
+
+.header-logo {
+    height: 60px;
+    width: auto;
+    margin-right: 15px;
+    /* Using a shadow that matches the purple hyperlink color */
+    box-shadow: 0 0 10px rgba(189, 147, 249, 0.7); 
+    border-radius: 5px;
+}
+
+h1 {
     margin: 0;
-    padding: 0;
-    font-family: 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
-    background-color: black;
-    text-align: center;
-    text-shadow: 2px 2px 5px red, 5px 5px 25px blueviolet; 
-    
-    
+    font-family: 'Impact', 'Arial Narrow Bold', sans-serif;
+    color: var(--color-light-text);
+    /* Neon glow effect for the main title */
+    text-shadow: 0 0 10px var(--color-accent-blue), 0 0 20px var(--color-accent-red); 
+    letter-spacing: 3px;
+    font-size: 2.5rem;
 }
-h3{
-    text-align: center;
-    text-decoration: underline solid white;
-    text-shadow: 2px 2px 5px blue;
-    position: sticky;
-    top: 0;
+
+h3 {
+    text-align: center; /* <<< CENTERING THE SUBTITLE */
+    color: var(--color-hyperlink);
+    padding: 10px 0 20px 0;
+    font-size: 1.6rem;
+    margin-top: 0;
 }
-body{
-    font-family: 'Times New Roman', Times, serif,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,Georgia, 'Times New Roman', Times, serif,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,Verdana, Geneva, Tahoma, sans-serif,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: larger;
-    background-color: black;
-    color: antiquewhite;
-    
+
+/* --- Main Layout: Flexbox for Responsiveness --- */
+.main-content-wrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
-.first{
-    font-size: larger;
-    color: aqua;
+
+.content-area {
+    /* Main Content (70% on desktop) */
+    flex: 2; 
+    min-width: 300px;
+    padding: 25px;
+    background-color: var(--color-content-bg);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
-.grneral-form{
-    color: chocolate;
+
+.sidebar-area {
+    /* Sidebar (30% on desktop) */
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 25px;
+    /* Optional: give the sidebar a distinct background if needed, or leave it transparent */
 }
-.examples{
-    color: yellow;
+
+/* --- Typography & Specific Classes (Unified for all pages) --- */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
 }
-.example{
-    color: yellowgreen;
+
+.span1 { /* Main topic header text (e.g., "What is HTML?") - Red Accent */
+    font-size: 2.0rem;
+    color: var(--color-accent-red);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
 }
-.ol{
-    color: red;
-    text-shadow: none;
+
+.span2 { color: var(--color-accent-blue); } /* Blue/Green highlights */
+.span3 { color: var(--color-hyperlink); } /* Purple highlights */
+.span4 { color: var(--color-accent-blue); } /* Aqua highlights (same as span2) */
+.soyeah {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-light-text);
+    margin-top: 40px;
 }
-.more{
-    color: green;
-    text-shadow: none;
+
+/* Code Blocks */
+.code-block {
+    color: var(--color-accent-blue);
+    display: block;
+    white-space: pre;
+    font-family: 'Consolas', monospace;
+    background-color: #1a1a2e;
+    padding: 15px;
+    border-left: 5px solid var(--color-hyperlink);
+    overflow-x: auto;
+    margin: 15px 0;
+    border-radius: 4px;
+    font-size: 1rem;
 }
-.why{
-    color: violet;
+
+/* Syntax Highlighting for Tags Page */
+.opening { color: var(--color-accent-blue); font-weight: bold; }
+.closing { color: #ff79c6; font-weight: bold; } /* Pink */
+.content { color: var(--color-headsup); font-weight: bold; } /* Orange */
+
+/* Lists */
+ol, ul {
+    margin-left: 20px;
+    padding-left: 0;
 }
-.table{
-    border: 2px solid red;
-    color: green;
+li {
+    margin-bottom: 15px;
+}
+.olli { color: var(--color-accent-red); font-size: 1.2rem; font-weight: bold; }
+.ulli { color: var(--color-headsup); }
+.vs { color: var(--color-accent-blue); list-style-type: '🚀 '; }
+.np { color: var(--color-accent-red); list-style-type: '📝 '; }
+.headsup { 
+    color: var(--color-headsup); 
+    font-style: italic;
+    display: block;
+    padding: 10px;
+    border: 1px dashed var(--color-headsup);
+    border-radius: 5px;
+}
+
+/* --- Image Styles --- */
+img {
     max-width: 100%;
     height: auto;
+    border: 3px solid var(--color-hyperlink);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(189, 147, 249, 0.5);
+    transition: transform 0.3s ease-in-out;
+    display: block; 
+    margin: 20px auto; 
 }
-tr{
-    border: 2px solid red;
+img:hover {
+    transform: scale(1.03);
 }
-td{
-    border: 2px solid red;
+
+/* Editor Specific Images (for code-editor.html) */
+.img-editor {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid var(--color-accent-blue);
+    margin: 20px 0;
+}
+
+/* --- Table Styles --- */
+table {
+    border: 1px solid var(--color-hyperlink);
+    width: 100%;
     border-collapse: collapse;
-    max-height: 50px;
-    padding-right: 40px;
+    margin: 20px 0;
+    background-color: #1a1a2e;
+}
+th, td {
+    padding: 12px;
+    border: 1px solid var(--color-hyperlink);
+    text-align: left;
+    font-size: 1rem;
+}
+th {
+    background-color: var(--color-hyperlink);
+    color: var(--color-dark-bg);
+    font-weight: bold;
+}
+tr {
+    background-color: var(--color-content-bg);
+    color: var(--color-light-text);
+    transition: background-color 0.3s;
+}
+tr:hover {
+    background-color: #383a48;
 }
 
-.btn-default{
-    background-color: black;
-    color: white;
+/* --- Link & Button Styles --- */
+a {
+    color: var(--color-accent-blue);
     text-decoration: none;
+    transition: color 0.3s;
 }
-.next-page{
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
+a:hover {
+    color: var(--color-hyperlink);
 }
-.previuos{
-    color: white;
-    background-color: black;
-    font-size: 20px;
-    text-decoration: none;
-}
-.pagination{
-    font-size: 2.1rem;
-    text-decoration: none;
-    
 
-}
-.pagination-lg{
-    list-style-type: none;
-    
-    
-
-}
-.page-item{
+.btn-default {
+    background-color: var(--color-hyperlink);
+    border: none;
+    padding: 10px 20px;
+    margin: 15px 5px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
     display: inline-block;
-    gap: 20%;
-    padding: 5px;
-    flex-wrap: wrap;
-    max-width: 60%;
 }
-.page-link{
-    background-color: white;
-    color: black;
+
+.btn-default:hover {
+    background-color: #e6e6fa;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.next-page, .previous {
     text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--color-dark-bg);
+    font-weight: bold;
+    display: block;
+    padding: 0;
+}
+
+/* Pagination Styles */
+.goto {
+    font-size: 1.3rem;
+    margin-top: 40px;
+    display: block;
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-accent-blue);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.pagination-lg {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.page-link, .pageactive-link {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 1px solid var(--color-accent-blue);
+    background-color: var(--color-dark-bg);
+    color: var(--color-accent-blue);
+}
+
+.page-link:hover {
+   background-color: var(--color-accent-blue);
+   color: var(--color-dark-bg);
+}
+
+.pageactive-link {
+    background-color: var(--color-hyperlink);
+    color: var(--color-dark-bg);
+    border-color: var(--color-hyperlink);
+}
+
+/* --- Media Queries for FULL Responsiveness (Mobile First) --- */
+@media (max-width: 768px) {
+    /* Main layout stacks vertically */
+    .main-content-wrapper {
+        flex-direction: column;
+    }
+    .content-area, .sidebar-area {
+        width: 100%;
+        min-width: unset;
+        padding: 15px;
+    }
+
+    /* Header adjustments */
+    .header-logo {
+        height: 45px;
+        margin-right: 10px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Sidebar Image layout on mobile for code-editor */
+    .sidebar-area {
+        flex-direction: row; /* Puts images side-by-side */
+        justify-content: space-around;
+        padding-top: 0;
+    }
+    .img-editor {
+        max-width: 45%;
+        margin: 10px 0;
+    }
     
+    /* Table overflow (Makes tables vertically readable on small screens) */
+    table, thead, tbody, th, td, tr {
+		display: block;
+	}
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	tr { border: 1px solid var(--color-hyperlink); margin-bottom: 10px;}
+	td { 
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50% !important; 
+		text-align: right !important;
+	}
+	td:before {
+		content: attr(data-label);
+		position: absolute;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+        font-weight: bold;
+        color: var(--color-accent-red);
+	}
 }
-.page-link:hover{
-   background-color: red;
-   color: green;
-}
-.pageactive-link{
-    color: white;
-    background-color: green;
-}
-.goto{
-    font-size: larger;
-}
-
-
