@@ -133,6 +133,9 @@ form {
     color: var(--input-focus);
     text-decoration: underline;
 }
+.back{
+    color: #00cc99;
+}
 
 /* Back Link (Assuming 'Back' is the last p element in signup.html) */
 body > p:last-child a {
