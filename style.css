@@ -1,142 +1,209 @@
-body{
-    font-family: 'Times New Roman', Times, serif,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,Georgia, 'Times New Roman', Times, serif,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,Verdana, Geneva, Tahoma, sans-serif,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: black;
-    text-shadow: 2px 2px 5px blue;
+/* GLOBAL RESET & BASE STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-h1{
-    
-    text-align: center;
-    color: white;
-    font-size: 30px;
-    background-color: black;
-    margin-top: -4px;
-    font-family: 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
-    background-color: black;
-    text-align: center;
-    text-shadow: 2px 2px 5px red, 5px 5px 25px blueviolet; 
-}
-.humburger{
-    background-color: black;
-    position: relative;
-    padding: auto;
-}
-.humburger-navbar{
-    max-width: 50px;
-    max-height: 50px;
-    justify-content: center;
-    
 
+:root {
+    /* Define a high-contrast, modern color palette */
+    --bg-primary: #000000;      /* Pure Black background */
+    --accent-color: #00ffc8;    /* Bright Neon Green/Cyan */
+    --text-light: #e0e0e0;      /* Off-White for readability */
+    --card-bg: #1a1a1a;         /* Dark gray for card background */
+    --shadow-neon: 0 0 15px rgba(0, 255, 200, 0.4); /* Neon glow shadow */
 }
-.dropdown-content{
+
+body {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif; /* A sharp, modern font */
+    background-color: var(--bg-primary);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* HEADER - BOLD AND MINIMAL */
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 30px 0;
+    color: var(--accent-color);
+    background-color: var(--bg-primary);
+    text-align: center;
+    letter-spacing: 2px; /* Add some flair to the title */
+    text-shadow: 0 0 5px rgba(0, 255, 200, 0.7); 
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* HAMBURGER MENU */
+.humburger {
+    background-color: var(--bg-primary);
+    position: relative;
+    padding: 15px 25px;
+    z-index: 10;
+}
+
+.humburger-navbar {
+    max-width: 35px;
+    max-height: 35px;
+    cursor: pointer;
+    filter: invert(1); /* Keep the icon visible */
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
-    min-width: 160px;
+    top: 100%; 
+    left: 0;
+    background-color: var(--card-bg);
+    min-width: 200px;
+    box-shadow: var(--shadow-neon);
+    padding: 0;
+    border: 1px solid var(--accent-color);
 }
-.humburger:hover .dropdown-content{
-    background-color: black;
-    padding: 0px 50px;
+
+.humburger:hover .dropdown-content {
     display: block;
-    z-index: 1;
-
 }
 
-.navbar{
-    background-color: gray;
-    
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-    li{
-    background-color: black;
+
+.dropdown-content li {
     list-style-type: none;
-    display: block;
-    margin: 10px;
-    
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
-    .home{
-        text-decoration: none;
-        color: aqua;
-        font-size: 20px;
-        text-align: left;
-        
-        
-        
-        
-       }
-    
-        
 
-.div1-html{
-    width: 100%;
-    height: 350px;
-    background-color: white;
-    margin-top: -17px;
- }
- .p1-html{
-    color: blue;
-    text-align: center;
-    font-size: 30px;
-    background-color: white;
- }
- .img-html{
-    
-    float: left;
-    background-color: white;
- }
- .html1{
- text-decoration: none;
- color: blueviolet;
- font-size: 50px;
- background-color: white;
- margin-top: -20px;
- text-align: right;
- 
-
- }
-
-
- .div2-css{
-    width: 100%;
-    height: 350px;
-    background-color: white;
- }
- .p2-css{
-    color: red;
-    text-align: center;
-    font-size: 30px;
-
- }
- .img-css{
-    
-    float: left;
-    height: 230px;
-    width: 230px;
-    
-    
-
- }
- .css1{
-text-decoration: none;
- color: red;
- font-size: 50px;
- background-color: white;
- margin-top: -20px;
- text-align: right;
- 
- }
-
- .footer{
-     font-family: 'Times New Roman', Times, serif,Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.5em;
-    color: white;
-    text-shadow: 2.5em 2.5em 5px,red;
-    font-style: italic;
-    text-align: center;
-    background-color: blueviolet;
-    opacity: 0.8;
-    width: 100%;
- }
- .termsconditions,.privacypolicy{
-    font-size: 1rem;
+.home {
     text-decoration: none;
-    color: white;
- }
+    color: var(--text-light);
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.home:hover {
+    background-color: rgba(0, 255, 200, 0.1);
+    color: var(--accent-color);
+}
+
+/* COURSE CARDS - FOCUSED AND PADDED */
+/* Assuming the <main> tag is wrapped around the course divs as suggested previously */
+main {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    flex-wrap: wrap; 
+}
+
+.div1-html, .div2-css {
+    width: 300px; 
+    height: 450px; /* Taller card for more focus */
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div1-html:hover, .div2-css:hover {
+    transform: translateY(-8px); /* Aggressive lift on hover */
+    box-shadow: var(--shadow-neon); /* Glow effect on hover */
+    border-color: var(--accent-color);
+}
+
+.p1-html, .p2-css {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding: 0;
+    color: var(--accent-color);
+}
+
+
+.img-html, .img-css {
+    width: 120px; /* Explicitly set the width */
+    height: 120px; /* Explicitly set the height to match the width */
+    object-fit: contain; /* Ensures the image scales down to fit the 120x120 container without being stretched */
+    margin: 15px 0 30px 0;
+    /* Subtle filter instead of a neon glow on the image */
+    filter: grayscale(10%); 
+}   
+
+
+.learn-html, .learn-css {
+    margin-top: auto; 
+}
+
+.html1, .css1 {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 50px; /* Pill shape for modern look */
+    color: var(--bg-primary); /* Dark text on bright button */
+    background-color: var(--accent-color);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.html1:hover, .css1:hover {
+    background-color: #33ffdb; 
+    transform: scale(1.05);
+}
+
+/* FOOTER - SIMPLE AND SUBDUED */
+footer {
+    width: 100%;
+    margin-top: 60px;
+}
+
+.footer {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    text-align: center;
+    background-color: var(--bg-primary);
+    padding: 25px 10px;
+    border-top: 1px solid var(--card-bg);
+    line-height: 1.8;
+}
+
+.termsconditions, .privacypolicy {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--accent-color); 
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+
+.termsconditions:hover, .privacypolicy:hover {
+    color: var(--text-light);
+}
+
+/* MEDIA QUERY FOR SMALL SCREENS */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+        padding: 20px 0;
+    }
+    
+    .div1-html, .div2-css {
+        width: 100%;
+        margin: 0 auto;
+        height: auto; /* Allow height to adjust on mobile */
+    }
+    
+    main {
+        padding: 30px 15px;
+    }
+}

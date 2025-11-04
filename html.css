@@ -1,78 +1,124 @@
-*{
+/* GLOBAL RESET & BOX-MODEL */
+* {
     box-sizing: border-box;
     margin: 0;
-    padding: 0px 5px 0px 12px;
-}
-ol>li{
-    color: blueviolet;
-}
-h1{
-    margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
-    background-color: black;
+}
+
+/* BASE STYLES */
+:root {
+    --bg-dark: #121212;            /* Very dark background for contrast */
+    --accent-vibrant: #00bcd4;     /* Cyan/Aqua for main highlight */
+    --accent-secondary: #ff4081;   /* Pink for the main section title */
+    --text-light: #f5f5f5;
+    --glass-bg: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    --border-glass: rgba(255, 255, 255, 0.2);
+    --shadow-soft: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Deep shadow */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* A popular modern font */
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    display: flex; 
+    /* To fully appreciate glassmorphism, the main body needs an interesting background texture or gradient,
+       but we will keep it simple dark for high contrast here. */
+}
+
+/* HEADER STYLES (Floating over the glass) */
+h1 {
+    font-size: 2rem;
+    padding: 25px 20px;
+    margin: 0;
+    font-weight: 800;
+    color: var(--accent-vibrant);
+    background: linear-gradient(135deg, var(--bg-dark), #2c2c2c); /* Dark gradient for depth */
     text-align: center;
-    text-shadow: 2px 2px 5px red, 5px 5px 25px blueviolet; 
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); 
+    border-bottom: 2px solid var(--accent-vibrant);
+}
 
-    
-    
+/* NAVIGATION BAR - GLASSMOPHISM EFFECT */
+.navbar {
+    width: 320px; /* Slightly wider for a more impressive effect */
+    min-height: 100vh;
+    background: var(--glass-bg); 
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(10px); /* The key Glassmorphism feature */
+    -webkit-backdrop-filter: blur(10px); 
+    border-right: 1px solid var(--border-glass);
+    overflow-y: auto;
+    position: sticky;
+    top: 0;
 }
-body{
-    color: blueviolet;
-background-color: black;
-font-size: 25px;
-margin: 0;
-padding: 0;
-text-shadow: 2px 2px 5px blue;
 
+.ul1 {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
 }
-.navbar{
-    width: 300px;
-    height: 1000000000000000px;
-    background-color: aqua;
-    overflow: auto;
-    float: left;
-    
-    
+
+/* LIST ITEM STYLES */
+/* HTML BASICS main section title */
+ol > li {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent-secondary); /* Eye-catching pink */
+    padding: 20px 25px 10px 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    list-style: none;
 }
-.ul1{
-    overflow: auto;
-    height: auto;
-    overflow-x: hidden;
-    
+
+/* Sub-list items */
+ul li {
+    padding: 0; 
+    list-style: none;
 }
-li{
-    color: chocolate;
-}
-a{
-color: red;
-text-decoration: none;
-}
-.tande:hover li{
+
+/* LINKS */
+a {
+    color: var(--text-light);
+    text-decoration: none;
     display: block;
-   
-}
-.sublists{
-color: chocolate;
-}
-.btn-default{
-    background-color: black;
-    color: white;
-    text-decoration: none;
+    padding: 12px 25px 12px 40px; /* Increased padding */
+    font-size: 1.05rem;
+    border-left: 5px solid transparent; 
+    transition: background-color 0.3s ease, color 0.3s ease, border-left 0.3s ease; /* Smooth transitions */
 }
 
-
-.next-page{
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-}
-.previuos{
-    color: white;
-    background-color: black;
-    font-size: 20px;
-    text-decoration: none;
+a:hover, a:focus {
+    color: var(--accent-vibrant);
+    background-color: rgba(0, 188, 212, 0.15); /* Light aqua overlay */
+    border-left: 5px solid var(--accent-vibrant); /* Strong highlight bar */
 }
 
+/* BUTTON STYLES (Previous Button) */
+.btn-default {
+    margin: 40px 20px;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, var(--accent-vibrant) 0%, #0097a7 100%); /* Gradient background */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+    transition: all 0.3s ease;
+}
 
+.btn-default:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.6);
+}
+
+.previous {
+    color: var(--bg-dark) !important; /* Dark text for contrast on bright button */
+    font-weight: 700;
+    display: inline; 
+    padding: 0;
+}
+
+/* Clean up extra break tags */
+.ul1 br {
+    display: none;
+}
