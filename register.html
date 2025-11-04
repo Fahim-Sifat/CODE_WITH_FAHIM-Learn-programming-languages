@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <link rel="canonical" href="https://code-with-fahim.wuaze.com/" />
-    <meta name="google-adsense-account" content="ca-pub-3930264175657320">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <h1>CODE WITH FAHIM</h1>
     <link rel="stylesheet" href="register.css"/>
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
- 
-  gtag('config', 'G-MZ1JHY721H');
-</script>
-
-    <!--Monetag-->
- <script src="https://3nbf4.com/act/files/tag.min.js?z=10118148" data-cfasync="false" async></script>
-
 </head>
 <body>
+    <h1>CODE WITH FAHIM</h1>
+
     <div class="div1">
-    <h3>REGISTER</h3><br><br>
-   <form action="register-cwf.php" method="post">
-    <label for="FIRST NAME">
-        FIRST NAME : <input type="text" placeholder="Enter first name" class="first-name" name="first_name"><br></label> <br>
-        <label for="LAST NAME">
-        LAST NAME : <input type="text" placeholder="Enter last name" class="last_name" name="last-name"></label><br> <br>
-        <label for="email">
-        E-MAIL: <input type="email" class="email" name="email" placeholder="Enter valid e-mail address"></label><br> <br>
-        <label for="password">
-        PASSWORD : <input type="password" class="password" name="password" placeholder="At least 8 characters"></label><br> <br>
-        <label for="cpassword">
-        CONFIRM PASSWORD : <input type="password" class="cpassword" name="cpassword" placeholder="At least 8 characters"></label><br> <br>
-        <label for="gender">
-            Gender: <input type="radio" class="gender" name="gender">
-            Male
-            <input type="radio">Female
-            <input type="radio">Other
-        </label> <br><br>
-        <label for="nationality"></label>
-        NATIONALITY : <input type="text" class="nationality" name="nationality" placeholder="Country-name"><br> <br>
+        <h3>REGISTER</h3>
         
+        <form action="register-cwf.php" method="post">
+            
+            <label>
+                FIRST NAME:
+                <input type="text" placeholder="Enter first name" class="first-name" name="first_name">
+            </label>
+            
+            <label>
+                LAST NAME:
+                <input type="text" placeholder="Enter last name" class="last_name" name="last-name">
+            </label>
+            
+            <label>
+                E-MAIL:
+                <input type="email" class="email" name="email" placeholder="Enter valid e-mail address">
+            </label>
+            
+            <label>
+                PASSWORD:
+                <input type="password" class="password" name="password" placeholder="At least 8 characters">
+            </label>
+            
+            <label>
+                CONFIRM PASSWORD:
+                <input type="password" class="cpassword" name="cpassword" placeholder="At least 8 characters">
+            </label>
+            
+            <label>
+                GENDER:
+                <span class="gender-group">
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                    <input type="radio" name="gender" value="other"> Other
+                </span>
+            </label>
+            
+            <label>
+                NATIONALITY:
+                <input type="text" class="nationality" name="nationality" placeholder="Country-name">
+            </label>
+            
+            <input type="submit" value="Register" class="submit" name="register_submit">
+        </form>
+        
+        <p class="p-login">Already have an account? <a href="signup.html" class="login">Login</a></p>
+    </div>
 
-        <br><br><br><br>
-        <input type="submit" class="submit" name="submit">
-        <br><br>
-        <a href="signup.html" class="notnow">Not now</a>
-    </ul>
-</form>
-</div>
-
-    
-    
+    <a href="html.html">Back</a>
 </body>
 </html>

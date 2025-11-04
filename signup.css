@@ -1,68 +1,174 @@
-body{
-    font-family: 'Times New Roman', Times, serif,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,Georgia, 'Times New Roman', Times, serif,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif,Verdana, Geneva, Tahoma, sans-serif,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-image: url(signup.png);
-    background-size: cover;
-    background-repeat: none;
-    margin-left: 20px;
-    margin-bottom: 5px;
-    box-shadow: 20px;
-    padding-bottom: 45px;
-    text-shadow: 5px 5px 10px blue,6px 6px 7px red,7px 8px 9px black;
+/*
+|--------------------------------------------------------------------------
+| SIGN UP/SIGN IN STYLE (DARK MODE / PROFESSIONAL)
+|--------------------------------------------------------------------------
+| Refactored for a clean, professional dark mode with animations and transitions.
+*/
+
+/* --- Global Variables (Professional Dark Palette) --- */
+:root {
+    --bg-dark: #121212;         /* Deepest dark background */
+    --card-bg: #1e1e1e;         /* Form/Card background */
+    --accent-color: #00cc99;    /* Emerald Green (Primary Action) */
+    --text-light: #f0f0f0;      /* Near-white text */
+    --input-focus: #33ffc2;     /* Lighter green for hover/focus */
+    --shadow-color: rgba(0, 0, 0, 0.7); /* Deep shadow */
 }
-h1{
-    color: antiquewhite;
-    font-size: 40px;
-    text-align: center;
-    text-align: center;
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif, Arial, Helvetica, sans-serif, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Keeping the original background image but ensuring it covers the view */
+    background-image: url(signup.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    /* Cleaned up text shadow */
+    text-shadow: 0 0 5px rgba(0, 204, 153, 0.5); 
+    margin: 20px 0 10px 0;
+}
+
+.p1 {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+form {
+    background-color: var(--card-bg);
+    /* Subtle transparency for a modern look */
+    background-color: rgba(30, 30, 30, 0.95); 
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--accent-color); /* Accent border */
+    box-shadow: 0 4px 20px var(--shadow-color);
+    width: 90%;
+    max-width: 400px;
+    transition: all 0.5s ease;
+    animation: fadeIn 1s ease-out; /* Entry Animation */
+}
+
+/* Input Labels */
+.p2, form > p { 
+    color: var(--text-light);
+    font-size: 1.1rem;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+.email, .password {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: var(--text-light);
+    font-size: 1rem;
+    /* Smooth Transition for focus effect */
+    transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
+    box-sizing: border-box;
+    /* Removing the scroll bar on email input */
+    overflow: hidden; 
+}
+
+.email:focus, .password:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 8px var(--input-focus);
+    background-color: #2a2a2a;
+    outline: none;
+}
+
+/* Submit Button */
+.login_submit {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    color: var(--bg-dark); 
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    /* Smooth Transition for hover effect */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.login_submit:hover {
+    background-color: var(--input-focus);
+    transform: translateY(-2px); /* Slight lift animation */
+    box-shadow: 0 5px 15px rgba(0, 204, 153, 0.5);
+}
+
+/* Register Link */
+.p-register {
     text-align: center;
-    text-shadow: 2px 2px 5px red, 5px 5px 25px blueviolet; 
-}
-p{
-    color:antiquewhite;
-    text-align: center;
-    font-size: 25px;
-      
+    margin-top: 20px;
 }
 
-.p2{
-    color: antiquewhite;
-}
-.email{
-    color: white;
-    background-color: rgba(12, 12, 12,0.5);
-    font-size: 20px;
-    overflow: scroll;
-    
-
-}
-.password{
-    color: white;
-    background-color: rgba(12, 12, 12,0.5);
-    font-size: 20px;
-
-    
-}
-.login_submit{
-    color: antiquewhite;
-    background-color: green;
-    font-size: 20px;
-    padding: 0px 70px;
-    border-radius: 20px;
-}
-.btn-info:hover{
-    color: black;
-    background-color: red;
-    cursor:pointer;
-    transition-delay: 0.5s;
-}
-.register{
+.register {
+    color: var(--accent-color);
     text-decoration: none;
-    color: black
+    font-weight: bold;
+    /* Smooth Transition for hover effect */
+    transition: color 0.3s;
 }
-.p-register{
-    font-size: 19px;
+
+.register:hover {
+    color: var(--input-focus);
+    text-decoration: underline;
+}
+
+/* Back Link (Assuming 'Back' is the last p element in signup.html) */
+body > p:last-child a {
+    color: var(--accent-color);
+    font-size: 1.0rem;
+    text-decoration: none;
+    display: block; /* Make it take its own line */
+    text-align: center;
+    margin-top: 20px;
+    transition: color 0.3s;
+}
+
+body > p:last-child a:hover {
+    color: var(--input-focus);
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .p1 {
+        font-size: 1.3rem;
+    }
+    form {
+        padding: 30px 20px;
+    }
+    body {
+        /* Remove the background image on small screens for better performance and readability */
+        background-image: none;
+        background-color: #121212;
+    }
 }

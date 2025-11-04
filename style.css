@@ -101,7 +101,7 @@ main {
     flex-wrap: wrap; 
 }
 
-.div1-html, .div2-css {
+.div1-html, .div2-css,.div3-js {
     width: 300px; 
     height: 450px; /* Taller card for more focus */
     background-color: var(--card-bg);
@@ -116,13 +116,13 @@ main {
     align-items: center;
 }
 
-.div1-html:hover, .div2-css:hover {
+.div1-html:hover, .div2-css:hover,.div3-js:hover {
     transform: translateY(-8px); /* Aggressive lift on hover */
     box-shadow: var(--shadow-neon); /* Glow effect on hover */
     border-color: var(--accent-color);
 }
 
-.p1-html, .p2-css {
+.p1-html, .p2-css,.p3-js {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 20px;
@@ -131,7 +131,7 @@ main {
 }
 
 
-.img-html, .img-css {
+.img-html, .img-css, .img-js {
     width: 120px; /* Explicitly set the width */
     height: 120px; /* Explicitly set the height to match the width */
     object-fit: contain; /* Ensures the image scales down to fit the 120x120 container without being stretched */
@@ -141,11 +141,11 @@ main {
 }   
 
 
-.learn-html, .learn-css {
+.learn-html, .learn-css, .learn-js {
     margin-top: auto; 
 }
 
-.html1, .css1 {
+.html1, .css1 ,.js3{
     display: inline-block;
     text-decoration: none;
     font-size: 1.2rem;
@@ -157,7 +157,7 @@ main {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.html1:hover, .css1:hover {
+.html1:hover, .css1:hover, .js3:hover {
     background-color: #33ffdb; 
     transform: scale(1.05);
 }
@@ -197,7 +197,7 @@ footer {
         padding: 20px 0;
     }
     
-    .div1-html, .div2-css {
+    .div1-html, .div2-css, .div3-js {
         width: 100%;
         margin: 0 auto;
         height: auto; /* Allow height to adjust on mobile */
