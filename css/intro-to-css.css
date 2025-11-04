@@ -1,0 +1,218 @@
+/* ROOT VARIABLES (Good practice for theming) */
+:root {
+    --color-background-dark: #1e1e1e;
+    --color-surface-dark: #2d2d30;
+    --color-text-light: #f0f0f0;
+    --color-text-subtle: #b0b0b0;
+    --color-highlight: #1e90ff; /* Royal Blue */
+    --color-border-subtle: #444;
+}
+
+/* --- GLOBAL AND BODY STYLES --- */
+body {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Ensures the footer is at the bottom */
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+    max-width: 1200px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* --- HEADER STYLES --- */
+header {
+    background-color: var(--color-surface-dark);
+    color: var(--color-text-light);
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid var(--color-highlight);
+}
+
+header h1 {
+    color: var(--color-highlight);
+    margin: 5px 0;
+    font-size: 2.5em;
+}
+
+header h3 {
+    color: var(--color-text-subtle);
+    margin: 5px 0 0;
+    font-weight: normal;
+}
+
+header img {
+    height: 50px; /* Adjust size as needed */
+    margin-bottom: 10px;
+}
+
+/* --- MAIN CONTENT STYLES --- */
+.div1, .div3 {
+    background-color: var(--color-surface-dark);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-left: 5px solid var(--color-highlight);
+}
+
+.div1 br + br, .div3 br + br {
+    margin-top: 10px;
+    content: "";
+    display: block;
+}
+
+/* Code Output Section Styling */
+.divoutput {
+    background-color: #0d1117; /* GitHub Dark Mode for code blocks */
+    color: #c9d1d9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    white-space: pre-wrap;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.divoutput h1 {
+    /* Style for the H1 *within* the output section to demonstrate the style */
+    color: royalblue; /* Matching the example style from the HTML file */
+    text-align: center;
+    background-color: transparent;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.div3 {
+    border-left: 5px solid #28a745; /* A different highlight color for the 'What CSS Does' section */
+}
+
+.div3 i {
+    color: #ffc107; /* Yellow for the lightbulb icon */
+    font-weight: bold;
+}
+
+/* --- FOOTER DARK THEME STYLES (From previous turn) --- */
+footer {
+    background-color: #121212; /* Deep dark gray/almost black background */
+    color: var(--color-text-light);
+    padding: 40px 20px;
+    border-top: 5px solid var(--color-highlight);
+    font-family: Arial, sans-serif;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+/* Footer Navigation Section */
+.footer-nav {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.footer-nav h3 {
+    color: var(--color-highlight);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-bottom: 2px solid var(--color-highlight);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-nav nav ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-nav nav ol li {
+    flex: 1 1 200px;
+    margin-bottom: 5px;
+}
+
+/* Style for the links within the list */
+.footer-nav nav a {
+    color: var(--color-text-subtle);
+    text-decoration: none;
+    font-size: 0.95em;
+    display: block;
+    padding: 5px 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-nav nav a:hover {
+    color: #ffffff; /* White on hover */
+    text-decoration: underline;
+}
+
+/* Footer Bottom Section (Copyright and Links) */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 15px;
+}
+
+.copyright {
+    margin: 0;
+    font-size: 0.9em;
+    color: #999999; /* Subtle gray for copyright text */
+}
+
+.footer-links a {
+    color: var(--color-text-subtle);
+    text-decoration: none;
+    font-size: 0.9em;
+    margin-left: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: var(--color-highlight);
+    text-decoration: underline;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .copyright {
+        margin-bottom: 10px;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-links a {
+        margin: 5px 0;
+    }
+
+    .footer-nav nav ol {
+        flex-direction: column;
+    }
+    
+    .footer-nav nav ol li {
+      flex-basis: auto;
+    }
+}
