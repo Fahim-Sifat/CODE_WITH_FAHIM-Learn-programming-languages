@@ -1,218 +1,223 @@
-/* ROOT VARIABLES (Good practice for theming) */
+/*
+ * Dark Theme CSS for 'intro-to-css.html'
+ * Black background, light/vibrant text colors, and modern styling.
+ */
+
+/* === General Reset & Body Styles === */
 :root {
-    --color-background-dark: #1e1e1e;
-    --color-surface-dark: #2d2d30;
-    --color-text-light: #f0f0f0;
-    --color-text-subtle: #b0b0b0;
-    --color-highlight: #1e90ff; /* Royal Blue */
-    --color-border-subtle: #444;
+    /* Define a modern, clean font stack */
+    --font-family-primary: 'Helvetica Neue', Arial, sans-serif;
+    /* Aesthetic Dark Palette */
+    --color-background-dark: #121212; /* Very dark gray, better than pure black for eyes */
+    --color-text-light: #E0E0E0;      /* Soft white for primary text */
+    --color-primary-accent: #00ADB5;  /* Cyan/Teal for highlights (amazing color) */
+    --color-secondary-accent: #FF6B6B;/* Soft Red for buttons/warnings */
+    --color-code-background: #1E1E1E; /* Darker background for code blocks */
+    --color-border: #333333;          /* Subtle border color */
 }
 
-/* --- GLOBAL AND BODY STYLES --- */
 body {
     background-color: var(--color-background-dark);
     color: var(--color-text-light);
+    font-family: var(--font-family-primary);
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    font-family: Arial, sans-serif;
-    min-height: 100vh; /* Ensures the footer is at the bottom */
-    display: flex;
-    flex-direction: column;
+    line-height: 1.6; /* Improved readability */
 }
 
-main {
-    flex-grow: 1;
-    max-width: 1200px;
-    width: 90%;
-    margin: 20px auto;
-    padding: 20px;
+/* Apply box-sizing for easier layout calculations */
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
-/* --- HEADER STYLES --- */
+/* === Header Styles === */
 header {
-    background-color: var(--color-surface-dark);
-    color: var(--color-text-light);
-    padding: 20px 0;
+    background-color: #1F1F1F; /* Slightly lighter than body background */
+    padding: 20px 40px;
     text-align: center;
-    border-bottom: 2px solid var(--color-highlight);
-}
-
-header h1 {
-    color: var(--color-highlight);
-    margin: 5px 0;
-    font-size: 2.5em;
-}
-
-header h3 {
-    color: var(--color-text-subtle);
-    margin: 5px 0 0;
-    font-weight: normal;
+    border-bottom: 2px solid var(--color-primary-accent);
 }
 
 header img {
-    height: 50px; /* Adjust size as needed */
+    width: 60px;
+    height: 60px;
+    /* Optional: Add a subtle glow/border to the logo */
+    border-radius: 50%;
     margin-bottom: 10px;
 }
 
-/* --- MAIN CONTENT STYLES --- */
+header h1 {
+    color: var(--color-primary-accent);
+    font-size: 2.5em;
+    margin: 5px 0;
+    letter-spacing: 2px;
+}
+
+header h3 {
+    color: var(--color-text-light);
+    font-size: 1.2em;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* === Main Content Styles === */
+main {
+    padding: 20px 40px;
+    max-width: 900px; /* Center content and make it readable */
+    margin: 20px auto;
+    background-color: #1A1A1A; /* Slightly distinguished from the body */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
 .div1, .div3 {
-    background-color: var(--color-surface-dark);
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-left: 5px solid var(--color-highlight);
+    font-size: 1.1em;
+    margin-bottom: 30px;
 }
 
-.div1 br + br, .div3 br + br {
-    margin-top: 10px;
-    content: "";
-    display: block;
-}
-
-/* Code Output Section Styling */
-.divoutput {
-    background-color: #0d1117; /* GitHub Dark Mode for code blocks */
-    color: #c9d1d9;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    border: 1px solid #30363d;
-    white-space: pre-wrap;
-    font-family: 'Consolas', 'Courier New', monospace;
-    font-size: 0.9em;
-}
-
-.divoutput h1 {
-    /* Style for the H1 *within* the output section to demonstrate the style */
-    color: royalblue; /* Matching the example style from the HTML file */
-    text-align: center;
-    background-color: transparent;
-    padding: 0;
-    margin: 10px 0;
-}
-
+/* Highlight for the "What CSS Really Does" section */
 .div3 {
-    border-left: 5px solid #28a745; /* A different highlight color for the 'What CSS Does' section */
+    border-left: 5px solid var(--color-secondary-accent);
+    padding-left: 15px;
+    background-color: #252525;
+    padding: 15px;
+    border-radius: 4px;
 }
 
-.div3 i {
-    color: #ffc107; /* Yellow for the lightbulb icon */
+/* Emphasis on the lightbulb and key points */
+.div3 > br:nth-of-type(1) + br + br + br + br + br + br + br { /* Targeting the key points starting with 'Colors' */
+    color: var(--color-primary-accent);
     font-weight: bold;
 }
 
-/* --- FOOTER DARK THEME STYLES (From previous turn) --- */
-footer {
-    background-color: #121212; /* Deep dark gray/almost black background */
-    color: var(--color-text-light);
-    padding: 40px 20px;
-    border-top: 5px solid var(--color-highlight);
-    font-family: Arial, sans-serif;
-    margin-top: auto; /* Pushes the footer to the bottom */
+/* Output/Example Code Block Styling */
+.divoutput {
+    background-color: var(--color-code-background);
+    border: 1px solid var(--color-border);
+    padding: 20px;
+    border-radius: 5px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.9em;
+    white-space: pre-wrap; /* Preserve formatting but wrap long lines */
+    overflow-x: auto;
+    color: #4EC9B0; /* Light green/teal for HTML tags in the code block */
 }
 
-/* Footer Navigation Section */
+.divoutput > br:first-child + br + br { /* Styling the "Output:" label */
+    color: var(--color-text-light);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+/* Internal code within the output block */
+.divoutput body, .divoutput h1 {
+    color: royalblue; /* Magenta for CSS properties */
+}
+.divoutput h1:before, .divoutput h1:after {
+    content: ''; /* Prevent the example HTML tags from showing the color */
+}
+
+/* === Footer Styles === */
+footer {
+    background-color: #1F1F1F;
+    padding: 30px 40px;
+    border-top: 2px solid var(--color-border);
+    text-align: center;
+}
+
 .footer-nav {
-    max-width: 1200px;
-    margin: 0 auto 30px;
+    margin-bottom: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px solid var(--color-border-subtle);
+    border-bottom: 1px dashed var(--color-border);
 }
 
 .footer-nav h3 {
-    color: var(--color-highlight);
-    margin-bottom: 15px;
-    font-size: 1.5em;
-    border-bottom: 2px solid var(--color-highlight);
-    display: inline-block;
-    padding-bottom: 5px;
+    color: var(--color-primary-accent);
+    margin: 20px 0 10px 0;
 }
 
-.footer-nav nav ol {
+.footer-nav button {
+    text-decoration: none;
+    background-color: var(--color-primary-accent);
+    color: var(--color-background-dark);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+a{
+    text-decoration: none;
+}
+
+.footer-nav button:hover {
+    background-color: #3CD0D6;
+    transform: translateY(-2px);
+}
+
+/* List of Topics */
+footer nav ol {
     list-style: none;
     padding: 0;
-    margin: 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
 }
 
-.footer-nav nav ol li {
-    flex: 1 1 200px;
-    margin-bottom: 5px;
+footer nav li {
+    background-color: #252525;
+    border-radius: 4px;
+    padding: 5px 10px;
 }
 
-/* Style for the links within the list */
-.footer-nav nav a {
-    color: var(--color-text-subtle);
+footer nav a {
+    color: var(--color-text-light);
     text-decoration: none;
-    font-size: 0.95em;
-    display: block;
-    padding: 5px 0;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s;
 }
 
-.footer-nav nav a:hover {
-    color: #ffffff; /* White on hover */
-    text-decoration: underline;
+footer nav a:hover {
+    text-decoration: none;
+    list-style: none;
+    color: var(--color-primary-accent);
+    
 }
 
-/* Footer Bottom Section (Copyright and Links) */
+/* Bottom Footer Links */
 .footer-bottom {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 
 .copyright {
-    margin: 0;
+    color: #777; /* Subtler color for copyright */
     font-size: 0.9em;
-    color: #999999; /* Subtle gray for copyright text */
 }
 
 .footer-links a {
-    color: var(--color-text-subtle);
+    color: #999;
     text-decoration: none;
+    margin-left: 15px;
     font-size: 0.9em;
-    margin-left: 20px;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s;
 }
 
 .footer-links a:hover {
-    color: var(--color-highlight);
-    text-decoration: underline;
+    color: var(--color-secondary-accent);
 }
 
-/* Responsive adjustment for small screens */
-@media (max-width: 768px) {
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .copyright {
-        margin-bottom: 10px;
-    }
-
-    .footer-links {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .footer-links a {
-        margin: 5px 0;
-    }
-
-    .footer-nav nav ol {
-        flex-direction: column;
-    }
-    
-    .footer-nav nav ol li {
-      flex-basis: auto;
-    }
+/* Style for the inline HTML code examples in .div1 */
+.div1 code {
+    color: #4EC9B0; /* Code-like color */
+    background-color: #1E1E1E;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'Consolas', 'Courier New', monospace;
 }
