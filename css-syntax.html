@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Syntax</title>
+    <link rel="stylesheet" href="css-syntax.css"/> 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MZ1JHY721H');
+    </script>
+
+
+</head>
+<body>
+    
+   <header> 
+ <img src="header-logo.png" alt="Header Logo">
+        <h1>CODE WITH FAHIM</h1>
+        <h3>CSS Syntax</h3>
+    </header>
+    <div class="div1">
+       <span class="large"> 🎨 Basic CSS Syntax: </span><br><br><br>
+A CSS rule set consists of two main parts: a selector and a declaration block. <br><br>
+<ul>
+    <li>
+<span class="highlight"> Selector:</span> This points to the HTML element you want to style (e.g., p for paragraphs, h1 for main headings).</li> 
+<li>
+<span class="highlight"> Declaration Block:</span> This contains one or more declarations, separated by semicolons. Each declaration includes a property and a value. 
+</li></ul> <br><br><br>
+The structure: <br><br>
+<div class="highlightbg">
+selector { <br>
+  property: value; <br>
+  property: value; <br>
+} </div><br><br><br>
+Example: <br><br>
+<div class="highlightbg">
+body{ <br>
+    color: blue; <br>
+    background- color: red; <br>
+} </div><br><br><br>
+Here- <br><br>
+<div class="here">
+body=> Selector <br>
+color,background-color=>property <br>
+blue,red=>value </div><br><br><br><br>
+📝 Key Components and Terminology: <br><br>
+<table>
+    <tr>
+        <th>Components</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td>Selector</td>
+        <td>Targets the HTML element to be styled.</td>
+        <td>p(for all paragraph)</td>
+    </tr>
+    <tr>
+        <td>Declaration</td>
+        <td>A single style instruction (a property and a value).</td>
+        <td>color: blue;</td>
+    </tr>
+    <tr>
+        <td>Property</td>
+        <td>The specific feature you want to change.</td>
+        <td>color,margin,padding</td>
+    </tr>
+    <tr>
+        <td>Value</td>
+        <td>The setting for the property.</td>
+        <td>blue,15px,30px</td>
+    </tr>
+    <tr>
+        <td>Colon</td>
+        <td>Separates the property from its value.</td>
+        <td>font-size: 16px</td>
+    </tr>
+    <tr>
+        <td>Semicolon</td>
+        <td>Separates different declarations.</td>
+        <td>color: blue; <br>
+             font-size: 16px;</td>
+    </tr>
+    <tr>
+        <td>Curly braces{}</td>
+        <td>Enclose the declaration block.</td>
+        <td>p{ <br>
+        color: blue; <br>
+        } <br>
+    </td>
+    </tr>
+</table> <br><br><br>
+<span class="large">
+🌟 The Three Types of CSS:</span> <br><br>
+<ol>
+    <li>
+       <span class="topic"> External CSS (The Standard Practice):</span> <br><br>
+        <ul>
+            <li>
+        This is the most professional and common method. It keeps your HTML (content/structure) completely separate from your CSS (presentation/style).</li></ul> <br><br>
+        HTML Syntax: <br><br>
+        <div class="highlightbg">
+        &lt;head> <br>
+  &lt;link rel="stylesheet" href="styles.css"> <br>
+  &lt;h1>Welcome to my website&lt;/h1> <br>
+&lt;/head></div> <br><br>
+CSS Syntax:(in a separate file, [styles.css]) <br><br>
+<div class="highlightbg">
+body { <br>
+  font-family: Arial, sans-serif; <br>
+} <br>
+<br>
+h1 { <br>
+  color: darkblue; <br>
+} </div><br><br><br>
+Output: <br><br>
+<div class="highlightbg">
+<h1 style="font-family: Arial, Helvetica, sans-serif;color: darkblue;">Welcome to my website</h1></div> <br><br>
+Pros: Highly reusable, clean code, faster load times after the initial page load (due to browser caching). <br><br><br>
+How to link html files with external css: <br><br>
+&lt;link rel="stylesheet" href="styles.css"> <br><br>
+📝 Key Attributes of the &lt;link> Tag: <br>
+The &lt;link> tag requires three essential attributes to function correctly for CSS: <br><br>
+<table>
+    <tr>
+        <th>Attribute</th>
+        <th>Value</th>
+        <th>Purpose</th>
+    </tr>
+    <tr>
+        <td>rel</td>
+        <td>"stylesheet"</td>
+        <td>Relationship: Tells the browser that the linked document is a stylesheet. This is required for CSS.</td>
+    </tr>
+    <tr>
+        <td>href</td>
+        <td>"styles.css"</td>
+        <td>Hypertext Reference: Specifies the path to the external file.</td>
+    </tr>
+    <tr>
+        <td>type(optional)</td>
+        <td>"text/css"</td>
+        <td>MIME Type: Historically used, but is generally considered optional today as CSS is the default stylesheet type.</td>
+    </tr>
+</table> <br><br><br>
+
+<li><span class="topic"> Internal CSS (For Single HTML Pages):</span></li>
+The styles are embedded directly in the HTML file using the &lt;style> tag. <br><br>
+<div class="highlightbg">
+&lt;html> <br>
+&lt;head> <br>
+  &lt;style> <br>
+    p { <br>
+      color: green; <br>
+      font-size: 18px; <br>
+    } <br>
+  &lt;/style> <br>
+&lt;/head> <br>
+&lt;body> <br>
+    &lt;p>The color of the paragraph is green & font-size is 18px&lt;/p> <br>
+&lt;/body> <br>
+&lt;html></div> <br><br>
+Output: <br><br>
+
+<div class="div2">
+
+<style>
+    p {
+      color: green;
+      font-size: 18px;
+    }
+  </style>
+<p>The color of the paragraph is green & font-size is 18px</p>
+
+</div> <br><br>
+Pros: No extra HTTP request for a separate file, all styles for the page are in one place.
+ <br>
+Cons: Not reusable on other pages.
+<br><br><br>
+</li>
+<li><span class="topic"> Inline CSS(For Specific Overrides):</span> <br><br>
+The style is applied directly to an element using the style HTML attribute. <br><br>
+
+HTML Syntax (in index.html):
+<br><br>
+<div class="highlightbg">
+&lt;p style="color: red; border: 1px solid black;"> 
+  This text is styled inline & red colored.
+&lt;/p></div> <br><br>
+Output: <br><br>
+<div class="highlightbg">
+<p style="color: red; border: 1px solid black;">
+  This text is styled inline & red colored
+</p></div>
+Pros: Highest specificity (overrides External and Internal CSS), useful for testing or critical, one-off overrides. <br>
+
+Cons: Messy HTML, cannot be reused, difficult to manage, and defeats the purpose of separating content and style. <br>
+</li> <br><br><br>
+</ol> <br><br><br>
+<span class="topic"> 💥 The "Cascading" Order (Specificity): </span><br><br>
+CSS stands for Cascading Style Sheets. The "cascading" means that when conflicting styles are applied to the same element, a specific order of priority determines which style wins:
+<br><br>
+<div class="order">
+1.Inline CSS (Highest Priority)
+<br>
+2.Internal/Embedded CSS
+<br>
+3.External CSS (Lowest Priority)
+<br><br></div>
+External CSS is the preferred method because it scales better, but inline CSS will almost always override it for a single element. <br><br><br>
+Remember: <br><br>
+
+1.Start with External CSS: While there are three ways to add CSS to HTML, the best practice is to put your styles in a separate file (e.g., styles.css) and link it to your HTML.
+<br>br
+
+2.Semicolons are Crucial: Forgetting the semicolon (;) at the end of a declaration is the single most common syntax error.
+<br><br>
+3.Readability: Keep each declaration on its own line and indent the properties/values within the curly braces for better readability.
+  <br>  </div>
+</body>
+ <footer>
+ <div class="footer-nav">
+        <button><a href="css-selectors.html">Next</a> 
+        </button>
+        <button><a href="intro-to-css.html">Previous</a> </button>  
+        <br>
+        <h3>CSS Topics</h3>
+          <nav>
+              <ol>
+                  <li><a href="intro-to-css.html">Introduction to CSS</a></li>
+                  <li><a href="css-selectors.html">CSS Selectors</a></li>
+                  <li><a href="css-pseudoclasses.html">CSS Pseudoclasses</a></li>
+                  <li><a href="css-pseudoelements.html">CSS Pseudoelements</a></li>
+                  <li><a href="css-boxmodel.html">CSS Box Model</a></li>
+                  <li><a href="css-boxsizing.html">CSS Box Sizing</a></li>
+                  <li><a href="css-display.html">CSS Display</a></li>
+                  <li><a href="css-widthheight.html">CSS Width &amp; Height</a></li>
+                  <li><a href="css-marginpadding.html">CSS Margin &amp; Padding</a></li>
+                  <li><a href="css-overflow.html">CSS Overflow</a></li>
+                  <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+                  <li><a href="css-grid.html">CSS Grid</a></li>
+                  <li><a href="css-positioning.html">CSS Positioning</a></li>
+                  <li><a href="css-float.html">CSS Float</a></li>
+                  <li><a href="css-colors.html">CSS Colors</a></li>
+                  <li><a href="css-typography.html">CSS Typography</a></li>
+                  <li><a href="css-borders.html">CSS Borders</a></li>
+                  <li><a href="css-transparency.html">CSS Transparency</a></li>
+                  <li><a href="css-filters.html">CSS Filters</a></li>
+                  <li><a href="css-viewport.html">CSS Viewport</a></li>
+                  <li><a href="css-mediaqueries.html">CSS Media Queries</a></li>
+                  <li><a href="css-relativeunits.html">CSS Relative Units</a></li>
+                  <li><a href="css-responsiveimages.html">CSS Responsive Images</a></li>
+                  <li><a href="css-transforms2d.html">CSS 2D Transforms</a></li>
+                  <li><a href="css-transforms3d.html">CSS 3D Transforms</a></li>
+                  <li><a href="css-transitions.html">CSS Transitions</a></li>
+                  <li><a href="css-animations.html">CSS Animations</a></li>
+                  <li><a href="css-customproperties.html">CSS Custom Properties</a></li>
+                  <li><a href="css-functions.html">CSS Functions</a></li>
+              </ol>
+          </nav>
+      </div>
+
+      <div class="footer-bottom">
+          <p class="copyright">&copy; CODE WITH FAHIM 2025</p>
+          <div class="footer-links">
+              <a href="privacy.html">Privacy Policy</a>
+              <a href="terms.html">Terms of Use</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+    
+ </footer>
+ </html>   
