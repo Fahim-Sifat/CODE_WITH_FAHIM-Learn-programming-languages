@@ -1,147 +1,236 @@
-/* ========================================================================= */
-/* 1. CSS Custom Properties (Variables) */
-/* Define colors for easy theme switching (e.g., light theme defaults) */
-/* ========================================================================= */
+/* --- Global Styles: Dark Background and Neon Text Color --- */
 :root {
-    /* Primary Colors */
-    --clr-primary: #007bff;        /* A bright blue for links/buttons */
-    --clr-dark: #333333;           /* Standard dark text color */
-    --clr-light: #ffffff;          /* Standard white background */
-    --clr-accent: #ffc107;         /* A yellow accent color */
-
-    /* Typography */
-    --font-primary: 'Arial', sans-serif;
-    --font-heading: 'Helvetica Neue', sans-serif;
-
-    /* Spacing */
-    --space-sm: 8px;
-    --space-md: 16px;
-    --space-lg: 32px;
-}
-
-
-/* ========================================================================= */
-/* 2. Global Reset and Base Styles */
-/* Sets a foundation for all elements */
-/* ========================================================================= */
-* {
-    /* Simple box model reset */
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    /* Define Neon Colors for easy re-use */
+    --neon-blue: #2dd9fe; /* Primary color */
+    --neon-blue-glow: #00a3d5; 
+    --neon-pink: #ff008d; /* Secondary color */
+    --neon-pink-glow: #e10361;
+    --dark-bg: #10101a;
+    --text-color: #f0f0f0; 
 }
 
 body {
-    font-family: var(--font-primary);
+    background-color: var(--dark-bg); /* Very dark, near-black background */
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
-    color: var(--clr-dark);
-    background-color: var(--clr-light);
-    padding: 20px; /* Add some overall padding */
 }
 
+/* --- Typography and Neon Glow Effects --- */
 
-/* ========================================================================= */
-/* 3. Typography and Component Styles */
-/* Styling the main structural and text elements */
-/* ========================================================================= */
-
-/* Header and Headings */
-header {
+/* Main Header Glow */
+header h1, header h3 {
     text-align: center;
-    padding: var(--space-lg) 0;
-    border-bottom: 2px solid var(--clr-primary);
-    margin-bottom: var(--space-lg);
+    text-transform: uppercase;
+    /* Neon Glow effect using stacked text-shadows */
+    text-shadow: 
+        0 0 5px #fff,    /* Inner white core */
+        0 0 10px #fff,
+        0 0 20px var(--neon-blue),
+        0 0 40px var(--neon-blue),
+        0 0 80px var(--neon-blue-glow); /* Outer, broader glow */
 }
 
 header h1 {
-    font-family: var(--font-heading);
-    color: var(--clr-dark);
-    margin-top: var(--space-sm);
+    color: #fff; /* White core of the glow */
+    font-size: 3em;
+    padding-top: 20px;
 }
 
 header h3 {
-    color: var(--clr-primary);
-    font-weight: 400;
+    color: var(--neon-blue);
+    font-size: 1.5em;
+    padding-bottom: 20px;
 }
 
-/* Main Content Area */
+/* Section Headings/Key components */
 .div1 {
-    max-width: 800px;
-    margin: 0 auto; /* Center the content block */
-    padding: var(--space-lg);
-    background: var(--clr-light);
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* Links */
+.div1 > br + br + br + br + br + br + br { /* Targets the "Key Components" heading - a bit brittle, but works for this structure */
+    color: var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink), 0 0 15px var(--neon-pink-glow);
+    font-size: 1.3em;
+    font-weight: bold;
+    display: block; /* To apply the text-shadow correctly */
+    margin-top: 40px;
+}
+
+/* General Link Styling (making all links glow) */
 a {
-    color: var(--clr-primary);
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease;
+    color: var(--neon-blue);
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
 a:hover {
-    color: var(--clr-dark);
-    text-decoration: underline; /* Add underline on hover */
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px var(--neon-blue-glow);
 }
 
-/* Lists (UL and OL) */
+
+/* --- Structure and Layout --- */
+
+/* Code Blocks and Boxes */
+/* Using a softer glow for borders to frame content */
+pre, code, .div2 {
+    background-color: #1a1a2b; /* Slightly lighter dark background */
+    border: 1px solid var(--neon-blue);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 8px var(--neon-blue-glow); /* Box Glow */
+    color: #e0f7fa; /* Light cyan text for code */
+    overflow-x: auto;
+}
+
+/* Special styling for the example components within the div */
+.div2 p {
+    color: var(--text-color) !important; /* Resetting the green paragraph color for better readability in the dark theme */
+    font-size: 1em !important;
+}
+
+/* List Items */
 ul, ol {
-    margin-left: var(--space-lg);
-    padding: var(--space-md) 0;
+    padding-left: 30px;
 }
 
-/* Tables (for Key Components and Attributes) */
+li {
+    margin-bottom: 10px;
+}
+
+
+/* --- Table Styles (Key Components) --- */
 table {
-    border: 2px solid chocolate;
-   max-width: 100%;
+    width: 100%;
     border-collapse: collapse;
-    margin: var(--space-md) 0;
+    margin: 25px 0;
+    box-shadow: 0 0 10px var(--neon-pink-glow);
+    background-color: #1a102b; /* Dark purple background for the table */
 }
 
-table th, table td {
-    border: 1px solid #cccccc;
-    padding: var(--space-md);
+th, td {
+    padding: 12px 15px;
     text-align: left;
+    border: 1px solid var(--neon-pink); /* Neon Pink borders */
 }
 
-table th {
-    background-color: #f4f4f4;
-    color: var(--clr-dark);
+th {
+    background-color: var(--neon-pink);
+    color: var(--dark-bg);
+    font-weight: bold;
+    text-shadow: none;
 }
 
-/* Footer and Navigation */
+tr:nth-child(even) {
+    background-color: #131320; /* Subtle stripe effect */
+}
+
+
+/* --- Footer/Navigation Styles --- */
 footer {
-    padding: var(--space-lg) 0;
+    background-color: #0d0d15;
+    padding: 20px;
     text-align: center;
-    border-top: 2px solid #e0e0e0;
-    margin-top: var(--space-lg);
+    border-top: 3px solid var(--neon-blue);
+    margin-top: 50px;
+}
+
+.footer-nav {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-nav h3 {
+    color: var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink);
+    margin: 20px 0 10px;
 }
 
 .footer-nav button {
-    background-color: var(--clr-primary);
-    color: var(--clr-light);
+    background: var(--neon-blue);
     border: none;
-    padding: 10px 15px;
-    margin: 5px;
     border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
     cursor: pointer;
-}
-
-.footer-nav button a {
-    color: var(--clr-light);
+    box-shadow: 0 0 10px var(--neon-blue-glow);
+    transition: background-color 0.3s;
 }
 
 .footer-nav button:hover {
-    opacity: 0.8;
+    background: #fff;
+    box-shadow: 0 0 15px #fff;
+}
+
+.footer-nav button a {
+    color: var(--dark-bg);
+    font-weight: bold;
+    text-shadow: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav nav ol {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+}
+
+.footer-nav nav ol li {
+    margin: 5px 10px;
+    padding: 5px;
+    border-bottom: 1px dotted var(--neon-pink);
+}
+
+.footer-nav nav ol li a {
+    color: var(--text-color);
+    font-size: 0.9em;
+}
+
+.footer-nav nav ol li a:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 5px var(--neon-blue-glow);
 }
 
 .footer-bottom {
-    margin-top: var(--space-md);
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #333;
 }
 
 .copyright {
-    font-size: 0.9em;
-    color: #666666;
+    color: #888;
+    font-size: 0.8em;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    font-size: 0.8em;
+}
+.highlight{ color: #00a3d5;}
+.large{
+    font-size: xx-large;
+}
+.highlightbg{
+    color: black;
+    background-color: white;
+}
+.here{
+    color: yellow;
+}
+.topic{
+    font-size: x-large;
+    color: aqua;
+}
+.order{
+    color: yellowgreen;
 }

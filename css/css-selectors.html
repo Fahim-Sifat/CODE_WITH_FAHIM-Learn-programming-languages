@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css-syntax.css"> <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MZ1JHY721H');
+    </script>
+
+    <script>(function(s){s.dataset.zone='10140862',s.src='https://groleegni.net/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+</head>
+<body>
+<header>
+<img src="header-logo.png" alt="header-logo"><h1>CODE WITH FAHIM</h1>
+<h3>CSS Selectors</h3>
+</header>
+    <div class="container">
+        CSS selectors are basically how you point at specific HTML elements to style them. They’re the “who” part in your CSS rules. 
+        Think of a CSS rule like this:
+        <pre>p {
+  color: red;
+}</pre>
+Here, the selector is <code>p</code>. It tells the browser, “Yo, find all &lt;p> elements and make their text red.” 
+
+Now, there are many types of selectors, each with its own special mission:
+<span class="chapter-title">🧱 1. Basic Selectors:</span>
+These are your everyday workhorses.
+<ul>
+    <li>Element Selector: targets HTML tags directly-
+    <pre>h1{
+      color: blue;
+     }</pre>
+</li>
+    <li>Class Selector: targets elements with a specific class(Use a dot <code>.</code> before the class name.)-
+        HTML code:
+        <pre>&lt;p class="highlight">This text stands out!&lt;/p></pre>
+     CSS code:
+     <pre>.highlight{
+        background: red;
+     }</pre>
+     Output:
+     <div class="output">
+        <p class="highlight">This text stands out!</p> </div> 
+     💡 You can use the same class on multiple elements.
+</li>
+    <li>ID Selector: targets a unique element with a specific ID-(Use a hash <code>#</code> before the ID name )-
+      HTML code:
+      <pre>&lt;h1 class="title" id="main-title">Welcome to my page&lt;/h1></pre>
+        CSS code:
+        <pre>#main-title {
+         font-size: 2em;
+         }</pre>
+         Output:
+         <div class="output">
+         <h1>Welcome to my page</h1> </div>
+</li> 
+</ul>
+
+<span class="chapter-title">2. Grouping Selectors:</span>
+A grouping selector combines two or more selectors with a comma (<code>,</code>) between them.
+It’s like saying: 
+
+“Hey browser, style all of these things the same way.”
+HTML code:
+<pre>&lt;h1>Hello World!&lt;/h1>
+&lt;h2>Welcome to my page&lt;/h2>
+&lt;h3>Code with Fahim&lt;h3></pre>
+CSS code:
+<pre>h1, h2, h3 {
+  color: royalblue;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}</pre>
+Output:
+<div class="output">
+<h1>Hello World!</h1>
+<h2>Welcome to my page</h2>
+<h3>CODE WITH FAHIM</h3>
+</div>
+This means:
+All &lt;h1>, All &lt;h2>, All &lt;h3> will have the same color, font, and alignment. 
+
+⚙️ Why Use It?
+
+✅ Reduces repetitive code <br>
+✅ Keeps styles consistent <br>
+✅ Makes maintenance easier 
+
+<span class="chapter-title">3. Universal Selector:</span>
+The universal selector is like the “select everything” button in CSS. 🌍✨ 
+
+It’s represented by a single asterisk <code>*</code>, and when you use it, it literally means “every element on the page.” The universal selector (*) targets all HTML elements at once — no exceptions. 
+It’s often used for resetting or applying global styles.
+CSS code:
+<pre>* {
+  color: white;
+  background-color: black;
+}</pre>
+💬 This makes every element on your webpage white text on a black background — from &lt;h1> to &lt;p>, even &lt;a> and &lt;div>.
+
+<span class="chapter-title">4. Combinator Selectors:</span>
+Combinator selectors are the tactical squad of CSS. 🎯 
+They don’t just style elements; they define relationships between them. 
+It’s like saying:
+
+“Don’t style every paragraph — only the one that lives right after this header” or
+“Only the &lt;p> that’s a child of a &lt;div>.”
+These selectors let you pinpoint elements based on their position in the HTML structure.
+Let’s break ‘em down clearly and powerfully 👇
+<ul>
+    <li>Descendant Selector (space):
+    CSS Example:
+    <pre>div p {
+  color: blue;
+}</pre>
+💬 Meaning: “Select all &lt;p> elements inside &lt;div>, no matter how deep they’re nested.”
+Example:
+<pre>&lt;div>
+  &lt;p>✅ Styled&lt;/p>
+  &lt;section>
+    &lt;p>✅ Also styled (still inside div)&lt;/p>
+  &lt;/section>
+&lt;/div>
+
+&lt;p>❌ Not styled (outside div)&lt;/p></pre>
+</li>
+<li>
+    👶Child Selector (>):
+    CSS code:
+    <pre>div>p{
+    color:red;
+    }</pre>
+    💬 Meaning: “Select only &lt;p> elements that are direct children of &lt;div>.”
+    Example:
+    <pre>&lt;div>
+  &lt;p>✅ Styled&lt;/p>
+  &lt;section>
+    &lt;p>❌ Not styled (inside a section, not directly in div)&lt;/p>
+  &lt;/section>
+&lt;/div></pre>
+It’s like saying: “I only care about my immediate kids, not my grandkids.” 😂
+</li>
+
+<li>
+➕Adjacent Sibling Selector (+):
+CSS code:
+<pre>h2 + p {
+  color: green;
+}</pre>
+💬 Meaning: “Select the first &lt;p> that comes right after an &lt;h2>.”
+Example:
+<pre>&lt;h2>Title&lt;/h2>
+&lt;p>✅ Styled (right after h2)&lt;/p>
+&lt;p>❌ Not styled (second p)&lt;/p></pre>
+Perfect when you want to style a summary or note that directly follows a header.
+</li>
+<li>
+    🫱General Sibling Selector (~):
+    CSS code:
+    <pre>h2 ~ p {
+  color: purple;
+}</pre>
+💬 Meaning: “Select all &lt;p> elements that come after an &lt;h2> (same parent).”
+Example:
+<pre>&lt;h2>Title&lt;/h2>
+&lt;p>✅ Styled&lt;/p>
+&lt;p>✅ Styled too&lt;/p>
+&lt;p>✅ You guessed it… styled!&lt;/p></pre>
+This one’s like: “Everyone after the &lt;h2> gets the same princess treatment.” 😎
+Quick Comparison:
+<table>
+    <tr>
+        <th>Selector</th>
+        <th>Symbol</th>
+        <th>Target</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td>Descendant</td>
+        <td>(space)</td>
+        <td>All matching elements inside</td>
+        <td>div p</td>
+    </tr>
+    <tr>
+        <td>👶Child</td>
+        <td>></td>
+        <td>Only direct children</td>
+        <td>div>p</td>
+    </tr>
+    <tr>
+        <td>➕Adjacent Sibling</td>
+        <td>+</td>
+        <td>Next element only</td>
+        <td>h2+p</td>
+    </tr>
+    <tr>
+        <td>General Sibling</td>
+        <td>~</td>
+        <td>All following siblings</td>
+        <td>h2~p</td>
+    </tr>
+</table>
+</li>
+</ul>
+</div>
+</body>
+<footer>
+<div class="footer-nav">
+        <button><a href="css-pseudoclasses.html">Next</a> 
+        </button>
+        <button><a href="css-syntax.html">Previous</a> </button>  
+        <br>
+        <h3>CSS Topics</h3>
+          <nav>
+              <ol>
+                <li><a href="intro-to-css.html">Introduction to CSS</a></li>
+                  <li><a href="css-syntax.html">CSS Syntax</a></li>
+                  <li><a href="css-pseudoclasses.html">CSS Pseudoclasses</a></li>
+                  <li><a href="css-pseudoelements.html">CSS Pseudoelements</a></li>
+                  <li><a href="css-boxmodel.html">CSS Box Model</a></li>
+                  <li><a href="css-boxsizing.html">CSS Box Sizing</a></li>
+                  <li><a href="css-display.html">CSS Display</a></li>
+                  <li><a href="css-widthheight.html">CSS Width &amp; Height</a></li>
+                  <li><a href="css-marginpadding.html">CSS Margin &amp; Padding</a></li>
+                  <li><a href="css-overflow.html">CSS Overflow</a></li>
+                  <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+                  <li><a href="css-grid.html">CSS Grid</a></li>
+                  <li><a href="css-positioning.html">CSS Positioning</a></li>
+                  <li><a href="css-float.html">CSS Float</a></li>
+                  <li><a href="css-colors.html">CSS Colors</a></li>
+                  <li><a href="css-typography.html">CSS Typography</a></li>
+                  <li><a href="css-borders.html">CSS Borders</a></li>
+                  <li><a href="css-transparency.html">CSS Transparency</a></li>
+                  <li><a href="css-filters.html">CSS Filters</a></li>
+                  <li><a href="css-viewport.html">CSS Viewport</a></li>
+                  <li><a href="css-mediaqueries.html">CSS Media Queries</a></li>
+                  <li><a href="css-relativeunits.html">CSS Relative Units</a></li>
+                  <li><a href="css-responsiveimages.html">CSS Responsive Images</a></li>
+                  <li><a href="css-transforms2d.html">CSS 2D Transforms</a></li>
+                  <li><a href="css-transforms3d.html">CSS 3D Transforms</a></li>
+                  <li><a href="css-transitions.html">CSS Transitions</a></li>
+                  <li><a href="css-animations.html">CSS Animations</a></li>
+                  <li><a href="css-customproperties.html">CSS Custom Properties</a></li>
+                  <li><a href="css-functions.html">CSS Functions</a></li>
+              </ol>
+          </nav>
+      </div>
+
+      <div class="footer-bottom">
+          <p class="copyright">&copy; CODE WITH FAHIM 2025</p>
+          <div class="footer-links">
+              <a href="privacy.html">Privacy Policy</a>
+              <a href="terms.html">Terms of Use</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+    
+</footer>
+</html>
