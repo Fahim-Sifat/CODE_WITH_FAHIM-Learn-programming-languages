@@ -1,0 +1,290 @@
+/* --- 1. Global Reset and Base Styles (Dark Theme) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Dark Neon Color Palette */
+    --primary-neon: #00ff99; /* Bright Green/Cyan for main actions */
+    --secondary-neon: #ff33cc; /* Magenta/Pink for secondary accents */
+    --background-dark: #0f0f0f; /* Near black background */
+    --card-dark: #1a1a1a; /* Darker gray for card backgrounds */
+    --text-light: #e0e0e0; /* Light gray for main text */
+    --border-glow: rgba(0, 255, 153, 0.4); /* Neon glow effect */
+    --font-stack: 'Consolas', 'Courier New', monospace; /* Monospace font for coding feel */
+}
+
+body {
+    font-family: var(--font-stack);
+    line-height: 1.6;
+    color: var(--text-light);
+    background-color: var(--background-dark);
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevent horizontal scroll from box-shadows */
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-neon);
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+    color: var(--secondary-neon);
+    text-shadow: 0 0 5px var(--secondary-neon);
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    color: var(--primary-neon); /* Headings use primary neon color */
+    text-shadow: 0 0 5px rgba(0, 255, 153, 0.5); /* Subtle glow */
+}
+
+/* --- 2. Header and Navigation (High Contrast) --- */
+header {
+    background-color: #000000; /* Pure black header */
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-glow); /* Neon border */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary-neon);
+    text-shadow: 0 0 8px var(--primary-neon);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul a {
+    color: var(--text-light);
+    padding: 5px 10px;
+}
+
+nav ul a:hover {
+    color: var(--secondary-neon);
+    box-shadow: 0 1px 0 0 var(--secondary-neon); /* Underline glow */
+}
+
+/* --- 3. Hero Section (#hero) (Bold and Cyberpunk) --- */
+#hero {
+    /* A deep dark background or a subtle sci-fi texture image */
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('cyber-circuit.jpg'); /* Replace with a futuristic image */
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+    padding: 2rem;
+    margin: 0 -5vw;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    color: var(--primary-neon);
+    text-shadow: 0 0 15px var(--primary-neon); /* Stronger glow for H1 */
+    letter-spacing: 2px;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    color: var(--text-light);
+}
+
+.cta-button {
+    background-color: var(--primary-neon);
+    color: var(--background-dark); /* Dark text on bright button */
+    padding: 15px 40px;
+    border-radius: 2px; /* Sharp edges for cyberpunk look */
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid var(--primary-neon);
+    box-shadow: 0 0 10px var(--primary-neon); /* Button glow */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    color: var(--primary-neon);
+    box-shadow: 0 0 20px var(--primary-neon), inset 0 0 5px var(--primary-neon);
+}
+
+/* --- 4. Languages Section (#languages) (Glow Cards) --- */
+#languages h2, .section-description {
+    text-align: center;
+    color: var(--secondary-neon);
+}
+
+.language-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.language-card {
+    background-color: var(--card-dark);
+    border-radius: 0; /* Sharp corners */
+    padding: 30px;
+    border: 1px solid #333;
+    box-shadow: 0 0 5px rgba(255, 51, 204, 0.2); /* Subtle card glow */
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 4px solid; /* Left accent bar */
+}
+
+.language-card:hover {
+    transform: scale(1.02);
+    border-color: var(--primary-neon);
+    box-shadow: 0 0 15px var(--primary-neon); /* Stronger glow on hover */
+}
+
+/* Colourful border accents for each path */
+.web-dev { border-color: #fdd835; } /* Yellow/Gold */
+.general-purpose { border-color: #2196f3; } /* Blue */
+.systems-low-level { border-color: #ff3d00; } /* Orange/Red */
+.mobile-niche { border-color: #9c27b0; } /* Purple */
+
+.language-card h3 {
+    color: var(--primary-neon);
+    text-shadow: none;
+}
+
+.language-card ul {
+    list-style: none;
+    margin: 15px 0;
+}
+
+.language-card ul li {
+    padding: 7px 0;
+    border-bottom: 1px dashed #333;
+}
+
+.path-link {
+    font-weight: 700;
+    color: var(--secondary-neon);
+    text-shadow: 0 0 3px var(--secondary-neon);
+}
+
+/* --- 5. About Section (#about) --- */
+#about {
+    background-color: #151515; /* Slightly lighter dark background */
+    border-radius: 0;
+    padding: 4rem;
+    margin-top: 2rem;
+    border: 1px solid var(--secondary-neon);
+}
+
+#about h2 {
+    color: var(--secondary-neon);
+}
+
+#about ul {
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    padding: 0;
+}
+
+#about ul li {
+    flex-basis: 30%;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--card-dark);
+    border: 1px solid #333;
+    box-shadow: 0 0 5px rgba(255, 51, 204, 0.2);
+}
+
+#about ul li strong {
+    color: var(--primary-neon);
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    text-shadow: 0 0 2px var(--primary-neon);
+}
+
+/* --- 6. Footer --- */
+footer {
+    background-color: #000000;
+    color: var(--text-light);
+    padding: 2.5rem 5%;
+    text-align: center;
+    margin-top: 4rem;
+    border-top: 1px solid var(--border-glow);
+}
+
+.footer-links a, .social-links a {
+    color: var(--secondary-neon);
+}
+
+.footer-links a:hover, .social-links a:hover {
+    color: var(--primary-neon);
+}
+
+/* --- 7. Responsiveness (Media Queries) --- */
+
+@media (max-width: 992px) {
+    #hero h1 {
+        font-size: 3rem;
+    }
+    #about ul {
+        flex-wrap: wrap;
+    }
+    #about ul li {
+        flex-basis: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        margin-top: 15px;
+        width: 100%;
+    }
+    nav ul {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    #hero {
+        min-height: 50vh;
+    }
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1.1rem;
+    }
+    
+    .language-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #about ul li {
+        flex-basis: 100%;
+    }
+}
