@@ -12,7 +12,7 @@
 body {
     background-color: var(--dark-bg);
     color: var(--text-color);
-    font-family: 'Consolas', 'Courier New', monospace; /* Monospaced font for a retro-terminal feel */
+    font-family: Arial, Helvetica, sans-serif,'Times New Roman', Times, serif,Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     line-height: 1.8; /* Increased line-height for readability */
@@ -62,7 +62,7 @@ header h3 {
 /* --- Content Areas --- */
 .div1, .container {
     padding: 20px;
-    max-width: 1000px;
+    max-width: 100%;
     margin: 0 auto;
 }
 

@@ -1,0 +1,451 @@
+/* --- CSS Custom Properties for Neon Colors --- */
+:root {
+    --neon-blue: #2dd9fe; /* Primary color: Cyan/Blue */
+    --neon-blue-glow: #00a3d5; 
+    --neon-pink: #ff008d; /* Secondary color: Magenta/Pink */
+    --neon-pink-glow: #e10361;
+    --dark-bg: #10101a; /* Very dark background */
+    --text-color: #f0f0f0; /* Light text */
+    --valid-color: #39ff14; /* Neon Green */
+    --invalid-color: #ff3333; /* Neon Red */
+}
+
+/* --- Global Styles: Dark Background and Font --- */
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+.container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* --- Header and Logo (Neon Style) --- */
+header {
+    background-color: #0b0b10;
+    border-bottom: 2px solid var(--neon-blue);
+    margin-bottom: 20px;
+}
+
+header img {
+    /* Assuming image styling/positioning is handled elsewhere or is not critical */
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    filter: drop-shadow(0 0 10px var(--neon-pink));
+    padding-top: 20px;
+}
+
+header h1, header h3 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin: 0;
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px var(--neon-blue),
+        0 0 40px var(--neon-blue),
+        0 0 80px var(--neon-blue-glow);
+}
+
+header h1 {
+    color: #fff;
+    font-size: 3em;
+}
+
+header h3 {
+    color: var(--neon-blue);
+    font-size: 1.5em;
+    padding-bottom: 20px;
+}
+
+
+/* --- Content Headings and Text --- */
+.larger {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px dotted var(--neon-pink-glow);
+    color: var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink-glow);
+}
+
+.large {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--neon-blue);
+    text-shadow: 0 0 5px var(--neon-blue-glow);
+    display: block;
+    margin-top: 25px;
+}
+
+ul {
+    padding-left: 20px;
+    color: #ccc;
+}
+
+/* --- Table (Neon Style) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(255, 0, 141, 0.5);
+    background-color: #1a102b; 
+    border: 1px solid var(--neon-pink);
+}
+
+th, td {
+    border: 1px solid var(--neon-pink);
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--neon-pink);
+    color: var(--dark-bg);
+    font-weight: bold;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #131320;
+}
+
+
+/* --- Code Blocks and Examples (Neon Style) --- */
+.example {
+    background-color: #1a1a2b; /* Dark block background */
+    border: 1px solid var(--neon-blue);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 8px var(--neon-blue-glow); /* Box Glow */
+    color: #e0f7fa; /* Light cyan text for code */
+    overflow-x: auto;
+    font-family: 'Consolas', 'Courier New', monospace;
+}
+
+.example a {
+    color: var(--neon-blue);
+    text-decoration: none;
+}
+
+
+/* ====================================
+   Pseudo-Class Implementations (1-30)
+   ==================================== */
+
+/* 1. :hover */
+.hover:hover { 
+    color: var(--neon-pink); 
+    text-shadow: 0 0 5px var(--neon-pink);
+}
+
+/* 2. :active */
+.active:active { 
+    color: var(--valid-color); 
+}
+
+/* 3. :focus */
+.focus:focus {
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-blue-glow);
+    outline: none;
+}
+
+/* 4. :visited */
+.visited:visited {
+    color: purple; /* Standard :visited color */
+}
+
+/* Base style for child/of-type containers */
+.child-container p, .child-container-2 p, .child-container-3 p, 
+.of-type-container *, .of-type-container-2 *, .nth-of-type-container * {
+    padding: 5px;
+    margin: 2px 0;
+    background-color: #1a1a2b;
+    border-left: 3px solid #555;
+    display: block;
+}
+
+/* 5. :first-child */
+.child-container p:first-child { 
+    font-weight: bold; 
+    border-left-color: var(--neon-pink);
+}
+
+/* 6. :last-child */
+.child-container-3 p:last-child { 
+    font-style: italic; 
+    border-left-color: var(--neon-blue);
+}
+
+/* 7. :nth-child(n) */
+li {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+li:nth-child(odd) { 
+    background-color: #1f1f2a; 
+}
+li:nth-child(even) {
+    background-color: #10101a;
+}
+
+/* 8. :checked */
+.checked-box:checked {
+    outline: 3px solid var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-blue-glow);
+}
+
+/* 9. :disabled */
+.disabled-input:disabled {
+    background-color: #333;
+    cursor: not-allowed;
+    border-color: #666;
+    color: #888;
+}
+
+/* 10. :only-child */
+.only-child-container > p:only-child { 
+    background-color: #2b1a2b; 
+    border: 1px dashed var(--neon-pink);
+}
+
+/* 11. :root (Styling is global, but used to set variable) */
+
+/* 12. :not(selector) */
+.not-example, .special {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #1a1a2b;
+}
+div:not(.special) { 
+    border: 1px solid var(--neon-blue); 
+}
+.special {
+    background-color: #2b1a2b; 
+}
+
+/* 13. :empty */
+.box {
+    width: 100px;
+    border: 1px solid var(--text-color);
+    margin-bottom: 5px;
+}
+.box:empty { 
+    height: 20px; 
+    background-color: var(--neon-pink); 
+    box-shadow: 0 0 8px var(--neon-pink-glow);
+}
+
+/* 14. :target */
+.target-example {
+    padding: 15px;
+    margin-top: 10px;
+    border: 2px solid transparent;
+    transition: border 0.3s, background-color 0.3s;
+}
+#section-A:target { 
+    border: 2px solid var(--valid-color); 
+    background-color: #1f2a1a;
+    box-shadow: 0 0 10px var(--valid-color);
+}
+
+/* Input default styling for form examples */
+input[type="text"], input[type="email"], input[type="number"], button {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #666;
+    background-color: #131320;
+    color: var(--text-color);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* 15. :read-only */
+.readonly-input:read-only {
+    background-color: #1f1f2a;
+    color: #888;
+    border-color: #444;
+    cursor: default;
+}
+
+/* 16. :required */
+.required-input:required { 
+    border-left: 5px solid var(--neon-pink); 
+}
+
+/* 17. :optional */
+.optional-input:optional { 
+    border-left: 5px solid var(--neon-blue); 
+}
+
+/* 18. :valid */
+.valid-input:valid { 
+    background-color: #1a2b1a; /* Dark green background */
+    border-color: var(--valid-color);
+}
+
+/* 19. :invalid */
+.invalid-input:invalid { 
+    border: 2px solid var(--invalid-color); 
+    box-shadow: 0 0 5px var(--invalid-color);
+}
+
+/* 20. :lang(language) */
+.lang-example {
+    padding: 5px;
+}
+p:lang(fr) {
+    font-style: italic;
+    color: var(--neon-pink);
+}
+
+/* 21. :first-of-type */
+.of-type-container span:first-of-type { 
+    color: var(--neon-pink); 
+}
+
+/* 22. :last-of-type */
+.of-type-container-2 span:last-of-type { 
+    border-bottom: 2px solid var(--neon-blue); 
+}
+
+/* 23. :only-of-type */
+.only-of-type-container h4 {
+    color: #fff;
+    padding: 5px;
+    background-color: #1f1f2a;
+}
+.only-of-type-container h4:only-of-type { 
+    text-decoration: underline; 
+    text-decoration-color: var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink-glow);
+}
+
+/* 24. :nth-of-type(n) */
+.nth-of-type-container p:nth-of-type(2) { 
+    background-color: #313100; /* Dark yellow/gold */
+    border-left-color: gold;
+}
+
+/* 25. :default */
+.default-btn {
+    border: 1px solid var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-blue-glow);
+}
+button:default { 
+    border: 3px solid var(--neon-blue); 
+    background-color: #1a2b3a;
+}
+
+/* 26. :in-range / 27. :out-of-range */
+input:in-range { 
+    border: 2px solid var(--valid-color); 
+    box-shadow: 0 0 5px var(--valid-color);
+}
+input:out-of-range { 
+    border: 2px solid var(--invalid-color); 
+    box-shadow: 0 0 5px var(--invalid-color);
+}
+
+/* 28. :placeholder-shown */
+.placeholder-shown-input:placeholder-shown { 
+    opacity: 0.6; 
+}
+
+/* 29. :focus-within */
+.focus-group {
+    border: 2px solid #333;
+    padding: 15px;
+    margin-top: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.focus-group:focus-within { 
+    border: 2px solid orange; 
+    box-shadow: 0 0 15px orange;
+}
+.focus-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--neon-blue);
+}
+
+/* 30. :scope */
+/* This requires a specific JS or Shadow DOM context to show visual effect, 
+   but the style is included for completeness */
+:scope > div { 
+    border: 1px dashed var(--text-color); 
+}
+
+
+/* --- Footer Styles (Neon Theme) --- */
+footer {
+    background-color: #0d0d15;
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid var(--neon-blue);
+    margin-top: 50px;
+}
+
+.footer-nav h3 {
+    color: var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink);
+    margin: 20px 0 10px;
+}
+
+.footer-nav button {
+    background: transparent;
+    border: 2px solid var(--neon-blue);
+    padding: 10px 20px;
+    box-shadow: 0 0 10px var(--neon-blue-glow);
+    transition: all 0.3s;
+}
+
+.footer-nav button:hover {
+    background: var(--neon-blue);
+    box-shadow: 0 0 15px var(--neon-blue-glow), 0 0 20px var(--neon-blue);
+}
+
+.footer-nav button a {
+    color: var(--neon-blue);
+    text-shadow: none;
+    text-decoration: none;
+}
+
+.footer-nav button:hover a {
+    color: var(--dark-bg);
+}
+
+.footer-nav nav ol {
+    list-style-type: none;
+}
+.footer-nav nav ol li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+.footer-nav nav ol li a:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 5px var(--neon-blue-glow);
+}
+
+.copyright, .footer-links a {
+    color: #888;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink-glow);
+}
