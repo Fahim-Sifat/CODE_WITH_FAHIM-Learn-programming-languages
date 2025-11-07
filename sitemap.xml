@@ -16,6 +16,13 @@
 </url>
 
 <!-- Main Course/Topic Pages -->
+
+<url>
+  <loc>https://code-with-fahim.wuaze.com/html.html</loc>
+  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>daily</changefreq>
+</url>
 <url>
   <loc>https://code-with-fahim.wuaze.com/introduction-to-html.html</loc>
   <lastmod>2025-11-02T00:00:00+00:00</lastmod>
@@ -119,12 +126,6 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>https://code-with-fahim.wuaze.com/paragraph.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
   <loc>https://code-with-fahim.wuaze.com/forms.html</loc>
   <lastmod>2025-11-06T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
@@ -159,6 +160,13 @@
   <lastmod>2025-11-06T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
   <changefreq>monthly</changefreq>
+</url>
+
+<url>
+  <loc>https://code-with-fahim.wuaze.com/css-pseudoclasses.html</loc>
+  <lastmod>2025-11-07T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>daily</changefreq>
 </url>
 <!-- Utility/Account Pages -->
 <url>
