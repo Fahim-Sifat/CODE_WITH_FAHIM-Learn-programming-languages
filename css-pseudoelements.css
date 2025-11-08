@@ -11,7 +11,7 @@
 
 /* --- Global Styles: Dark Background and Font --- */
 body {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     background-color: var(--dark-bg);
     color: var(--text-color);
     font-family: 'Times New Roman', Times, serif,Arial, Helvetica, sans-serif,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,Georgia, 'Times New Roman', Times, serif;
