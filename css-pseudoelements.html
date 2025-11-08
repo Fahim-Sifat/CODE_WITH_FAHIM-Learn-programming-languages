@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://code-with-fahim.wuaze.com/"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-elements</title>
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MZ1JHY721H');
+    </script>
+  <link rel="stylesheet" href="css-pseudoelements.css"/>
+</head>
+<body>
+    <header>
+        <img src="header-logo.png" alt="header-logo"><h1>CODE WITH FAHIM</h1>
+<h3>CSS Pseudo-elements</h3>
+
+    </header>
+    <div class="container">
+        CSS pseudo-elements are special selectors that let you style specific parts of an element’s content — parts that you can’t normally target directly with HTML or regular selectors. <br><br>
+        <span class="large">
+        What Pseudo-Elements Actually Do:</span> <br><br>
+
+Pseudo-elements create virtual elements that don’t exist in your HTML, but behave like real ones in the CSS rendering layer.
+<br><br>
+They: <br><br>
+<ul>
+    <li>
+Don’t appear in the DOM.</li>
+<li>
+Can be styled like regular elements (color, background, position, etc.).
+</li><li>
+Often used to add decoration or structure without extra markup.</li>
+</ul>   <br><br><br>
+<span class="large">
+        Syntax: <br>
+        </span> <br>
+        CSS3 introduced the **double-colon (::)** notation to distinguish pseudo-elements from pseudo-classes (like :hover), though most browsers still support the single-colon form for backward compatibility: 
+        <div class="example">
+         p::first-line { <br>
+  color: blue; <br>
+} <br>
+
+        </div> <br><br>
+        <span class="larger">
+            🔹 Difference Between Pseudo-Classes and Pseudo-Elements: 
+        </span> <br><br>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Example</th>
+                <th>Targets</th>
+            </tr>
+            <tr>
+                <td>Pseudo-Class</td>
+                <td>a:hover</td>
+                <td>State of an element</td>
+            </tr>
+            <tr>
+                <td>Pseudo-Element</td>
+                <td>p::after</td>
+                <td>Part of an element</td>
+            </tr>
+        </table> <br><br><br>
+        <span class="larger">
+            Limitations: 
+        </span> <br><br>
+        <ul><li>
+            You can only have two **content-generating** pseudo-elements per element (::before and ::after).
+</li><li>
+Pseudo-elements cannot wrap real elements — they live inside or around them, not across siblings.</li>
+<li>
+Not all CSS properties are supported (e.g., ::first-line can’t use margin).
+    </li>    </ul> <br><br><br>
+    <span class="larger">
+        Complete Pseudo-element Reference (20 Total):
+    </span> <br><br><br>
+    <table>
+        <tr>
+            <th>Pseudo-Element</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>::before</td>
+            <td>Inserts generated content **before** an element’s content.</td>
+        </tr>
+        <tr>
+            <td>::after</td>
+            <td>Inserts generated content **after** an element’s content.</td>
+        </tr>
+        <tr>
+            <td>::first-line</td>
+            <td>Styles only the **first line** of an element’s formatted text.</td>
+        </tr>
+        <tr>
+            <td>::first-letter</td>
+            <td>Styles the **first letter** of an element’s text.</td>
+        </tr>
+        <tr>
+            <td>::selection</td>
+            <td>Styles the portion of text the user has **selected/highlighted**.</td>
+        </tr>
+        <tr>
+            <td>::marker</td>
+            <td>Styles the **bullet or numbering** of a list item (&lt;li>).</td>
+        </tr>
+        <tr>
+            <td>::placeholder</td>
+            <td>Styles the placeholder text in **form fields** (&lt;input>, &lt;textarea>).</td>
+        </tr>
+        <tr>
+            <td>::backdrop</td>
+            <td>Styles the **background** layer behind an element in full-screen mode (e.g., &lt;dialog>).</td>
+        </tr>
+        <tr>
+            <td>::cue</td>
+            <td>Styles the **captions/subtitles** displayed in media elements (&lt;video>).</td>
+        </tr>
+        <tr>
+            <td>::file-selector-button</td>
+            <td>Styles the button part of an &lt;input type="file"> element.</td>
+        </tr>
+        <tr>
+            <td>::target-text</td>
+            <td>Styles the specific **text fragment** highlighted when navigating with a text fragment URL.</td>
+        </tr>
+        <tr>
+            <td>::part(name)</td>
+            <td>Targets named parts inside a **Shadow DOM** component (Web Components).</td>
+        </tr>
+        <tr>
+            <td>::slotted(selector)</td>
+            <td>Targets content inserted into a **Shadow DOM &lt;slot>** element.</td>
+        </tr>
+        <tr>
+            <td>**::-webkit-autofill**</td>
+            <td>**(Vendor Prefix)** Targets input fields when they have been **auto-filled** by the browser.</td>
+        </tr>
+        <tr>
+            <td>**::-webkit-slider-thumb**</td>
+            <td>**(Vendor Prefix)** Styles the **handle (thumb)** of an &lt;input type="range">.</td>
+        </tr>
+        <tr>
+            <td>**::-webkit-slider-runnable-track**</td>
+            <td>**(Vendor Prefix)** Styles the **track** of an &lt;input type="range">.</td>
+        </tr>
+        <tr>
+            <td>**::-webkit-validation-next-paged-page**</td>
+            <td>**(Vendor Prefix)** Styles the native **error message balloon** for form validation.</td>
+        </tr>
+        <tr>
+            <td>**::-webkit-search-decoration**</td>
+            <td>**(Vendor Prefix)** Targets the **search icon/clear button** in &lt;input type="search">.</td>
+        </tr>
+        <tr>
+            <td>**::next-paged-page**</td>
+            <td>**(Print Layout)** Targets the generated **empty boxes** for print and paged media layouts.</td>
+        </tr>
+        <tr>
+            <td>**::grammar-error**</td>
+            <td>**(Vendor Prefix)** Styles text marked by the browser as a **grammar error**.</td>
+        </tr>
+    </table> <br><br><br>
+    <span class="larger">
+        Pseudo-element Use Cases:
+    </span> <br><br><br>
+<span class="large">
+    1.::before & ::after - (Content Generation)</span> <br><br>
+    These are used with the `content` property to insert non-semantic decorative content.
+    <br><br>
+    CSS code: <br><br>
+    <div class="example">
+    p::before { <br>
+  content: "👉 "; <br>
+  color: var(--neon-blue); <br>
+} <br>
+p::after { <br>
+  content: " 💡"; <br>
+  color: var(--neon-pink); <br>
+}
+    </div> 
+<br>
+HTML code: <br><br>
+&lt;p class="content-ex">This paragraph has generated content on both sides.&lt;/p>
+ <br><br>
+
+<span class="large">
+    Output (Combined):
+</span> <br><br>
+<p class="content-ex">👉This paragraph has generated content on both sides. 💡</p> <br><br>
+<hr>
+
+<span class="large">
+    2.::first-line - (Text Formatting)</span> <br><br>
+    Styles only the first line of text. The line break adjusts with the viewport size.
+    <br><br>
+    CSS code: <br><br>
+    <div class="example">
+    .text-ex::first-line { <br>
+  font-variant: small-caps; <br>
+  color: var(--neon-pink); <br>
+} 
+    </div>
+<br>
+HTML code: <br><br>
+&lt;p class="text-ex">This is a long paragraph where only the very first line will be styled differently, regardless of how wide the browser window is. The styling property is restricted to only font-based styles, color, background, etc.&lt;/p>
+<br>
+
+<span class="large">
+    Output:
+</span> <br><br>
+<p class="text-ex first-line-output">This is a long paragraph where only the very first line will be styled differently, regardless of how wide the browser window is. The styling property is restricted to only font-based styles, color, background, etc.</p>
+<br><br>
+<hr>
+
+<span class="large">
+    3.::first-letter - (Text Formatting)</span> <br><br>
+    Used to create drop-cap effects on the first letter of a block-level element.
+    <br><br>
+    CSS code: <br><br>
+    <div class="example">
+    .text-ex::first-letter { <br>
+  font-size: 3em; <br>
+  color: var(--neon-blue); <br>
+  float: left; <br>
+  margin-right: 10px; <br>
+} 
+    </div>
+<br>
+HTML code: <br><br>
+&lt;p class="first-letter-ex">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p>
+<br>
+
+<span class="large">
+    Output:
+</span> <br><br>
+<p class="first-letter-ex first-letter-output">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<br><br>
+<hr>
+
+<span class="large">
+    4.::selection - (User Interaction)</span> <br><br>
+    Styles the foreground (text color) and background of text selected by the user.
+    <br><br>
+    CSS code: <br><br>
+    <div class="example">
+    ::selection { <br>
+  background: var(--neon-pink); <br>
+  color: var(--dark-bg); <br>
+} 
+    </div>
+<br>
+HTML code: <br><br>
+&lt;p class="selection-ex">Try selecting this text to see the custom neon highlight.&lt;/p>
+<br>
+
+<span class="large">
+    Output:
+</span> <br><br>
+<p class="selection-ex selection-output">Try selecting this text to see the custom neon highlight.</p>
+<br><br>
+<hr>
+
+<span class="large">
+    5.::marker - (List Styling)</span> <br><br>
+    Allows styling of the bullet point or numbered counter of a list item.
+    <br><br>
+    CSS code: <br><br>
+    <div class="example">
+    li::marker { <br>
+  content: "★ "; <br>
+  color: var(--neon-blue); <br>
+  font-size: 1.2em; <br>
+} 
+    </div>
+<br>
+HTML code: <br><br>
+&lt;ul class="marker-ex"> <br>
+  &lt;li>List Item One&lt;/li> <br>
+  &lt;li>List Item Two&lt;/li> <br>
+&lt;/ul>
+<br>
+
+<span class="large">
+    Output:
+</span> <br><br>
+<ul class="marker-ex marker-output">
+  <li>List Item One</li>
+  <li>List Item Two</li>
+</ul>
+<br><br>
+<hr>
+
+<span class="large">
+    6.::placeholder - (Form Styling)</span> <br><br>
+    Styles the instructional placeholder text in inputs and textareas.
+    <br><br>
+    CSS code: <br><br>
+    <div class="example">
+    input::placeholder { <br>
+  color: var(--neon-pink); <br>
+  opacity: 0.8; <br>
+  font-style: italic; <br>
+} 
+    </div>
+<br>
+HTML code: <br><br>
+&lt;input type="text" placeholder="Enter your neon code..." class="placeholder-ex">
+<br>
+
+<span class="large">
+    Output:
+</span> <br><br>
+<input type="text" placeholder="Enter your neon code..." class="placeholder-ex placeholder-output">
+<br><br>
+<hr>
+
+<span class="large">
+    7.::backdrop - (Modal/Full-Screen Styling)</span> <br><br>
+    Targets the layer that covers the rest of the page when an element is in a top layer (like an HTML &lt;dialog> or full-screen video).
+    <br><br>
+    CSS code: <br><br>
+    <div class="example">
+    dialog::backdrop { <br>
+  background-color: rgba(0, 0, 0, 0.9); <br>
+  backdrop-filter: blur(4px); <br>
+} 
+    </div>
+<br>
+Explanation: <br><br>
+When a &lt;dialog> element is opened, this rule styles the shaded area behind it, giving a dark, focused look.
+<br><br>
+<hr>
+
+<span class="large">
+    8.::cue - (Media/Accessibility)</span> <br><br>
+    Styles the text of WebVTT captions/subtitles used in HTML5 &lt;video> elements.
+    <br><br>
+    CSS code: <br><br>
+    <div class="example">
+    video::cue { <br>
+  background-color: var(--neon-blue); <br>
+  color: var(--dark-bg); <br>
+  text-shadow: 0 0 5px #fff; <br>
+} 
+    </div>
+<br>
+Explanation: <br><br>
+Ensures subtitles are styled with high contrast and a neon effect to stand out over the video content.
+<br><br>
+<hr>
+
+<span class="large">
+    9.::target-text - (Navigation/Highlighting)</span> <br><br>
+    Styles the specific text highlighted by the browser when a URL includes a text fragment identifier (e.g., `#::target=...`).
+    <br><br>
+    CSS code: <br><br>
+    <div class="example">
+    ::target-text { <br>
+  background-color: var(--neon-pink-glow); <br>
+  color: var(--dark-bg); <br>
+} 
+    </div>
+<br>
+Explanation: <br><br>
+If a user lands on your page directly to a specific sentence, that sentence is highlighted with the pink neon glow.
+<br><br>
+<hr>
+
+<span class="large">
+    10.::file-selector-button - (Form Styling)</span> <br><br>
+    Styles the button portion of an `<input type="file">` element.
+    <br><br>
+    CSS code: <br><br>
+    <div class="example">
+    input[type="file"]::file-selector-button { <br>
+  background-color: var(--neon-blue); <br>
+  color: var(--dark-bg); <br>
+  border: none; <br>
+  padding: 8px 16px; <br>
+  border-radius: 4px; <br>
+  cursor: pointer; <br>
+} 
+    </div>
+<br>
+HTML code: <br><br>
+&lt;input type="file" class="file-selector-ex">
+<br>
+
+<span class="large">
+    Output:
+</span> <br><br>
+<input type="file" class="file-selector-ex file-selector-output">
+<br><br>
+<hr>
+
+<span class="large">
+    11.::target-text - (Navigation/Highlighting)</span> <br><br>
+    Styles the specific text highlighted by the browser when a URL includes a text fragment identifier (e.g., `#::target=...`).
+    <br><br>
+    CSS code: <br><br>
+    <div class="example">
+    ::target-text { <br>
+  background-color: var(--neon-pink-glow); <br>
+  color: var(--dark-bg); <br>
+} 
+    </div>
+<br>
+Explanation: <br><br>
+If a user lands on your page directly to a specific sentence, that sentence is highlighted with the pink neon glow.
+<br><br>
+<hr>
+
+<span class="large">
+    12.::part(name) - (Web Components / Shadow DOM)</span> <br><br>
+    Used to style named internal parts of a custom web component from the outside (Light DOM).
+    <br><br>
+    CSS code (In global stylesheet): <br><br>
+    <div class="example">
+    my-component::part(button-style) { <br>
+  border: 2px solid var(--neon-pink); <br>
+  background: var(--dark-bg); <br>
+} <br>
+    </div>
+<br>
+Explanation: <br><br>
+This allows external CSS to penetrate the Shadow DOM and style internal elements that have the `part="button-style"` attribute.
+<br><br>
+<hr>
+
+<span class="large">
+    13.::slotted(selector) - (Web Components / Shadow DOM)</span> <br><br>
+    Used within the Shadow DOM component's stylesheet to style content that has been "slotted" in from the Light DOM.
+    <br><br>
+    CSS code (Inside Shadow DOM stylesheet): <br><br>
+    <div class="example">
+    ::slotted(h3) { <br>
+  color: var(--neon-blue); <br>
+  text-decoration: underline; <br>
+} <br>
+    </div>
+<br>
+Explanation: <br><br>
+If the user of the custom component passes an `<h3>` tag into the component, this rule applies styling to that specific `<h3>`.
+<br><br>
+<hr>
+
+<span class="large">
+    14.::-webkit-autofill - (Form Styling - Vendor Prefixed)</span> <br><br>
+    A crucial pseudo-element for modern form styling. It targets the input element when the browser has auto-filled its value (e.g., saved passwords/addresses).
+    <br><br>
+    CSS code: <br><br>
+    <div class="example">
+    /* Note: Requires vendor prefix and "!important" to override browser styles */ <br>
+    input:-webkit-autofill { <br>
+  -webkit-box-shadow: 0 0 0 1000px #2b2b1a inset !important; /* Dark green background */ <br>
+  -webkit-text-fill-color: var(--valid-color) !important; <br>
+} <br>
+    </div>
+<br>
+HTML code: <br><br>
+&lt;input type="email" autocomplete="email" placeholder="Auto-fillable field">
+<br>
+
+<span class="large">
+    Output:
+</span> <br><br>
+<input type="email" autocomplete="email" placeholder="Auto-fillable field" class="autofill-output">
+<br><br>
+<hr>
+
+<span class="large">
+    15.::-webkit-slider-thumb / ::-webkit-slider-runnable-track - (Form Styling - Vendor Prefixed)</span> <br><br>
+    Used to style the complex components of a range slider input.
+    <br><br>
+    CSS code: <br><br>
+    <div class="example">
+    input[type="range"]::-webkit-slider-thumb { <br>
+  background: var(--neon-pink); <br>
+  border: 1px solid white; <br>
+} <br>
+    input[type="range"]::-webkit-slider-runnable-track { <br>
+  background: #333; <br>
+} <br>
+    </div>
+<br>
+HTML code: <br><br>
+&lt;input type="range" min="0" max="100" value="50" class="slider-ex">
+<br>
+
+<span class="large">
+    Output:
+</span> <br><br>
+<input type="range" min="0" max="100" value="50" class="slider-ex slider-output">
+<br><br>
+<hr>
+
+<span class="large">
+    16.::-webkit-validation-next-paged-page - (Form Validation - Vendor Prefixed)</span> <br><br>
+    Targets the native error message balloon that appears when a form field fails validation.
+    <br><br>
+    CSS code: <br><br>
+    <div class="example">
+    /* Vendor prefix is required and styling capabilities are limited. */ <br>
+    ::-webkit-validation-next-paged-page { <br>
+  background: var(--neon-pink); <br>
+  color: var(--dark-bg); <br>
+  border: 1px solid var(--neon-pink); <br>
+} <br>
+    </div>
+<br>
+Explanation: <br><br>
+If you try to submit a required, empty field, the resulting error bubble will be neon pink.
+<br><br>
+<hr>
+
+<span class="large">
+    17.::-webkit-search-decoration - (Form Styling - Vendor Prefixed)</span> <br><br>
+    Used to style the internal decorations (magnifying glass, clear 'x' button) inside an `input[type="search"]`.
+    <br><br>
+    CSS code: <br><br>
+    <div class="example">
+    ::-webkit-search-decoration { <br>
+  display: none; /* Hide the native search elements */ <br>
+} <br>
+    </div>
+<br>
+HTML code: <br><br>
+&lt;input type="search" placeholder="Search" class="search-ex">
+<br>
+
+<span class="large">
+    Output:
+</span> <br><br>
+<input type="search" placeholder="Search" class="search-ex search-output">
+<br><br>
+<hr>
+
+<span class="large">
+    18.::next-paged-page - (Print Layout - Paged Media)</span> <br><br>
+    Targets the blank boxes generated by block elements in paged media. Useful for controlling printed output.
+    <br><br>
+    CSS code: <br><br>
+    <div class="example">
+    @media print { <br>
+      p::next-paged-page { <br>
+        content: "--- NEW PAGE ---"; <br>
+        color: #999; <br>
+        margin-top: 1em; <br>
+      } <br>
+    } <br>
+    </div>
+<br>
+Explanation: <br><br>
+Adds generated content in the space left by a forced page break, helpful for debugging print layouts.
+<br><br>
+<hr>
+
+<span class="large">
+    19.::grammar-error - (Error Highlighting - Vendor Prefixed)</span> <br><br>
+    Used to style text marked by the browser's native grammar check feature.
+    <br><br>
+    CSS code: <br><br>
+    <div class="example">
+    /* Note: Requires vendor prefix (e.g., -webkit) in actual usage */ <br>
+    ::grammar-error { <br>
+  border-bottom: 2px dotted var(--neon-blue); <br>
+  background-color: rgba(45, 217, 254, 0.1); <br>
+} <br>
+    </div>
+<br>
+Explanation: <br><br>
+This non-standard rule allows you to customize the default wavy green line seen under grammatically incorrect text.
+<br><br>
+<hr>
+
+<span class="large">
+    20.::spelling-error - (Error Highlighting - Vendor Prefixed)</span> <br><br>
+    Used to style text marked by the browser's native spell check feature.
+    <br><br>
+    CSS code: <br><br>
+    <div class="example">
+    /* Note: Requires vendor prefix (e.g., -webkit) in actual usage */ <br>
+    ::spelling-error { <br>
+  background-color: rgba(255, 0, 141, 0.2); <br>
+  border-bottom: 2px dashed var(--neon-pink); <br>
+} <br>
+    </div>
+<br>
+Explanation: <br><br>
+This non-standard rule allows you to customize the default wavy red line seen under misspelled text.
+<br><br>
+<hr>
+
+
+    </div>
+</body>
+<footer>
+    <div class="footer-nav">
+        <button><a href="css-boxmodel.html">Next</a> 
+        </button>
+        <button><a href="css-pseudoclasses.html">Previous</a> </button>  
+        <br>
+        <h3>CSS Topics</h3>
+          <nav>
+              <ol>
+                <li><a href="intro-to-css.html">Introduction to CSS</a></li>
+                  <li><a href="css-syntax.html">CSS Syntax</a></li>
+                  <li><a href="css-selectors.html">CSS Selectors</a></li>
+                  <li><a href="css-pseudoclasses.html">CSS Pseudoclasses</a></li>
+                  <li><a href="css-pseudoelements.html">CSS Pseudoelements</a></li>
+                  <li><a href="css-boxmodel.html">CSS Box Model</a></li>
+                  <li><a href="css-boxsizing.html">CSS Box Sizing</a></li>
+                  <li><a href="css-display.html">CSS Display</a></li>
+                  <li><a href="css-widthheight.html">CSS Width &amp; Height</a></li>
+                  <li><a href="css-marginpadding.html">CSS Margin &amp; Padding</a></li>
+                  <li><a href="css-overflow.html">CSS Overflow</a></li>
+                  <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+                  <li><a href="css-grid.html">CSS Grid</a></li>
+                  <li><a href="css-positioning.html">CSS Positioning</a></li>
+                  <li><a href="css-float.html">CSS Float</a></li>
+                  <li><a href="css-colors.html">CSS Colors</a></li>
+                  <li><a href="css-typography.html">CSS Typography</a></li>
+                  <li><a href="css-borders.html">CSS Borders</a></li>
+                  <li><a href="css-transparency.html">CSS Transparency</a></li>
+                  <li><a href="css-filters.html">CSS Filters</a></li>
+                  <li><a href="css-viewport.html">CSS Viewport</a></li>
+                  <li><a href="css-mediaqueries.html">CSS Media Queries</a></li>
+                  <li><a href="css-relativeunits.html">CSS Relative Units</a></li>
+                  <li><a href="css-responsiveimages.html">CSS Responsive Images</a></li>
+                  <li><a href="css-transforms2d.html">CSS 2D Transforms</a></li>
+                  <li><a href="css-transforms3d.html">CSS 3D Transforms</a></li>
+                  <li><a href="css-transitions.html">CSS Transitions</a></li>
+                  <li><a href="css-animations.html">CSS Animations</a></li>
+                  <li><a href="css-customproperties.html">CSS Custom Properties</a></li>
+                  <li><a href="css-functions.html">CSS Functions</a></li>
+              </ol>
+          </nav>
+      </div>
+
+      <div class="footer-bottom">
+          <p class="copyright">&copy; CODE WITH FAHIM 2025</p>
+          <div class="footer-links">
+              <a href="privacy.html">Privacy Policy</a>
+              <a href="terms.html">Terms of Use</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+    
+
+</footer>
+</html>
