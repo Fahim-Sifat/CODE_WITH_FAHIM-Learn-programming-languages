@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://code-with-fahim.wuaze.com/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box-Model</title>
+    <link rel="stylesheet" href="css-boxmodel.css"/>
+    <!--GA4-->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZ1JHY721H');
+</script>
+
+
+</head>
+<body>
+    <header>
+    <div class="header-with-logo">
+      <img src="header-logo.png" alt="CWF Logo" class="header-logo"> 
+      <h1>CODE WITH FAHIM</h1>
+    </div>
+    <h3>CSS Box-Model</h3>
+</header>
+<div class="container">
+    <span class="larger">
+    🧩 What Is the Box Model?</span> <br><br>
+
+Every HTML element on a webpage — whether it’s a &lt;p>, &lt;div>, &lt;img>, or anything else — is treated like a box.
+This box has multiple parts that determine how much space it takes and how it interacts with other elements.
+<br><br>
+You can imagine it like a gift box:
+<br><br>
+<ul>
+<li>🎁 The gift = content</li>
+<li>
+🧻 The wrapping paper = padding
+</li><li>
+🎀 The ribbon = border
+</li><li>
+📦 The space between boxes = margin
+   </li></ul> <br><br><br>
+The CSS Box Model is one of the most important concepts in web design — it defines how every element on a webpage is structured and how it takes up space. <br><br>
+
+Think of it like this: every HTML element is a rectangular box, and the box model describes what’s inside and around that box. <br><br>
+<div class="img">
+    <img src="css-boxmodel.png" alt="Box-Model">
+</div> <br><br>
+<span class="larger">
+🧱 The 4 Layers of the Box Model:</span> <br><br><br>
+<ol>
+    <li>Content:</li>
+    <ul>
+        <li>This is the actual stuff inside the element — text, images, or other elements.</li>
+        <li>You can control its size using width and height.</li>
+    </ul>
+    <li>Padding:</li>
+    <ul>
+        <li>The space between the content and the border.</li>
+        <li>It creates breathing room inside the element.</li>
+        <li>Controlled with properties like padding, padding-top, padding-right, etc.</li>
+    </ul>
+    <li>Border:</li>
+    <ul>
+        <li>Surrounds the padding and content.</li>
+        <li>You can style it with border-width, border-style, and border-color.</li>
+        <li>Example: border: 2px solid red;</li>
+    </ul>
+    <li>Margin:</li>
+    <ul>
+        <li>The space outside the border — it separates the element from others.</li>
+        <li>Controlled using margin, margin-top, margin-right, etc.</li>
+    </ul>
+</ol> <br><br><br><br>
+<span class="larger">
+🧮 Total Element Size Formula: </span><br><br>
+Total width  =  margin-left + border-left + padding-left + width + padding-right + border-right + margin-right <br><br>
+Total height =  margin-top + border-top + padding-top + height + padding-bottom + border-bottom + margin-bottom <br><br>
+<br><br>
+<span class="large">
+    🧱 1. Content Area: 
+</span> <br><br>
+<ul>
+    <li>This is where your actual text, image, or child elements live.</li>
+    <li>Its size can be set using the width and height properties.</li>
+    <li>Example: <br><br>
+    div {
+<br>  width: 200px;
+  <br>height: 100px; <br>
+} <br>
+
+    </li>
+    <li>Only this content area is affected — not padding or borders unless you use box-sizing: border-box.</li>
+</ul> <br><br><br>
+<span class="large">
+    🧤 2. Padding Area:
+</span>
+<br><br>
+<ul>
+    <li>The padding adds space inside the element, between the content and the border.</li>
+    <li>Padding expands the element’s background color or image (since it’s part of the box itself).</li>
+    <li>Example: <br><br>
+    div { <br>
+  padding: 20px; <br>
+} <br>
+
+    </li>
+    <li>If you had text inside, it’d look like it’s sitting on a comfy cushion — not touching the edges.</li>
+</ul> <br><br><br>
+<span class="large">
+    🧱 3. Border Area:
+</span>
+<br><br>
+<ul>
+    <li>The border wraps around the padding and content.</li>
+    <li>You can make it visible, styled, or invisible.</li>
+    <li>Example: <br><br>
+    div { <br>
+  border: 3px solid blue; <br>
+} <br>
+
+    </li>
+    <li>Borders increase the total box size unless you use box-sizing: border-box.</li>
+</ul> <br><br>
+<span class="large">
+    🪞 4. Margin Area: 
+</span> <br><br>
+<ul>
+    <li>The margin is the space outside the box — it separates this element from others.</li>
+    <li>Margins are transparent and don’t affect the element’s background.</li>
+    <li>Example: <br><br>
+    div { <br>
+  margin: 15px; <br>
+} <br>
+
+    </li>
+    <li>Margins can even collapse vertically — for example, if two paragraphs each have a margin-top of 10px, the space between them will be 10px, not 20px</li>
+</ul> <br><br><br>
+<span class="larger">
+    🧠 Why the Box Model Matters:
+</span> <br><br><br>
+<ul>
+    <li>
+It helps you predict how elements fit together.
+</li>
+<li>
+It controls spacing, alignment, and layout.
+</li><li>
+It’s the foundation for flexbox, grid, and responsive design.
+</li>
+<li>
+And honestly, mastering it makes you look like a CSS wizard. 🧙‍♂️</li></ul>
+<br><br><br><br>
+😎 let’s visualize the CSS Box Model with a simple and colorful example. <br><br><br>
+HTML Code: <br><br>
+<div class="example">
+    &lt;!DOCTYPE html> <br>
+&lt;html lang="en"><br>
+&lt;head> <br>
+  &lt;meta charset="UTF-8"> <br>
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"> <br>
+  &lt;title>CSS Box Model Example&lt;/title> <br>
+  &lt;link rel="stylesheet" href="style.css"> <br>
+&lt;/head> <br>
+&lt;body> <br>
+  &lt;div class="box"> <br>
+    &lt;p>Content Area&lt;/p> <br>
+  &lt;/div> <br>
+&lt;/body> <br>
+&lt;/html></div> <br><br><br>
+CSS code: <br><br>
+<div class="example">
+body { <br>
+  background-color: #0e0e10; <br>
+  font-family: Arial, sans-serif; <br>
+  color: #fff; <br>
+  display: flex; <br>
+  justify-content: center; <br>
+  align-items: center; <br>
+  height: 100vh;<br>
+}br
+<br>
+.box { <br>
+  background-color: #1e90ff; /* content area */ <br>
+  color: white;<br>
+  text-align: center; <br>
+  width: 200px;<br>
+  padding: 30px; /* inner spacing */ <br>
+  border: 10px solid #ff6347; /* border around padding */ <br>
+  margin: 40px; /* space outside the box */ <br>
+  box-shadow: 0 0 20px #00ffff; /* glow for fun */ <br>
+}br
+<br>
+/* Add background colors to visualize each layer */
+<br>
+body::before { <br>
+  content: "Margin Area"; <br>
+  position: absolute; <br>
+  top: 10%; <br>
+  left: 50%; <br>
+  transform: translateX(-50%); <br>
+  color: #888; <br>
+  font-size: 18px; <br>
+} <br>
+<br>
+p {<br>
+  background-color: rgba(0, 0, 0, 0.3); <br>
+  padding: 10px; <br>
+  border-radius: 5px; <br>
+} </div><br><br><br>
+Output: <br><br>
+<div class="example">
+<img src="css-boxmodel2.png" alt="css-boxmodel2">
+</div>
+
+
+</div>
+
+</div>
+
+    
+</body> <br><br><br> <br>
+ <div class="footer-nav">
+        <button><a href="css-boxsizing.html">Next</a> 
+        </button>
+        <button><a href="css-pseudoelements.html">Previous</a> </button>  
+        <br>
+        <h3>CSS Topics</h3>
+          <nav>
+              <ol>
+                <li><a href="intro-to-css.html">Introduction to CSS</a></li>
+                  <li><a href="css-syntax.html">CSS Syntax</a></li>
+                  <li><a href="css-selectors.html">CSS Selectors</a></li>
+                  <li><a href="css-pseudoclasses.html">CSS Pseudo-classes</a></li>
+                  
+                  <li><a href="css-pseudoelements.html">CSS Pseudoelements</a></li>
+                  <li><a href="css-boxmodel.html">CSS Box Model</a></li>
+                  <li><a href="css-boxsizing.html">CSS Box Sizing</a></li>
+                  <li><a href="css-display.html">CSS Display</a></li>
+                  <li><a href="css-widthheight.html">CSS Width &amp; Height</a></li>
+                  <li><a href="css-marginpadding.html">CSS Margin &amp; Padding</a></li>
+                  <li><a href="css-overflow.html">CSS Overflow</a></li>
+                  <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+                  <li><a href="css-grid.html">CSS Grid</a></li>
+                  <li><a href="css-positioning.html">CSS Positioning</a></li>
+                  <li><a href="css-float.html">CSS Float</a></li>
+                  <li><a href="css-colors.html">CSS Colors</a></li>
+                  <li><a href="css-typography.html">CSS Typography</a></li>
+                  <li><a href="css-borders.html">CSS Borders</a></li>
+                  <li><a href="css-transparency.html">CSS Transparency</a></li>
+                  <li><a href="css-filters.html">CSS Filters</a></li>
+                  <li><a href="css-viewport.html">CSS Viewport</a></li>
+                  <li><a href="css-mediaqueries.html">CSS Media Queries</a></li>
+                  <li><a href="css-relativeunits.html">CSS Relative Units</a></li>
+                  <li><a href="css-responsiveimages.html">CSS Responsive Images</a></li>
+                  <li><a href="css-transforms2d.html">CSS 2D Transforms</a></li>
+                  <li><a href="css-transforms3d.html">CSS 3D Transforms</a></li>
+                  <li><a href="css-transitions.html">CSS Transitions</a></li>
+                  <li><a href="css-animations.html">CSS Animations</a></li>
+                  <li><a href="css-customproperties.html">CSS Custom Properties</a></li>
+                  <li><a href="css-functions.html">CSS Functions</a></li>
+              </ol>
+          </nav>
+      </div>
+
+      <div class="footer-bottom">
+          <p class="copyright">&copy; CODE WITH FAHIM 2025</p>
+          <div class="footer-links">
+              <a href="privacypolicy.html">Privacy Policy</a>
+              <a href="terms&conditions.html">Terms of Use</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+   
+</html>
