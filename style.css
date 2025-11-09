@@ -55,12 +55,17 @@ header {
     top: 0;
     z-index: 1000;
 }
+.header-logo{
+    width: 25px;
+    
+}
 
 .logo a {
     font-size: 1.6rem;
     font-weight: bold;
     color: var(--primary-neon);
     text-shadow: 0 0 8px var(--primary-neon);
+    
 }
 
 nav ul {

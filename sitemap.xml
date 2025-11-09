@@ -17,6 +17,7 @@
 
 <!-- Main Course/Topic Pages -->
 
+<!--HTML5-->
 <url>
   <loc>https://code-with-fahim.wuaze.com/html.html</loc>
   <lastmod>2025-11-02T00:00:00+00:00</lastmod>
@@ -138,6 +139,9 @@
   <changefreq>monthly</changefreq>
 </url>
 <url>
+
+<!--CSS3-->
+
   <loc>https://code-with-fahim.wuaze.com/css.html</loc>
   <lastmod>2025-11-06T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
@@ -168,13 +172,47 @@
   <priority>0.80</priority>
   <changefreq>daily</changefreq>
 </url>
-<!-- Utility/Account Pages -->
+
 <url>
-  <loc>https://code-with-fahim.wuaze.com/login.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.60</priority>
-  <changefreq>yearly</changefreq>
+  <loc>https://code-with-fahim.wuaze.com/css-pseudoelements.html</loc>
+  <lastmod>2025-11-09T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>daily</changefreq>
 </url>
+
+<url>
+  <loc>https://code-with-fahim.wuaze.com/css-boxmodel.html</loc>
+  <lastmod>2025-11-09T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>daily</changefreq>
+</url>
+
+<url>
+  <loc>https://code-with-fahim.wuaze.com/css-boxsizing.html</loc>
+  <lastmod>2025-11-09T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>daily</changefreq>
+</url>
+
+<url>
+  <loc>https://code-with-fahim.wuaze.com/css-display.html</loc>
+  <lastmod>2025-11-09T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>daily</changefreq>
+</url>
+
+<url>
+  <loc>https://code-with-fahim.wuaze.com/css-widthheight.html</loc>
+  <lastmod>2025-11-09T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>daily</changefreq>
+</url>
+
+
+
+
+<!-- Utility/Account Pages -->
+
 <url>
   <loc>https://code-with-fahim.wuaze.com/register.html</loc>
   <lastmod>2025-11-02T00:00:00+00:00</lastmod>
@@ -182,10 +220,17 @@
   <changefreq>yearly</changefreq>
 </url>
 <url>
-  <loc>https://code-with-fahim.wuaze.com/privacy.policy.html</loc>
+  <loc>https://code-with-fahim.wuaze.com/privacypolicy.html</loc>
   <lastmod>2025-11-02T00:00:00+00:00</lastmod>
   <priority>0.50</priority>
   <changefreq>yearly</changefreq>
+</url>
+
+<url>
+  <loc>https://code-with-fahim.wuaze.com/css-terms&amp;conditions.html</loc>
+  <lastmod>2025-11-07T00:00:00+00:00</lastmod>
+  <priority>0.50</priority>
+  <changefreq>monthly</changefreq>
 </url>
 
 </urlset>

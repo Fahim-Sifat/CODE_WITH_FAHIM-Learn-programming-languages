@@ -4,63 +4,71 @@
  */
 
 /* === General Reset & Body Styles === */
+/* === Main Content Styles === */
 :root {
-    /* Define a modern, clean font stack */
-    --font-family-primary: 'Helvetica Neue', Arial, sans-serif;
-    /* Aesthetic Dark Palette */
-    --color-background-dark: #121212; /* Very dark gray, better than pure black for eyes */
-    --color-text-light: #E0E0E0;      /* Soft white for primary text */
-    --color-primary-accent: #00ADB5;  /* Cyan/Teal for highlights (amazing color) */
-    --color-secondary-accent: #FF6B6B;/* Soft Red for buttons/warnings */
-    --color-code-background: #1E1E1E; /* Darker background for code blocks */
-    --color-border: #333333;          /* Subtle border color */
+    --neon-blue: #2dd9fe; /* Primary color: Cyan/Blue */
+    --neon-blue-glow: #00a3d5; 
+    --neon-pink: #ff008d; /* Secondary color: Magenta/Pink */
+    --neon-pink-glow: #e10361;
+    --dark-bg: #10101a; /* Very dark background */
+    --text-color: #f0f0f0; /* Light text */
+    --valid-color: #00ff66; /* Bright Green for success/valid states */
 }
 
+/* --- Global Styles: Dark Background and Font --- */
 body {
-    background-color: var(--color-background-dark);
-    color: var(--color-text-light);
-    font-family: var(--font-family-primary);
+    font-size: 1.2rem;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-family: 'Times New Roman', Times, serif,Arial, Helvetica, sans-serif,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6; /* Improved readability */
+    line-height: 1.8; /* Increased line-height for readability */
 }
 
-/* Apply box-sizing for easier layout calculations */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-/* === Header Styles === */
+/* --- Header and Logo --- */
 header {
-    background-color: #1F1F1F; /* Slightly lighter than body background */
-    padding: 20px 40px;
-    text-align: center;
-    border-bottom: 2px solid var(--color-primary-accent);
+    background-color: #0d0d15;
+    border-bottom: 2px solid var(--neon-blue);
+    margin-bottom: 20px;
 }
 
 header img {
-    width: 60px;
-    height: 60px;
-    /* Optional: Add a subtle glow/border to the logo */
-    border-radius: 50%;
-    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    filter: drop-shadow(0 0 10px var(--neon-pink)); /* Apply glow to logo */
+    padding-top: 20px;
+}
+
+/* Main Header Neon Glow */
+header h1, header h3 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin: 0;
+    /* Stacked text-shadows for the glow effect */
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px var(--neon-blue),
+        0 0 40px var(--neon-blue),
+        0 0 80px var(--neon-blue-glow);
 }
 
 header h1 {
-    color: var(--color-primary-accent);
-    font-size: 2.5em;
-    margin: 5px 0;
-    letter-spacing: 2px;
+    color: #fff;
+    font-size: 3em;
 }
 
 header h3 {
-    color: var(--color-text-light);
-    font-size: 1.2em;
-    margin: 0;
-    font-weight: 300;
+    color: var(--neon-blue);
+    font-size: 1.5em;
+    padding-bottom: 20px;
 }
 
-/* === Main Content Styles === */
+
+
 main {
     padding: 20px 40px;
     max-width: 900px; /* Center content and make it readable */
@@ -119,98 +127,112 @@ main {
     content: ''; /* Prevent the example HTML tags from showing the color */
 }
 
-/* === Footer Styles === */
-footer {
-    background-color: #1F1F1F;
-    padding: 30px 40px;
-    border-top: 2px solid var(--color-border);
-    text-align: center;
-}
 
-.footer-nav {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px dashed var(--color-border);
+
+/* --- Footer --- */
+footer {
+    background-color: #0d0d15;
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid var(--neon-blue);
+    margin-top: 50px;
 }
 
 .footer-nav h3 {
-    color: var(--color-primary-accent);
-    margin: 20px 0 10px 0;
+    color: var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink);
+    margin: 20px 0 10px;
 }
 
+/* Footer Navigation Buttons */
 .footer-nav button {
-    text-decoration: none;
-    background-color: var(--color-primary-accent);
-    color: var(--color-background-dark);
-    border: none;
+    background: transparent;
+    border: 2px solid var(--neon-blue);
     padding: 10px 20px;
-    margin: 5px 10px;
-    border-radius: 5px;
+    box-shadow: 0 0 10px var(--neon-blue-glow);
+    transition: all 0.3s;
     cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s;
-}
-a{
-    text-decoration: none;
+    margin: 5px;
 }
 
 .footer-nav button:hover {
-    background-color: #3CD0D6;
-    transform: translateY(-2px);
+    background: var(--neon-blue);
+    box-shadow: 0 0 15px var(--neon-blue-glow), 0 0 20px var(--neon-blue);
 }
 
-/* List of Topics */
-footer nav ol {
+.footer-nav button a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-nav button:hover a {
+    color: var(--dark-bg);
+}
+
+/* Footer Topic List */
+.footer-nav nav ol {
     list-style: none;
     padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    margin: 0;
+    column-count: 2; /* Two columns for the long list */
+    column-gap: 30px;
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
-footer nav li {
-    background-color: #252525;
-    border-radius: 4px;
-    padding: 5px 10px;
+.footer-nav nav ol li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #222;
 }
 
-footer nav a {
-    color: var(--color-text-light);
+.footer-nav nav ol li::before {
+    content: "::"; /* Different marker for the list */
+    color: var(--neon-pink);
+    margin-right: 5px;
+}
+
+.footer-nav nav ol li a {
+    color: #aaa;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-footer nav a:hover {
-    text-decoration: none;
-    list-style: none;
-    color: var(--color-primary-accent);
-    
+.footer-nav nav ol li a:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 3px var(--neon-blue-glow);
 }
 
-/* Bottom Footer Links */
+/* Footer Bottom */
 .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-top: 20px;
     padding-top: 10px;
-}
-
-.copyright {
-    color: #777; /* Subtler color for copyright */
-    font-size: 0.9em;
+    border-top: 1px dotted #333;
 }
 
 .footer-links a {
-    color: #999;
+    color: #666;
     text-decoration: none;
-    margin-left: 15px;
+    margin: 0 10px;
     font-size: 0.9em;
-    transition: color 0.3s;
 }
 
 .footer-links a:hover {
-    color: var(--color-secondary-accent);
+    color: var(--neon-pink);
+}
+
+.copyright {
+    color: #444;
+    font-size: 0.8em;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .footer-nav nav ol {
+        column-count: 1;
+        max-width: none;
+    }
 }
 
 /* Style for the inline HTML code examples in .div1 */
