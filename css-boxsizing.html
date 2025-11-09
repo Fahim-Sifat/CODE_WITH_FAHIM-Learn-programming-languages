@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://code-with-fahim.wuaze.com/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box-Sizing</title>
+    <link rel="stylesheet" href="css-boxsizing.css"/>
+  <!--GA4-->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZ1JHY721H');
+</script>
+
+
+</head>
+<body>
+    <header>
+        <img src="header-logo.png" alt="header-logo"><h1>CODE WITH FAHIM</h1>
+        <h3>CSS Box-Sizing</h3>
+    </header> <br>
+    <div class="container">
+        <span class="larger">
+      🧠 The Core Concept:</span> <br><br>
+
+Every element on a webpage is like a little rectangular “box.” <br>
+That box is made up of four layers:
+<br><br>
+1.Content → the text or image inside.
+<br>
+2.Padding → the space between the content and the border.
+<br>
+3.Border → the outline surrounding the padding.
+<br>
+4.Margin → the space outside the box, separating it from other boxes.
+<br>
+So, when you set: <br><br>
+<div class="example">
+    width: 300px; <br>
+height: 200px; <br>
+
+</div> <br><br>
+you’re talking about the content box — unless you change box-sizing. <br><br>
+<br>
+<span class="larger">
+    ⚙️ The box-sizing Property Values: 
+</span> <br><br>
+<span class="large">
+1. content-box (default):</span> <br><br>
+
+Think of this as the “old-school” box model.
+<br><br>
+<ul>
+    <li>
+The width and height apply only to the content.
+</li>
+<li>
+Padding and borders are added on top of those dimensions.
+    </li></ul></div> <br>
+<div class="example">
+    .box1 { <br>
+  box-sizing: content-box; <br>
+  width: 300px; <br>
+  padding: 20px; <br>
+  border: 10px solid #333; <br>
+} <br>
+
+</div> <br><br>
+🧮 Total Width = 300 + (20×2) + (10×2) = 360px. <br><br>
+<br>
+<span class="large">2.Border box(modern standard):</span> <br><br>
+This one’s way more practical for layout design. <br><br>
+<ul>
+    <li>
+The width and height include content, padding, and border.
+</li><li>
+The content area shrinks automatically to fit inside.</li></ul> <br><br>
+<div class="example">
+    .box2 { <br>
+  box-sizing: border-box; <br>
+  width: 300px; <br>
+  padding: 20px; <br>
+  border: 10px solid #333; <br>
+} </div><br><br>
+🧮 Total Width = exactly 300px, no matter what padding or border you add. <br>
+<br>
+<br>
+<span class="large">3.inherit:</span> <br><br>
+This makes the element take the box-sizing value from its parent. <br><br>
+<div class="example">
+    .child { <br>
+  box-sizing: inherit; <br>
+} </div><br><br>
+This can be useful when you’re building complex UI systems or CSS frameworks where inheritance keeps things consistent. <br><br><br><br>
+<span class="larger">
+
+🌍 Best Practice (Developers’ Favorite Trick):</span> <br><br>
+Nearly all modern projects start with this reset: <br><br>
+<div class="example">
+*{ <br>
+  box-sizing: border-box; <br>
+} <br>
+</div> <br><br>
+
+
+✅ This ensures every element, including pseudo-elements, behaves predictably. <br>
+✅ It prevents weird overflow bugs caused by padding or borders. <br>
+</div> <br><br><br>
+<span class="larger">
+    📊 Quick Visual Comparison:
+</span> <br><br>
+<table>
+<tr>
+    <th>Property</th>
+    <th>content-box(default)</th>
+    <th>border-box(modern)</th>
+</tr>
+<tr>
+    <td>Width includes</td>
+    <td>Content only</td>
+    <td>Content + Padding + Border</td>
+</tr>
+<tr>
+    <td>Easier to size</td>
+    <td>❌ No</td>
+    <td>✅ Yes</td>
+</tr>
+<tr>
+    <td>Default in CSS</td>
+    <td>✅ Yes</td>
+    <td>❌ No</td>
+</tr>
+<tr>
+    <td>Common in use</td>
+    <td>⚙️ Legacy layouts</td>
+    <td>💪 Modern responsive layouts</td>
+</tr></table>
+ <br><br><br>
+ <span class="larger">
+ 🧩 Why box-sizing matters: 
+</span> <br><br>
+Imagine building a grid of perfectly aligned boxes — cards, buttons, or input fields — and suddenly some are wider because of padding or borders. That’s a layout nightmare 😅. <br>
+box-sizing: border-box; fixes that by making the total size of each element predictable. You say “200px wide,” and it stays 200px, no matter what padding or border you add.
+</div> <br><br>
+<span class="larger">
+🧭 Designer’s Tip:
+</span> <br><br>
+If you ever notice scrollbars appearing unexpectedly, it’s often because you’re using content-box and your padding or border pushed the box past 100% width. Switching to border-box usually resolves it cleanly. <br><br><br>
+<img class="box-sizing" src="box-sizing.png" alt="box-sizing">
+</body> <br><br><br><br><br>
+<footer>
+    <div class="footer-nav">
+        <button><a href="css-display.html">Next</a> 
+        </button>
+        <button><a href="css-boxmodel.html">Previous</a> </button>  
+        <br>
+        <h3>CSS Topics</h3>
+          <nav>
+              <ol>
+                <li><a href="intro-to-css.html">Introduction to CSS</a></li>
+                  <li><a href="css-syntax.html">CSS Syntax</a></li>
+                  <li><a href="css-selectors.html">CSS Selectors</a></li>
+                  <li><a href="css-pseudoclasses.html">CSS Pseudo-classes</a></li>
+                  
+                  <li><a href="css-pseudoelements.html">CSS Pseudoelements</a></li>
+                  <li><a href="css-boxmodel.html">CSS Box Model</a></li>
+                  <li><a href="css-boxsizing.html">CSS Box Sizing</a></li>
+                  <li><a href="css-display.html">CSS Display</a></li>
+                  <li><a href="css-widthheight.html">CSS Width &amp; Height</a></li>
+                  <li><a href="css-marginpadding.html">CSS Margin &amp; Padding</a></li>
+                  <li><a href="css-overflow.html">CSS Overflow</a></li>
+                  <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+                  <li><a href="css-grid.html">CSS Grid</a></li>
+                  <li><a href="css-positioning.html">CSS Positioning</a></li>
+                  <li><a href="css-float.html">CSS Float</a></li>
+                  <li><a href="css-colors.html">CSS Colors</a></li>
+                  <li><a href="css-typography.html">CSS Typography</a></li>
+                  <li><a href="css-borders.html">CSS Borders</a></li>
+                  <li><a href="css-transparency.html">CSS Transparency</a></li>
+                  <li><a href="css-filters.html">CSS Filters</a></li>
+                  <li><a href="css-viewport.html">CSS Viewport</a></li>
+                  <li><a href="css-mediaqueries.html">CSS Media Queries</a></li>
+                  <li><a href="css-relativeunits.html">CSS Relative Units</a></li>
+                  <li><a href="css-responsiveimages.html">CSS Responsive Images</a></li>
+                  <li><a href="css-transforms2d.html">CSS 2D Transforms</a></li>
+                  <li><a href="css-transforms3d.html">CSS 3D Transforms</a></li>
+                  <li><a href="css-transitions.html">CSS Transitions</a></li>
+                  <li><a href="css-animations.html">CSS Animations</a></li>
+                  <li><a href="css-customproperties.html">CSS Custom Properties</a></li>
+                  <li><a href="css-functions.html">CSS Functions</a></li>
+              </ol>
+          </nav>
+      </div>
+
+      <div class="footer-bottom">
+          <p class="copyright">&copy; CODE WITH FAHIM 2025</p>
+          <div class="footer-links">
+              <a href="privacypolicy.html">Privacy Policy</a>
+              <a href="terms&conditions.html">Terms of Use</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+ 
+</footer>
+</html>
