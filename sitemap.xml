@@ -208,6 +208,28 @@
   <changefreq>daily</changefreq>
 </url>
 
+<url>
+  <loc>https://code-with-fahim.wuaze.com/css-marginpadding.html</loc>
+  <lastmod>2025-11-09T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>daily</changefreq>
+</url>
+
+<url>
+  <loc>https://code-with-fahim.wuaze.com/css-widthheight.html</loc>
+  <lastmod>2025-11-09T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>daily</changefreq>
+</url>
+
+<url>
+  <loc>https://code-with-fahim.wuaze.com/css-overflow.html</loc>
+  <lastmod>2025-11-09T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+  <changefreq>daily</changefreq>
+</url>
+
+
 
 
 
