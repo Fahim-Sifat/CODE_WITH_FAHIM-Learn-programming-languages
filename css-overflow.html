@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://code-with-fahim.wuaze.com/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow</title>
+    <link rel="stylesheet" href="css-overflow.css"/>
+<!--GA4-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZ1JHY721H');
+</script>
+
+
+</head>
+<body>
+<header>
+        <img src="header-logo.png" alt="header-logo"><h1>CODE WITH FAHIM</h1>
+        <h3>CSS Overflow</h3>
+    </header>
+    <div class="container">
+In CSS, overflow controls what happens when the content of an element is too big to fit inside its container (like text or images spilling out of a box).
+<br>
+Here’s the basic idea: imagine you’ve got a div with a fixed width and height — if the content inside it goes beyond those limits, overflow decides whether to hide it, show scrollbars, or just let it spill out.
+<br><br>
+<span class="larger">
+🌊 What “Overflow” Really Means:
+</span>
+<br><br>
+When you set a width or height on an element, the browser draws a “box” for it (thanks to the CSS box model). <br>
+If the content inside that box — like text, images, or other elements — becomes larger than the box itself, that’s called overflow.
+<br><br>
+By default, the browser just lets that extra stuff spill out beyond the border. But with the overflow property, you take control. <br><br>
+<span class="large">Syntax:</span> <br><br>
+<div class="example">
+    overflow: visible | hidden | scroll | auto;
+</div> <br><br>
+<span class="large">Values:</span> <br><br>
+<table>
+    <tr>
+        <th>Value</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>visible</td>
+        <td>Default. Content is not clipped — it overflows and remains visible outside the box.</td>
+    </tr>
+    <tr>
+        <td>hidden</td>
+        <td>The overflow is clipped, and the extra content is not visible.</td>
+    </tr>
+    <tr>
+        <td>scroll</td>
+        <td>The overflow is clipped, but scrollbars always appear, even if not needed.</td>
+    </tr>
+    <tr>
+        <td>auto</td>
+        <td>The browser adds scrollbars only if necessary.</td>
+    </tr>
+</table> <br><br><br>
+<span class="larger">
+    Details of overflow values:
+</span> <br><br>
+<span class="large">1.Overflow:auto(Smart option)</span> <br><br>
+<ul>
+<li>
+Adds scrollbars only when content actually overflows.
+</li><li>
+Clean and user-friendly.
+</li> <br></ul><br><br>
+Example:
+<div class="example">
+    .box {
+  width: 200px;
+  height: 100px;
+  border: 2px solid #444;
+  overflow: auto;
+}
+
+&lt;div class="box">
+  &lt;p>This is a long paragraph that overflows the box boundaries...&lt;/p>
+  &lt;div>
+</div> <br><br>
+Output: <br><br>
+<div class="example">
+    <style>
+        .box {
+  width: 200px;
+  height: 100px;
+  border: 2px solid #444;
+  overflow: auto;
+}
+
+    </style>
+<div class="box">
+  <p>This is a long paragraph that overflows the box boundaries...</p>
+</div>
+
+</div> <br><br>
+Here, if the text is too long, scrollbars will appear so you can scroll to see the rest.
+<br><br><br>
+You can also control horizontal and vertical overflow separately:
+<br><br>
+<div class="example">
+    overflow-x: hidden;  /* horizontal */
+overflow-y: scroll;  /* vertical */
+
+</div> <br><br><br>
+
+<span class="large">2. overflow: visible; (Default)</span> <br><br>
+<ul><li>
+    The overflowing content is not clipped.
+</li><li>
+It stays visible outside the container.
+</li><li>
+This can break your layout if you’re not careful.
+</li></ul> <br><br>
+Example: 
+<div class="example">
+    .box {
+  width: 200px;
+  height: 100px;
+  border: 2px solid red;
+  overflow: visible;
+}
+&lt;div class="box">➡️ You’ll see text or images popping out beyond the box — messy but sometimes intentional (for artistic effects).&lt;div>
+</div> <br><br>
+Output: 
+<div class="example">
+<style>
+      .box2 {
+  width: 200px;
+  height: 100px;
+  border: 2px solid red;
+  overflow: visible;
+}
+</style>
+<div class="box2">➡️ You’ll see text or images popping out beyond the box — messy but sometimes intentional (for artistic effects).</div>
+</div> <br><br><br>
+<span class="large">3. overflow: hidden;</span>
+<br><br>
+<ul>
+  <li>  Any content that doesn’t fit is cut off.
+</li><li>
+There’s no scrollbar, so you can’t access the hidden part.
+</li><li>
+Useful for clean layouts, image cropping, or animation clipping.
+</li></ul> <br><br>
+Example: 
+<div class="example">
+    .box {
+  width: 200px;
+  height: 100px;
+  border: 2px solid green;
+  overflow: hidden;
+}
+&lt;div class="box">➡️ Great when you want to hide what’s overflowing without letting users scroll.(The text is hidden.)&lt;div>
+</div> <br><br>
+Output:
+<div class="example">
+    <style>
+         .box3 {
+  width: 200px;
+  height: 100px;
+  border: 2px solid green;
+  overflow: hidden;
+}
+    </style>
+<div class="box3">➡️ Great when you want to hide what’s overflowing without letting users scroll.The text is hidden</div>
+</div> <br><br>
+<span class="large">4.overflow: scroll;</span> <br><br>
+<ul><li>
+The box always shows scrollbars, whether content fits or not.
+</li><li>
+Gives a clear signal that scrolling is possible.
+</li><li>
+But it can look awkward if the scrollbars are empty.</li></ul>
+<br><br>
+Example:
+<div class="example">
+    .box {
+  width: 200px;
+  height: 100px;
+  border: 2px solid blue;
+  overflow: scroll;
+}
+&lt;div class="box">➡️ Scrollbars appear even if your text fits perfectly — so use it sparingly.&lt;/div>
+</div> <br><br>
+Output: <br><br>
+<div class="example">
+    <style>
+         .box4 {
+  width: 200px;
+  height: 100px;
+  border: 2px solid blue;
+  overflow: scroll;
+}
+    </style>
+<div class="box4">➡️ Scrollbars appear even if your text fits perfectly — so use it sparingly.</div>
+</div>
+<br><br><br>
+<span class="larger">
+    🎨 Real-World Uses of overflow:
+</span>
+<br><br>
+<ul><li>
+    Scrollable containers (chat boxes, sidebars, or feeds)
+</li><li>
+Hiding overflowing elements (image galleries, animations)
+</li><li>
+Custom scroll areas (with CSS scrollbars or JS libraries)
+</li><li>
+Clipping effects (paired with border-radius or transform)
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div> <br>
+</body> <br><br><br><br>
+<footer>
+    <div class="footer-nav">
+        <button><a href="css-flexbox.html">Next</a> 
+        </button>
+         <button><a href="css-marginpadding.html">Previous</a> </button>  
+        <br>
+        <h3>CSS Topics</h3>
+          <nav>
+              <ol>
+                <li><a href="intro-to-css.html">Introduction to CSS</a></li>
+                  <li><a href="css-syntax.html">CSS Syntax</a></li>
+                  <li><a href="css-selectors.html">CSS Selectors</a></li>
+                  <li><a href="css-pseudoclasses.html">CSS Pseudo-classes</a></li>
+                  
+                  <li><a href="css-pseudoelements.html">CSS Pseudoelements</a></li>
+                  <li><a href="css-boxmodel.html">CSS Box Model</a></li>
+                  <li><a href="css-boxsizing.html">CSS Box Sizing</a></li>
+                  <li><a href="css-display.html">CSS Display</a></li>
+                  <li><a href="css-widthheight.html">CSS Width &amp; Height</a></li>
+                  <li><a href="css-marginpadding.html">CSS Margin &amp; Padding</a></li>
+                  <li><a href="css-overflow.html">CSS Overflow</a></li>
+                  <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+                  <li><a href="css-grid.html">CSS Grid</a></li>
+                  <li><a href="css-positioning.html">CSS Positioning</a></li>
+                  <li><a href="css-float.html">CSS Float</a></li>
+                  <li><a href="css-colors.html">CSS Colors</a></li>
+                  <li><a href="css-typography.html">CSS Typography</a></li>
+                  <li><a href="css-borders.html">CSS Borders</a></li>
+                  <li><a href="css-transparency.html">CSS Transparency</a></li>
+                  <li><a href="css-filters.html">CSS Filters</a></li>
+                  <li><a href="css-viewport.html">CSS Viewport</a></li>
+                  <li><a href="css-mediaqueries.html">CSS Media Queries</a></li>
+                  <li><a href="css-relativeunits.html">CSS Relative Units</a></li>
+                  <li><a href="css-responsiveimages.html">CSS Responsive Images</a></li>
+                  <li><a href="css-transforms2d.html">CSS 2D Transforms</a></li>
+                  <li><a href="css-transforms3d.html">CSS 3D Transforms</a></li>
+                  <li><a href="css-transitions.html">CSS Transitions</a></li>
+                  <li><a href="css-animations.html">CSS Animations</a></li>
+                  <li><a href="css-customproperties.html">CSS Custom Properties</a></li>
+                  <li><a href="css-functions.html">CSS Functions</a></li>
+              </ol>
+          </nav>
+      </div>
+
+      <div class="footer-bottom">
+          <p class="copyright">&copy; CODE WITH FAHIM 2025</p>
+          <div class="footer-links">
+              <a href="privacypolicy.html">Privacy Policy</a>
+              <a href="terms&conditions.html">Terms of Use</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+ 
+</footer>
+
+</html>        
