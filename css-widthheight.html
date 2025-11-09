@@ -1,11 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="canonical" href="https://code-with-fahim.wuaze.com/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Width & Height</title>
+    <link rel="stylesheet" href="css-widthheight.css"/>
+<!--GA4-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZ1JHY721H');
+</script>
+
 </head>
 <body>
-    
-</body>
+    <header>
+        <img src="header-logo.png" alt="header-logo"><h1>CODE WITH FAHIM</h1>
+        <h3>CSS Width & Height</h3>
+    </header>
+    <div class="container">
+       CSS width and height — the duo decides how big your elements look on the page.
+<br><br>
+<span class="larger">
+🧱 What They Do:</span><br><br>
+<ul><li>
+width controls how wide an element is.
+</li><li>
+height controls how tall an element is.
+</li></ul> <br><br>
+They define the content area of an element (not including padding, border, or margin — unless you change box-sizing, which we can get into later). <br><br>
+<span class="large">
+🧩 Basic Syntax: </span> <br><br>
+<div class="example">
+selector { 
+  width: value;
+  height: value; 
+} </div><br><br><br>
+<span class="large">🎯 Example:</span> <br><br>
+<div class="example">
+&lt;div class="box">Hello!&lt;/div>
+<br>
+&lt;style> 
+  .box {
+    width: 200px; 
+    height: 100px;
+    background-color: cornflowerblue;
+  } <br>
+&lt;/style> </div><br><br>
+
+<span class="large">Output:</span> <br><br>
+<div class="example">
+<div class="box">Hello!</div>
+
+<style>
+  .box {
+    width: 200px;
+    height: 100px;
+    background-color: cornflowerblue;
+  }
+</style>
+</div> <br><br>
+🖼️ This makes a 200px wide and 100px tall blue rectangle. <br><br><br>
+<span class="larger">
+    📏 Units You Can Use:
+</span> <br><br>
+<table>
+    <tr>
+        <th>Type</th>
+        <th>Example</th>
+        <th>Meaning</th>
+    </tr>
+    <tr>
+        <td>Pixels(px)</td>
+        <td>width: 300px;</td>
+        <td>Fixed size</td>
+    </tr>
+    <tr>
+        <td>Percent</td>
+        <td>width: 50%;</td>
+        <td>Relative to the parent element</td>
+    </tr>
+    <tr>
+        <td>Viewport Width/Height (vw/vh)</td>
+        <td>width: 80vw;</td>
+        <td>Relative to the browser window</td>
+    </tr>
+    <tr>
+        <td>em,rem</td>
+        <td>width: 20em; <br>
+        width:20rem;</td>
+        <td>Relative to font size</td>
+    </tr>
+    <tr>
+        <td>auto</td>
+        <td>width: auto;</td>
+        <td>Browser decides (default)</td>
+    </tr>
+</table> <br><br><br>
+<span class="larger">🧩 max-width and max-height:</span> <br><br>
+They’re like the “don’t get too big” rules for your elements — keeping your design responsive and under control. <br><br>
+<span class="large">
+🧱 What They Do:</span> <br><br>
+<ul><li>
+max-width sets the maximum width an element can grow to.
+</li><li>
+max-height sets the maximum height an element can grow to.
+</li></ul> <br><br>
+If the content or parent container tries to make the element bigger than that — it stops growing right at that limit. <br><br><br>
+<span class="large">📘 Example: max-width:</span> 
+<div class="example">
+&lt;style> 
+  .box { 
+    width: 100%; 
+    max-width: 600px; 
+    height: 150px; 
+    background: cornflowerblue; 
+    color: white; 
+    text-align: center; 
+    line-height: 150px; 
+  } 
+&lt;/style> 
+<br>
+&lt;div class="box">Hello world!&lt;/div>
+<br>
+</div> <br><br>
+<span class="large">Output:</span> <br><br>
+<div class="example">
+    <div class="box">Hello world!</div>
+
+<style>
+  .box {
+    width: 100%;
+    max-width: 600px;
+    height: 150px;
+    background: cornflowerblue;
+    color: white;
+    text-align: center;
+    line-height: 150px;
+  }
+</style>
+
+</div> <br><br>
+✅ Here’s what happens:
+<br><br>
+<ul><li>
+The width: 100% lets it stretch with the browser.</li>
+<li>
+But max-width: 600px stops it from becoming wider than 600px — perfect for responsive layouts.</li></ul>
+<br><br><br>
+<span class="large">📗 Example: max-height:</span> <br><br>
+<div class="example">
+    .image { 
+  max-height: 400px; 
+  width: auto; 
+} <br>
+
+</div> <br><br>
+If the image is very tall, it’ll shrink down to fit within 400px height while keeping its proportions. <br><br> <br>
+<span class="larger">
+⚙️ When to Use:</span> <br><br>
+<table>
+    <tr>
+        <th>Situation</th>
+        <th>Use</th>
+    </tr>
+    <tr>
+        <td>Responsive images or videos</td>
+        <td>max-width: 100%; height: auto;</td>
+    </tr>
+    <tr>
+        <td>Preventing layout overflow</td>
+        <td>max-width: 1200px;</td>
+    </tr>
+    <tr>
+        <td>Controlling long text boxes or scrollable divs</td>
+        <td>max-height: 300px; overflow: auto;</td>
+    </tr>
+</table> <br><br><br>
+<span class="large">🧩 The Core Difference Between width & max-width:</span> <br><br>
+<table>
+    <tr>
+        <th>Property</th>
+        <th>Meaning</th>
+        <th>Behaviour</th>
+    </tr>
+    <tr>
+        <td>width</td>
+        <td>Sets a fixed or relative size</td>
+        <td>The element will always try to be that width (no matter the screen size)</td>
+    </tr>
+    <tr>
+        <td>max-width</td>
+        <td>Sets an upper limit</td>
+        <td>The element can grow, but never exceed that width(Best for responsive design)</td>
+    </tr>
+</table> <br><br><br>
+<span class="larger">
+    min-width & min-height:
+</span> <br><br>
+These are like your element’s safety net on the small side — making sure it never gets too tiny to be usable or readable. <br><br>
+<span class="large">What they do:</span>
+ <br><br>
+<ul><li>
+min-width → sets the minimum width an element can shrink to.
+</li><li>
+min-height → sets the minimum height an element can shrink to.
+</li></ul> <br><br>
+If the content or parent tries to make the element smaller than these values, the element resists and stays at the minimum.
+<br><br><br>
+<span class="large">⚙️ Why Use min-width / min-height:</span> <br><br>
+<table>
+    <tr>
+        <th>Scenario</th>
+        <th>Why it's useful</th>
+    </tr>
+    <tr>
+        <td>Buttons</td>
+        <td>Make sure buttons are always clickable on small screens</td>
+    </tr>
+    <tr>
+        <td>Cards</td>
+        <td>Prevent card content from overlapping or collapsing</td>
+    </tr>
+    <tr>
+        <td>Responsive layout</td>
+        <td>Keep readability and aesthetics intact on tiny screens</td>
+    </tr>
+    <tr>
+        <td>Text containers</td>
+        <td>Avoid text wrapping awkwardly or being clipped</td>
+    </tr>
+</table> <br><br><br>
+
+    </div>
+</body> <br><br><br> <br><br><br>
+<footer>
+    <div class="footer-nav">
+        <button><a href="css-marginpadding.html">Next</a> 
+        </button>
+         <button><a href="css-display.html">Previous</a> </button>  
+        <br>
+        <h3>CSS Topics</h3>
+          <nav>
+              <ol>
+                <li><a href="intro-to-css.html">Introduction to CSS</a></li>
+                  <li><a href="css-syntax.html">CSS Syntax</a></li>
+                  <li><a href="css-selectors.html">CSS Selectors</a></li>
+                  <li><a href="css-pseudoclasses.html">CSS Pseudo-classes</a></li>
+                  
+                  <li><a href="css-pseudoelements.html">CSS Pseudoelements</a></li>
+                  <li><a href="css-boxmodel.html">CSS Box Model</a></li>
+                  <li><a href="css-boxsizing.html">CSS Box Sizing</a></li>
+                  <li><a href="css-display.html">CSS Display</a></li>
+                  <li><a href="css-widthheight.html">CSS Width &amp; Height</a></li>
+                  <li><a href="css-marginpadding.html">CSS Margin &amp; Padding</a></li>
+                  <li><a href="css-overflow.html">CSS Overflow</a></li>
+                  <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+                  <li><a href="css-grid.html">CSS Grid</a></li>
+                  <li><a href="css-positioning.html">CSS Positioning</a></li>
+                  <li><a href="css-float.html">CSS Float</a></li>
+                  <li><a href="css-colors.html">CSS Colors</a></li>
+                  <li><a href="css-typography.html">CSS Typography</a></li>
+                  <li><a href="css-borders.html">CSS Borders</a></li>
+                  <li><a href="css-transparency.html">CSS Transparency</a></li>
+                  <li><a href="css-filters.html">CSS Filters</a></li>
+                  <li><a href="css-viewport.html">CSS Viewport</a></li>
+                  <li><a href="css-mediaqueries.html">CSS Media Queries</a></li>
+                  <li><a href="css-relativeunits.html">CSS Relative Units</a></li>
+                  <li><a href="css-responsiveimages.html">CSS Responsive Images</a></li>
+                  <li><a href="css-transforms2d.html">CSS 2D Transforms</a></li>
+                  <li><a href="css-transforms3d.html">CSS 3D Transforms</a></li>
+                  <li><a href="css-transitions.html">CSS Transitions</a></li>
+                  <li><a href="css-animations.html">CSS Animations</a></li>
+                  <li><a href="css-customproperties.html">CSS Custom Properties</a></li>
+                  <li><a href="css-functions.html">CSS Functions</a></li>
+              </ol>
+          </nav>
+      </div>
+
+      <div class="footer-bottom">
+          <p class="copyright">&copy; CODE WITH FAHIM 2025</p>
+          <div class="footer-links">
+              <a href="privacypolicy.html">Privacy Policy</a>
+              <a href="terms&conditions.html">Terms of Use</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+ 
+</footer>
+
 </html>
