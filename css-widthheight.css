@@ -137,6 +137,11 @@ th {
 tr:nth-child(even) {
     background-color: #131320; /* Subtle stripe effect */
 }
+.width-height{
+    max-width: 100%;
+    height:auto;
+    border: 1px solid orangered;
+}
 
 
 
