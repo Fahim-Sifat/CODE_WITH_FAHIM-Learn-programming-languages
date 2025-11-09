@@ -138,11 +138,11 @@ tr:nth-child(even) {
     background-color: #131320; /* Subtle stripe effect */
 }
 
-.box-sizing{
-    max-width: 100%;
-    height: auto;
-    border: 1px solid blue;
-}
+
+
+
+
+
 
 /* --- Footer --- */
 footer {
