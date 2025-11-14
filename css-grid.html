@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://code-with-fahim.wuaze.com/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="css-grid.css"/>
+<!--GA4-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZ1JHY721H');
+</script>
+
+<!--Adsterra popunder-->
+<script type='text/javascript' src='//underpantsjokeimmunity.com/1b/8c/07/1b8c07f067877dcbe7aee75aca53d282.js'></script>
+
+<!--Hiltopads-->
+<meta name="referrer" content="no-referrer-when-downgrade" />
+<!--Video slider36-->
+
+
+<script>
+(function(xpf){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = xpf || {};
+s.src = "\/\/tatteredpassenger.com\/b.X_VVs\/dZGhlL0bY\/WLcs\/Ze_mZ9aunZ\/UtlUk\/PhTFY_3lMMDKIV1dMjzHYUtzNRjfcFwaMRjxUszeNdwU";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+<!--Videoslider36-->
+
+
+</head>
+<body>
+<header>
+        <img src="header-logo.png" alt="header-logo"><h1>CODE WITH FAHIM</h1>
+        <h3>CSS Grid</h3>
+    </header>
+    <br>
+    <img src="css-grid.png" alt="css-grid">
+    <div class="container">
+        <span class="larger">
+🌐 What is CSS Grid?</span> <br><br>
+
+Picture a spreadsheet… but for your website layout. <br>
+CSS Grid is a two-dimensional layout system that lets you control rows + columns at the same time. <br>
+It’s like Flexbox’s older, more structured sibling — the one who shows up to office meetings with a neatly colour-coded planner.
+<br><br>
+With Grid, you can:
+<br>
+<ul><li>
+Place items exactly where you want
+</li><li>
+Create rows and columns in seconds
+</li><li>
+Build complex layouts that stay responsive
+</li><li>
+Stop fighting with floats, positions, or hacks from 2010 😭
+</li></ul> <br><br><br>
+<span class="large">
+🪄 Why Grid is goated:</span><br><br>
+<ul><li>
+Perfect for full page layouts
+</li><li>
+Rows + columns = ultimate control
+</li><li>
+Less CSS, more power
+</li><li>
+Cleaner than Flexbox for complex layouts
+</li><li>
+Makes you look like you know what you’re doing even when you don’t
+</li></ul> <br><br><br>
+<span class="larger">
+🧱 Basic CSS Grid Syntax:</span><br><br>
+<span class="large">
+1. Turn on Grid-</span> <br><br>
+
+This is how you activate the grid layout system on any container: 
+<div class="example">
+.container {
+  display: grid;
+}
+</div> <br><br>
+
+Boom. You're officially in Grid mode.
+<br><br>
+<span class="large">
+2.Define Columns-</span><br><br>
+
+You decide how many columns your layout needs:
+<div class="example">
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+}
+</div> <br><br>
+<ul><li>
+First column: 200px
+</li><li>
+Middle: flexible
+</li><li>
+Last: 200px
+</li></ul> <br><br>
+<span class="large">
+3. Define Rows-</span><br><br>
+
+Same idea for rows:
+<div class="example">
+grid-template-rows: 100px auto 50px;
+</div> <br><br>
+<span class="large">
+4. Add Spacing Between Items-</span><br><br>
+
+Because nobody likes elements hugging too close:
+<div class="example">
+gap: 20px;       /* both row + column */
+row-gap: 10px;   /* only rows */
+column-gap: 30px; /* only columns */
+</div><br><br>
+<span class="large">
+5. Place Items-</span><br><br>
+
+Tell an item where to sit:
+<div class="example">
+.item1 {
+  grid-column: 1 / 3; /* spans from column 1 to 3 */
+  grid-row: 1 / 2;
+}
+</div> <br><br>
+<span class="large">
+6. Grid Areas (Optional but Fire)
+</span> <br><br>
+Name your zones to keep layout clean:
+<div class="example">
+grid-template-areas:
+  "header header header"
+  "sidebar content content"
+  "footer footer footer";
+</div><br><br>
+
+Assign area:
+<div class="example">
+.header { grid-area: header; }
+</div><br><br>
+<span class="large">
+7. Responsive Magic-</span>
+<div class="example">
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</div> <br><br>
+<br><br>
+<span class="larger">
+⚔️ CSS Grid vs Flexbox — 
+</span> <br><br>
+Both are powerful. Both are modern. <br>
+But they’re built for different missions — like two cousins who pull up with different skill sets. <br><br>
+<table>
+    <tr>
+        <th>Feature</th>
+        <th>CSS Grid</th>
+        <th>CSS Flexbox</th>
+    </tr>
+    <tr>
+        <td>Layout Type</td>
+        <td>Two-dimensional (rows + columns)</td>
+        <td>One-dimensional (rows or columns)</td>
+    </tr>
+    <tr>
+        <td>Main Purpose</td>
+        <td>Full page layouts, structured designs</td>
+        <td>UI components, simple alignment</td>
+    </tr>
+    <tr>
+        <td>Control Style</td>
+        <td>Explicit (you define rows/columns)</td>
+        <td>Content-driven (items adjust automatically)</td>
+    </tr>
+    <tr>
+        <td>Positioning</td>
+        <td>Place items using grid lines (e.g., 1 / 3)</td>
+        <td>Items flow naturally; use order to rearrange</td>
+    </tr>
+    <tr>
+        <td>Responsiveness</td>
+        <td>Super easy with auto-fit + minmax()</td>
+        <td>Requires tuning flex-grow, flex-shrink, basis</td>
+    </tr>
+    <tr>
+        <td>Alignment</td>
+        <td>Powerful across rows & columns</td>
+        <td>Best for single axis alignment</td>
+    </tr>
+    <tr>
+        <td>Complex layouts</td>
+        <td>Excellent</td>
+        <td>Difficult and messy</td>
+    </tr>
+    <tr>
+        <td>Learning Curve</td>
+        <td>Higher</td>
+        <td>Lower</td>
+    </tr>
+    <tr>
+        <td>Overlapping items</td>
+        <td>Yes(Naturally)</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Best use case</td>
+        <td>Dashboards, templates, multi-column layouts</td>
+        <td>Navbars, cards, forms, toolbars, centers</td>
+        </tr>
+</table> <br><br>
+
+
+
+        </div> <br>
+
+
+
+</body> <br><br><br><br>
+<footer>
+    <div class="footer-nav">
+        <button><a href="css-positioning.html">Next</a> 
+        </button>
+         <button><a href="css-flexbox.html">Previous</a> </button>  
+        <br>
+        <h3>CSS Topics</h3>
+          <nav>
+              <ol>
+                <li><a href="intro-to-css.html">Introduction to CSS</a></li>
+                  <li><a href="css-syntax.html">CSS Syntax</a></li>
+                  <li><a href="css-selectors.html">CSS Selectors</a></li>
+                  <li><a href="css-pseudoclasses.html">CSS Pseudo-classes</a></li>
+                  
+                  <li><a href="css-pseudoelements.html">CSS Pseudoelements</a></li>
+                  <li><a href="css-boxmodel.html">CSS Box Model</a></li>
+                  <li><a href="css-boxsizing.html">CSS Box Sizing</a></li>
+                  <li><a href="css-display.html">CSS Display</a></li>
+                  <li><a href="css-widthheight.html">CSS Width &amp; Height</a></li>
+                  <li><a href="css-marginpadding.html">CSS Margin &amp; Padding</a></li>
+                  <li><a href="css-overflow.html">CSS Overflow</a></li>
+                  <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+                  <li><a href="css-grid.html">CSS Grid</a></li>
+                  <li><a href="css-positioning.html">CSS Positioning</a></li>
+                  <li><a href="css-float.html">CSS Float</a></li>
+                  <li><a href="css-colors.html">CSS Colors</a></li>
+                  <li><a href="css-typography.html">CSS Typography</a></li>
+                  <li><a href="css-borders.html">CSS Borders</a></li>
+                  <li><a href="css-transparency.html">CSS Transparency</a></li>
+                  <li><a href="css-filters.html">CSS Filters</a></li>
+                  <li><a href="css-viewport.html">CSS Viewport</a></li>
+                  <li><a href="css-mediaqueries.html">CSS Media Queries</a></li>
+                  <li><a href="css-relativeunits.html">CSS Relative Units</a></li>
+                  <li><a href="css-responsiveimages.html">CSS Responsive Images</a></li>
+                  <li><a href="css-transforms2d.html">CSS 2D Transforms</a></li>
+                  <li><a href="css-transforms3d.html">CSS 3D Transforms</a></li>
+                  <li><a href="css-transitions.html">CSS Transitions</a></li>
+                  <li><a href="css-animations.html">CSS Animations</a></li>
+                  <li><a href="css-customproperties.html">CSS Custom Properties</a></li>
+                  <li><a href="css-functions.html">CSS Functions</a></li>
+              </ol>
+          </nav>
+      </div>
+
+      <div class="footer-bottom">
+          <p class="copyright">&copy; CODE WITH FAHIM 2025</p>
+          <div class="footer-links">
+              <a href="privacypolicy.html">Privacy Policy</a>
+              <a href="terms&conditions.html">Terms of Use</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+ 
+</footer>
+
+</html>        
