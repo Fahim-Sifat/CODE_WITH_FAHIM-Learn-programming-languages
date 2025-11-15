@@ -22,15 +22,14 @@ const staticAssets = [
   '/index.html',
   
   // COMMON ASSETS (Placeholders - Verify these paths!)
-  '/styles.css', 
-  '/js/script.js',    
-  
+  '/html.html',
+  '/css.html',
   // PWA ICONS (Confirmed in the root directory)
   '/pwa-192x192.png', 
   '/pwa-512x512.jpg',
 
   // HTML BASICS LESSONS [cite: 1]
-  '/html.html',
+  
   '/introduction-to-html.html',
   '/code-editor.html',
   '/tags.html',
@@ -53,7 +52,7 @@ const staticAssets = [
   '/favicons.html',
 
   // CSS LESSONS [cite: 3]
-  '/css.html',
+  
   '/intro-to-css.html',
   '/css-syntax.html',
   '/css-selectors.html',
