@@ -1,6 +1,10 @@
 <html lang="en">
 <head>
-    
+     <!--Manifest file for pwa-->
+    <link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#1f2937">
+   
+
 <!--Adsense-->
 <meta name="google-adsense-account" content="ca-pub-3930264175657320">
     <link rel="canonical" href="https://code-with-fahim.wuaze.com/"/>
@@ -137,6 +141,21 @@ l.parentNode.insertBefore(s, l);
     </main>
     
 
+ <!--SW.js file for pwa-->
+    <script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    // The scope will be the root directory ('/') where the sw.js file is located
+    navigator.serviceWorker.register('/sw.js')
+      .then(registration => {
+        console.log('Service Worker registered with scope:', registration.scope);
+      })
+      .catch(error => {
+        console.log('Service Worker registration failed:', error);
+      });
+  });
+}
+</script>
 
 </body>
     <footer id="contact">
