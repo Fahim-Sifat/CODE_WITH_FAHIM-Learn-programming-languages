@@ -14,8 +14,6 @@ const urlsToCache = [
   '/favicon-32x32.png',
   '/header-logo.png',
   // Main Language Pages
-  '/html.html',
-  '/css.html',
   '/js.html',
   '/python.html',
   '/java.html',
@@ -41,7 +39,9 @@ const networkOnlyUrls = [
   'googletagmanager.com',
   'google-analytics.com',
   'tatteredpassenger.com', // Hiltop video slider script
-  'wuaze.com' 
+  'wuaze.com',
+  '/html.html',
+  '/css.html' 
 ];
 
 
