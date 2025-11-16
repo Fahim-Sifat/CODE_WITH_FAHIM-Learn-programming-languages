@@ -15,8 +15,8 @@ const urlsToCache = [
   '/favicon-32x32.png',
   '/header-logo.png',
   // Main Language Pages
-  '/html.html',
-  '/css.html',
+  '/html',
+  '/css',
   '/js.html',
   '/python.html',
   '/java.html',
