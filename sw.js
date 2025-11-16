@@ -1,5 +1,5 @@
 // A unique name for your cache. **Incremented to v4 to ensure mandatory update.**
-const CACHE_NAME = 'code-with-fahim-v5';
+const CACHE_NAME = 'code-with-fahim-v6';
 
 // List of all static files that make up your site's core structure (App Shell)
 const urlsToCache = [
@@ -14,6 +14,8 @@ const urlsToCache = [
   '/favicon-32x32.png',
   '/header-logo.png',
   // Main Language Pages
+  '/html.html',
+  '/css.html', 
   '/js.html',
   '/python.html',
   '/java.html',
