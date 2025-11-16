@@ -1,6 +1,5 @@
-// A unique name for your cache. **ALWAYS UPDATE THIS WHEN DEPLOYING NEW FILES**
-// We are incrementing this to v3 to ensure the Service Worker is updated on the client.
-const CACHE_NAME = 'code-with-fahim-v3';
+// A unique name for your cache. **Incremented to v4 to ensure mandatory update.**
+const CACHE_NAME = 'code-with-fahim-v4';
 
 // List of all static files that make up your site's core structure (App Shell)
 const urlsToCache = [
@@ -15,8 +14,8 @@ const urlsToCache = [
   '/favicon-32x32.png',
   '/header-logo.png',
   // Main Language Pages
-  '/html',
-  '/css',
+  '/html.html',
+  '/css.html',
   '/js.html',
   '/python.html',
   '/java.html',
@@ -34,7 +33,6 @@ const urlsToCache = [
   // Language-specific CSS files
   '/html.css',
   '/css.css'
-  // NOTE: If you have an offline.html, add it here: '/offline.html'
 ];
 
 // URLs to be explicitly ignored by the Service Worker (Network-Only)
@@ -85,7 +83,7 @@ self.addEventListener('fetch', event => {
         }
 
         // Cache Miss: Go to the network
-        // **CRITICAL FIX:** Setting { redirect: 'follow' } to prevent ERR_FAILED on redirects
+        // **CRITICAL FIX:** Setting { redirect: 'follow' } to prevent ERR_FAILED (on 308 redirects)
         return fetch(event.request, { redirect: 'follow' })
           .catch(error => {
             console.log('Service Worker: Fetch failed (Network or Redirect error):', error);
