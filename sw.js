@@ -11,8 +11,7 @@ const DYNAMIC_CACHE_NAME = 'cwf-dynamic-v2';
 const staticAssets = [
   '/', 
   '/index.html',
-  '/html.html', // Main HTML section link
-  '/css.html',  // Main CSS section link
+    // Main CSS section link
   // PWA ICONS (Corrected extension from previous step)
   '/pwa-192x192.png', 
   '/pwa-512x512.png', 
