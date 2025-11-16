@@ -1,49 +1,36 @@
-// A unique name for your cache. **Incremented to v4 to ensure mandatory update.**
-const CACHE_NAME = 'code-with-fahim-v6';
+// A unique name for your cache. **Incremented to v7 for mandatory update.**
+const CACHE_NAME = 'code-with-fahim-v7';
 
-// List of all static files that make up your site's core structure (App Shell)
+// List of all static files to be cached (The App Shell).
 const urlsToCache = [
   '/', 
   '/index.html',
-  // Core Styles & Manifest
-  '/style.css',
-  '/manifest.json',
-  // Favicons & Logo
-  '/favicon.png',
-  '/favicon-16x16.png',
-  '/favicon-32x32.png',
-  '/header-logo.png',
-  // Main Language Pages
-  '/html.html',
-  '/css.html', 
-  '/js.html',
-  '/python.html',
-  '/java.html',
-  '/csharp.html',
-  '/cpp.html',
-  '/c.html',
-  '/rust.html',
-  '/kotlin.html',
-  '/swift.html',
-  '/php.html',
-  // Footer/Policy Pages
-  '/privacypolicy.html',
-  '/terms&conditions.html',
+  // All HTML pages (must be listed here for pre-caching)
+  '/html.html', '/css.html', '/js.html', '/python.html', '/java.html', 
+  '/csharp.html', '/cpp.html', '/c.html', '/rust.html', '/kotlin.html', 
+  '/swift.html', '/php.html', '/privacypolicy.html', '/terms&conditions.html', 
   '/blog.html',
-  // Language-specific CSS files
-  '/html.css',
-  '/css.css'
+  // Nested HTML pages
+  '/introduction-to-html.html', '/code-editor.html', '/tags.html', '/structure.html', 
+  '/attributes.html', '/headings&paragraphs.html', '/html-styles.html', 
+  '/text-formation.html', '/comments.html', '/div&classes.html', '/colors.html', 
+  '/links.html', '/lists.html', '/tables.html', '/images.html', '/audio-video.html', 
+  '/input-types.html', '/forms.html', '/emojis.html',
+  '/intro-to-css.html', '/css-syntax.html', '/css-selectors.html', '/css-pseudoclasses.html', 
+  '/css-pseudoelements.html', '/css-boxmodel.html', '/css-boxsizing.html', 
+  '/css-display.html', '/css-widthheight.html', '/css-marginpadding.html', 
+  '/css-overflow.html', '/css-flexbox.html', '/css-grid.html', '/css-positioning.html', 
+  '/css-float.html', '/css-colors.html', '/css-typography.html', '/css-borders.html',
+  '/css-outline.html', '/css-transparency.html', '/css-filters.html', '/css-navbar.html', 
+  '/css-dropdown.html', '/css-buttons.html', '/css-pagination',
+  // Assets
+  '/style.css', '/manifest.json', '/favicon.png', '/favicon-16x16.png', 
+  '/favicon-32x32.png', '/header-logo.png', '/html.css', '/css.css'
 ];
 
 // URLs to be explicitly ignored by the Service Worker (Network-Only)
-// This ensures external scripts/ads are always fetched live.
 const networkOnlyUrls = [
-  'googletagmanager.com',
-  'google-analytics.com',
-  'tatteredpassenger.com', // Hiltop video slider script
-  'wuaze.com',
-  '/html.html',
-  '/css.html' 
+  'googletagmanager.com', 'google-analytics.com', 'tatteredpassenger.com', 'wuaze.com' 
 ];
 
 
@@ -53,7 +40,6 @@ self.addEventListener('install', event => {
     caches.open(CACHE_NAME)
       .then(cache => {
         console.log('Service Worker: App Shell pre-caching complete.');
-        // Add all required static assets to the cache
         return cache.addAll(urlsToCache);
       })
       .catch(error => {
@@ -62,39 +48,52 @@ self.addEventListener('install', event => {
   );
 });
 
-// 2. Fetching: Serving from Cache, falling back to Network (with redirect fix)
+// 2. Fetching: Network-First for HTML, Cache-First for Assets
 self.addEventListener('fetch', event => {
-  // We only handle GET requests
   if (event.request.method !== 'GET') {
     return;
   }
   
-  // Skip external scripts/ads (network-only strategy)
   const requestUrl = event.request.url;
   if (networkOnlyUrls.some(url => requestUrl.includes(url))) {
       return fetch(event.request);
   }
 
-  // Intercept the request
+  // Strategy for HTML navigation requests (Network-First)
+  if (event.request.mode === 'navigate' || event.request.destination === 'document') {
+    event.respondWith(
+        fetch(event.request, { redirect: 'follow' }) // CRITICAL FIX: Allows 308 redirect
+        .then(response => {
+            // Put the successful network response into the cache (stale-while-revalidate style)
+            const responseToCache = response.clone();
+            caches.open(CACHE_NAME).then(cache => {
+                cache.put(event.request, responseToCache);
+            });
+            return response;
+        })
+        .catch(() => {
+            // Network failed - serve from cache
+            console.log('Service Worker: Network failed, falling back to cache for document.');
+            return caches.match(event.request);
+        })
+    );
+    return;
+  }
+
+
+  // Strategy for all other assets (Cache-First)
   event.respondWith(
     caches.match(event.request)
       .then(response => {
-        // Cache Hit: Return cached response immediately
+        // Cache Hit: Return cached response
         if (response) {
           return response;
         }
 
         // Cache Miss: Go to the network
-        // **CRITICAL FIX:** Setting { redirect: 'follow' } to prevent ERR_FAILED (on 308 redirects)
         return fetch(event.request, { redirect: 'follow' })
           .catch(error => {
-            console.log('Service Worker: Fetch failed (Network or Redirect error):', error);
-            
-            // This block handles complete network failure
-            if (event.request.mode === 'navigate') {
-               // Fallback logic for when the user is completely offline
-               // return caches.match('/offline.html');
-            }
+            console.log('Service Worker: Asset fetch failed:', error);
           });
       })
   );
