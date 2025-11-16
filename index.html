@@ -28,6 +28,25 @@
       gtag('js', new Date());
       gtag('config', 'G-MZ1JHY721H');
     </script>
+    
+<!--Ga4 tracking pwa install-->
+
+
+<script>
+window.addEventListener('appinstalled', (event) => {
+  // Check if the gtag function is available before calling it
+  if (typeof gtag === 'function') {
+    // Send a custom event to your GA4 property
+    gtag('event', 'pwa_install', {
+      'event_category': 'pwa',
+      'event_label': 'installation_success'
+    });
+    console.log('PWA Installation Event tracked successfully.');
+  }
+});
+</script>
+
+
 
 
     <meta name="description" content="Start your coding journey with CODE WITH FAHIM. Free tutorials on Web Development (HTML, CSS, JS), Python, Java, C++, and more!">
