@@ -1,5 +1,6 @@
 // A unique name for your cache. **ALWAYS UPDATE THIS WHEN DEPLOYING NEW FILES**
-const CACHE_NAME = 'code-with-fahim-v2';
+// We are incrementing this to v3 to ensure the Service Worker is updated on the client.
+const CACHE_NAME = 'code-with-fahim-v3';
 
 // List of all static files that make up your site's core structure (App Shell)
 const urlsToCache = [
@@ -13,7 +14,7 @@ const urlsToCache = [
   '/favicon-16x16.png',
   '/favicon-32x32.png',
   '/header-logo.png',
-  // Main Language Pages (must be cached to ensure offline access)
+  // Main Language Pages
   '/html.html',
   '/css.html',
   '/js.html',
@@ -30,18 +31,19 @@ const urlsToCache = [
   '/privacypolicy.html',
   '/terms&conditions.html',
   '/blog.html',
-  // Ensure the CSS files for the language pages are included
+  // Language-specific CSS files
   '/html.css',
   '/css.css'
   // NOTE: If you have an offline.html, add it here: '/offline.html'
 ];
 
 // URLs to be explicitly ignored by the Service Worker (Network-Only)
+// This ensures external scripts/ads are always fetched live.
 const networkOnlyUrls = [
   'googletagmanager.com',
   'google-analytics.com',
   'tatteredpassenger.com', // Hiltop video slider script
-  'wuaze.com' // Any domain redirect or known external asset
+  'wuaze.com' 
 ];
 
 
@@ -60,14 +62,14 @@ self.addEventListener('install', event => {
   );
 });
 
-// 2. Fetching: Serving from Cache, falling back to Network
+// 2. Fetching: Serving from Cache, falling back to Network (with redirect fix)
 self.addEventListener('fetch', event => {
   // We only handle GET requests
   if (event.request.method !== 'GET') {
     return;
   }
   
-  // Skip external scripts/ads defined in networkOnlyUrls (network-only strategy)
+  // Skip external scripts/ads (network-only strategy)
   const requestUrl = event.request.url;
   if (networkOnlyUrls.some(url => requestUrl.includes(url))) {
       return fetch(event.request);
@@ -83,16 +85,17 @@ self.addEventListener('fetch', event => {
         }
 
         // Cache Miss: Go to the network
-        return fetch(event.request).catch(error => {
-          // This block handles network failure after a cache miss
-          console.log('Service Worker: Fetch failed:', error);
-          
-          // Optional: If navigating to a page and offline, serve a fallback
-          if (event.request.mode === 'navigate') {
-             // To serve an offline page, uncomment this and make sure '/offline.html' is in urlsToCache
-             // return caches.match('/offline.html');
-          }
-        });
+        // **CRITICAL FIX:** Setting { redirect: 'follow' } to prevent ERR_FAILED on redirects
+        return fetch(event.request, { redirect: 'follow' })
+          .catch(error => {
+            console.log('Service Worker: Fetch failed (Network or Redirect error):', error);
+            
+            // This block handles complete network failure
+            if (event.request.mode === 'navigate') {
+               // Fallback logic for when the user is completely offline
+               // return caches.match('/offline.html');
+            }
+          });
       })
   );
 });
