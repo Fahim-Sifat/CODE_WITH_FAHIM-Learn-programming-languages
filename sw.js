@@ -1,118 +1,60 @@
 // ======================================================
-// 1. THIRD-PARTY INTEGRATION (5gvci.com)
+// 1. PWA CACHING CONFIGURATION ⚙️
 // ======================================================
-self.options = {
-    "domain": "5gvci.com",
-    "zoneId": 1 // Set to 1 based on the input '00000001'
-}
-self.lary = ""
-// Loads the external script provided by the third-party.
-importScripts('https://5gvci.com/act/files/service-worker.min.js?r=sw')
 
+// Define cache names for static (app shell) and dynamic (runtime) assets.
+const STATIC_CACHE_NAME = 'cwf-static-v2'; // Bumped version to ensure fresh installation
+const DYNAMIC_CACHE_NAME = 'cwf-dynamic-v2';
 
-// ======================================================
-// 2. CORE PWA CACHING LOGIC (For Offline Functionality)
-// ======================================================
-const STATIC_CACHE_NAME = 'cwf-static-v1'; // *** VERSION BUMPED for new assets ***
-const DYNAMIC_CACHE_NAME = 'cwf-dynamic-v1';
-
-// List of ALL core assets to cache on install for full offline use.
+// ⚠️ MINIMAL App Shell: Only pre-cache the absolute essentials ⚠️
+// The rest of the content will be cached dynamically upon user visit.
 const staticAssets = [
   '/', 
   '/index.html',
-  
-  // COMMON ASSETS (Placeholders - Verify these paths!)
-  '/html.html',
-  '/css.html',
-  // PWA ICONS (Confirmed in the root directory)
+  '/html.html', // Main HTML section link
+  '/css.html',  // Main CSS section link
+  // PWA ICONS (Corrected extension from previous step)
   '/pwa-192x192.png', 
-  '/pwa-512x512.jpg',
-
-  // HTML BASICS LESSONS [cite: 1]
-  
-  '/introduction-to-html.html',
-  '/code-editor.html',
-  '/tags.html',
-  '/structure.html',
-  '/attributes.html',
-  '/headings&paragraphs.html',
-  '/html-styles.html',
-  '/text-formation.html',
-  '/comments.html',
-  '/div&classes.html',
-  '/colors.html',
-  '/links.html',
-  '/lists.html',
-  '/tables.html',
-  '/images.html',
-  '/audio-video.html',
-  '/input-types.html',
-  '/forms.html',
-  '/emojis.html',
-  '/favicons.html',
-
-  // CSS LESSONS [cite: 3]
-  
-  '/intro-to-css.html',
-  '/css-syntax.html',
-  '/css-selectors.html',
-  '/css-pseudoclasses.html',
-  '/css-pseudoelements.html',
-  '/css-boxmodel.html',
-  '/css-boxsizing.html',
-  '/css-display.html',
-  '/css-widthheight.html',
-  '/css-marginpadding.html',
-  '/css-overflow.html',
-  '/css-flexbox.html',
-  '/css-grid.html',
-  '/css-positioning.html',
-  '/css-float.html',
-  '/css-colors.html',
-  '/css-typography.html',
-  '/css-borders.html',
-  '/css-outline.html',
-  '/css-transparency.html',
-  '/css-filters.html',
-  '/css-navbar.html',
-  '/css-dropdown.html',
-  '/css-buttons.html',
-  '/css-pagination.html',
-  '/css-viewport.html',
-  '/css-mediaqueries.html',
-  '/css-relativeunits.html',
-  '/css-responsiveimages.html',
-  '/css-transforms2d.html',
-  '/css-transforms3d.html',
-  '/css-transitions.html',
-  '/css-animations.html',
-  '/css-customproperties.html',
-  '/css-functions.html',
- //Extra pages
-   '/privacypolicy.html',
-   '/terms&conditions.html',
+  '/pwa-512x512.png', 
+  // You might also include a main CSS/JS file if necessary for the layout
+  // e.g., '/styles/main.css', '/scripts/app.js'
 ];
 
-// INSTALL event: Caches the core static assets
+// ======================================================
+// 2. INSTALLATION (Caching the Minimal App Shell) 📦
+// ======================================================
+
 self.addEventListener('install', event => {
+  console.log('[Service Worker] Installing...');
   event.waitUntil(
     caches.open(STATIC_CACHE_NAME)
       .then(cache => {
-        console.log('[Service Worker] Caching App Shell');
+        console.log('[Service Worker] Pre-caching Minimal App Shell');
+        // Add only the small, essential list of assets
         return cache.addAll(staticAssets);
+      })
+      .catch(error => {
+        console.error('[Service Worker] Pre-caching failed:', error);
+        // Installation will fail if a required asset is missing, which is intended.
       })
   );
   self.skipWaiting();
 });
 
-// ACTIVATE event: Deletes old caches
+// ======================================================
+// 3. ACTIVATION (Cleaning Up Old Caches) 🗑️
+// ======================================================
+
 self.addEventListener('activate', event => {
+  console.log('[Service Worker] Activating...');
   event.waitUntil(
     caches.keys().then(cacheNames => {
+      // Delete any cache that doesn't match the current V2 names
       return Promise.all(
         cacheNames.filter(name => {
           return name !== STATIC_CACHE_NAME && name !== DYNAMIC_CACHE_NAME;
         }).map(name => {
+          console.log('[Service Worker] Deleting old cache:', name);
           return caches.delete(name);
         })
       );
@@ -121,34 +63,48 @@ self.addEventListener('activate', event => {
   return self.clients.claim();
 });
 
-// FETCH event: Cache First, then Network strategy
+// ======================================================
+// 4. FETCH (Cache-First, then Network Strategy for Dynamic Content) 📡
+// ======================================================
+
 self.addEventListener('fetch', event => {
+  // Only handle requests that originate from our application (same origin)
   if (event.request.url.startsWith(self.location.origin)) {
     event.respondWith(
+      // 1. Check if the request is already in ANY cache
       caches.match(event.request).then(cachedResponse => {
+        
+        // If it's in the cache (static or dynamic), serve it immediately
         if (cachedResponse) {
           return cachedResponse;
         }
+        
+        // 2. If not found, go to the network
         return fetch(event.request).then(response => {
+          
+          // Check if the response is valid before caching it
           if (!response || response.status !== 200 || response.type !== 'basic') {
             return response;
           }
+          
+          // 3. Clone the response (for the dynamic cache)
           const responseToCache = response.clone();
+          
+          // 4. Put the clone in the dynamic cache for future visits
           caches.open(DYNAMIC_CACHE_NAME).then(cache => {
             cache.put(event.request, responseToCache);
           });
+          
+          // 5. Return the original network response to the page
           return response;
+        }).catch(error => {
+            // This 'catch' handles true network failures 
+            // (e.g., user is offline and asset wasn't cached)
+            console.warn('[Service Worker] Fetch failed:', error.message);
+            // You can add logic here to return a generic offline page if the fetch fails
+            // return caches.match('/offline.html');
         });
       })
     );
   }
 });
-
-
-
-
-
-
-
-
-
