@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Code with Fahim</title>
+    <style>
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0; /* Light grey text for dark background */
+            background-color: #282c34; /* Dark background */
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #3a4049; /* Slightly lighter dark for container */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #61dafb; /* A vibrant light blue/cyan for primary accents */
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .intro-text {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #b0b0b0;
+            font-size: 1.1em;
+        }
+
+        .contact-content {
+            display: flex;
+            gap: 40px;
+        }
+
+        .contact-form-section, .contact-info-section {
+            padding: 20px;
+            border-radius: 6px;
+            flex: 1;
+        }
+
+        .contact-form-section {
+            background: #4a5059; /* Darker background for form section */
+        }
+
+        .contact-info-section {
+            background: #2f343c; /* Even darker background for info section */
+        }
+
+        h2 {
+            color: #61dafb;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #61dafb;
+            padding-bottom: 5px;
+        }
+
+        /* Form Styling */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #e0e0e0;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #555; /* Darker border for inputs */
+            border-radius: 4px;
+            font-size: 1em;
+            background-color: #3a4049; /* Dark input background */
+            color: #e0e0e0; /* Light text in inputs */
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #61dafb;
+            outline: none;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #61dafb; /* Accent color for button */
+            color: #282c34; /* Dark text on light button */
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #4fa3d1; /* Slightly darker accent on hover */
+        }
+
+        /* Info Styling */
+        .contact-details p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .contact-details a {
+            color: #61dafb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-details a:hover {
+            color: #4fa3d1;
+            text-decoration: underline;
+        }
+
+        /* Social Links */
+        .social-links {
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #61dafb;
+            font-size: 1.2em;
+            padding: 8px 12px;
+            border: 1px solid #61dafb;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: #61dafb;
+            color: #282c34; /* Dark text on light hover */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #999;
+            font-size: 0.9em;
+            border-top: 1px solid #555; /* Darker border for footer */
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .contact-content {
+                flex-direction: column;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Get in Touch</h1>
+        <p class="intro-text">
+            We'd love to hear from you! Whether you have a project inquiry, a question about a tutorial, or just want to say hello, use the form below or connect with us directly.
+        </p>
+
+        <div class="contact-content">
+            
+            <section class="contact-form-section">
+                <h2>Send Us a Message</h2>
+                <form action="YOUR_SERVER_ENDPOINT_HERE" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Submit Message</button>
+                </form>
+                <small style="display:block; text-align:center; margin-top:10px; color:#b0b0b0;">
+                    *Note: The form's `action` attribute must be configured to send data to your server/email service.
+                </small>
+            </section>
+
+            <section class="contact-info-section">
+                <h2>Contact Information</h2>
+                <div class="contact-details">
+                    <p>
+                        <strong>Email for General Inquiries:</strong><br>
+                        <a href="mailto:contact@code-with-fahim.pages.dev">contact@code-with-fahim.pages.dev</a>
+                    </p>
+                    <p>
+                        <strong>Email for Business/Sponsorship:</strong><br>
+                        <a href="mailto:business@code-with-fahim.pages.dev">business@code-with-fahim.pages.dev</a>
+                    </p>
+                </div>
+                
+                <h2 style="margin-top: 40px;">Connect Online</h2>
+                <div class="social-links">
+                    <a href="YOUR_GITHUB_URL" target="_blank" title="GitHub">GitHub</a>
+                    <a href="YOUR_LINKEDIN_URL" target="_blank" title="LinkedIn">LinkedIn</a>
+                    <a href="YOUR_TWITTER_URL" target="_blank" title="Twitter/X">Twitter / X</a>
+                    <a href="YOUR_BLOG_URL" target="_blank" title="Blog">Blog</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Code with Fahim. All rights reserved.
+    </footer>
+
+</body>
+</html>
