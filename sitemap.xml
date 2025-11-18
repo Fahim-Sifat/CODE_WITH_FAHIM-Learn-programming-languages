@@ -1,258 +1,385 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<!-- Generated based on project files (2025-11-02) -->
+  <url>
+    <loc>https://code-with-fahim.pages.dev/</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/contact.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/blog.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/privacypolicy.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/terms&conditions.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
 
-<!-- Homepage -->
-<url>
-  <loc>https://code-with-fahim.wuaze.com/</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>1.00</priority>
-  <changefreq>daily</changefreq>
-</url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/js.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/python.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/java.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/csharp.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/cpp.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/c.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/rust.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/kotlin.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/swift.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/php.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-<!-- Main Course/Topic Pages -->
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/introduction-to-html.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/code-editor.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/tags.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/structure.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/attributes.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/headings&paragraphs.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/html-styles.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/text-formation.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/comments.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/div&classes.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/colors.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/links.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/lists.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/tables.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/images.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/audio-video.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/input-types.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/forms.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/emojis.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/html/favicons.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
 
-<!--HTML5-->
-<url>
-  <loc>https://code-with-fahim.wuaze.com/html.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/introduction-to-html.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/code-editor.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.70</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/tags.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/structure.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/attributes.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/headings&amp;paragraphs.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/html-styles.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/text-formation.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/comments.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/div&amp;classes.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/colors.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/links.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/lists.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/tables.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/images.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/audio-video.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/input-types.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/forms.html</loc>
-  <lastmod>2025-11-06T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/emojis.html</loc>
-  <lastmod>2025-11-06T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-
-<!--CSS3-->
-
-  <loc>https://code-with-fahim.wuaze.com/css.html</loc>
-  <lastmod>2025-11-06T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/intro-to-css.html</loc>
-  <lastmod>2025-11-06T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/css-syntax.html</loc>
-  <lastmod>2025-11-06T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/css-selectors.html</loc>
-  <lastmod>2025-11-06T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>monthly</changefreq>
-</url>
-
-<url>
-  <loc>https://code-with-fahim.wuaze.com/css-pseudoclasses.html</loc>
-  <lastmod>2025-11-07T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>daily</changefreq>
-</url>
-
-<url>
-  <loc>https://code-with-fahim.wuaze.com/css-pseudoelements.html</loc>
-  <lastmod>2025-11-09T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>daily</changefreq>
-</url>
-
-<url>
-  <loc>https://code-with-fahim.wuaze.com/css-boxmodel.html</loc>
-  <lastmod>2025-11-09T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>daily</changefreq>
-</url>
-
-<url>
-  <loc>https://code-with-fahim.wuaze.com/css-boxsizing.html</loc>
-  <lastmod>2025-11-09T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>daily</changefreq>
-</url>
-
-<url>
-  <loc>https://code-with-fahim.wuaze.com/css-display.html</loc>
-  <lastmod>2025-11-09T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>daily</changefreq>
-</url>
-
-<url>
-  <loc>https://code-with-fahim.wuaze.com/css-widthheight.html</loc>
-  <lastmod>2025-11-09T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>daily</changefreq>
-</url>
-
-<url>
-  <loc>https://code-with-fahim.wuaze.com/css-marginpadding.html</loc>
-  <lastmod>2025-11-09T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>daily</changefreq>
-</url>
-
-<url>
-  <loc>https://code-with-fahim.wuaze.com/css-widthheight.html</loc>
-  <lastmod>2025-11-09T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>daily</changefreq>
-</url>
-
-<url>
-  <loc>https://code-with-fahim.wuaze.com/css-overflow.html</loc>
-  <lastmod>2025-11-09T00:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-  <changefreq>daily</changefreq>
-</url>
-
-
-
-
-
-<!-- Utility/Account Pages -->
-
-<url>
-  <loc>https://code-with-fahim.wuaze.com/register.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.60</priority>
-  <changefreq>yearly</changefreq>
-</url>
-<url>
-  <loc>https://code-with-fahim.wuaze.com/privacypolicy.html</loc>
-  <lastmod>2025-11-02T00:00:00+00:00</lastmod>
-  <priority>0.50</priority>
-  <changefreq>yearly</changefreq>
-</url>
-
-<url>
-  <loc>https://code-with-fahim.wuaze.com/css-terms&amp;conditions.html</loc>
-  <lastmod>2025-11-07T00:00:00+00:00</lastmod>
-  <priority>0.50</priority>
-  <changefreq>monthly</changefreq>
-</url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/intro-to-css.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-syntax.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-selectors.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-pseudoclasses.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-pseudoelements.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-boxmodel.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-boxsizing.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-display.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-widthheight.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-marginpadding.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-overflow.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-flexbox.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-grid.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-positioning.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-float.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-colors.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-typography.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-borders.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-outline.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-transparency.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-filters.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-navbar.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-dropdown.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-buttons.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-pagination.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-viewport.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-mediaqueries.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-relativeunits.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-responsiveimages.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-transforms2d.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-transforms3d.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-transitions.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-animations.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-customproperties.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://code-with-fahim.pages.dev/css/css-functions.html</loc>
+    <lastmod>2025-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
 
 </urlset>
