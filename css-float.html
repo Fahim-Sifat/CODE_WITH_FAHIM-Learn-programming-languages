@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://code-with-fahim.pages.dev/"/>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float & z-index</title>
+    <link rel="stylesheet" href="css-float.css"/>
+<!--GA4-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZ1JHY721H');
+</script>
+
+<!--Adsterra popunder cloudfare-->
+<script type='text/javascript' src='//underpantsjokeimmunity.com/0b/4a/60/0b4a6002649c1d813fccc6c06dfb190c.js'></script>
+
+
+</head>
+<body>
+<header>
+        <img src="header-logo.png" alt="header-logo"><h1>CODE WITH FAHIM</h1>
+        <h3>CSS Float & z-index</h3>
+    </header>
+    <span class="larger">What is CSS Float</span>
+    <br><br>
+    The CSS float property is used to place an element on the left or right side of its container, allowing text and inline elements to wrap around it. It was originally intended for magazine-style layouts, but it became a fundamental part of earlier web layouts before the widespread adoption of Flexbox and Grid. <br><br>
+    <span class="large">🎨 How float Works</span>
+    <ul>
+        <li>
+When you apply float to an element, the element is taken out of the normal document flow but remains a part of the rendering flow.
+</li><li>
+The element shifts as far as possible to the left or right inside its parent container.
+</li><li>
+Content (like text) and inline elements on the same level flow around the floated element, occupying the space next to it.
+</li><li>
+Block-level elements below the floated element will collapse underneath it, but their content will wrap around the floated element.
+</li></ul> <br><br>
+<span class="larger">💻 float Property Values:</span> <br><br>
+The float property accepts a few key values:
+<br>
+<table>
+<tr>
+    <th>Value</th>
+    <th>Description</th>
+</tr>
+<tr>
+    <td>left</td>
+    <td>The element floats to the left of its container.</td>
+</tr>
+<tr>
+    <td>right</td>
+    <td>The element floats to the right of its container.</td>
+</tr>
+<tr>
+    <td>none</td>
+    <td>(Default) The element is displayed as a normal, non-floated element.</td>
+</tr>
+<tr>
+    <td>inherit</td>
+    <td>Specifies that the value should be inherited from its parent element.</td>
+</tr>
+</table><br><br>
+<span class="larger">🚧 The "Clearing" Problem (and the clear Property)</span>
+<br><br>
+One of the main complexities of using float is that when an element is floated, its parent container no longer recognizes its height, which can cause the parent to collapse (have zero height). This is often referred to as the parent collapse issue.
+<br><br>
+To fix this, you use the clear property on the element after the floated element to ensure it doesn't wrap around the float. <br><br>
+<table>
+    <tr>
+        <th>Value</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>left</td>
+        <td>Requires the element's left side to be below any floating element on the left.</td>
+    </tr>
+    <tr>
+        <td>right</td>
+        <td>Requires the element's right side to be below any floating element on the left.</td>
+    </tr>
+    <tr>
+        <td>both</td>
+        <td>Requires the element to be below any floating elements on both the left and right. (This is the most common value.)</td>
+        
+    </tr>
+    <tr>
+        <td>none(default)</td>
+        <td>Allows floating elements on either side.</td>
+    </tr>
+</table> <br><br>
+<span class="large">
+    Example:
+</span> <br>
+HTML Code:
+<div class="example">
+&lt;div class="container clearfix">
+  &lt;img src="Bangladesh.jpg" alt="Bangladesh" class="floated-image">
+  &lt;p>
+Bangladesh, to the east of India on the Bay of Bengal, is a South Asian country marked by lush greenery and many waterways. Its Padma (Ganges), Meghna and Jamuna rivers create fertile plains, and travel by boat is common. On the southern coast, the Sundarbans, an enormous mangrove forest shared with Eastern India, is home to the royal Bengal tiger
+  &lt;/p>
+ &lt;/div>
+
+&lt;div class="footer">
+  This is the footer section.
+&lt;/div>
+</div> <br><br>
+CSS code:
+<div class="example">
+    /* Styling for the Floated Element */
+.floated-image {
+  float: left;        /* 1. Moves the image to the left */
+  margin-right: 15px; /* Adds space between the image and the wrapping text */
+  width: 150px;
+  height: auto;
+}
+/* 2. Clearing the Float */
+/* The element immediately following the float that MUST go below it */
+.footer {
+  border-top: 2px solid #333;
+  padding-top: 10px;
+  clear: both; /* Forces the footer to appear below any left or right floats */
+}
+/* 3. The Clearfix Hack (To fix parent collapse) */
+/* The parent of the float must be cleared to contain the float's height. */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container {
+  background-color: #f0f8ff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+</div> <br><br>
+Output:
+<div class="example">
+    <style>
+        /* Styling for the Floated Element */
+.floated-image {
+  float: left;        /* 1. Moves the image to the left */
+  margin-right: 15px; /* Adds space between the image and the wrapping text */
+  width: 350px;
+  height: auto;
+}
+
+/* 2. Clearing the Float */
+/* The element immediately following the float that MUST go below it */
+.footer {
+  border-top: 2px solid #333;
+  padding-top: 10px;
+  clear: both; /* Forces the footer to appear below any left or right floats */
+}
+
+/* 3. The Clearfix Hack (To fix parent collapse) */
+/* The parent of the float must be cleared to contain the float's height. */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* General Styling (for visualization) */
+.container {
+  background-color: #f0f8ff;
+  border: 1px solid #ddd;
+}
+    </style>
+    <div class="container clearfix">
+  <img src="bd-float2.jpeg" alt="Beauty-of-Bangladesh" class="floated-image">
+  <p style="color: black;">
+Bangladesh, to the east of India on the Bay of Bengal, is a South Asian country marked by lush greenery and many waterways. Its Padma (Ganges), Meghna and Jamuna rivers create fertile plains, and travel by boat is common. On the southern coast, the Sundarbans, an enormous mangrove forest shared with Eastern India, is home to the royal Bengal tiger   
+</p>
+  <p>
+    This text wraps around the image because it is in the normal flow.
+  </p>
+</div>
+
+<div class="footer">
+  This is the footer section.
+</div>
+</div>
+<br><br>
+<span class="large">✨ Result Explanation:</span>
+<br><br>
+<ul><li>
+float: left; on the image: The image is taken out of the normal flow and pushed to the left. The paragraphs that follow it move up and wrap their text content around the right side of the image.
+</li><li>
+clearfix on the container: If we didn't use the .clearfix, the .container element would collapse its height, as it wouldn't include the floated image's height. The clearfix hack ensures the container stretches to fit the image.</li><li>
+clear: both; on the footer: Without clear: both;, the .footer would attempt to position itself next to the image (if there were space). By applying clear: both;, we instruct the browser to push the footer below the bottom edge of the floated image, ensuring a clean separation.</li></ul> <br><br>
+<span class="larger">#z-index:</span> <br><br>
+The z-index CSS property controls the vertical stacking order of elements that overlap. It only affects elements that have a position value of relative, absolute, fixed, or sticky. <br><br>
+<span style="color: yellow;">
+1.Stacking Order:</span> Elements with a higher z-index value will be displayed in front of elements with a lower z-index value.
+
+Values:
+<ul><li>
+It accepts unitless integer values (e.g., 1, 10, -5).</li><li>
+
+The default value for all elements is auto, which means the element's stacking level is the same as its parent's, or it establishes a new stacking context for itself if it's a flex/grid item.</li>
+<li>
+Negative values (-1, -10) are valid and can place an element behind its parent's content, provided the parent has a stacking context.
+</li></ul><br><br><br>
+<span style="color: yellow;">
+2.Position Requirement:</span> z-index will be ignored unless the element has been given an explicit position value other than the default static.
+<br><br><br>
+<span style="color: yellow">
+3.Stacking Context: </span>The stacking context is a three-dimensional concept that determines how elements are stacked on the z-axis. Elements within the same stacking context are compared against each other based on their z-index values. A new stacking context is typically created by:
+
+<ul><li>
+An element having a position value other than static and a z-index value other than auto.
+</li><li>
+Setting certain CSS properties like opacity (less than 1), transform, filter, will-change, etc.</li></ul> <br><br>
+<span class="large">📝 Example:</span>
+Imagine two overlapping boxes: <br>
+<div class="example">
+.box-1 {
+  position: absolute;
+  background-color: red;
+  /* ... other styles (width, height, top, left) ... */
+  z-index: 1; /* This box is layer 1 */
+}
+.box-2 {
+  position: absolute;
+  background-color: blue;
+  /* ... other styles (width, height, top, left) ... */
+  z-index: 10; /* This box is layer 10 */
+}
+&lt;div class="box1">Box 1 (Red) - z-index: 1&lt;/div>
+&lt;div class="box2">Box2 (Blue) - z-index: 10&lt;/div>
+</div>
+<br>
+Output: 
+<div class="example">
+    <style>
+        .box-container {
+            position: relative;
+            height: 300px; /* Example height */
+            border: 1px solid gray;
+        }
+
+        .box-1 {
+            position: absolute;
+            background-color: red;
+            width: 150px;
+            height: 150px;
+            top: 50px;
+            left: 50px;
+            z-index: 1; /* This box is layer 1, will be BEHIND box-2 */
+            color: white;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .box-2 {
+            position: absolute;
+            background-color: blue;
+            width: 150px;
+            height: 150px;
+            top: 100px;
+            left: 100px;
+            z-index: 10; /* This box is layer 10, will be IN FRONT of box-1 */
+            color: white;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+    <div class="box-container">
+        <div class="box-1">
+            Box 1 (Red) - z-index: 1
+        </div>
+        <div class="box-2">
+            Box 2 (Blue) - z-index: 10
+        </div>
+    </div>
+<br><br>
+<span class="large">Common Pitfall:</span>
+      If two sibling elements both have position: absolute; and z-index: 1;, their final stacking order is determined by their order in the HTML source code. The element that appears later in the HTML will be stacked on top. <br><br>
+      
+</div>
+</body> <br><br><br><br>
+
+<footer>
+<div class="footer-nav">
+        <button><a href="css-colors.html">Next</a> 
+        </button>
+        <button><a href="css-positioning.html">Previous</a> </button>  
+        <br>
+        <h3>CSS Topics</h3>
+          <nav>
+              <ol>
+                <li><a href="intro-to-css.html">Introduction to CSS</a></li>
+                <li><a href="css-syntax.html">CSS Syntax</a></li>
+                <li><a href="css-selectors.html">CSS Selectors</a></li>
+                <li><a href="css-pseudoclasses.html">CSS Pseudoclasses</a></li>
+                <li><a href="css-pseudoelements.html">CSS Pseudoelements</a></li>
+                <li><a href="css-boxmodel.html">CSS Box Model</a></li>
+                <li><a href="css-boxsizing.html">CSS Box Sizing</a></li>
+                <li><a href="css-display.html">CSS Display</a></li>
+                <li><a href="css-widthheight.html">CSS Width &amp; Height</a></li>
+                <li><a href="css-marginpadding.html">CSS Margin &amp; Padding</a></li>
+                <li><a href="css-overflow.html">CSS Overflow</a></li>
+                <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+                <li><a href="css-grid.html">CSS Grid</a></li>
+                <li><a href="css-positioning.html">CSS Positioning</a></li>
+                <li><a href="css-float.html">CSS Float</a></li>
+                <li><a href="css-colors.html">CSS Colors</a></li>
+                <li><a href="css-typography.html">CSS Typography</a></li>
+                <li><a href="css-borders.html">CSS Borders</a></li>
+                <li><a href="css-outline.html">CSS Outline</a></li>
+                <li><a href="css-transparency.html">CSS Transparency</a></li>
+                <li><a href="css-filters.html">CSS Filters</a></li>
+                <li><a href="css-navbar.html">CSS Navbar</a></li>
+                <li><a href="css-dropdown.html">CSS Dropdown</a></li>
+                <li><a href="css-buttons.html">CSS Buttons</a></li>
+                <li><a href="css-pagination.html">CSS Pagination</a></li>
+                <li><a href="css-viewport.html">CSS Viewport</a></li>
+                <li><a href="css-mediaqueries.html">CSS Media Queries</a></li>
+                <li><a href="css-relativeunits.html">CSS Relative Units</a></li>
+                <li><a href="css-responsiveimages.html">CSS Responsive Images</a></li>
+                <li><a href="css-transforms2d.html">CSS 2D Transforms</a></li>
+                <li><a href="css-transforms3d.html">CSS 3D Transforms</a></li>
+                <li><a href="css-transitions.html">CSS Transitions</a></li>
+                <li><a href="css-animations.html">CSS Animations</a></li>
+                <li><a href="css-customproperties.html">CSS Custom Properties</a></li>
+                <li><a href="css-functions.html">CSS Functions</a></li>
+              </ol>
+          </nav>
+      </div>
+
+      <div class="footer-bottom">
+          <p class="copyright">&copy; CODE WITH FAHIM 2025</p>
+          <div class="footer-links">
+              <a href="privacypolicy.html">Privacy Policy</a>
+              <a href="terms&conditions.html">Terms of Use</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+    
+</footer>
+
+</html>        

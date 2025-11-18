@@ -70,7 +70,8 @@ CSS positioning is the mechanism that determines how elements are laid out on a 
 <span class="large">1.Static:</span>
 <br><br>
 <span style="color: aqua;"> position: static</span> is the default positioning for every element on a webpage. When an element has position: static (or no position property is specified), it is placed according to the normal flow of the document. <br><br>
-Characteristics of Static Positioning: <br><br>
+<span style="color: coral;font-size: xx-large;">
+Characteristics of Static Positioning:</span> <br><br>
 <ul><li>
 Normal Flow: The element is positioned in the document where it would naturally appear based on the HTML structure. It doesn’t move from its default position unless affected by other layout properties like margin, padding, or flexbox/grid.
 </li><li>
@@ -133,14 +134,16 @@ The .static-box is positioned according to the normal document flow.
 </li><li>
 Both .static-box and .other-box are stacked one after the other, respecting the natural flow of the HTML document. Neither element is manually moved or offset.
 </li></ul> <br><br>
-When to Use position: static?
+<span style="color: yellow;font-size: xx-large;">
+When to Use position: static?</span>
 <br><br>
 <ul><li>
 Default Layout: If you don’t need to adjust an element’s position, leave it at static. It will follow the natural flow and won’t affect other elements.
 </li><li>
 When Reverting Other Positions: If you’ve previously set an element to relative, absolute, or fixed and want to return it to the normal document flow, you can explicitly set it to static.
 </li></ul> <br><br>
-Important Notes:
+<span style="color: crimson;font-size: xx-large;">
+Important Notes:</span>
 <br><br>
 <ul><li>
 If you set position: static, it doesn’t accept any positioning offsets like top, bottom, left, or right.
@@ -150,8 +153,8 @@ Most of the time, static is implicit, which means you don't need to explicitly s
 <span class="large">2.Relative</span>
 <br><br>
 <span style="color: aqua;">position: relative</span> allows you to position an element relative to its original position in the normal document flow. This means the element is moved from where it would naturally appear, but it still occupies space in the layout and does not affect other elements around it. <br><br>
-
-Characteristics of position: relative:
+<span style="color: coral;font-size: xx-large;">
+Characteristics of position: relative:</span>
 <br><br>
 <ul><li>
 Relative to Original Position: The element is moved based on the top, right, bottom, or left properties, but its original position in the layout is still maintained. This means other elements are not "pulled" to fill the space it originally occupied.
@@ -160,7 +163,8 @@ Offsets Work: You can use top, right, bottom, and left properties to move the el
 </li><li>
 Does Not Remove from Flow: The element remains part of the document flow. The space it would occupy if it were static still exists, and other elements around it behave as though the element is still in its original location.
 </li></ul> <br><br>
-When to Use position: relative? <br><br>
+<span style="color: yellow;font-size: xx-large;">
+When to Use position: relative?</span> <br><br>
 <ul><li>
 Nudging an element: Use relative when you want to move an element from its default position without affecting the layout of other elements.
 </li><li>
@@ -219,7 +223,8 @@ Creating a reference for absolute positioning: A very common use case is positio
   <div class="relative-box">Relative Box</div>
 </div>
 </div> <br><br>
-Explanation of Example: <br><br>
+<span style="color: magenta;font-size: xx-large;">
+Explanation of Example:</span> <br><br>
 <ul><li>
 The .relative-box is positioned relative to its original position inside the .container.
 </li><li>
@@ -279,7 +284,8 @@ Output:
   <div class="absolute-box">Absolute Box</div>
 </div>
 </div> <br><br><br>
-Explanation:
+<span style="color: magenta;font-size: xx-large;">
+Explanation:</span>
 <br>
 <br>
 <ul><li>
@@ -289,8 +295,8 @@ The .absolute-box is positioned absolutely within the .container, and its top-le
 </li><li>
 The element is removed from the document flow, meaning it doesn’t affect the position of any other elements in the layout.
 </li></ul> <br><br>
-
-Characteristics of position: absolute: <br><br>
+<span style="color: coral;font-size: xx-large;">
+Characteristics of position: absolute: </span><br><br>
 <ul><li>
 Removed from Document Flow: An absolutely positioned element does not affect the layout of other elements. It is removed from the flow of the document, so other elements act as if it doesn’t exist.</li><li>
 Positioned Relative to an Ancestor: The element is positioned relative to its nearest positioned ancestor. If no ancestor has a positioning property set (like relative, absolute, fixed, or sticky), it will be positioned relative to the viewport (the browser window).
@@ -306,7 +312,8 @@ Overlays: Creating overlays like image captions, sticky buttons, or sticky navig
 <span class="large">4.Fixed:</span> <br><br>
 position: fixed allows you to position an element relative to the viewport (the browser window), rather than its parent container or the document flow. An element with position: fixed will stay in a fixed position even when the page is scrolled.
 <br><br>
-Characteristics of position: fixed: <br><br>
+<span style="color: coral;font-size: xx-large;">
+Characteristics of position: fixed: </span><br><br>
 <ul><li>
     Fixed to the Viewport: The element is fixed relative to the browser window, meaning it will remain in the same position on the screen no matter how much the user scrolls.
 </li><li>
@@ -316,7 +323,8 @@ Uses Offsets: The top, right, bottom, and left properties are used to specify th
 </li><li>
 Sticky Behavior: It can be used to create sticky elements, like fixed navigation bars, buttons, or footers that remain visible even when scrolling.</li>
 </ul> <br><br>
-When to Use position: fixed?
+<span style="color: yellow;font-size: xx-large;">
+When to Use position: fixed?</span>
 <br><br>
 <ul><li>
 Fixed Navigation Bars: To create a navigation bar that stays at the top or bottom of the screen even when scrolling.
@@ -373,7 +381,8 @@ Floating Action Buttons (FAB): To keep buttons or icons fixed in a certain posit
 </div> <br><br>
 <span class="large">5.Sticky:</span> <br><br>
 <span style="color: aqua;">position: sticky</span> is a hybrid positioning property that allows an element to stick to a specified position within its scrollable container when the user scrolls past it, but only within the bounds of its parent container. Once the element reaches the end of its container, it "unsticks" and scrolls with the rest of the content. <br><br>
-Characteristics of position: sticky: <br><br>
+<span style="color: coral;font-size: xx-large;">
+Characteristics of position: sticky:</span> <br><br>
 <ul><li>
 Scrolls Until a Threshold: The element behaves like position: relative until the user scrolls past it. Once the scroll position reaches a defined threshold (like top: 0 or top: 10px), it becomes fixed relative to the viewport.
 </li><li>
@@ -446,7 +455,8 @@ Sticky Footers: Making the footer stick to the bottom of a container when the co
 </div>
 </div>
 <br><br><br>
-Explanation:
+<span style="color: magenta;font-size: xx-large;">
+Explanation:</span>
 <br><br>
 <ul><li>
 The header has position: sticky and top: 0, so it sticks to the top of the viewport when you scroll.
@@ -457,11 +467,6 @@ As you scroll down, the header will stay fixed at the top of the page until you 
 
 
 
-
-<!--Video slider exoclick-->
-<script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script> 
- <ins class="eas6a97888e31" data-zoneid="5772912" data-keywords="keywords" data-sub="123450000"></ins> 
- <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
 
 </body> <br><br><br><br>
 
