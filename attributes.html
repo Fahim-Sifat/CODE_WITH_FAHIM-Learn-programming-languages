@@ -287,10 +287,35 @@ Some attributes only work with specific tags. <br><br>
 
 
 
-<!--Video slider exoclick-->
-<script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script> 
- <ins class="eas6a97888e31" data-zoneid="5772912" data-keywords="keywords" data-sub="123450000"></ins> 
- <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
+<!--body part of video vast-->
+    <video id="my-video" 
+           class="video-js vjs-default-skin" 
+           controls
+           autoplay 
+           preload="auto"  
+           data-setup='{}'>
+        <source src="path/to/your/content-video.webm" type="video/webm"/>
+        <source src="path/to/your/content-video.mp4" type="video/mp4"/>
+        
+        <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+    </video>
+<!--Video vast tag here-->
+<script>
+    var player = videojs('my-video');
+player.ready(function() {
+        player.vast({
+            url: 'https://embarrassed-bridge.com/d/myFvzgd.GdNBvBZ-GzUr/HeVm-9/uhZMUbllkYPlTmYi3DM/DGg/0bMwzBgkt/NMjGc-wyOhDAQFzWO/QO', 
+            offset: 'pre',   
+            skip: 5,    
+         displayRemainingTime: true
+        });
+        player.play();
+    });
+</script>
+<!--Video vast tag ends here-->
 
 </body>
  </html>
