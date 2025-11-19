@@ -71,26 +71,7 @@ window.addEventListener('appinstalled', (event) => {
 
 </head>
 <body>
-    <!--body part of video vast-->
-    <video id="my-video" 
-           class="video-js vjs-default-skin" 
-           controls 
-           preload="auto" 
-           width="480" 
-           height="264" 
-           data-setup='{}'>
-        
-        <source src="path/to/your/content-video.mp4" type="video/mp4"/>
-        
-        <p class="vjs-no-js">
-            To view this video please enable JavaScript, and consider upgrading to a web browser that
-            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-        </p>
-    </video>
-
-    <!--End-->
-
-
+    
 
 
 
@@ -200,6 +181,25 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 
+
+<!--body part of video vast-->
+    <video id="my-video" 
+           class="video-js vjs-default-skin" 
+           controls 
+           preload="auto" 
+           width="400" 
+           height="264" 
+           data-setup='{}'>
+        
+        <source src="path/to/your/content-video.mp4" type="video/mp4"/>
+        
+        <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+    </video>
+
+    <!--End-->
 
  
 <!--Video vast tag here-->
