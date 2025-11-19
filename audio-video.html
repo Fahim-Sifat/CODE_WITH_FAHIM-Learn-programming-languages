@@ -25,6 +25,15 @@
 <script type='text/javascript' src='//underpantsjokeimmunity.com/1b/8c/07/1b8c07f067877dcbe7aee75aca53d282.js'></script>
 
 
+<!--Hiltopads video vast-->
+<link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+<script src="https://vjs.zencdn.net/8.10.0/video.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/videojs-contrib-ads@7.5.2/dist/videojs.ads.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/videojs-contrib-ads@7.5.2/dist/videojs.ads.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/videojsx-vast-plugin@1.0.4/dist/videojsx.vast.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/videojsx-vast-plugin@1.0.4/dist/videojsx.vast.js"></script>
+<!--Video vast ends-->
  
 </head>
 <body> 
@@ -182,11 +191,36 @@ OGG=( Chrome,Safari,Firefox,Opera)</div> <br>
 
 
 
-<!--Video slider exoclick-->
-<script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script> 
- <ins class="eas6a97888e31" data-zoneid="5772912" data-keywords="keywords" data-sub="123450000"></ins> 
- <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
 
+<!--body part of video vast-->
+    <video id="my-video" 
+           class="video-js vjs-default-skin" 
+           controls
+           autoplay 
+           preload="auto"  
+           data-setup='{}'>
+        <source src="path/to/your/content-video.webm" type="video/webm"/>
+        <source src="path/to/your/content-video.mp4" type="video/mp4"/>
+        
+        <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+    </video>
+<!--Video vast tag here-->
+<script>
+    var player = videojs('my-video');
+player.ready(function() {
+        player.vast({
+            url: 'https://embarrassed-bridge.com/d/myFvzgd.GdNBvBZ-GzUr/HeVm-9/uhZMUbllkYPlTmYi3DM/DGg/0bMwzBgkt/NMjGc-wyOhDAQFzWO/QO', 
+            offset: 'pre',   
+            skip: 5,    
+         displayRemainingTime: true
+        });
+        player.play();
+    });
+</script>
+<!--Video vast tag ends here-->
 </body> <br><br><br><br><br><br>
   <footer>
  <button type="button" class="btn btn-default"><a href="input-types.html" class="next-page">Next>></a></button>

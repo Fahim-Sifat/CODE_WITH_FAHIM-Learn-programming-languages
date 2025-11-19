@@ -191,3 +191,31 @@ button[href="html.html"]:hover {
         font-size: 1.5rem;
     }
 }
+
+
+#my-video {
+    width: 360px !important;
+    height: 240px !important;
+}
+
+/* Ensure the Video.js container uses the same size */
+.video-js {
+    width: 360px !important;
+    height: 240px !important;
+}
+
+/* 2. Desktop Override (Applies when the screen width is 1024px or larger) */
+/* This will automatically switch to the maximum size for high CPM */
+@media screen and (min-width: 1024px) {
+    /* 1280px width (with a standard 16:9 height of 720px) */
+    #my-video {
+        width: 1024px !important;
+        height: 768px !important;
+    }
+
+    /* Ensure the Video.js container uses the same size */
+    .video-js {
+        width: 1024px !important;
+        height: 768px !important;
+    }
+}
