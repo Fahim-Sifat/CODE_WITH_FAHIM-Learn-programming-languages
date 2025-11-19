@@ -350,15 +350,15 @@ a:hover {
 }
 
 /* 1. Default/Mobile Settings (Applies to ALL devices unless overridden) */
-/* Setting 400px width and 225px height for the video element */
+/* Setting 360px width and 225px height for the video element */
 #my-video {
-    width: 400px !important;
+    width: 360px !important;
     height: 225px !important;
 }
 
 /* Ensure the Video.js container uses the same size */
 .video-js {
-    width: 400px !important;
+    width: 360px !important;
     height: 225px !important;
 }
 
