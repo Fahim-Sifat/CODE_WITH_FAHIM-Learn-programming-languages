@@ -348,23 +348,32 @@ a:hover {
         color: var(--color-accent-red);
 	}
 }
+
+/* 1. Default/Mobile Settings (Applies to ALL devices unless overridden) */
+/* Setting 400px width and 225px height for the video element */
 #my-video {
-    max-width: 100% !important;
-    height: auto !important;
+    width: 400px !important;
+    height: 225px !important;
 }
 
 /* Ensure the Video.js container uses the same size */
 .video-js {
-    max-width: 100% !important;
-    height: auto !important;
+    width: 400px !important;
+    height: 225px !important;
 }
-@media screen and (max-width: 600px) {
+
+/* 2. Desktop Override (Applies when the screen width is 1024px or larger) */
+/* This will automatically switch to the maximum size for high CPM */
+@media screen and (min-width: 1024px) {
+    /* 1280px width (with a standard 16:9 height of 720px) */
     #my-video {
-        width: 100% !important;
-        height: auto !important;
+        width: 1280px !important;
+        height: 720px !important;
     }
+
+    /* Ensure the Video.js container uses the same size */
     .video-js {
-        max-width: 100% !important;
-        height: auto !important;
+        width: 1280px !important;
+        height: 720px !important;
     }
 }
