@@ -348,3 +348,23 @@ a:hover {
         color: var(--color-accent-red);
 	}
 }
+#my-video {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Ensure the Video.js container uses the same size */
+.video-js {
+    max-width: 100% !important;
+    height: auto !important;
+}
+@media screen and (max-width: 600px) {
+    #my-video {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .video-js {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
