@@ -191,7 +191,7 @@ if ('serviceWorker' in navigator) {
            width="400" 
            height="264" 
            data-setup='{}'>
-        
+        <source src="path/to/your/content-video.webm" type="video/webm"/>
         <source src="path/to/your/content-video.mp4" type="video/mp4"/>
         
         <p class="vjs-no-js">
@@ -209,7 +209,8 @@ if ('serviceWorker' in navigator) {
 player.ready(function() {
         player.vast({
             url: 'https://embarrassed-bridge.com/d/myFvzgd.GdNBvBZ-GzUr/HeVm-9/uhZMUbllkYPlTmYi3DM/DGg/0bMwzBgkt/NMjGc-wyOhDAQFzWO/QO', 
-            offset: 'pre',       
+            offset: 'pre',   
+            skip: 5,    
          displayRemainingTime: true
         });
         player.play();
