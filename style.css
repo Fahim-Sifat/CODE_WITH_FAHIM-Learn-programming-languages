@@ -1,0 +1,323 @@
+/*
+ * Alternative Dark Neon Theme (Hacker/Matrix Style) for CODE WITH FAHIM
+ * style_v2.css
+ */
+
+:root {
+    /* Main Colors */
+    --color-dark-bg: #030a10; /* Very deep blue-black */
+    --color-darker-bg: #010408; /* Near black */
+    --color-text-light: #f0f0f0; 
+
+    /* Neon Accent Colors */
+    --color-neon-primary: #33ccff; /* Electric Blue */
+    --color-neon-secondary: #ccff33; /* Vibrant Lime Green */
+    --color-neon-glow-primary: rgba(51, 204, 255, 0.4); 
+    --color-neon-glow-secondary: rgba(204, 255, 51, 0.6); 
+
+    /* Typography */
+    --font-primary: 'VT323', monospace; /* Use a pixel/retro font if available, otherwise fallback */
+    --font-secondary: 'Roboto Mono', 'Consolas', monospace; /* Modern monospace for content */
+}
+
+/* --- Global Reset & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif,Georgia, 'Times New Roman', Times, serif,Verdana, Geneva, Tahoma, sans-serif,Arial, Helvetica, sans-serif;
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-light);
+    line-height: 1.8; /* Increased line height for better readability in monospace */
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Times New Roman', Times, serif,Georgia, 'Times New Roman', Times, serif,Verdana, Geneva, Tahoma, sans-serif,Arial, Helvetica, sans-serif;
+    color: var(--color-neon-primary);
+    /* Matrix-style glow */
+    text-shadow: 0 0 7px var(--color-neon-glow-primary), 
+                 0 0 15px var(--color-neon-primary);
+}
+
+a {
+    color: var(--color-neon-secondary); /* Default link is Lime */
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-neon-primary); /* Hover is Electric Blue */
+    text-shadow: 0 0 8px var(--color-neon-primary);
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--color-darker-bg);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--color-neon-secondary);
+}
+
+.logo a {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--color-neon-secondary);
+    text-shadow: 0 0 10px var(--color-neon-glow-secondary);
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    height: 35px;
+    margin-right: 10px;
+    filter: drop-shadow(0 0 5px var(--color-neon-secondary));
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+}
+
+nav ul li a:hover {
+    border: 1px solid var(--color-neon-primary);
+    background-color: rgba(51, 204, 255, 0.1);
+}
+
+/* --- Main Content Layout --- */
+main {
+    padding: 2.5rem 5%;
+}
+
+section {
+    padding: 4rem 0;
+    /* Matrix Line Separator */
+    border-bottom: 1px dashed var(--color-neon-primary); 
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-color: var(--color-neon-secondary);
+    box-shadow: 0 0 10px var(--color-neon-glow-secondary);
+    margin: 3rem 0;
+}
+
+/* --- Hero Section --- */
+#hero {
+    text-align: center;
+    padding: 7rem 0;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    /* Strongest glow */
+    text-shadow: 0 0 15px var(--color-neon-glow-primary), 0 0 30px var(--color-neon-primary);
+}
+
+#hero p {
+    font-size: 1.3rem;
+    color: var(--color-text-light);
+    margin-bottom: 3rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-neon-secondary);
+    color: var(--color-darker-bg);
+    padding: 15px 35px;
+    border-radius: 0; /* Sharp edges for hacker feel */
+    border: 3px solid var(--color-neon-secondary);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 20px var(--color-neon-secondary);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.cta-button:hover {
+    background-color: var(--color-darker-bg); /* Inverted look on hover */
+    color: var(--color-neon-secondary);
+    box-shadow: 0 0 30px var(--color-neon-secondary), 0 0 60px rgba(204, 255, 51, 0.4);
+    transform: scale(1.02);
+}
+
+/* --- Languages Section --- */
+.section-description {
+    text-align: center;
+    color: var(--color-neon-primary);
+    margin-bottom: 3rem;
+    text-shadow: 0 0 5px var(--color-neon-glow-primary);
+}
+
+.language-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.language-card {
+    background-color: var(--color-darker-bg);
+    padding: 30px;
+    border-radius: 0;
+    border: 1px solid var(--color-neon-primary);
+    box-shadow: 0 0 15px var(--color-neon-glow-primary);
+    transition: all 0.3s ease;
+}
+
+.language-card:hover {
+    transform: perspective(1000px) rotateX(2deg) translateY(-8px);
+    box-shadow: 0 5px 25px var(--color-neon-primary), 0 0 40px rgba(51, 204, 255, 0.3);
+}
+
+.language-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: var(--color-neon-secondary);
+    border-bottom: 2px solid var(--color-neon-primary);
+    padding-bottom: 8px;
+}
+
+.language-card p {
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+}
+
+.language-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.language-card ul li {
+    margin-top: 10px;
+    padding-left: 20px;
+    position: relative;
+    color: var(--color-text-light);
+}
+
+.language-card ul li a {
+    color: var(--color-neon-primary); /* Links inside cards are Blue */
+}
+
+.language-card ul li::before {
+    content: '> '; 
+    color: var(--color-neon-secondary);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* --- About Section --- */
+#about ul {
+    list-style: none;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#about ul li {
+    background-color: var(--color-darker-bg);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 0;
+    border: 1px solid var(--color-neon-secondary);
+    box-shadow: 0 0 10px var(--color-neon-glow-secondary);
+}
+
+#about ul li strong {
+    color: var(--color-neon-secondary);
+    text-shadow: 0 0 5px var(--color-neon-glow-secondary);
+}
+
+
+/* --- Footer --- */
+footer {
+    background-color: var(--color-darker-bg);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 2rem 5%;
+    border-top: 2px solid var(--color-neon-primary);
+}
+
+.footer-links a, .social-links a {
+    color: var(--color-neon-primary);
+    margin: 0 15px;
+    padding: 5px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.footer-links a:hover, .social-links a:hover {
+    color: var(--color-neon-secondary);
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 5px 10px;
+    }
+    
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
+
+
+
+/* 1. Default/Mobile Settings (Applies to ALL devices unless overridden) */
+/* Setting 400px width and 225px height for the video element */
+#my-video {
+    width: 360px !important;
+    height: 240px !important;
+}
+
+/* Ensure the Video.js container uses the same size */
+.video-js {
+    width: 360px !important;
+    height: 240px !important;
+}
+
+/* 2. Desktop Override (Applies when the screen width is 1024px or larger) */
+/* This will automatically switch to the maximum size for high CPM */
+@media screen and (min-width: 1024px) {
+    /* 1280px width (with a standard 16:9 height of 720px) */
+    #my-video {
+        width: 1024px !important;
+        height: 768px !important;
+    }
+
+    /* Ensure the Video.js container uses the same size */
+    .video-js {
+        width: 1024px !important;
+        height: 768px !important;
+    }
+}
