@@ -126,7 +126,7 @@ ul {
 
 /* --- Link Styling and Animation --- */
 a {
-    text-decoration: none;
+    text-decoration: underline;
     color: var(--link-color); /* **Readability Change** - Clear blue links */
     display: block;
     padding: 4px 10px;
@@ -138,4 +138,13 @@ a:hover {
     color: var(--link-hover-color); /* **Readability Change** - High contrast hover state */
     background-color: rgba(100, 181, 246, 0.1); 
     transform: scale(1.02);
+}
+.main{
+    font-style: italic;
+    color: magenta;
+    font-size: xx-large;
+}
+.sub{
+    color: yellow;
+    font-size: larger;
 }
