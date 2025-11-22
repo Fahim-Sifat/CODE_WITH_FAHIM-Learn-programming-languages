@@ -41,7 +41,7 @@ h1, h2, h3 {
     /* Matrix-style glow */
     text-shadow: 0 0 7px var(--color-neon-glow-primary), 
                  0 0 15px var(--color-neon-primary);
-}
+                     }
 
 a {
     color: var(--color-neon-secondary); /* Default link is Lime */
@@ -110,6 +110,12 @@ section {
     padding: 4rem 0;
     /* Matrix Line Separator */
     border-bottom: 1px dashed var(--color-neon-primary); 
+    
+}
+.notice{
+    text-align: center;
+    border: 1px solid green;
+    margin-bottom: 20px;
 }
 
 hr {
@@ -124,6 +130,7 @@ hr {
 #hero {
     text-align: center;
     padding: 7rem 0;
+
 }
 
 #hero h1 {

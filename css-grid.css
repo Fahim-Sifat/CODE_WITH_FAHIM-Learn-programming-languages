@@ -144,11 +144,7 @@ th {
 tr:nth-child(even) {
     background-color: #131320; /* Subtle stripe effect */
 }
-.notice{
-    text-align: center;
-    border: 1px solid maroon;
-    
-}
+
 
 
 
