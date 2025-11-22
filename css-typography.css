@@ -108,6 +108,7 @@ li::before {
     font-size: 0.9em;
     color: #f8f8ff;
     border-radius: 5px;
+    word-wrap: break-word;
 }
 
 /* --- Tables --- */
