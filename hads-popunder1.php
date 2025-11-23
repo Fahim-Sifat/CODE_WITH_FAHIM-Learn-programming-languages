@@ -9,7 +9,7 @@ class AntiAdBlock {
     /**
      * @var string
      */
-    private $zoneId = '6702546-6702547';
+    private $zoneId = '6711541-6711542';
 
     /**
      * @var string
