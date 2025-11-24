@@ -1,260 +1,182 @@
-:root{
-    /* Define a color palette for consistency */
-    --color-dark-bg: #1a1a2e;       /* Deep Indigo/Dark Background */
-    --color-light-text: #e9e9f2;    /* Off-White/Light Text */
-    --color-accent-red: #ff416c;    /* Vibrant Red Accent */
-    --color-accent-blue: #2a73ff;   /* Bright Blue Accent */
-    --color-code-text: #4caf50;     /* Green for Code */
-    --color-tag-blue: #4dd0e1;      /* Aqua for Tags */
-    --color-hyper-text: #a742ff;    /* Purple for Hyper Text */
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* --- Dark Mode Variables and Global Styles --- */
+
+:root {
+    --bg-primary: #1e1e1e;       /* Dark background */
+    --bg-secondary: #252526;     /* Slightly lighter for panels/cards */
+    --text-primary: #f0f0f0;     /* Light text color */
+    --text-secondary: #aaaaaa;   /* Muted secondary text */
+    --sidebar-bg: #333333;       /* Sidebar background */
+    --link-hover-bg: #444444;    /* Hover state for links */
+    --accent-color: #5d9cec;     /* Blue accent color for contrast */
+    --success-bg: #4caf50;       /* Green for success (Submit button, Correct answer) */
+    --error-bg: #f44336;         /* Red for errors (Wrong answer) */
+    --warning-bg: #ffc107;       /* Amber for warnings (Skipped answers) */
 }
 
 body {
-    /* Use a simple, clean font-stack and the dark background color */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--color-dark-bg);
-    color: var(--color-light-text);
-    line-height: 1.6; /* Improved readability */
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Main Layout using Flexbox */
+.quiz-container {
+    display: flex; 
+    max-width: 1200px;
+    margin: 20px auto;
+    border: 1px solid var(--sidebar-bg);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5); 
+    background-color: var(--bg-secondary);
+    min-height: 80vh;
+}
+
+/* --- Sidebar Styling --- */
+.sidebar {
+    width: 250px; 
+    background-color: var(--sidebar-bg);
+    color: var(--text-primary);
     padding: 20px;
+    flex-shrink: 0; 
 }
 
-/* --- Header Styles --- */
-h1 {
-    text-align: center;
-    margin: 0 0 10px 0;
-    padding: 15px 0;
-    font-family: 'Impact', sans-serif;
-    color: var(--color-light-text);
-    background-color: #0d0d1b; /* Slightly darker header background */
-    text-shadow: 0 0 10px var(--color-accent-red), 0 0 20px var(--color-accent-blue);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    letter-spacing: 2px;
-    border-radius: 8px;
+.sidebar h3 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--link-hover-bg);
+    padding-bottom: 10px;
 }
 
-h3 {
-    text-align: center;
-    text-decoration: none; /* Removed default underline */
-    color: var(--color-accent-red);
-    text-shadow: 0 0 5px var(--color-accent-blue);
+#topic-list {
+    list-style: none;
+}
+
+#topic-list li a {
+    display: block;
     padding: 10px 0;
-    position: sticky;
-    top: 70px; /* Below H1 */
-    z-index: 99;
-    background-color: var(--color-dark-bg);
+    text-decoration: none;
+    color: var(--text-primary);
+    border-bottom: 1px dotted var(--link-hover-bg);
+    transition: background-color 0.3s;
 }
 
-/* --- Layout (Using Flexbox for modern layout) --- */
-.div-container {
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    gap: 30px;
-    margin-top: 20px;
+#topic-list li a:hover,
+#topic-list li a.active {
+    background-color: var(--link-hover-bg);
+    color: white; 
 }
 
-.div1 {
-    /* Main Content Area */
-    flex: 2; /* Takes up more space */
-    min-width: 300px;
-    padding: 20px;
-    background-color: #24243e; /* Slight contrast for content box */
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+/* --- Main Content Styling --- */
+.main-content {
+    flex-grow: 1; 
+    padding: 30px;
 }
 
-.div2 {
-    /* Sidebar Image Area */
-    flex: 1; /* Takes up less space */
-    min-width: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 20px;
+.main-content h1 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    border: 5px solid var(--color-accent-red);
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 65, 108, 0.5);
-    transition: transform 0.3s ease-in-out;
-}
-img:hover {
-    transform: scale(1.03);
+/* Quiz Card Styling */
+.question-card {
+    background-color: var(--bg-primary); 
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--link-hover-bg);
+    border-left: 5px solid var(--accent-color); 
+    border-radius: 4px;
 }
 
-/* --- Typography and Specific Elements --- */
-p {
-    font-size: 1.1rem;
-}
-.p1 {
-    font-size: 1.2rem;
+.question-card label {
+    display: block; 
+    margin: 8px 0;
+    color: var(--text-primary);
 }
 
-.span1 {
-    /* HTML */
-    font-size: 3rem;
-    color: var(--color-accent-red);
-    font-weight: bold;
-    display: block; /* Ensures it takes a new line for emphasis */
+
+/* --- BUTTON STYLING --- */
+
+/* Submit Button */
+button#submit-quiz {
+    padding: 10px 20px;
+    background-color: var(--success-bg);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button#submit-quiz:hover {
+    background-color: #43a047; 
+}
+
+/* NEW: Reset Button Styling */
+button#reset-score {
+    padding: 10px 20px;
+    background-color: var(--accent-color); /* Using the blue accent color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button#reset-score:hover {
+    background-color: #4a89d9; /* Slightly darker blue on hover */
+}
+
+
+/* --- RESULTS & FEEDBACK STYLING --- */
+
+/* Topic Results Area */
+#results-area h3 {
+    color: var(--text-primary);
     margin-bottom: 10px;
 }
 
-.span2 {
-    /* Hyper Text Markup Language */
-    color: var(--color-accent-blue);
-    font-weight: 600;
-}
-
-.span3 {
-    /* Hyper Text / Markup Language in breakdown */
-    color: var(--color-hyper-text);
-    font-weight: bold;
-}
-
-.code {
-    /* Code Block */
-    color: var(--color-code-text);
-    background-color: #0d0d1b;
+/* Cumulative Score Area */
+#cumulative-score-display {
     padding: 15px;
-    border-left: 5px solid var(--color-accent-red);
-    margin: 20px 0;
-    font-family: 'Consolas', 'Courier New', monospace;
-    font-size: 1rem;
-    white-space: pre-wrap; /* Ensures line breaks are respected */
-    border-radius: 0 8px 8px 0;
-}
-
-.span4 {
-    /* Tags like <html> */
-    color: var(--color-tag-blue);
-    font-weight: bold;
-}
-
-.soyeah {
-    /* Closing summary */
-    font-size: 1.8rem;
-    font-style: italic;
-    margin-top: 30px;
-    padding: 10px;
-    border-top: 1px dashed var(--color-light-text);
-}
-
-/* --- Button Styling --- */
-.btn-default {
-    background-color: var(--color-accent-red);
-    border: none;
-    padding: 10px 20px;
-    margin: 10px 5px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.btn-default:hover {
-    background-color: #e6395e; /* Slightly darker red on hover */
-    transform: translateY(-2px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-}
-
-.next-page, .previous {
-    text-decoration: none;
-    font-size: 1.1rem;
-    color: var(--color-light-text);
-    font-weight: bold;
-    display: block; /* Makes the anchor cover the whole button */
-    padding: 0;
-}
-
-/* Custom styling for the previous button to distinguish */
-button[href="html.html"] {
-    background-color: #24243e; /* Darker background */
-    border: 1px solid var(--color-accent-red);
-}
-button[href="html.html"]:hover {
-    background-color: #313150;
+    background-color: var(--sidebar-bg);
+    border-radius: 4px;
+    margin-top: 20px;
 }
 
 
-/* --- Pagination Styling --- */
-.goto {
-    font-size: 1.3rem;
-    margin-top: 40px;
-    display: block;
-    font-weight: bold;
-    border-bottom: 2px solid var(--color-accent-blue);
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+/* JavaScript Applied Feedback */
+
+/* 1. Correct Answer */
+.question-card.correct {
+    background-color: rgba(76, 175, 80, 0.2); /* Light green tint */
+    border-left-color: var(--success-bg);
 }
 
-.pagination-lg {
-    list-style-type: none;
-    padding: 0;
-    display: flex; /* Use flexbox for the list */
-    flex-wrap: wrap;
-    gap: 8px; /* Space between links */
+/* 2. Wrong Answer */
+.question-card.incorrect {
+    background-color: rgba(244, 67, 54, 0.2); /* Light red tint */
+    border-left-color: var(--error-bg);
 }
 
-.page-item {
-    padding: 0;
-    margin: 0;
+/* 3. NEW: Skipped Question */
+.question-card.skipped {
+    background-color: rgba(255, 193, 7, 0.2); /* Light amber/yellow tint */
+    border-left-color: var(--warning-bg);
 }
 
-.page-link, .pageactive-link {
-    display: inline-block;
-    padding: 8px 12px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-    border: 1px solid transparent;
-}
-
-.page-link {
-    background-color: var(--color-dark-bg);
-    color: var(--color-accent-blue);
-    border: 1px solid var(--color-accent-blue);
-}
-
-.page-link:hover {
-   background-color: var(--color-accent-blue);
-   color: var(--color-dark-bg);
-}
-
-.pageactive-link {
-    /* Active page */
-    color: var(--color-light-text);
-    background-color: var(--color-accent-red);
-    border: 1px solid var(--color-accent-red);
-}
-
-/* --- Media Queries for Responsiveness --- */
-@media (max-width: 768px) {
-    .div-container {
-        flex-direction: column; /* Stacks content and image vertically */
-    }
-    .div1, .div2 {
-        width: 100%;
-        float: none;
-        min-width: unset;
-        padding: 15px;
-    }
-    img {
-        margin-left: 0;
-        max-width: 70%; /* Smaller image on mobile */
-    }
-    h1 {
-        font-size: 1.8rem;
-        padding: 10px 0;
-    }
-    .span1 {
-        font-size: 2.5rem;
-    }
-    .soyeah {
-        font-size: 1.5rem;
-    }
+/* Hint text shown for incorrect/skipped answers */
+.correct-answer-hint {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: rgba(93, 156, 236, 0.1); 
+    color: var(--accent-color);
+    border-radius: 3px;
+    font-size: 0.9em;
 }

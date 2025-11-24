@@ -1,66 +1,54 @@
-<!--                    HTML PAGE_1              -->
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial scale=1.0"/>
-<title>HTML Quiz</title>
 <head>
-  <link rel="canonical" href="https://code-with-fahim.pages.dev/"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics Quiz Challenge</title>
     
-    <link rel="stylesheet" href="html-quizes.css"/>
-  <h1>CODE WITH FAHIM.</h1>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link rel="stylesheet" href="html-quizes.css"> 
+    
+    <meta name="google-adsense-account" content="ca-pub-3930264175657320">
 
-  gtag('config', 'G-MZ1JHY721H');
-</script>
-
-
-  
 </head>
 <body>
-<div class="navbar">
-    <ul class="ul1">
-      <!--class name are first letter of each word.-->
-    <ol>
-      <li>HTML BASICS</li>
-      <ul>
-      <li><a href="html-quizes/html-q1.html" class="ith">Quiz1-Introduction to HTML</a></li>
-      <li><a href="code-editor.html" class="ce">Code Editor</a></li>
-      <li><a href="tags.html" class="t&e">Tags & Elements</a></li>         
-       <li> <a href="structure.html"class="structure">Structure</a></li>
-       <li><a href="attributes.html" class="attributes">Attributes</a></li>
-       <li><a href="headings&paragraphs.html" class="hp">Heading & Paragraphs</a></li>
-       <li><a href="html-styles.html" class="styles">HTML Styles</a></li>
-       <li><a href="text-formation.html" class="tf">Text-formation</a></li>
-       <li><a href="comments.html" class="comments">Html Comments</a></li>
-       <li><a href="div&classes.html" class="divandclass">Html Div & Classes</a></li>
-       <li><a href="colors.html" class="colors">HTML Colors</a></li>
-       <li><a href="links.html"class="links">HTML Links</a></li>
-       <li><a href="lists.html"class="lists">HTML Lists</a></li>
-       <li><a href="tables.html"class="tables">HTML Tables</a></li>
-       <li><a href="images.html" class="images">Html Images</a></li>
-       <li><a href="audio-video.html" class="av">HTML Audio & Video</a></li>
-       <li><a href="input-types.html" class="it">HTML Input-Types</a></li>
-       <li><a href="forms.html" class="forms">HTML Forms</a></li>
-       <li><a href="emojis.html" class="emojis">HTML Emojis</a></li>
-      </ul> 
-      <li>HTML Expert</li>
-      Coming soon......
-      </ol>
-  <br><br><br><br>
-  <button type="button" class="btn btn-default"><a href="index.html" class="previous">&lt;Previous</a></button></li>
-    </ul>
-    <br>
-    
-</div>
 
+    <div class="quiz-container">
+        <aside class="sidebar">
+            <h3>HTML Topics</h3>
+            <ul id="topic-list">
+                <li><a href="#" data-topic="1">1. Introduction to HTML</a></li>
+                <li><a href="#" data-topic="2">2. Code Editor</a></li>
+                <li><a href="#" data-topic="3">3. Tags</a></li>
+                <li><a href="#" data-topic="4">4. Structure</a></li>
+                <li><a href="#" data-topic="5">5. Attributes</a></li>
+                <li><a href="#" data-topic="6">6. Headings & Paragraphs</a></li>
+                <li><a href="#" data-topic="7">7. HTML Styles</a></li>
+                <li><a href="#" data-topic="8">8. Text Formation</a></li>
+                <li><a href="#" data-topic="9">9. Comments</a></li>
+                <li><a href="#" data-topic="10">10. Div & Classes</a></li>
+                <li><a href="#" data-topic="11">11. Colors</a></li>
+                <li><a href="#" data-topic="12">12. Links</a></li>
+                <li><a href="#" data-topic="13">13. Lists</a></li>
+                <li><a href="#" data-topic="14">14. Tables</a></li>
+                <li><a href="#" data-topic="15">15. Images</a></li>
+                <li><a href="#" data-topic="16">16. Audio-Video</a></li>
+                <li><a href="#" data-topic="17">17. Input Types</a></li>
+                <li><a href="#" data-topic="18">18. Forms</a></li>
+                <li><a href="#" data-topic="19">19. Emojis</a></li>
+            </ul>
+        </aside>
 
+        <main class="main-content">
+            <h1>HTML Quiz Challenge</h1>
+            <div id="quiz-area">
+                <p>Select a topic from the sidebar to load the quiz!</p>
+            </div>
+            <button id="submit-quiz" style="display: none;">Submit Answers</button>
+            <button id="reset-score" style="margin-left: 10px; display: none;">Reset Total Score</button>
+            <div id="results-area"></div>
+        </main>
+    </div>
 
-
+    <script src="html-quizes.js"></script>
 </body>
 </html>
