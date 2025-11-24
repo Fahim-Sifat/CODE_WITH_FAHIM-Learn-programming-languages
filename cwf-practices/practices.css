@@ -1,0 +1,138 @@
+/* Custom Neon Font Import (Optional) */
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+/* --- General Page & Dark Background --- */
+body {
+    /* Deep Black background for maximum neon contrast */
+    background-color: #0a0a0a; 
+    /* Primary text color is now bright white for maximum clarity */
+    color: maroon; 
+    /* Simplified font stack for stability and readability */
+    font-family: 'Times New Roman', Times, serif,Arial, Helvetica, sans-serif,'Major Mono Display', monospace, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Header & Title --- */
+header {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    /* Subtle border and shadow */
+    border-bottom: 2px solid #00ffff; 
+    box-shadow: 0 2px 5px rgba(0, 255, 255, 0.5); 
+    transition: background-color 0.4s ease; /* Ensure transition is smooth */
+}
+
+/* --- NEW HOVER EFFECT: Header flashes magenta on hover --- */
+header:hover {
+    background-color: #2c0a2c; /* Slightly purple/dark magenta background */
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; /* Strong magenta glow */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    color: #ffff00; /* Yellow Neon Text */
+    /* Text Shadow is now minimal for better reading */
+    text-shadow: 0 0 2px #ffff00; 
+    transition: color 0.4s ease;
+}
+
+/* --- NEW HOVER EFFECT: Title text color changes on header hover --- */
+header:hover h1 {
+    color: #00ffff; /* Title text switches to blue/cyan */
+    text-shadow: 0 0 2px #00ffff;
+}
+
+/* --- Main Content Section --- */
+section {
+    flex-grow: 1; 
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Smooth transition for any changes */
+    transition: padding 0.5s ease; 
+}
+
+/* --- Language Grid (Card Container) --- */
+.language-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 850px;
+}
+
+.language-card {
+    background-color: #1a1a1a;
+    border: 3px solid #9b0d9b; /* Magenta Border */
+    border-radius: 10px;
+    padding: 120px; /* Current large padding */
+    
+    box-shadow: 0 0 5px rgba(255, 0, 255, 0.7), 
+                0 0 10px rgba(0, 255, 255, 0.4); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.language-card:hover {
+    /* Enhanced transform and strong yellow/blue hover glow */
+    transform: scale(1.02); /* Slightly less dramatic scale up */
+    box-shadow: 0 0 12px #ffff00, 0 0 25px #00ffff;
+    border-color: #ffff00; /* Border switches to yellow */
+}
+
+/* --- Buttons and Links --- */
+.div {
+    display: flex;
+    /* Increased Gap (Horizontal Spacing) */
+    gap: 40px; 
+    justify-content: center;
+}
+
+.div1 button {
+    /* General Button Style */
+    background-color: #2c2c2c; 
+    border: 2px solid #00ffff; /* Blue Neon Button Border */
+    padding: 12px 25px; 
+    
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Ensure all properties transition smoothly */
+}
+
+.div1 button a {
+    /* Link Text is bright white for maximum readability */
+    text-decoration: none;
+    color: #ffffff; 
+    font-weight: bold;
+    font-size: 1.1em;
+    text-shadow: none; 
+}
+
+/* Hover effects cycle the colors */
+.div1 button:nth-child(1):hover { /* Play Quiz Button */
+    background-color: #ff00ff; /* Magenta Fill */
+    border-color: #ffff00; 
+    box-shadow: 0 0 10px #ff00ff;
+}
+.div1 button:nth-child(2):hover { /* Build Projects Button */
+    background-color: #ffff00; /* Yellow Fill */
+    border-color: #00ffff;
+    box-shadow: 0 0 10px #ffff00;
+}
+.div1 button:nth-child(3):hover { /* Play Games Button */
+    background-color: #00ffff; /* Blue Fill */
+    border-color: #b3cadd;
+    box-shadow: 0 0 10px #00ffff;
+}
+
+.div1 button:hover a {
+    /* Dark text on bright background for readability */
+    color: #0a0a0a; 
+    text-shadow: none;
+}
