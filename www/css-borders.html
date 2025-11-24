@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://code-with-fahim.pages.dev/"/>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Borders</title>
+    <link rel="stylesheet" href="css-borders.css"/>
+<!--GA4-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZ1JHY721H');
+</script>
+
+<!--Adsterra popunder cloudfare-->
+<script type='text/javascript' src='//underpantsjokeimmunity.com/0b/4a/60/0b4a6002649c1d813fccc6c06dfb190c.js'></script>
+
+
+</head>
+<body>
+<header>
+        <img src="header-logo.png" alt="header-logo"><h1>CODE WITH FAHIM</h1>
+        <h3>CSS Borders</h3>
+    </header>
+    <div class="container">
+<br>
+        CSS borders define the line that surrounds an element’s content and padding. They control style, width, and color, and can be customized in many ways.
+<br><br>
+<span class="larger">
+⭐ Basics of CSS Borders</span>
+<br><br>
+A border is made of three main properties:
+<br>
+<br>
+<span class="large">
+1. border-style (required to show a border)
+</span> <br><br>
+Controls the appearance of the border.
+<br><br>
+
+Common values:
+<ul><li>
+solid
+</li><li>
+dashed
+</li><li>
+dotted
+</li><li>
+double
+</li><li>
+groove
+</li><li>
+ridge
+</li><li>
+inset
+</li><li>
+outset
+</li><li>
+none
+</li><li>
+hidden
+</li> <br><br>
+Example:
+<div class="example">
+    &lt;style>
+.box1 {
+  border-style: solid;
+}
+.box2 {
+  border-style: dashed;
+}
+.box3 {
+  border-style: dotted;
+}
+.box4 {
+  border-style: double;
+}
+.box5 {
+  border-style: groove;
+}
+.box6 {
+  border-style: ridge;
+}
+.box7 {
+  border-style: inset;
+}
+.box8 {
+  border-style: outset;
+}
+.box9 {
+  border-style: none;
+}
+.box10 {
+  border-style: hidden;
+}
+&lt;/style>
+
+&lt;span class="box1">solid&lt;/span>
+&lt;span class="box2">dashed&lt;/span>
+&lt;span class="box3">dotted&lt;/span>
+&lt;span class="box4">double&lt;/span>
+&lt;span class="box5">groove&lt;/span>
+&lt;span class="box6">ridge&lt;/span>
+&lt;span class="box7">inset&lt;/span>
+&lt;span class="box8">outset&lt;/span>
+&lt;span class="box9">none&lt;/span>
+&lt;span class="box10">hidden&lt;/span>
+</div> <br>
+Output:
+<div class="example">
+    <style>
+.box1 {
+  border-style: solid;
+}
+.box2 {
+  border-style: dashed;
+}
+.box3 {
+  border-style: dotted;
+}
+.box4 {
+  border-style: double;
+}
+.box5 {
+  border-style: groove;
+}
+.box6 {
+  border-style: ridge;
+}
+.box7 {
+  border-style: inset;
+}
+.box8 {
+  border-style: outset;
+}
+.box9 {
+  border-style: none;
+}
+.box10 {
+  border-style: hidden;
+}
+</style>
+
+<span class="box1">solid</span> <br>
+<span class="box2">dashed</span><br>
+<span class="box3">dotted</span><br>
+<span class="box4">double</span><br>
+<span class="box5">groove</span><br>
+<span class="box6">ridge</span><br>
+<span class="box7">inset</span><br>
+<span class="box8">outset</span><br>
+<span class="box9">none</span><br>
+<span class="box10">hidden</span><br>
+</div> <br><br>
+<br>
+<span class="large">
+2. border-width</span> <br><br>
+
+Controls the thickness of the border.
+<br><br>
+Values:
+<ul><li>
+Keywords: thin, medium, thick
+</li><li>
+Or specific sizes: 2px, 0.5rem
+</li></ul> <br>
+Example:
+<div class="example">
+    box {
+  border-width: 2px;
+}
+</div>
+<br><br><br>
+<span class="large">3.border-color</span>
+<br><br>
+Sets the border color.
+<div class="example">
+    box {
+  border-style: solid;      
+  border-color: red;
+}
+&lt;p class="box">The border color is red&lt;/p>
+</div>
+<br>
+Output:
+<div class="example">
+    <style>
+         .box11 {
+            border-style: solid;
+  border-color: red;
+}
+
+    </style>
+<p class="box11">The border color is red</p>
+</div> <br><br><br>
+<span class="title">🎯 Border Shorthand:</span>
+<br><br>
+You can combine all three into one property:
+<div class="example">
+box {
+  border: 3px solid red;
+}
+</div>
+<br>
+Order doesn’t matter, but a common pattern is:
+<div class="example">
+    border: width style color;
+</div> <br><br>
+<span class="title">🎛 Side-specific Borders:</span> <br><br>
+You can style each side independently: <br><br>
+Example:
+<div class="example">
+    box{
+  border-top: 5px solid red;
+  border-right: 3px dotted blue;
+  border-bottom: 5px dashed yellow;
+  border-left: none;
+}
+    &lt;p>Example of multiple borders.&lt;/p>
+</div>
+<br>
+Output:
+<div class="example">
+    <style>
+        .box12{
+            width: 100px;
+            height: 100px;
+        border-top: 5px solid red;
+  border-right: 3px dotted blue;
+  border-bottom: 5px dashed yellow;
+  border-left: none;
+        }
+    </style>
+    <p class="box12">Example of multiple borders.</p>
+</div> <br><br>
+<br><br>
+<span class="larger">🌐 Border Radius (rounded corners):</span>
+<br><br>
+border-radius in CSS controls how rounded an element’s corners are. You can round one corner, all corners, or even create circles and ovals. <br><br>
+<span class="large">
+    ⭐ Basic Usage:
+</span> <br>
+
+    Round all corners equally:
+<div class="example">
+    .box {
+  border-radius: 10px;
+}
+</div> <br><br>
+Output:
+<div class="example">
+    <style>
+.box13 {
+    border: 1px solid red;
+  border-radius: 10px;
+}</style>
+<p class="box13">Border radius is 10px.</p>
+</div> <br><br>
+<span class="title">
+Different radii for each corner:
+</span><br>
+Order goes top-left → top-right → bottom-right → bottom-left:
+<div class="example">
+.box {
+  border-radius: 10px 20px 30px 40px;
+}
+</div> <br>
+Output:
+<div class="example">
+    <style>
+.box14 {
+    border: 1px solid yellow;
+  border-radius: 10px 20px 30px 40px;
+}
+    </style>
+<p class="box14">Different radii for each corner</p>
+</div>
+<br><br>
+<span class="large">Circle Using border-radius:</span>
+<br><br>
+A circle requires equal width and height and border-radius: 50%. 
+<div class="example">
+.circle {
+  width: 100px;        /* Equal width and height */
+  height: 100px;
+  background-color: teal;
+  border-radius: 50%;  /* Makes it perfectly round */
+}
+&lt;p class="circle">&lt;/p>
+</div>
+Output: 
+<div class="example">
+    <style>
+       .circle {
+  width: 100px;        /* Equal width and height */
+  height: 100px;
+  background-color: crimson;
+  border-radius: 50%;  /* Makes it perfectly round */
+}
+    </style>
+<p class="circle">
+</p>
+</div> <br><br>
+Explanation:
+<ul><li>
+border-radius: 50% turns a square into a circle.</li><li>
+The element must be a square. If width ≠ height, it becomes an oval.
+</li></ul> <br><br>
+<span class="large">Elliptical Corners:
+</span> <br><br>
+You can create an ellipse shape for corners using two values per corner:
+<div class="example">
+.ellipse {
+  width: 200px;       /* Horizontal size */
+  height: 100px;      /* Vertical size */
+  background-color: teal;
+  border-radius: 50%; /* Turns rectangle into ellipse */
+}
+&lt;div class=""ellipse">&lt;div>
+</div> <br>
+Output:
+<div class="example">
+    <style>
+.ellipse {
+  width: 200px;       /* Horizontal size */
+  height: 100px;      /* Vertical size */
+  background-color: yellow;
+  border-radius: 50%; /* Turns rectangle into ellipse */
+}
+</style>
+    <div class="ellipse"></div>
+</div> <br><br>
+Explanation: <br><br>
+<ul><li>
+border-radius: 50% makes the element fully rounded.
+</li><li>
+Since width ≠ height, the circle becomes an ellipse.</li></ul>
+<br><br>
+<span class="large">Creating Triangle:</span>
+<div class="example">
+    &lt;style>
+    .triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;   /* Left side transparent */
+  border-right: 50px solid transparent;  /* Right side transparent */
+  border-bottom: 100px solid teal;       /* Bottom side colored */
+}
+&lt;/style>
+&lt;p class="triangle">&lt;/p>
+</div> <br>
+Output:
+<div class="example">
+    <style>
+        .triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;   /* Left side transparent */
+  border-right: 50px solid transparent;  /* Right side transparent */
+  border-bottom: 100px solid magenta;       /* Bottom side colored */
+}
+    </style>
+<p class="triangle"></p>
+</div>
+<br><br>
+Explanation:
+<ul><li>
+The element has no width/height itself (0), so the borders form the shape.
+</li><li>
+border-left and border-right are transparent to shape the triangle.
+</li><li>
+border-bottom is the visible triangle color.
+</li></ul>
+<br><br>
+<span class="large">
+Upward and Downward Triangles:
+</span> 
+<ul><li>
+Pointing Up: Color the bottom border.
+</li><li>
+Pointing Down: Color the top border.
+</li><li>
+    Pointing Left: Color the right border.
+ </li><li>
+    Pointing right: Color the left border.
+ </li></ul>
+<br><br><br>
+<span class="large">Equilateral triangle:</span> <br>
+To make a triangle where all sides are equal:
+<div class="example">
+ &lt;style>   
+.equilateral-triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 86.6px solid purple; /* 100 * √3 / 2 */
+}
+&lt;/style>
+&lt;p class="equilateral-triangle">&lt;/p>
+</div> <br><br>
+Output:
+<div class="example">
+    <style>
+.equilateral-triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 86.6px solid purple; /* 100 * √3 / 2 */
+}
+    </style>
+<p class="equilateral-triangle"></p>
+</div> <br><br>
+Note: The height of an equilateral triangle = 
+(side x √3/2 )
+
+
+
+
+        </div>
+</body> <br><br><br><br>
+
+<footer>
+<div class="footer-nav">
+        <button><a href="css-outline.html">Next</a> 
+        </button>
+        <button><a href="css-typography.html">Previous</a> </button>  
+        <br>
+        <h3>CSS Topics</h3>
+          <nav>
+              <ol>
+                <li><a href="intro-to-css.html">Introduction to CSS</a></li>
+                <li><a href="css-syntax.html">CSS Syntax</a></li>
+                <li><a href="css-selectors.html">CSS Selectors</a></li>
+                <li><a href="css-pseudoclasses.html">CSS Pseudoclasses</a></li>
+                <li><a href="css-pseudoelements.html">CSS Pseudoelements</a></li>
+                <li><a href="css-boxmodel.html">CSS Box Model</a></li>
+                <li><a href="css-boxsizing.html">CSS Box Sizing</a></li>
+                <li><a href="css-display.html">CSS Display</a></li>
+                <li><a href="css-widthheight.html">CSS Width &amp; Height</a></li>
+                <li><a href="css-marginpadding.html">CSS Margin &amp; Padding</a></li>
+                <li><a href="css-overflow.html">CSS Overflow</a></li>
+                <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+                <li><a href="css-grid.html">CSS Grid</a></li>
+                <li><a href="css-positioning.html">CSS Positioning</a></li>
+                <li><a href="css-float.html">CSS Float</a></li>
+                <li><a href="css-colors.html">CSS Colors</a></li>
+                <li><a href="css-typography.html">CSS Typography</a></li>
+                <li><a href="css-borders.html">CSS Borders</a></li>
+                <li><a href="css-outline.html">CSS Outline</a></li>
+                <li><a href="css-transparency.html">CSS Transparency</a></li>
+                <li><a href="css-filters.html">CSS Filters</a></li>
+                <li><a href="css-navbar.html">CSS Navbar</a></li>
+                <li><a href="css-dropdown.html">CSS Dropdown</a></li>
+                <li><a href="css-buttons.html">CSS Buttons</a></li>
+                <li><a href="css-pagination.html">CSS Pagination</a></li>
+                <li><a href="css-viewport.html">CSS Viewport</a></li>
+                <li><a href="css-mediaqueries.html">CSS Media Queries</a></li>
+                <li><a href="css-relativeunits.html">CSS Relative Units</a></li>
+                <li><a href="css-responsiveimages.html">CSS Responsive Images</a></li>
+                <li><a href="css-transforms2d.html">CSS 2D Transforms</a></li>
+                <li><a href="css-transforms3d.html">CSS 3D Transforms</a></li>
+                <li><a href="css-transitions.html">CSS Transitions</a></li>
+                <li><a href="css-animations.html">CSS Animations</a></li>
+                <li><a href="css-customproperties.html">CSS Custom Properties</a></li>
+                <li><a href="css-functions.html">CSS Functions</a></li>
+              </ol>
+          </nav>
+      </div>
+
+      <div class="footer-bottom">
+          <p class="copyright">&copy; CODE WITH FAHIM 2025</p>
+          <div class="footer-links">
+              <a href="privacypolicy.html">Privacy Policy</a>
+              <a href="terms&conditions.html">Terms of Use</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+    
+</footer>
+
+</html>        
+       

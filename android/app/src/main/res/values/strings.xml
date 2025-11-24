@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Code With Fahim</string>
+    <string name="title_activity_main">Code With Fahim</string>
+    <string name="package_name">dev.pages.codewithfahimapp</string>
+    <string name="custom_url_scheme">dev.pages.codewithfahimapp</string>
+</resources>

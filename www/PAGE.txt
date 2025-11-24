@@ -1,0 +1,21 @@
+#HTML BASICS
+1.html.html
+2.introduction-to-html.html
+3.code-editor.html
+4.tags.html
+5.structure.html
+6.attributes.html
+7.headings&paragraphs.html
+8.html-styles.html
+9.text-formation.html
+10.comments.html
+11.div&class.html
+12.colors.html
+13.links.html
+14.lists.html
+15.tables.html
+16.images.html
+17.audio-video.html
+18.input-types.html
+19.forms.html
+20.emojis.html

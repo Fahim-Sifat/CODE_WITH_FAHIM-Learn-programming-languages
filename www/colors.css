@@ -1,0 +1,344 @@
+:root{
+    /* Define a color palette for consistency */
+    --color-dark-bg: #1a1a2e;       /* Deep Indigo/Dark Background */
+    --color-light-text: #e9e9f2;    /* Off-White/Light Text */
+    --color-accent-red: #ff416c;    /* Vibrant Red Accent */
+    --color-accent-blue: #2a73ff;   /* Bright Blue Accent */
+    --color-code-text: #4caf50;     /* Green for Code */
+    --color-tag-blue: #4dd0e1;      /* Aqua for Tags */
+    --color-hyper-text: #a742ff;    /* Purple for Hyper Text */
+}
+
+body {
+    /* Use a simple, clean font-stack and the dark background color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-dark-bg);
+    color: var(--color-light-text);
+    line-height: 1.6; /* Improved readability */
+    padding: 20px;
+}
+
+/* --- Header Styles --- */
+h1 {
+    text-align: center;
+    margin: 0 0 10px 0;
+    padding: 15px 0;
+    font-family: 'Impact', sans-serif;
+    color: var(--color-light-text);
+    background-color: #0d0d1b; /* Slightly darker header background */
+    text-shadow: 0 0 10px var(--color-accent-red), 0 0 20px var(--color-accent-blue);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    letter-spacing: 2px;
+    border-radius: 8px;
+}
+
+h3 {
+    text-align: center;
+    text-decoration: none; /* Removed default underline */
+    color: var(--color-accent-red);
+    text-shadow: 0 0 5px var(--color-accent-blue);
+    padding: 10px 0;
+    position: sticky;
+    top: 70px; /* Below H1 */
+    z-index: 99;
+    background-color: var(--color-dark-bg);
+}
+
+/* Base paragraph style */
+p {
+    font-size: 20px;
+}
+
+/* ==================================== */
+/* 2. HEADER STYLES */
+/* ==================================== */
+
+/* Unified Header Container */
+.header-with-logo {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-logo {
+    height: 50px; /* Adjust as needed */
+    margin-right: 15px;
+}
+
+h1 {
+    /* Primary Heading Style (used for 'CODE WITH FAHIM') */
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 5px red, 5px 5px 25px blueviolet;
+    font-size: 30px; /* Adjusted font size for use in a smaller header */
+    flex-grow: 1; /* Allows it to take up available space */
+}
+
+h3 {
+    /* Secondary Heading Style (used for Lesson Title) */
+    text-align: center;
+    text-decoration: underline solid white;
+    text-shadow: 2px 2px 5px blue;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* ==================================== */
+/* 3. LAYOUT (New Flexbox Structure) */
+/* ==================================== */
+
+.main-content-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin: 20px;
+}
+
+.content-area {
+    width: 70%;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar-area {
+    width: 30%;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 900px) {
+    .content-area, .sidebar-area {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+}
+
+/* ==================================== */
+/* 4. UTILITY & COLOR CLASSES */
+/* ==================================== */
+
+/* Primary Lesson Topic/Header Text Highlight (used for the first header) */
+.span1 {
+    font-size: 40px;
+    color: red;
+}
+
+/* Main Highlight Color - Blue */
+.span2 {
+    color: blue;
+}
+
+/* Secondary Highlight Color - Purple/Violet */
+.span3 {
+    color: blueviolet;
+}
+
+/* Tertiary Highlight Color - Aqua/Cyan */
+.span4 {
+    color: aqua;
+}
+
+/* Sub-section Heading Style */
+.soyeah {
+    display: block; /* Ensures it starts on a new line */
+    font-size: 35px;
+    color: yellow;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Code block container */
+.code-block {
+    background-color: #1a1a1a;
+    color: #00ff00; /* Neon Green for code */
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 5px solid red;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* List Item Styles */
+.ulli {
+    color: yellow;
+}
+.olli {
+    color: crimson;
+}
+
+/* ==================================== */
+/* 5. TABLE STYLES (Used in Sidebar) */
+/* ==================================== */
+
+.sidebar-area table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid blueviolet;
+    margin-top: 20px;
+}
+
+.sidebar-area th, .sidebar-area td {
+    padding: 10px;
+    border: 1px solid red;
+    text-align: center;
+}
+
+.sidebar-area thead th {
+    background-color: #333;
+    color: white;
+}
+
+.sidebar-area tbody tr {
+    color: yellowgreen;
+}
+
+/* Mobile Table Responsiveness (Optional: for a clearer look on small screens) */
+@media (max-width: 600px) {
+    /* Makes the table stack vertically instead of side-by-side */
+    .sidebar-area table, 
+    .sidebar-area thead, 
+    .sidebar-area tbody, 
+    .sidebar-area th, 
+    .sidebar-area td, 
+    .sidebar-area tr { 
+        display: block; 
+    }
+    .sidebar-area thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .sidebar-area tr { border: 1px solid #ccc; }
+    .sidebar-area td { 
+        border: none;
+        border-bottom: 1px solid #eee; 
+        position: relative;
+        padding-left: 50%; 
+        text-align: right;
+    }
+    .sidebar-area td:before { 
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: aqua;
+        /* Use the data-label attribute for the title */
+        content: attr(data-label);
+    }
+}
+
+
+/* ==================================== */
+/* 6. NAVIGATION & BUTTON STYLES */
+/* ==================================== */
+
+.goto {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    color: yellow;
+    margin-top: 30px;
+}
+
+.pagination-lg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.page-item {
+    margin: 5px;
+}
+
+.page-link, .pageactive-link {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.page-link {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.page-link:hover {
+    background-color: #333;
+    color: aqua;
+}
+
+.page-item.active .pageactive-link {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-color: red;
+}
+
+.btn-default {
+    background-color: black;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-default:hover {
+    background-color: #333;
+    border-color: red;
+}
+
+.next-page, .previous {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block; /* Ensure the link fills the button */
+}
+
+
+#my-video {
+    width: 360px !important;
+    height: 240px !important;
+}
+
+/* Ensure the Video.js container uses the same size */
+.video-js {
+    width: 360px !important;
+    height: 240px !important;
+}
+
+/* 2. Desktop Override (Applies when the screen width is 1024px or larger) */
+/* This will automatically switch to the maximum size for high CPM */
+@media screen and (min-width: 1024px) {
+    /* 1280px width (with a standard 16:9 height of 720px) */
+    #my-video {
+        width: 1024px !important;
+        height: 768px !important;
+    }
+
+    /* Ensure the Video.js container uses the same size */
+    .video-js {
+        width: 1024px !important;
+        height: 768px !important;
+    }
+}

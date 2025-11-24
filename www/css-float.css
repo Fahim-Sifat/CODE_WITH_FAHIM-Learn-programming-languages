@@ -1,0 +1,259 @@
+/* --- CSS Custom Properties for Neon Colors --- */
+:root {
+    --neon-blue: #2dd9fe; /* Primary color: Cyan/Blue */
+    --neon-blue-glow: #00a3d5; 
+    --neon-pink: #ff008d; /* Secondary color: Magenta/Pink */
+    --neon-pink-glow: #e10361;
+    --dark-bg: #10101a; /* Very dark background */
+    --text-color: #f0f0f0; /* Light text */
+    --valid-color: #00ff66; /* Bright Green for success/valid states */
+}
+
+/* --- Global Styles: Dark Background and Font --- */
+body {
+    font-size: 1.2rem;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    font-family: 'Times New Roman', Times, serif,Arial, Helvetica, sans-serif,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif,Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8; /* Increased line-height for readability */
+}
+
+/* --- Header and Logo --- */
+header {
+    background-color: #0d0d15;
+    border-bottom: 2px solid var(--neon-blue);
+    margin-bottom: 20px;
+}
+
+header img {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    filter: drop-shadow(0 0 10px var(--neon-pink)); /* Apply glow to logo */
+    padding-top: 20px;
+}
+
+/* Main Header Neon Glow */
+header h1, header h3 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin: 0;
+    /* Stacked text-shadows for the glow effect */
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px var(--neon-blue),
+        0 0 40px var(--neon-blue),
+        0 0 80px var(--neon-blue-glow);
+}
+
+header h1 {
+    color: #fff;
+    font-size: 3em;
+}
+
+header h3 {
+    color: var(--neon-blue);
+    font-size: 1.5em;
+    padding-bottom: 20px;
+}
+
+
+/* --- Typography and Structure --- */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.large {
+    display: block;
+    font-size: 1.7em;
+    color: var(--neon-blue);
+    text-shadow: 0 0 5px var(--neon-blue-glow);
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.larger {
+    display: block;
+    font-size: 2em;
+    color: var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink-glow);
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li::before {
+    content: "⚡ ";
+    color: var(--neon-pink);
+}
+
+/* --- Code and Examples --- */
+.example {
+    background-color: #1a1a2e;
+    border: 1px solid var(--neon-blue);
+    box-shadow: 0 0 10px rgba(45, 217, 254, 0.5);
+    padding: 15px;
+    margin: 15px 0;
+    white-space: pre-wrap;
+    font-size: 0.9em;
+    color: #f8f8ff;
+    border-radius: 5px;
+}
+
+/* --- Tables --- */
+table {
+    border: 2px solid crimson;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 0 15px rgba(255, 0, 141, 0.3);
+}
+
+th, td {
+    border: 2px solid crimson;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background-color: var(--neon-pink);
+    color: var(--dark-bg);
+    font-weight: bold;
+    text-shadow: none;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color: #131320; /* Subtle stripe effect */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Footer --- */
+footer {
+    background-color: #0d0d15;
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid var(--neon-blue);
+    margin-top: 50px;
+}
+
+.footer-nav h3 {
+    color: var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink);
+    margin: 20px 0 10px;
+}
+
+/* Footer Navigation Buttons */
+.footer-nav button {
+    background: transparent;
+    border: 2px solid var(--neon-blue);
+    padding: 10px 20px;
+    box-shadow: 0 0 10px var(--neon-blue-glow);
+    transition: all 0.3s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.footer-nav button:hover {
+    background: var(--neon-blue);
+    box-shadow: 0 0 15px var(--neon-blue-glow), 0 0 20px var(--neon-blue);
+}
+
+.footer-nav button a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-nav button:hover a {
+    color: var(--dark-bg);
+}
+
+/* Footer Topic List */
+.footer-nav nav ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    column-count: 2; /* Two columns for the long list */
+    column-gap: 30px;
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.footer-nav nav ol li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #222;
+}
+
+.footer-nav nav ol li::before {
+    content: "::"; /* Different marker for the list */
+    color: var(--neon-pink);
+    margin-right: 5px;
+}
+
+.footer-nav nav ol li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-nav nav ol li a:hover {
+    color: var(--neon-blue);
+    text-shadow: 0 0 3px var(--neon-blue-glow);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px dotted #333;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9em;
+}
+
+.footer-links a:hover {
+    color: var(--neon-pink);
+}
+
+.copyright {
+    color: #444;
+    font-size: 0.8em;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .footer-nav nav ol {
+        column-count: 1;
+        max-width: none;
+    }
+}

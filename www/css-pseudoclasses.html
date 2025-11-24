@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://code-with-fahim.pages.dev/"/>
+    
+
+    <link rel="stylesheet" href="css-pseudoclasses.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-classes</title>
+   
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MZ1JHY721H');
+    </script>
+
+
+
+<!--Adsterra popunder cloudfare-->
+<script type='text/javascript' src='//underpantsjokeimmunity.com/0b/4a/60/0b4a6002649c1d813fccc6c06dfb190c.js'></script>
+
+
+
+
+</head>
+<body>
+    <div class="container">
+    <header>
+         <img src="header-logo.png" alt="header-logo"><h1>CODE WITH FAHIM</h1>
+    <h3>CSS Pseudo-classes</h3>
+
+    </header>
+    <br><br>
+A CSS pseudo-class is a special keyword added to a selector that lets you style an element based on its state or position, rather than just its name, class, or ID.
+<br><br>
+Think of it like this: <br>
+A class targets elements you’ve labeled manually in your HTML. <br>
+A pseudo-class targets elements automatically based on how they behave or where they are in the document. <br><br>
+🧠 Simple definition: <br><br>
+A pseudo-class is used in CSS to define a special state of an element. <br><br><br>
+⚙️ Common pseudo-classes: <br><br>
+<table>
+    <tr>
+        <th>Pseudo-class</th>
+        <th>What it does</th>
+    </tr>
+    <tr>
+        <td>:hover</td>
+        <td>When mouse hovers over an element</td>
+    </tr>
+    <tr>
+        <td>:active</td>
+        <td>When element is being clicked</td>
+    </tr>
+    <tr>
+        <td>:focus</td>
+        <td>When element (like input) is selected</td>
+    </tr>
+    <tr>
+        <td>:visited</td>
+        <td>When link has been visited</td>
+    </tr>
+    <tr>
+        <td>:first-child</td>
+        <td>Selects first child element (regardless of type)</td>
+    </tr>
+    <tr>
+        <td>:last-child</td>
+        <td>Selects last child element (regardless of type)</td>
+    </tr>
+    <tr>
+        <td>:nth-child(n)</td>
+        <td>Selects element based on position (regardless of type)</td>
+    </tr>
+    <tr>
+        <td>:checked</td>
+        <td>Targets checked checkboxes/radio buttons</td>
+    </tr>
+    <tr>
+        <td>:disabled</td>
+        <td>Targets disabled form elements</td>
+    </tr>
+    <tr>
+        <td>:only-child</td>
+        <td>Targets an element that is the only child of its parent (regardless of type)</td>
+    </tr>
+    <tr>
+        <td>:root</td>
+        <td>Selects the document's root element (the html tag)</td>
+    </tr>
+    <tr>
+        <td>:not(selector)</td>
+        <td>Selects every element that is NOT the specified selector</td>
+    </tr>
+    <tr>
+        <td>:empty</td>
+        <td>Targets elements that have no children, not even text</td>
+    </tr>
+    <tr>
+        <td>:target</td>
+        <td>Targets the element whose ID matches the URL fragment (after #)</td>
+    </tr>
+    <tr>
+        <td>:read-only</td>
+        <td>Targets input fields that are set to be read-only</td>
+    </tr>
+    <tr>
+        <td>:required</td>
+        <td>Targets form elements with the `required` attribute</td>
+    </tr>
+    <tr>
+        <td>:optional</td>
+        <td>Targets form elements without the `required` attribute</td>
+    </tr>
+    <tr>
+        <td>:valid</td>
+        <td>Targets form elements whose content validates correctly</td>
+    </tr>
+    <tr>
+        <td>:invalid</td>
+        <td>Targets form elements whose content fails validation</td>
+    </tr>
+    <tr>
+        <td>:lang(language)</td>
+        <td>Targets elements based on the language attribute (e.g., `lang="fr"`)</td>
+    </tr>
+    <tr>
+        <td>**:first-of-type**</td>
+        <td>**Selects the first element of its type among siblings**</td>
+    </tr>
+    <tr>
+        <td>**:last-of-type**</td>
+        <td>**Selects the last element of its type among siblings**</td>
+    </tr>
+    <tr>
+        <td>**:only-of-type**</td>
+        <td>**Targets an element if it's the only one of its type in the parent**</td>
+    </tr>
+    <tr>
+        <td>**:nth-of-type(n)**</td>
+        <td>**Selects elements based on position, but only among its type**</td>
+    </tr>
+    <tr>
+        <td>**:default**</td>
+        <td>**Targets one or more default form elements (e.g., default button)**</td>
+    </tr>
+    <tr>
+        <td>**:in-range**</td>
+        <td>**Targets input fields whose value is within the min/max range**</td>
+    </tr>
+    <tr>
+        <td>**:out-of-range**</td>
+        <td>**Targets input fields whose value is outside the min/max range**</td>
+    </tr>
+    <tr>
+        <td>**:placeholder-shown**</td>
+        <td>**Targets an input element when its placeholder text is visible**</td>
+    </tr>
+    <tr>
+        <td>**:focus-within**</td>
+        <td>**Targets an element if it OR any of its descendants has :focus**</td>
+    </tr>
+    <tr>
+        <td>**:scope**</td>
+        <td>**Selects elements that are a reference point for other selectors**</td>
+    </tr>
+</table> <br><br><br>
+✅ In short: <br><br>
+A pseudo-class lets you style something based on behavior, state, or structure — things you can’t directly label in your HTML. <br><br><br>
+<br><br>
+<span class="larger">
+    Use of common Pseudo-classes:
+</span> <br><br>
+<span class="large">
+1. :hover  -</span> <br>
+<ul>
+    <li>Targets an element when the mouse hovers over it.</li>
+</ul> <br><br>
+Example:
+<div class="example">
+    CSS code: <br>
+    a:hover { <br>
+  color: red; <br>
+} <br>
+</div> <br><br>
+Output: 
+<div class="example">
+    <p><a href="#" class="hover">The color of the text will change after hovering</a></p>
+</div> <br><br>
+<span class="large">
+2.:active -</span> <br>
+<ul><li>Targets an element while it’s being clicked.</li></ul> <br><br>
+CSS code: <br><br>
+<div class="example">
+a:active { <br>
+  color: green; <br>
+} <br></div> <br><br>
+Output: <br><br>
+</div class="example">
+<a class="active" href="#">Text color changes while clicking (active state)</a>
+</div> <br><br>
+<span class="large">3.:focus -</span>
+<ul><li>Used to style elements when they are in focus (e.g., input field selected).</li></ul> <br><br>
+<div class="example">
+input:focus {
+  border-color: blue;
+}
+
+</div> <br><br>
+Output: <br><br>
+<div class="example">
+    <input type="text" class="focus" placeholder="Focus changes border color">
+</div> <br><br>
+<span class="large">4.:visited -</span>
+<ul><li>Targets links that have already been clicked.</li></ul> <br><br>
+<div class="example">
+    a:visited { <br>
+  color: purple; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+<a href="#" class="visited">Purple after visit (if already clicked)</a>
+</div> <br> <br>
+
+
+<span class="large">5.:first-child -</span>
+<ul><li>Targets the first element among a group of siblings (elements sharing the same parent), regardless of tag type.</li></ul> <br><br>
+<div class="example">
+    p:first-child { <br>
+  font-weight: bold; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <div class="child-container">
+        <p class="first-child">1. Paragraph (This is the first child and is bold)</p>
+        <span>2. Span (Not affected by p:first-child)</span>
+        <p>3. Paragraph (Not first child)</p>
+    </div>
+</div> <br> <br>
+
+<span class="large">6.:last-child -</span>
+<ul><li>Targets the last element among a group of siblings, regardless of tag type.</li></ul> <br><br>
+<div class="example">
+    p:last-child { <br>
+  font-style: italic; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <div class="child-container-2">
+        <p>1. Item A</p>
+        <p>2. Item B</p>
+        <span>3. Span (The actual last child, so no italic applied to 'p')</span>
+    </div>
+    <div class="child-container-3">
+        <p>1. Item C</p>
+        <p class="last-child">2. Item D (This is the last child and is italic)</p>
+    </div>
+</div> <br> <br>
+
+<span class="large">7.:nth-child(n) -</span>
+<ul><li>Targets elements based on a formula (n) by their position among all siblings.</li></ul> <br><br>
+<div class="example">
+    li:nth-child(odd) { <br>
+  background-color: #f0f0f0; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <ol>
+        <li class="nth-child-odd">List item 1 (odd)</li>
+        <li>List item 2</li>
+        <li class="nth-child-odd">List item 3 (odd)</li>
+        <li>List item 4</li>
+    </ol>
+</div> <br> <br>
+
+<span class="large">8.:checked -</span>
+<ul><li>Targets elements (like radio buttons or checkboxes) that are in a "checked" state.</li></ul> <br><br>
+<div class="example">
+    input[type="checkbox"]:checked { <br>
+  outline: 3px solid blue; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <input type="checkbox" checked class="checked-box"> Checked Checkbox 
+    <input type="checkbox"> Unchecked Checkbox
+</div> <br> <br>
+
+<span class="large">9.:disabled -</span>
+<ul><li>Targets form elements that are in a "disabled" state.</li></ul> <br><br>
+<div class="example">
+    input:disabled { <br>
+  background-color: #333; <br>
+  cursor: not-allowed; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <input type="text" disabled class="disabled-input" value="Cannot type here">
+    <input type="text" value="Can type here">
+</div> <br> <br>
+
+<span class="large">10.:only-child -</span>
+<ul><li>Targets an element that is the *only* child element inside its parent, regardless of tag type.</li></ul> <br><br>
+<div class="example">
+    .only-child-container > p:only-child { <br>
+  background-color: lightgreen; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <div class="only-child-container">
+        <p class="only-child">Only child (Highlighted)</p>
+    </div>
+    <div class="not-only-child-container">
+        <p>First child</p>
+        <p>Second child</p>
+    </div>
+</div> <br> <br>
+
+<span class="large">11.:root -</span>
+<ul><li>Targets the document's root element (`<html>`). Used for global variables.</li></ul> <br><br>
+<div class="example">
+    :root { <br>
+  --main-color: darkblue; <br>
+} <br>
+body { <br>
+  color: var(--main-color); <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <p class="root-example">The primary page text color is set via the :root selector.</p>
+</div> <br> <br>
+
+<span class="large">12.:not(selector) -</span>
+<ul><li>Selects every element that *does not* match the argument inside the parentheses.</li></ul> <br><br>
+<div class="example">
+    div:not(.special) { <br>
+  border: 1px solid black; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <div class="not-example">This div has a border.</div>
+    <div class="special">This div has NO border because it's negated.</div>
+</div> <br> <br>
+
+<span class="large">13.:empty -</span>
+<ul><li>Targets an element only if it has **no children and no content** (not even whitespace).</li></ul> <br><br>
+<div class="example">
+    .box:empty { <br>
+  height: 20px; <br>
+  background-color: orange; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <div class="box empty-box"></div> 
+    <div class="box">Content inside</div>
+    <p>The empty box above will be styled (orange).</p>
+</div> <br> <br>
+
+<span class="large">14.:target -</span>
+<ul><li>Targets the element whose ID is specified in the URL's fragment identifier.</li></ul> <br><br>
+<div class="example">
+    :target { <br>
+  border: 2px solid red; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <p>Click the link, and the box will be styled (Red border).</p>
+    <a href="#section-A">Go to Section A</a>
+    <div id="section-A" class="target-example">This box is the target.</div>
+</div> <br> <br>
+
+<span class="large">15.:read-only -</span>
+<ul><li>Targets input or textarea elements that are not editable by the user.</li></ul> <br><br>
+<div class="example">
+    input:read-only { <br>
+  background-color: #444; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <input type="text" value="Read-only data" readonly class="readonly-input">
+    <input type="text" value="Editable data">
+</div> <br> <br>
+
+<span class="large">16.:required -</span>
+<ul><li>Targets form elements that have the `required` attribute.</li></ul> <br><br>
+<div class="example">
+    input:required { <br>
+  border-left: 5px solid red; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <form>
+        <input type="text" placeholder="Required Field" required class="required-input">
+        <input type="text" placeholder="Optional Field">
+    </form>
+</div> <br> <br>
+
+<span class="large">17.:optional -</span>
+<ul><li>Targets form elements that do *not* have the `required` attribute.</li></ul> <br><br>
+<div class="example">
+    input:optional { <br>
+  border-left: 5px solid green; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <form>
+        <input type="text" placeholder="Required Field" required>
+        <input type="text" placeholder="Optional Field" class="optional-input">
+    </form>
+</div> <br> <br>
+
+<span class="large">18.:valid -</span>
+<ul><li>Targets form elements whose content currently validates successfully.</li></ul> <br><br>
+<div class="example">
+    input:valid { <br>
+  background-color: lightgreen; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <form>
+        <input type="email" placeholder="Enter valid email" value="test@example.com" class="valid-input"> 
+    </form>
+</div> <br> <br>
+
+<span class="large">19.:invalid -</span>
+<ul><li>Targets form elements whose content fails to validate.</li></ul> <br><br>
+<div class="example">
+    input:invalid { <br>
+  border: 2px solid red; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <form>
+        <input type="email" placeholder="Type an invalid email" value="not-an-email" class="invalid-input">
+    </form>
+</div> <br> <br>
+
+<span class="large">20.:lang(language) -</span>
+<ul><li>Targets elements based on their language attribute.</li></ul> <br><br>
+<div class="example">
+    p:lang(fr) { <br>
+  font-style: italic; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <p lang="en">English paragraph.</p>
+    <p lang="fr" class="lang-example">Paragraphe Français (italic).</p>
+</div> <br> <br>
+
+<span class="large">21.:first-of-type -</span>
+<ul><li>Targets the first element of its specific type within a group of siblings.</li></ul> <br><br>
+<div class="example">
+    span:first-of-type { <br>
+  color: magenta; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <div class="of-type-container">
+        <p>1. Paragraph (Type 1)</p>
+        <span class="first-of-type">2. Span (First span is magenta)</span>
+        <p>3. Paragraph (Type 2)</p>
+        <span>4. Span (Second span, not magenta)</span>
+    </div>
+</div> <br> <br>
+
+<span class="large">22.:last-of-type -</span>
+<ul><li>Targets the last element of its specific type within a group of siblings.</li></ul> <br><br>
+<div class="example">
+    span:last-of-type { <br>
+  border-bottom: 2px solid cyan; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <div class="of-type-container-2">
+        <span>1. Span (Not last)</span>
+        <p>2. Paragraph</p>
+        <span class="last-of-type">3. Span (Last span is underlined)</span>
+    </div>
+</div> <br> <br>
+
+<span class="large">23.:only-of-type -</span>
+<ul><li>Targets an element if it is the only one of its specific tag type within the parent.</li></ul> <br><br>
+<div class="example">
+    h4:only-of-type { <br>
+  text-decoration: underline; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <div class="only-of-type-container">
+        <p>Paragraph</p>
+        <h4 class="only-of-type">Only H4 (Underlined)</h4>
+        <p>Another Paragraph</p>
+    </div>
+    <div class="not-only-of-type-container">
+        <h4 class="not-only-of-type">First H4</h4>
+        <h4 class="not-only-of-type">Second H4 (No underline)</h4>
+    </div>
+</div> <br> <br>
+
+<span class="large">24.:nth-of-type(n) -</span>
+<ul><li>Targets elements based on a formula (n) by their position only among elements of the same tag type.</li></ul> <br><br>
+<div class="example">
+    p:nth-of-type(2) { <br>
+  background-color: yellow; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <div class="nth-of-type-container">
+        <p>1. First P</p>
+        <span>1. Span</span>
+        <p class="nth-of-type">2. Second P (Highlighted)</p>
+        <p>3. Third P</p>
+    </div>
+</div> <br> <br>
+
+<span class="large">25.:default -</span>
+<ul><li>Targets the default form element among a set of related elements (e.g., the default submission button).</li></ul> <br><br>
+<div class="example">
+    button:default { <br>
+  border: 3px solid blue; <br>
+} <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <form>
+        <button class="default-btn" type="submit">Submit (Default)</button>
+        <button type="button">Cancel</button>
+    </form>
+</div> <br> <br>
+
+<span class="large">26.:in-range / 27.:out-of-range -</span>
+<ul><li>Targets number or date inputs based on whether their value falls within the `min` and `max` attributes.</li></ul> <br><br>
+<div class="example">
+    input:in-range { border: 2px solid green; } <br>
+    input:out-of-range { border: 2px solid red; } <br>
+</div> <br><br>
+Output:
+<div class="example">
+    <form>
+        <label>Range (1-10):</label>
+        <input type="number" min="1" max="10" value="5" class="in-range-input"> (In Range)
+        <input type="number" min="1" max="10" value="15" class="out-of-range-input"> (Out of Range)
+    </form>
+</div> <br> <br>
+
+
+<!--Video slider exoclick-->
+<script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script> 
+ <ins class="eas6a97888e31" data-zoneid="5772912" data-keywords="keywords" data-sub="123450000"></ins> 
+ <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
+
+</body>
+
+<footer>
+<div class="footer-nav">
+        <button><a href="css-pseudoelements.html">Next</a> 
+        </button>
+        <button><a href="css-selectors.html">Previous</a> </button>  
+        <br>
+        <h3>CSS Topics</h3>
+          <nav>
+              <ol>
+                <li><a href="intro-to-css.html">Introduction to CSS</a></li>
+                <li><a href="css-syntax.html">CSS Syntax</a></li>
+                <li><a href="css-selectors.html">CSS Selectors</a></li>
+                <li><a href="css-pseudoclasses.html">CSS Pseudoclasses</a></li>
+                <li><a href="css-pseudoelements.html">CSS Pseudoelements</a></li>
+                <li><a href="css-boxmodel.html">CSS Box Model</a></li>
+                <li><a href="css-boxsizing.html">CSS Box Sizing</a></li>
+                <li><a href="css-display.html">CSS Display</a></li>
+                <li><a href="css-widthheight.html">CSS Width &amp; Height</a></li>
+                <li><a href="css-marginpadding.html">CSS Margin &amp; Padding</a></li>
+                <li><a href="css-overflow.html">CSS Overflow</a></li>
+                <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+                <li><a href="css-grid.html">CSS Grid</a></li>
+                <li><a href="css-positioning.html">CSS Positioning</a></li>
+                <li><a href="css-float.html">CSS Float</a></li>
+                <li><a href="css-colors.html">CSS Colors</a></li>
+                <li><a href="css-typography.html">CSS Typography</a></li>
+                <li><a href="css-borders.html">CSS Borders</a></li>
+                <li><a href="css-outline.html">CSS Outline</a></li>
+                <li><a href="css-transparency.html">CSS Transparency</a></li>
+                <li><a href="css-filters.html">CSS Filters</a></li>
+                <li><a href="css-navbar.html">CSS Navbar</a></li>
+                <li><a href="css-dropdown.html">CSS Dropdown</a></li>
+                <li><a href="css-buttons.html">CSS Buttons</a></li>
+                <li><a href="css-pagination.html">CSS Pagination</a></li>
+                <li><a href="css-viewport.html">CSS Viewport</a></li>
+                <li><a href="css-mediaqueries.html">CSS Media Queries</a></li>
+                <li><a href="css-relativeunits.html">CSS Relative Units</a></li>
+                <li><a href="css-responsiveimages.html">CSS Responsive Images</a></li>
+                <li><a href="css-transforms2d.html">CSS 2D Transforms</a></li>
+                <li><a href="css-transforms3d.html">CSS 3D Transforms</a></li>
+                <li><a href="css-transitions.html">CSS Transitions</a></li>
+                <li><a href="css-animations.html">CSS Animations</a></li>
+                <li><a href="css-customproperties.html">CSS Custom Properties</a></li>
+                <li><a href="css-functions.html">CSS Functions</a></li>
+              </ol>
+          </nav>
+      </div>
+
+      <div class="footer-bottom">
+          <p class="copyright">&copy; CODE WITH FAHIM 2025</p>
+          <div class="footer-links">
+              <a href="privacypolicy.html">Privacy Policy</a>
+              <a href="terms&conditions.html">Terms of Use</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+    
+</footer>
+</html>

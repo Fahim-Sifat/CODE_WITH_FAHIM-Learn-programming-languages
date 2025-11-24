@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://code-with-fahim.pages.dev/"/>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <link rel="stylesheet" href="css-flexbox.css"/>
+<!--GA4-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZ1JHY721H');
+</script>
+
+
+
+</head>
+<body>
+<header>
+        <img src="header-logo.png" alt="header-logo"><h1>CODE WITH FAHIM</h1>
+        <h3>CSS Flexbox</h3>
+    </header>
+    <div class="container">
+
+<span class="larger">🚀 Flexbox:</span> <br><br>
+Flexbox—short for Flexible Box Layout—is basically CSS saying: <br>
+“Yo, arranging elements shouldn’t feel like solving a Rubik’s cube blindfolded.”
+<br><br>
+It’s a layout system designed to make items align, distribute, and resize smoothly inside a container, no matter the screen size. Think of it like the project manager of your webpage elements—keeps everyone in line, keeps the vibes consistent, and adapts when chaos hits.
+<br><br>
+<span class="large">🔥 Why Flexbox is a Big Deal:</span> <br><br>
+<ul>
+    <li><b>Responsive by design –</b> items auto-adjust like they’re trained for a corporate crisis.</li>
+    <li><b>Vertical & horizontal alignment –</b>center things with one line. Absolute W.</li>
+    <li><b>Controls spacing easily –</b>no more margin hacks from the stone age</li>
+    <li><b>Reorders items –</b>without changing the HTML. Pure sorcery.</li>
+</ul> <br><br><br>
+Flexbox isn’t just a layout tool; it’s the Beyoncé of CSS layouts — powerful, flexible, and low-key carries the entire front-end department on its back. <br><br><br>
+<span class="large">🧱 How It Works:</span> <br><br>
+You take a container and declare it:
+<div class="example">
+.container {
+  display: flex;
+}
+</div>
+ <br><br>
+Boom—everything inside becomes a flex item that follows flex rules.
+<br><br> <br><br>
+<span class="larger">🧭 Core Concepts:</span> <br><br>
+<ul>
+   <li><b> flex-direction:</b> row, column, row-reverse, column-reverse</li>
+<li><b>
+justify-content:</b> aligns items horizontally
+</li><li><b>
+align-items:</b> aligns items vertically
+</li><li><b>
+flex-wrap: </b>allows items to move into multiple lines</li>
+<li><b>
+gap:</b> spacing between items (finally, a civilized solution)</li>
+</ul> <br><br><br><br><br>
+
+<span class="larger">The Deep Dive:</span>
+<br><br><br>
+<span class="large">🧭 1. The Axes (The backbone of Flexbox):</span>
+<br><br>
+Flexbox has two invisible axes: <br><br>
+
+➡️ Main Axis <br>
+
+The direction your items flow.
+Controlled by flex-direction.
+<br>
+⬆️ Cross Axis
+<br>
+The axis perpendicular to the main one.
+Controlled by alignment properties.
+<br><br>
+Think of them like highway lanes; they decide how the traffic moves.
+<br><br>
+<span class="large">🎮 2. Main Flexbox Properties (The ones you’ll use daily):</span>
+<br><br>
+flex-direction:
+<br>
+Decides the direction items want to chill in.
+<div class="example">
+    flex-direction: row;          /* default */
+flex-direction: row-reverse;
+flex-direction: column;
+flex-direction: column-reverse;
+
+</div> <br><br>
+<div class="img-flex">
+<img src="css-flex-direction.png" alt="css-flex-direction" class="css-flex-direction"> <br><br>
+</div>
+justify-content: <br>
+
+Aligns items along the main axis (horizontal by default). <br>
+<div class="example">
+    justify-content: center;
+justify-content: space-between;
+justify-content: space-around;
+justify-content: space-evenly;
+
+</div>
+<br><br>
+<div class="img-flex">
+<img src="css-justify-content.png" alt="css-justify-content" class="justify-content">
+</div>
+<br><br>
+
+align-items: <br>
+
+Aligns items along the cross-axis.
+<div class="example">
+    align-items: center;
+align-items: flex-start;
+align-items: flex-end;
+align-items: stretch; /* default */
+
+</div> <br><br>
+<img src="css-align-iems.jpeg" alt="css-align-iems" class="css-align-iems"><br><br>
+
+<span class="large">🌀 3. Flex-Wrap (Say goodbye to overflow chaos):</span>
+<br><br>
+Items automatically move to the next row like they’re evacuating a crowded elevator.
+<div class="example">
+flex-wrap: wrap; 
+flex-wrap: nowrap;   /* default */
+flex-wrap: wrap-reverse;
+</div> <br><br>
+<div class="img-flex">
+    <img src="css-flex-wrap.png" alt="css-flex-wrap" class="css-flex-wrap">
+</div>
+<span class="large">🔗 4. Gap (The underrated legend): </span>
+<br><br>
+Finally, a way to add spacing between items without falling into margin madness. 
+<div class="example">
+gap: 20px;</div><br><br>
+<span class="larger">Tips for centering ANYTHING (The Holy Grail):</span>
+<br><br>
+<div class="example">
+    .parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+</div> <br><br>
+
+
+
+
+
+
+
+</div> <br>
+
+
+<!--Hiltopads without anti-block-->  [7 to 12] [25 to 30]
+
+<script>
+(function(qpzl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = qpzl || {};
+s.src = "\/\/embarrassed-bridge.com\/cGDt9H6.bw2Q5MlkSRWnQx9PN\/jHc\/x\/MzTaUL0QMHSi0C2\/NPzDEMxXNiT\/Q_yM";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+
+</body> <br><br><br><br>
+
+<footer>
+<div class="footer-nav">
+        <button><a href="css-grid.html">Next</a> 
+        </button>
+        <button><a href="css-overflow.html">Previous</a> </button>  
+        <br>
+        <h3>CSS Topics</h3>
+          <nav>
+              <ol>
+                <li><a href="intro-to-css.html">Introduction to CSS</a></li>
+                <li><a href="css-syntax.html">CSS Syntax</a></li>
+                <li><a href="css-selectors.html">CSS Selectors</a></li>
+                <li><a href="css-pseudoclasses.html">CSS Pseudoclasses</a></li>
+                <li><a href="css-pseudoelements.html">CSS Pseudoelements</a></li>
+                <li><a href="css-boxmodel.html">CSS Box Model</a></li>
+                <li><a href="css-boxsizing.html">CSS Box Sizing</a></li>
+                <li><a href="css-display.html">CSS Display</a></li>
+                <li><a href="css-widthheight.html">CSS Width &amp; Height</a></li>
+                <li><a href="css-marginpadding.html">CSS Margin &amp; Padding</a></li>
+                <li><a href="css-overflow.html">CSS Overflow</a></li>
+                <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+                <li><a href="css-grid.html">CSS Grid</a></li>
+                <li><a href="css-positioning.html">CSS Positioning</a></li>
+                <li><a href="css-float.html">CSS Float</a></li>
+                <li><a href="css-colors.html">CSS Colors</a></li>
+                <li><a href="css-typography.html">CSS Typography</a></li>
+                <li><a href="css-borders.html">CSS Borders</a></li>
+                <li><a href="css-outline.html">CSS Outline</a></li>
+                <li><a href="css-transparency.html">CSS Transparency</a></li>
+                <li><a href="css-filters.html">CSS Filters</a></li>
+                <li><a href="css-navbar.html">CSS Navbar</a></li>
+                <li><a href="css-dropdown.html">CSS Dropdown</a></li>
+                <li><a href="css-buttons.html">CSS Buttons</a></li>
+                <li><a href="css-pagination.html">CSS Pagination</a></li>
+                <li><a href="css-viewport.html">CSS Viewport</a></li>
+                <li><a href="css-mediaqueries.html">CSS Media Queries</a></li>
+                <li><a href="css-relativeunits.html">CSS Relative Units</a></li>
+                <li><a href="css-responsiveimages.html">CSS Responsive Images</a></li>
+                <li><a href="css-transforms2d.html">CSS 2D Transforms</a></li>
+                <li><a href="css-transforms3d.html">CSS 3D Transforms</a></li>
+                <li><a href="css-transitions.html">CSS Transitions</a></li>
+                <li><a href="css-animations.html">CSS Animations</a></li>
+                <li><a href="css-customproperties.html">CSS Custom Properties</a></li>
+                <li><a href="css-functions.html">CSS Functions</a></li>
+              </ol>
+          </nav>
+      </div>
+
+      <div class="footer-bottom">
+          <p class="copyright">&copy; CODE WITH FAHIM 2025</p>
+          <div class="footer-links">
+              <a href="privacypolicy.html">Privacy Policy</a>
+              <a href="terms&conditions.html">Terms of Use</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+    
+</footer>
+</html>        

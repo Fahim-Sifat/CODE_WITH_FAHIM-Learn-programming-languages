@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://code-with-fahim.pages.dev/"/>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Typography</title>
+    <link rel="stylesheet" href="css-typography.css"/>
+<!--GA4-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZ1JHY721H');
+</script>
+
+<!--Adsterra popunder cloudfare-->
+<script type='text/javascript' src='//underpantsjokeimmunity.com/0b/4a/60/0b4a6002649c1d813fccc6c06dfb190c.js'></script>
+
+
+</head>
+<body>
+<header>
+        <img src="header-logo.png" alt="header-logo"><h1>CODE WITH FAHIM</h1>
+        <h3>CSS Typography</h3>
+    </header>
+    <div class="container">
+<span class="larger">What's CSS Typography?</span> <br><br>
+Typography in CSS controls how text appears on a webpage—its font, size, spacing, alignment, and overall readability. <br><br>
+<span class="large">1.font-family:</span>
+<br><br>
+font-family lets you define which font the browser should use for an element. <br>
+It accepts one or more fonts in a priority-ordered list (the browser uses the first available). <br><br>
+<span class="title">#Syntax:</span>
+<div class="example">
+    body {
+  font-family: Arial, sans-serif;
+}
+</div> <br>
+If Arial isn't available, the browser uses the fallback sans-serif.
+<br><br>
+<span class="title">#Custom Font Names Must Be Quoted</span> <br>
+<div class="example">
+    h1 {
+  font-family: "Open Sans", sans-serif;
+}
+</div>
+<br>
+Use quotes when a font name contains spaces or special characters. <br><br>
+<span class="title">#Generic Font Families:
+</span> <br>
+These are "catch-all" backups the browser always supports:
+<br><br>
+<table>
+    <tr>
+        <th>Generic family</th>
+        <th>Examples</th>
+    </tr>
+    <tr>
+        <td>serif</td>
+        <td>Times,Georgia</td>
+    </tr>
+    <tr>
+        <td>sans-serif</td>
+        <td>Arial,Helvetica</td>
+    </tr>
+    <tr>
+        <td>monospace</td>
+        <td>consolas,courier</td>
+    </tr>
+    <tr>
+        <td>cursive</td>
+        <td>Brush Script, Comic Sans</td>
+    </tr>
+    <tr>
+        <td>fantasy</td>
+        <td>Impact (rarely used)</td>
+    </tr>
+    <tr>
+        <td>system-ui</td>
+        <td>Local OS UI font</td>
+    </tr>
+</table> <br><br>
+Always end your list with a generic font. <br><br>
+<span class="title">#🎨 How to Use Google Fonts:</span>
+<br><br>
+Google Fonts gives you free web fonts you can load directly into your website.
+<br><br>
+There are two main ways to use Google Fonts:
+<br>
+<span style="color: yellow;">
+i.Using the &lt;link> Tag (Recommended):</span>
+<br><br>
+
+Step 1 — Copy Google Fonts link:
+<br>
+Example for Inter with multiple weights:
+<div class="example">
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</div> <br>
+Place the link tag inside the &lt;head> tag of your HTML File. <br><br>
+Step 2 — Use in CSS:
+<div class="example">
+body {
+  font-family: "Inter", sans-serif;
+}</div><br><br><br>
+
+
+<span style="color: yellow;">
+ii.Using @import in CSS (Not recommended, but possible)</span> <br>
+
+<div class="example">
+@import url('https://fonts.googleapis.com/css2?
+family=Poppins:wght@300;400;600&
+<br>display=swap');
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+</div>
+<br>
+❗ This method slows down page rendering — use &lt;link> tag instead.
+
+<br><br><br><br><br><br>
+<span class="large">2.font-size:</span>
+font-size controls how large or small text appears. <br>
+CSS supports many units (px, rem, em, %, vw…), each suited for different situations. <br><br>
+
+<span class="title">#Basic Syntax:</span>
+<div class="example">
+    p {
+  font-size: 16px;
+}
+</div>
+<br>
+<span class="title">Recommended Units for Modern Web Design</span><br><br>
+<span style="color: yellow;">✔ rem (most recommended):</span> <br>
+
+Scales relative to the root font size (usually 16px). 
+<div class="example">
+body {
+     font-size: 1rem;      /* 16px (browser-default)*/
+    }    
+h1   { 
+    font-size: 2.5rem;      /* 40px */ 
+}  
+</div> <br>
+Advantages:
+<ul><li>
+consistent
+</li><li>
+accessible
+</li><li>
+easy to scale entire site
+</li></ul> <br><br>
+<span style="color: yellow;">
+✔ em</span> <br>
+Relative to parent element's font size.
+<br><br>
+Use for spacing or component-based design:
+<div class="example">
+button {
+  font-size: 1em;     /* same as parent */
+  padding: 0.5em 1.2em;
+}
+</div> <br><br>
+<span style="color: yellow;">✔ px</span>
+<br><br>
+Fixed size. <br>
+Useful for small UI elements, but less responsive.
+<div class="example">
+.small-text {
+  font-size: 12px;
+}
+</div> <br><br>
+<span style="color: yellow;">✔ Fluid units (vw, vh)</span> <br><br>
+Size based on viewport width/height.
+<div class="example">
+.hero-title {
+  font-size: 8vw;
+}
+</div> <br><br>
+<span style="color: yellow;">Relative Percentages</span> <br>
+Useful for scaling entire containers.
+<div class="ex">
+section {
+  font-size: 120%;     /* 1.2rem if parent is 1rem */
+}
+</div> <br><br><br>
+<span class="title">#Responsive Font Sizes</span> <br><br>
+<span style="color: yellow;">✔ Using clamp() — BEST modern technique</span>
+<br>
+Automatically scales between min and max values.
+<div class="example">
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+</div> <br>
+Meaning: <ul>
+<li>
+    never smaller than 2rem
+</li><li>
+ideally 5vw
+</li><li>
+never bigger than 4rem
+</li></ul> <br><br> <br><br><br>
+<span class="large">3.font-weight:</span>
+<br>
+Basic syntax:
+<div class="example">
+    p {
+  font-weight: 400;
+}
+</div>
+Using keywords:
+<div class="example">
+    p{
+        font-weight: normal;   /*400*/
+        font-weight: bold;   /*700*/
+    }
+</div> <br><br><br><br><br>
+<span class="large">4.text-align:</span>
+<br>
+Syntax:
+<div class="example">
+    p{
+text-align: left;
+text-align: right;
+text-align: center;
+text-align: justify;      /* stretched edges */
+text-align: start;        /* depends on writing direction */
+text-align: end;          /* depends on writing direction */
+    }
+</div> <br><br><br><br>
+<span class="large">5.text-transform:</span>
+<div class="example">
+h2 {
+  text-transform: uppercase;
+}
+</div> <br><br>
+<table>
+    <tr>
+        <th>Values</th>
+        <th>Examples</th>
+    </tr>
+    <tr>
+        <td>uppercase</td>
+        <td>"hello" → "HELLO"</td>
+    </tr>
+    <tr>
+        <td>lowercase</td>
+        <td>"HELLO" → "hello" </td>
+    </tr>
+    <tr>
+        <td>capitalize</td>
+        <td>"hello world" → "Hello World"</td>
+    </tr>
+    <tr>
+        <td>none</td>
+        <td>Removes transformations</td>
+    </tr>
+</table> <br><br><br><br>
+<span class="large">6.text-decoration:</span>
+<br><br>
+Syntax:
+<div class="example">
+text-decoration-line: underline;
+text-decoration-color: red;
+text-decoration-style: wavy;
+text-decoration-thickness: 3px;
+</div> <br><br>
+You can use shorthand:
+<div class="example">
+text-decoration: underline red wavy 3px;
+</div> <br><br>
+Order doesn't matter.
+<br><br>
+<span class="title">Longhand Properties:</span>
+<br><br>
+<span style="color: yellow;">
+1.text-decoration-line:</span>
+<div class="example">
+text-decoration-line: underline;        /* underline */
+text-decoration-line: overline;         /* top line */
+text-decoration-line: line-through;     /* strike-through */
+text-decoration-line: underline overline;
+</div> <br> <br>
+<span style="color: yellow;">text-decoration-color:</span>
+<div class="example">
+text-decoration-color: #ff0055;
+</div> <br><br>
+<span style="color: yellow;">text-decoration-style:</span>
+<div class="example">
+    text-decoration-style: solid;     /* default */
+text-decoration-style: double;
+text-decoration-style: dotted;
+text-decoration-style: dashed;
+text-decoration-style: wavy;
+</div>
+<br><br>
+<span style="color: yellow;">text-decoration-thickness:</span>
+<div class="example">
+    text-decoration-thickness: 2px;
+</div> <br><br>
+<span style="font-size: xx-large; color: magenta;">Advanced typographies:</span>
+<ul>
+  <li>  text-indent: Specifies the indentation of the first line of a text block.
+</li><li>
+line-height: Sets the vertical spacing between lines of text (the leading).
+letter-spacing: Sets the horizontal spacing between characters (kerning).
+</li><li>
+word-spacing: Sets the spacing between words.
+</li><li>
+white-space: Controls how whitespace within an element is handled (e.g., preventing wrapping with nowrap).
+</li><li>
+text-shadow: Adds a shadow effect to the text.
+</li><li>
+word-break / overflow-wrap: Controls how long words break to prevent overflow outside their container.
+</li><li>
+text-overflow: Determines how content that overflows its container should be signaled (often with an ellipsis ...).
+</li></ul> <br><br><br><br>
+
+
+
+
+
+        </div>
+</body> <br><br><br><br>
+
+<footer>
+<div class="footer-nav">
+        <button><a href="css-borders.html">Next</a> 
+        </button>
+        <button><a href="css-colors.html">Previous</a> </button>  
+        <br>
+        <h3>CSS Topics</h3>
+          <nav>
+              <ol>
+                <li><a href="intro-to-css.html">Introduction to CSS</a></li>
+                <li><a href="css-syntax.html">CSS Syntax</a></li>
+                <li><a href="css-selectors.html">CSS Selectors</a></li>
+                <li><a href="css-pseudoclasses.html">CSS Pseudoclasses</a></li>
+                <li><a href="css-pseudoelements.html">CSS Pseudoelements</a></li>
+                <li><a href="css-boxmodel.html">CSS Box Model</a></li>
+                <li><a href="css-boxsizing.html">CSS Box Sizing</a></li>
+                <li><a href="css-display.html">CSS Display</a></li>
+                <li><a href="css-widthheight.html">CSS Width &amp; Height</a></li>
+                <li><a href="css-marginpadding.html">CSS Margin &amp; Padding</a></li>
+                <li><a href="css-overflow.html">CSS Overflow</a></li>
+                <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+                <li><a href="css-grid.html">CSS Grid</a></li>
+                <li><a href="css-positioning.html">CSS Positioning</a></li>
+                <li><a href="css-float.html">CSS Float</a></li>
+                <li><a href="css-colors.html">CSS Colors</a></li>
+                <li><a href="css-typography.html">CSS Typography</a></li>
+                <li><a href="css-borders.html">CSS Borders</a></li>
+                <li><a href="css-outline.html">CSS Outline</a></li>
+                <li><a href="css-transparency.html">CSS Transparency</a></li>
+                <li><a href="css-filters.html">CSS Filters</a></li>
+                <li><a href="css-navbar.html">CSS Navbar</a></li>
+                <li><a href="css-dropdown.html">CSS Dropdown</a></li>
+                <li><a href="css-buttons.html">CSS Buttons</a></li>
+                <li><a href="css-pagination.html">CSS Pagination</a></li>
+                <li><a href="css-viewport.html">CSS Viewport</a></li>
+                <li><a href="css-mediaqueries.html">CSS Media Queries</a></li>
+                <li><a href="css-relativeunits.html">CSS Relative Units</a></li>
+                <li><a href="css-responsiveimages.html">CSS Responsive Images</a></li>
+                <li><a href="css-transforms2d.html">CSS 2D Transforms</a></li>
+                <li><a href="css-transforms3d.html">CSS 3D Transforms</a></li>
+                <li><a href="css-transitions.html">CSS Transitions</a></li>
+                <li><a href="css-animations.html">CSS Animations</a></li>
+                <li><a href="css-customproperties.html">CSS Custom Properties</a></li>
+                <li><a href="css-functions.html">CSS Functions</a></li>
+              </ol>
+          </nav>
+      </div>
+
+      <div class="footer-bottom">
+          <p class="copyright">&copy; CODE WITH FAHIM 2025</p>
+          <div class="footer-links">
+              <a href="privacypolicy.html">Privacy Policy</a>
+              <a href="terms&conditions.html">Terms of Use</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+    
+</footer>
+
+</html>        

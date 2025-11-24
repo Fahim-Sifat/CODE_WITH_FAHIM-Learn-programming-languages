@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://code-with-fahim.pages.dev/"/>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-Formation</title>
+    <link rel="stylesheet" href="text-formation.css"/>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'G-MZ1JHY721H');
+</script>
+ 
+
+</head>
+<body>
+
+<header>
+    <div class="header-with-logo">
+      <img src="header-logo.png" alt="CWF Logo" class="header-logo"> 
+      <h1>CODE WITH FAHIM</h1>
+    </div>
+    <h3>Text-Formating</h3>
+</header>
+
+<div class="main-content-wrapper">
+    <div class="content-area">
+        
+        <p class="headsup">
+            🔑 **Info:** Text formatting tags are used to display text in a special type of format. These tags mainly focus on **semantics** (the meaning of the content), although they also change the visual style.
+        </p>
+
+        <p>
+            <span class="span1">Common Text Formatting Tags</span><br>
+            These elements help structure and present text content in an easily readable and meaningful way:
+        </p>
+
+        <img src="text-formatting.png" alt="text-formatting"> <br><br>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                    <th>Visual Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Tag">&lt;b></td>
+                    <td data-label="Description">Bold text (presentational).</td>
+                    <td data-label="Visual Example">**b**</td>
+                </tr>
+                <tr>
+                    <td data-label="Tag">&lt;strong></td>
+                    <td data-label="Description">Important text (semantic, bold style).</td>
+                    <td data-label="Visual Example">**strong**</td>
+                </tr>
+                <tr>
+                    <td data-label="Tag">&lt;i></td>
+                    <td data-label="Description">Italic text (presentational).</td>
+                    <td data-label="Visual Example">*i*</td>
+                </tr>
+                <tr>
+                    <td data-label="Tag">&lt;em></td>
+                    <td data-label="Description">Emphasized text (semantic, italic style).</td>
+                    <td data-label="Visual Example">*em*</td>
+                </tr>
+                <tr>
+                    <td data-label="Tag">&lt;mark></td>
+                    <td data-label="Description">Highlighted text.</td>
+                    <td data-label="Visual Example"></td>
+                </tr>
+                <tr>
+                    <td data-label="Tag">&lt;small></td>
+                    <td data-label="Description">Smaller text.</td>
+                    <td data-label="Visual Example"></td>
+                </tr>
+                <tr>
+                    <td data-label="Tag">&lt;del></td>
+                    <td data-label="Description">Deleted (strikethrough) text.</td>
+                    <td data-label="Visual Example">~~del~~</td>
+                </tr>
+                <tr>
+                    <td data-label="Tag">&lt;ins></td>
+                    <td data-label="Description">Inserted (underlined) text.</td>
+                    <td data-label="Visual Example"><u>ins</u></td>
+                </tr>
+                <tr>
+                    <td data-label="Tag">&lt;sub></td>
+                    <td data-label="Description">Subscripted text.</td>
+                    <td data-label="Visual Example">X<sub>sub</sub></td>
+                </tr>
+                <tr>
+                    <td data-label="Tag">&lt;sup></td>
+                    <td data-label="Description">Superscripted text.</td>
+                    <td data-label="Visual Example">Y<sup>sup</sup></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="soyeah">
+            <span class="span1">Why choose &lt;strong> vs &lt;b>?</span>
+        </p>
+        <p>
+            This is a common question. While both tags make text visually **bold**, they have different **semantic** meanings:
+            <ul>
+                <li class="ulli"><span class="span2">&lt;strong></span>: Indicates the content is of **strong importance** or seriousness. Search engines and screen readers pay attention to this.</li>
+                <li class="ulli"><span class="span3">&lt;b></span>: Used to attract attention to text without conveying extra importance, like keywords in a review. It is purely for **style** where **strong** is not appropriate.</li>
+            </ul>
+        </p>
+        <p>
+            The same rule applies to <span class="span2">&lt;em></span> (emphasis/semantic importance) versus <span class="span3">&lt;i></span> (alternate voice/style).
+        </p>
+
+        <p>
+            <span class="span1">Code Example:</span> <br><br>
+            <span class="code-block">
+                &lt;p>This is &lt;b>bold&lt;/b> text.&lt;/p><br>
+                &lt;p>This is &lt;strong>strongly important&lt;/strong> text.&lt;/p><br>
+                &lt;p>This is &lt;i>italic&lt;/i> text.&lt;/p><br>
+                &lt;p>This is &lt;em>emphasized&lt;/em> text.&lt;/p><br>
+                &lt;p>This is &lt;mark>highlighted&lt;/mark> text.&lt;/p><br>
+                &lt;p>This is &lt;del>deleted&lt;/del> text and &lt;ins>inserted&lt;/ins> text.&lt;/p><br>
+                &lt;p>H&lt;sub>2&lt;/sub>O is a common chemical formula.&lt;/p><br>
+                &lt;p>E=MC&lt;sup>2&lt;/sup> is Einstein's famous equation.&lt;/p>
+            </span>
+        </p>
+        
+        <p>
+            Output: <br><br>
+            <img src="text-formatting2.png" alt="text-formatting2" class="imgoutput">
+        </p>
+
+    </div>
+    <div class="sidebar-area">
+        </div>
+</div>
+
+<footer>
+    <button type="button" class="btn-default"><a href="comments.html" class="next-page">Next>></a></button>
+    <button type="button" class="btn-default"><a href="html-styles.html" class="previous">&lt;Previous</a></button>
+
+    <br><br>
+    <span class="goto">Go to:</span> <br>
+    <div class="pagination">
+        <nav aria-label="...">
+            <ul class="pagination pagination-lg">
+                <li class="page-item"><a class="page-link" href="introduction-to-html.html">1</a></li>
+                <li class="page-item"><a class="page-link" href="code-editor.html">2</a></li>
+                <li class="page-item"><a class="page-link" href="tags.html">3</a></li>
+                <li class="page-item"><a class="page-link" href="structure.html">4</a></li>
+                <li class="page-item"><a class="page-link" href="attributes.html">5</a></li>
+                <li class="page-item"><a class="page-link" href="headings&paragraphs.html">6</a></li>
+                <li class="page-item"><a class="page-link" href="html-styles.html">7</a></li>
+                <li class="page-item" >
+                <a class="pageactive-link" aria-current="page" href="text-formation.html">8</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="comments.html">9</a></li>
+                <li class="page-item"><a class="page-link" href="div&classes.html">10</a></li>
+                <li class="page-item"><a class="page-link" href="colors.html">11</a></li>
+                <li class="page-item"><a class="page-link" href="links.html">12</a></li>
+                <li class="page-item"><a class="page-link" href="lists.html">13</a></li>
+                <li class="page-item"><a class="page-link" href="tables.html">14</a></li>
+                <li class="page-item"><a class="page-link" href="images.html">15</a></li>
+                <li class="page-item"><a class="page-link" href="audio-video.html">16</a></li>
+                <li class="page-item"><a class="page-link" href="input-types.html">17</a></li>
+                <li class="page-item"><a class="page-link" href="forms.html">18</a></li>
+                <li class="page-item"><a class="page-link" href="emojis.html">19</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+
+
+
+
+<!--Hiltopads without anti-block--> 
+
+<script>
+(function(qpzl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = qpzl || {};
+s.src = "\/\/embarrassed-bridge.com\/cGDt9H6.bw2Q5MlkSRWnQx9PN\/jHc\/x\/MzTaUL0QMHSi0C2\/NPzDEMxXNiT\/Q_yM";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body>
+</html>

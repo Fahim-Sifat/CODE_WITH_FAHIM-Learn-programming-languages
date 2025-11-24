@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="canonical" href="https://code-with-fahim.pages.dev/"/>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display</title>
+    <link rel="stylesheet" href="css-display.css"/>
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZ1JHY721H');
+</script>
+
+
+
+
+
+</head>
+<body>
+    <header>
+        <img src="header-logo.png" alt="header-logo"><h1>CODE WITH FAHIM</h1>
+        <h3>CSS Display</h3>
+    </header> <br>
+    <div class="container">
+        <span class="larger">Concept:</span> <br><br>
+        In CSS, the display property controls how an element is shown on the web page — basically, how it behaves in the layout. It decides whether an element acts like a block, sits inline with text, becomes a flexbox container, grid, or even disappears from the layout entirely. <br><br><br>
+        <span class="larger">🧱 Common Display Values:</span> <br><br>
+        <table>
+            <tr>
+                <th>Value</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>block</td>
+                <td>Element takes up the full width of its parent. Starts on a new line.</td>
+                <td>&lt;div>,&lt;p>,&lt;h1></td>
+            </tr>
+            <tr>
+                <td>inline</td>
+                <td>Element only takes up as much width as its content needs. Doesn’t start on a new line.</td>
+                <td>&lt;span>,&lt;a>,&lt;b></td>
+            </tr>
+            <tr>
+                <td>inline-block</td>
+                <td>Like inline, but you can still set width and height and vertical margin/padding.</td>
+                <td>Great for buttons & icons</td>
+            </tr>
+            <tr>
+                <td>none</td>
+                <td>Hides the element completely — it’s not visible and doesn’t take up space.</td>
+                <td>Used to toggle visibility dynamically</td>
+            </tr>
+            <tr>
+                <td>flex</td>
+                <td>Turns the element into a **block-level** flex container that can align child elements horizontally or vertically.</td>
+                <td>Perfect for responsive layout</td>
+            </tr>
+            <tr>
+                <td>grid</td>
+                <td>Turns the element into a **block-level** grid container with rows and columns.</td>
+                <td>Excellent for advanced layout</td>
+            </tr>
+            <tr>
+                <td>inline-flex</td>
+                <td>Same as flex, but behaves **inline** with surrounding text.</td>
+                <td>Useful for small horizontal groups</td>
+            </tr>
+            <tr>
+                <td>inline-grid</td>
+                <td>Same as grid, but behaves **inline** with surrounding text.</td>
+                <td>Rare, but sometimes handy</td>
+            </tr>
+            <tr>
+                <td>contents</td>
+                <td>Makes the container element disappear from the layout while keeping its child elements visible in its place.</td>
+                <td>Useful for semantic grouping without layout impact</td>
+            </tr>
+        </table> <br><br><br>
+        <span class="large">🧱 1. display: block  =></span> <br><br>
+        Takes the full width of its parent container and starts on a new line. <br><br>
+        <div class="example">
+            &lt;style> <br>
+.block { <br>
+  display: block; <br>
+  background: steelblue; <br>
+  color: white; <br>
+  padding: 10px; <br>
+  margin: 5px 0; <br>
+} <br>
+&lt;/style> <br><br>
+
+&lt;div class="block">I’m a block element&lt;/div> <br>
+&lt;div class="block">I start on a new line&lt;/div> <br>
+
+        </div> <br><br>
+        Output: <br><br>
+        <style>
+.block {
+  display: block;
+  background: steelblue;
+  color: white;
+  padding: 10px;
+  margin: 5px 0;
+}
+</style>
+
+<div class="block">I’m a block element</div>
+<div class="block">I start on a new line</div>
+ <br><br>
+ Result: <br>
+Each box appears on its own line, stacking vertically like paragraphs. <br><br><br>
+<span class="large">✏️ 2. display: inline:
+</span>   <br><br>
+Flows in the same line as text; width and height can’t be controlled. 
+<div class="example">
+&lt;style> <br>
+.inline { <br>
+  display: inline; <br>
+  background: lightgreen; <br>
+  padding: 5px; <br>
+} <br>
+&lt;/style> <br><br>
+
+&lt;p> <br>
+  This is &lt;span class="inline">inline text&lt;/span> inside a sentence. <br>
+&lt;/p>
+
+</div> <br><br>
+Output: <br><br>
+
+    <style>
+.inline {
+  display: inline;
+  background: lightgreen;
+  padding: 5px;
+}
+</style>
+
+<p>
+  This is <span class="inline">inline text</span> inside a sentence.
+</p>
+
+<br><br><br>
+<span class="large">📦 3. display: inline-block:
+</span>   <br><br>
+Flows in the same line as text, but you **can** set `width`, `height`, and vertical margins. 
+<div class="example">
+&lt;style> <br>
+.inline-block { <br>
+  display: inline-block; <br>
+  background: gold; <br>
+  padding: 10px; <br>
+  margin: 10px; <br>
+  width: 150px; <br>
+  text-align: center; <br>
+} <br>
+&lt;/style> <br><br>
+
+&lt;div class="inline-block">Box 1&lt;/div> <br>
+&lt;div class="inline-block">Box 2&lt;/div> <br>
+&lt;div class="inline-block">Box 3&lt;/div>
+
+</div> <br><br>
+Output: <br><br>
+    <style>
+.inline-block {
+  display: inline-block;
+  background: gold;
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+  text-align: center;
+}
+</style>
+
+<div class="inline-block">Box 1</div>
+<div class="inline-block">Box 2</div>
+<div class="inline-block">Box 3</div>
+<br><br>
+ Result: <br>
+The boxes appear next to each other (inline) and respect the set width and vertical margins. <br><br><br>
+
+<span class="large">🔗 4. display: flex:
+</span>   <br><br>
+Turns the element into a **block-level** Flex Container, allowing children to be easily arranged in a single row or column. 
+<div class="example">
+&lt;style> <br>
+.flex-container { <br>
+  display: flex; <br>
+  background: #333; <br>
+  padding: 10px; <br>
+  justify-content: space-around; <br>
+} <br>
+.flex-item { <br>
+  background: tomato; <br>
+  color: white; <br>
+  padding: 15px; <br>
+  margin: 5px; <br>
+} <br>
+&lt;/style> <br><br>
+
+&lt;div class="flex-container"> <br>
+  &lt;div class="flex-item">One&lt;/div> <br>
+  &lt;div class="flex-item">Two&lt;/div> <br>
+  &lt;div class="flex-item">Three&lt;/div> <br>
+&lt;/div>
+
+</div> <br><br>
+Output: <br><br>
+    <style>
+.flex-container {
+  display: flex;
+  background: #333;
+  padding: 10px;
+  justify-content: space-around;
+}
+.flex-item {
+  background: tomato;
+  color: white;
+  padding: 15px;
+  margin: 5px;
+}
+</style>
+
+<div class="flex-container">
+  <div class="flex-item">One</div>
+  <div class="flex-item">Two</div>
+  <div class="flex-item">Three</div>
+</div>
+<br><br>
+ Result: <br>
+The items are automatically lined up horizontally and spaced evenly within the container. <br><br><br>
+
+<span class="large">🌐 5. display: grid:
+</span>   <br><br>
+Turns the element into a **block-level** Grid Container, allowing children to be placed into a complex two-dimensional layout (rows and columns). 
+<div class="example">
+&lt;style> <br>
+.grid-container { <br>
+  display: grid; <br>
+  grid-template-columns: 100px 1fr 100px; <br>
+  background: purple; <br>
+  padding: 10px; <br>
+} <br>
+.grid-item { <br>
+  background: cyan; <br>
+  padding: 10px; <br>
+  border: 1px solid #333; <br>
+} <br>
+&lt;/style> <br><br>
+
+&lt;div class="grid-container"> <br>
+  &lt;div class="grid-item">A&lt;/div> <br>
+  &lt;div class="grid-item">B&lt;/div> <br>
+  &lt;div class="grid-item">C&lt;/div> <br>
+&lt;/div>
+
+</div> <br><br>
+Output: <br><br>
+    <style>
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  background: purple;
+  padding: 10px;
+}
+.grid-item {
+  background: cyan;
+  padding: 10px;
+  border: 1px solid #333;
+}
+</style>
+
+<div class="grid-container">
+  <div class="grid-item">A</div>
+  <div class="grid-item">B</div>
+  <div class="grid-item">C</div>
+</div>
+<br><br>
+ Result: <br>
+The items are placed in three columns: a fixed 100px column, a flexible column (1fr), and another fixed 100px column. <br><br><br>
+
+</div>
+<!--Hiltopads popunder1-->
+<script>
+(function(qpzl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = qpzl || {};
+s.src = "\/\/embarrassed-bridge.com\/cGDt9H6.bw2Q5MlkSRWnQx9PN\/jHc\/x\/MzTaUL0QMHSi0C2\/NPzDEMxXNiT\/Q_yM";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+</body> <br><br><br><br><br>
+
+<footer>
+<div class="footer-nav">
+        <button><a href="css-widthheight.html">Next</a> 
+        </button>
+        <button><a href="css-boxsizing.html">Previous</a> </button>  
+        <br>
+        <h3>CSS Topics</h3>
+          <nav>
+              <ol>
+                <li><a href="intro-to-css.html">Introduction to CSS</a></li>
+                <li><a href="css-syntax.html">CSS Syntax</a></li>
+                <li><a href="css-selectors.html">CSS Selectors</a></li>
+                <li><a href="css-pseudoclasses.html">CSS Pseudoclasses</a></li>
+                <li><a href="css-pseudoelements.html">CSS Pseudoelements</a></li>
+                <li><a href="css-boxmodel.html">CSS Box Model</a></li>
+                <li><a href="css-boxsizing.html">CSS Box Sizing</a></li>
+                <li><a href="css-display.html">CSS Display</a></li>
+                <li><a href="css-widthheight.html">CSS Width &amp; Height</a></li>
+                <li><a href="css-marginpadding.html">CSS Margin &amp; Padding</a></li>
+                <li><a href="css-overflow.html">CSS Overflow</a></li>
+                <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+                <li><a href="css-grid.html">CSS Grid</a></li>
+                <li><a href="css-positioning.html">CSS Positioning</a></li>
+                <li><a href="css-float.html">CSS Float</a></li>
+                <li><a href="css-colors.html">CSS Colors</a></li>
+                <li><a href="css-typography.html">CSS Typography</a></li>
+                <li><a href="css-borders.html">CSS Borders</a></li>
+                <li><a href="css-outline.html">CSS Outline</a></li>
+                <li><a href="css-transparency.html">CSS Transparency</a></li>
+                <li><a href="css-filters.html">CSS Filters</a></li>
+                <li><a href="css-navbar.html">CSS Navbar</a></li>
+                <li><a href="css-dropdown.html">CSS Dropdown</a></li>
+                <li><a href="css-buttons.html">CSS Buttons</a></li>
+                <li><a href="css-pagination.html">CSS Pagination</a></li>
+                <li><a href="css-viewport.html">CSS Viewport</a></li>
+                <li><a href="css-mediaqueries.html">CSS Media Queries</a></li>
+                <li><a href="css-relativeunits.html">CSS Relative Units</a></li>
+                <li><a href="css-responsiveimages.html">CSS Responsive Images</a></li>
+                <li><a href="css-transforms2d.html">CSS 2D Transforms</a></li>
+                <li><a href="css-transforms3d.html">CSS 3D Transforms</a></li>
+                <li><a href="css-transitions.html">CSS Transitions</a></li>
+                <li><a href="css-animations.html">CSS Animations</a></li>
+                <li><a href="css-customproperties.html">CSS Custom Properties</a></li>
+                <li><a href="css-functions.html">CSS Functions</a></li>
+              </ol>
+          </nav>
+      </div>
+
+      <div class="footer-bottom">
+          <p class="copyright">&copy; CODE WITH FAHIM 2025</p>
+          <div class="footer-links">
+              <a href="privacypolicy.html">Privacy Policy</a>
+              <a href="terms&conditions.html">Terms of Use</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+    
+</footer>
+</html>

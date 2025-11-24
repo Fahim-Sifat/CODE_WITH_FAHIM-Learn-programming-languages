@@ -1,0 +1,3 @@
+User-agent:*
+Disallow:
+Sitemap:https://code-with-fahim.wuaze.com/sitemap.xml

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://code-with-fahim.pages.dev/"/>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Margin & Padding</title>
+    <link rel="stylesheet" href="css-marginpadding.css"/>
+<!--GA4-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZ1JHY721H');
+</script>
+
+
+
+</head>
+<body>
+<header>
+        <img src="header-logo.png" alt="header-logo"><h1>CODE WITH FAHIM</h1>
+        <h3>CSS Margin & Padding</h3>
+    </header>
+    <div class="container">
+    <img src="css-boxmodel.png" alt="css-boxmodel"> <br><br>
+<span class="larger">🔸 What Exactly Is Margin?</span> <br><br>
+In the CSS box model, every element is a rectangular box made up of 4 layers:
+<br><br>
+Content → Padding → Border → Margin
+<br><br>
+
+The margin is the outermost layer — the transparent space between an element’s border and its neighbors. <br>
+It doesn’t have color, but it affects spacing and layout heavily. <br><br>
+<span class="large">🔸 Margin Syntax and Values:</span>
+    <br><br>
+    You can define margins in different ways: <br><br>
+    <table>
+        <tr>
+            <th>Syntax</th>
+            <th>Meaning</th>
+        </tr>
+        <tr>
+            <td>margin: 20px;</td>
+            <td>20px on all four sides</td>
+        </tr>
+        <tr>
+            <td>margin: 10px 30px;</td>
+            <td>10px top & bottom, 30px left & right</td>
+        </tr>
+        <tr>
+            <td>margin: 10px 15px 20px;</td>
+            <td>10px top, 15px right & left, 20px bottom</td>
+        </tr>
+        <tr>
+            <td>margin: 10px 15px 20px 25px</td>
+            <td>top → right → bottom → left (clockwise order)</td>
+        </tr>
+    </table> <br><br><br>
+    You can also set them individually: 
+    <div class="example">
+margin-top: 10px;
+margin-right: 15px;
+margin-bottom: 20px;
+margin-left: 25px;
+
+    </div> <br><br>
+    <span class="large">
+        🔸 Accepted Units:
+    </span> <br><br>
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Example</th>
+            <th>Meaning</th>
+        </tr>
+        <tr>
+            <td>Pixels</td>
+            <td>margin: 20px;</td>
+            <td>Fixed size</td>
+        </tr>
+        <tr>
+            <td>Percentages</td>
+            <td>margin: 20%;</td>
+            <td>Based on width of the containing block</td>
+        </tr>
+        <tr>
+            <td>Viewport Units</td>
+            <td>margin: 5vw;</td>
+            <td>Based on viewport width</td>
+        </tr>
+        <tr>
+            <td>em,rem</td>
+            <td>margin: 1.6em</td>
+            <td>Relative to font size</td>
+        </tr>
+    </table> <br><br>
+    <span class="large">🔸 Auto Margins: </span> <br><br>
+    <ul>
+        <li>margin: auto; can automatically fill available space.
+</li><li>
+Most famously used to center block elements horizontally:</li>
+    </ul> 
+    <div class="example">
+        .box {
+  width: 300px;
+  margin: 0 auto;
+}
+
+    </div>
+<br>
+The browser gives equal left/right margins to center the box. <br><br>
+<span class="large">🔸 Margin Collapsing (Important!):</span> <br><br>
+Adjacent vertical margins can collapse — they don’t add up; the larger margin wins. <br><br>
+
+Example: <br>
+<div class="example">
+    &lt;p style="margin-bottom: 40px;">Hello&lt;/p>
+&lt;p style="margin-top: 20px;">World&lt;/p>
+
+</div> <br><br>
+Output: 
+<div class="example">
+    <p style="margin-bottom: 40px;">Hello</p>
+<p style="margin-top: 20px;">World</p>
+
+</div>
+The space between them will be 40px, not 60px. <br>
+Horizontal margins (left/right) do not collapse — only top/bottom ones do.
+<br><br>
+<span class="large">🔸 Negative Margins:</span>
+<br><br>
+You can use negative values:
+
+<div class="example">
+margin-top: -20px;
+</div>
+<br>
+This pulls the element closer to others or even overlaps them. It’s powerful — but use it carefully. <br><br>
+<span class="large">🔸 Inherit & Initial:</span> <br><br>
+<ul><li>
+margin: inherit; — takes the margin value from its parent.</li>
+<li>
+margin: initial; — resets to the browser’s default (usually 0).
+</li></ul><br><br><br>
+<span class="larger">🔸 What Exactly Is Padding?</span> <br><br><br>
+Padding is the space between an element’s content and its border — it’s the inner spacing of the box. <br>
+If margin pushes things away from an element, padding pushes things inward, creating breathing room inside the element. <br><br>
+the padding lies between content and border — it makes the box look roomier from the inside. <br><br>
+<span class="large">🧩 Syntax:</span>
+<br><br>
+You can set padding in several ways: <br><br>
+<table>
+    <tr>
+        <th>Syntax</th>
+        <th>Meaning</th>
+    </tr>
+    <tr>
+        <td>padding: 20px;</td>
+        <td>20px padding on all sides</td>
+    </tr>
+    <tr>
+        <td>padding: 10px 30px;</td>
+        <td>10px top & bottom, 30px left & right</td>
+    </tr>
+    <tr>
+        <td>padding: 10px 20px 30px;</td>
+        <td>10px top, 20px right & left, 30px bottom</td>
+    </tr>
+    <tr>
+        <td>padding: 10px 15px 20px 25px;</td>
+        <td>top → right → bottom → left</td>
+    </tr>
+</table> <br><br>
+Or individually:
+<div class="example">
+padding-top: 10px;
+padding-right: 20px;
+padding-bottom: 15px;
+padding-left: 25px;
+</div>
+<br><br>
+<span class="large">📏 Units:</span> <br><br>
+Padding accepts the same types of units as margins:
+<ul><li>
+px (pixels) — fixed space
+</li><li>
+% (percentage) — relative to the element’s width, not height
+</li><li>
+em / rem — relative to font size
+</li><li>
+vw / vh — relative to viewport
+</li></ul> <br><br>
+Exaample: <br><br>
+<div class="example">
+    .box {
+  background-color: skyblue;
+  padding: 20px;
+  border: 2px solid blue;
+}
+    &lt;div class="box">Hello, Padding!&lt;/div>
+    <br><br></div>
+    Output: <br><br>
+    <div class="example">
+        <style>
+        .box {
+  background-color: skyblue;
+  padding: 20px;
+  border: 2px solid blue;
+        }</style>
+<div class="box">Hello,Padding!</div>
+    </div>
+<br><br>
+👉 The text sits 20px away from the border on all sides. <br><br>
+<span class="larger">⚙️ Important Notes:</span> <br><br>
+<ul><li>
+Padding increases total element size (unless you use box-sizing: border-box;).
+<div class="example">
+div {
+  width: 200px;
+  padding: 20px;
+}
+</div>
+
+The real width becomes 240px (200 + 20 + 20).
+</li><li>
+Padding is always transparent — it inherits the element’s background color, not its own.
+</li><li>
+Unlike margins, paddings never collapse. Two paddings next to each other simply add up.
+</li></ul>
+</div> <br><br>
+<span class="larger">Margin VS Padding:</span>
+<br><br>
+<table>
+    <tr>
+        <th>Feature</th>
+        <th>Margin</th>
+        <th>Padding</th>
+    </tr>
+    <tr>
+        <td>Definition</td>
+        <td>Space outside the element’s border</td>
+        <td>Space inside the element’s border</td>
+    </tr>
+    <tr>
+        <td>Position in box model</td>
+        <td>Outmost layer</td>
+        <td>Between content and border</td>
+    </tr>
+    <tr>
+        <td>Affects</td>
+        <td>Distance between elements</td>
+        <td>Distance between content and border</td>
+    </tr>
+    <tr>
+        <td>Color/Background</td>
+        <td>Always transparent</td>
+        <td>Inherits the element’s background color</td>
+    </tr>
+    <tr>
+        <td>Can collapse</td>
+        <td>Yes (vertical margins can collapse)</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Used for</td>
+        <td>Creating space around elements</td>
+        <td>Creating space inside elements</td>
+    </tr>
+    <tr>
+        <td>Accept negative values</td>
+        <td>✅ Yes (can overlap elements)</td>
+        <td>No</td>
+    </tr>
+    <tr>
+        <td>Common use case</td>
+        <td>Separating elements (like boxes, sections, etc.)</td>
+        <td>Making content less cramped inside a container</td>
+    </tr>
+</table> <br><br><br>
+🧠 Quick Tip to Remember:
+<br><br>
+“Padding = inside space, Margin = outside space.”
+<br><br>
+<img src="margin-padding.png" alt="margin-padding" class="margin">   <br><br> 
+</div> <br>
+
+
+
+
+<!--Hiltopads without anti-block-->  [7 to 12] [25 to 30]
+
+<script>
+(function(qpzl){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = qpzl || {};
+s.src = "\/\/embarrassed-bridge.com\/cGDt9H6.bw2Q5MlkSRWnQx9PN\/jHc\/x\/MzTaUL0QMHSi0C2\/NPzDEMxXNiT\/Q_yM";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+
+</body> <br><br><br><br>
+
+<footer>
+<div class="footer-nav">
+        <button><a href="css-overflow.html">Next</a> 
+        </button>
+        <button><a href="css-widthheight.html">Previous</a> </button>  
+        <br>
+        <h3>CSS Topics</h3>
+          <nav>
+              <ol>
+                <li><a href="intro-to-css.html">Introduction to CSS</a></li>
+                <li><a href="css-syntax.html">CSS Syntax</a></li>
+                <li><a href="css-selectors.html">CSS Selectors</a></li>
+                <li><a href="css-pseudoclasses.html">CSS Pseudoclasses</a></li>
+                <li><a href="css-pseudoelements.html">CSS Pseudoelements</a></li>
+                <li><a href="css-boxmodel.html">CSS Box Model</a></li>
+                <li><a href="css-boxsizing.html">CSS Box Sizing</a></li>
+                <li><a href="css-display.html">CSS Display</a></li>
+                <li><a href="css-widthheight.html">CSS Width &amp; Height</a></li>
+                <li><a href="css-marginpadding.html">CSS Margin &amp; Padding</a></li>
+                <li><a href="css-overflow.html">CSS Overflow</a></li>
+                <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+                <li><a href="css-grid.html">CSS Grid</a></li>
+                <li><a href="css-positioning.html">CSS Positioning</a></li>
+                <li><a href="css-float.html">CSS Float</a></li>
+                <li><a href="css-colors.html">CSS Colors</a></li>
+                <li><a href="css-typography.html">CSS Typography</a></li>
+                <li><a href="css-borders.html">CSS Borders</a></li>
+                <li><a href="css-outline.html">CSS Outline</a></li>
+                <li><a href="css-transparency.html">CSS Transparency</a></li>
+                <li><a href="css-filters.html">CSS Filters</a></li>
+                <li><a href="css-navbar.html">CSS Navbar</a></li>
+                <li><a href="css-dropdown.html">CSS Dropdown</a></li>
+                <li><a href="css-buttons.html">CSS Buttons</a></li>
+                <li><a href="css-pagination.html">CSS Pagination</a></li>
+                <li><a href="css-viewport.html">CSS Viewport</a></li>
+                <li><a href="css-mediaqueries.html">CSS Media Queries</a></li>
+                <li><a href="css-relativeunits.html">CSS Relative Units</a></li>
+                <li><a href="css-responsiveimages.html">CSS Responsive Images</a></li>
+                <li><a href="css-transforms2d.html">CSS 2D Transforms</a></li>
+                <li><a href="css-transforms3d.html">CSS 3D Transforms</a></li>
+                <li><a href="css-transitions.html">CSS Transitions</a></li>
+                <li><a href="css-animations.html">CSS Animations</a></li>
+                <li><a href="css-customproperties.html">CSS Custom Properties</a></li>
+                <li><a href="css-functions.html">CSS Functions</a></li>
+              </ol>
+          </nav>
+      </div>
+
+      <div class="footer-bottom">
+          <p class="copyright">&copy; CODE WITH FAHIM 2025</p>
+          <div class="footer-links">
+              <a href="privacypolicy.html">Privacy Policy</a>
+              <a href="terms&conditions.html">Terms of Use</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+    
+</footer>
+</html>

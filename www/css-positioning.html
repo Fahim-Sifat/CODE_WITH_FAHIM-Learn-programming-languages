@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://code-with-fahim.pages.dev/"/>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+    <link rel="stylesheet" href="css-positioning.css"/>
+<!--GA4-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZ1JHY721H');
+</script>
+<!--Adsterra popunder cloudfare-->
+<script type='text/javascript' src='//underpantsjokeimmunity.com/0b/4a/60/0b4a6002649c1d813fccc6c06dfb190c.js'></script>
+
+</head>
+<body>
+<header>
+        <img src="header-logo.png" alt="header-logo"><h1>CODE WITH FAHIM</h1>
+        <h3>CSS Positioning</h3>
+    </header>
+    <br>
+    <span class="larger">
+Definition of CSS Positioning:
+</span> <br><br>
+CSS positioning refers to the set of CSS properties that control how elements are placed on a webpage. By assigning different position values, you can determine where an element appears relative to the normal document flow, its parent elements, or the browser window. <br><br>
+
+CSS positioning allows you to:
+<br>
+<ul><li>
+    Control exact placement of elements.
+</li><li>
+Take elements out of the normal flow.
+</li><li>
+Create overlaying, sticky, or floating UI components.
+</li><li>
+Adjust layout behavior during scrolling.
+</li></ul> <br><br>
+<span class="large">
+The position Property:</span> <br><br>
+
+The position property in CSS determines the positioning method used for an element. Its value affects how the browser calculates the element’s location. <br><br>
+
+The main positioning values are:
+<br><br>
+<ol type="1"><li>
+static – Default positioning; element follows normal document flow.
+</li><li>
+relative – Positioned relative to its original place.
+</li><li>
+absolute – Positioned relative to its closest positioned (non-static) ancestor.
+</li><li>
+fixed – Positioned relative to the viewport; does not move when the page is scrolled.
+</li><li>
+sticky – Behaves like relative until a certain scroll point, then behaves like fixed.
+</li></ol> <br><br>
+
+CSS positioning is the mechanism that determines how elements are laid out on a webpage, allowing you to place elements precisely using different positioning schemes (static, relative, absolute, fixed, sticky) and optional offset properties like top, right, bottom, and left. <br><br><br>
+<span class="larger">
+    Description of position values:
+</span><br><br>
+<span class="large">1.Static:</span>
+<br><br>
+<span style="color: aqua;"> position: static</span> is the default positioning for every element on a webpage. When an element has position: static (or no position property is specified), it is placed according to the normal flow of the document. <br><br>
+<span style="color: coral;font-size: xx-large;">
+Characteristics of Static Positioning:</span> <br><br>
+<ul><li>
+Normal Flow: The element is positioned in the document where it would naturally appear based on the HTML structure. It doesn’t move from its default position unless affected by other layout properties like margin, padding, or flexbox/grid.
+</li><li>
+No Offsets: The top, right, bottom, and left properties do not work on statically positioned elements. These properties only take effect when the element is positioned relatively (position: relative), absolutely (position: absolute), or fixed (position: fixed).</li><li>
+
+Doesn’t Affect Surrounding Elements: Static elements will not affect the layout of other elements that follow them in the document flow.
+    </li></ul> <br><br>
+   <span style="font-size: x-large; color: red"> Example:</span> <br>
+    HTML: 
+    <div class="example">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+  &lt;meta charset="UTF-8">
+  &lt;style>
+    .static-box {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      /* No position property set, so this uses the default static positioning */
+    }
+    .other-box {
+      width: 200px;
+      height: 100px;
+      background-color: lightgreen;
+    }
+  &lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class="static-box">Static Box&lt;/div>
+&lt;div class="other-box">Other Box&lt;/div>
+&lt;/body>
+&lt;/html>
+    </div> <br><br>
+  <span style="color: red;">Output:</span>
+  <div class="example">
+  <style>
+    .static-box {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      
+     /* No position property set, so this uses the default static positioning */
+    }
+    .other-box {
+      width: 200px;
+      height: 100px;
+      background-color: lightgreen;
+      
+    }
+  </style>
+<div class="static-box">Static Box</div>
+<div class="other-box">Other Box</div>
+  </div> <br><br>
+  <span style="color: blueviolet;">
+Explanation:
+</span> <br><br>
+<ul><li>
+The .static-box is positioned according to the normal document flow.
+</li><li>
+Both .static-box and .other-box are stacked one after the other, respecting the natural flow of the HTML document. Neither element is manually moved or offset.
+</li></ul> <br><br>
+<span style="color: yellow;font-size: xx-large;">
+When to Use position: static?</span>
+<br><br>
+<ul><li>
+Default Layout: If you don’t need to adjust an element’s position, leave it at static. It will follow the natural flow and won’t affect other elements.
+</li><li>
+When Reverting Other Positions: If you’ve previously set an element to relative, absolute, or fixed and want to return it to the normal document flow, you can explicitly set it to static.
+</li></ul> <br><br>
+<span style="color: crimson;font-size: xx-large;">
+Important Notes:</span>
+<br><br>
+<ul><li>
+If you set position: static, it doesn’t accept any positioning offsets like top, bottom, left, or right.
+</li><li>
+Most of the time, static is implicit, which means you don't need to explicitly set it. All elements default to static unless changed.
+</li></ul> <br><br>
+<span class="large">2.Relative</span>
+<br><br>
+<span style="color: aqua;">position: relative</span> allows you to position an element relative to its original position in the normal document flow. This means the element is moved from where it would naturally appear, but it still occupies space in the layout and does not affect other elements around it. <br><br>
+<span style="color: coral;font-size: xx-large;">
+Characteristics of position: relative:</span>
+<br><br>
+<ul><li>
+Relative to Original Position: The element is moved based on the top, right, bottom, or left properties, but its original position in the layout is still maintained. This means other elements are not "pulled" to fill the space it originally occupied.
+</li><li>
+Offsets Work: You can use top, right, bottom, and left properties to move the element. These properties are relative to where the element would be if it were position: static (its original position in the document flow).
+</li><li>
+Does Not Remove from Flow: The element remains part of the document flow. The space it would occupy if it were static still exists, and other elements around it behave as though the element is still in its original location.
+</li></ul> <br><br>
+<span style="color: yellow;font-size: xx-large;">
+When to Use position: relative?</span> <br><br>
+<ul><li>
+Nudging an element: Use relative when you want to move an element from its default position without affecting the layout of other elements.
+</li><li>
+Creating a reference for absolute positioning: A very common use case is positioning an absolutely positioned child element relative to a parent element with position: relative.
+</li></ul> <br><br>
+<span style="color: red; font-size: x-large;">Example:</span>
+<div class="example">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+  &lt;style>
+    .container {
+      width: 400px;
+      height: 200px;
+      background-color: lightgray;
+      position: relative; /* Makes this container the reference point for absolute positioning */
+    }
+    .relative-box {
+      position: relative;  /* The box is positioned relative to its original position */
+      top: 30px;           /* Moves the box 30px down */
+      left: 40px;          /* Moves the box 40px to the right */
+      width: 150px;
+      height: 100px;
+      background-color: lightcoral;
+    }
+  &lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class="container">
+  &lt;div class="relative-box">Relative Box&lt;/div>
+&lt;/div>
+&lt;/body>
+&lt;/html>
+
+</div> <br>
+<br>
+<span style="color: red; font-size: x-large;">Output:</span>
+<div class="example">
+  <style>
+    .container {
+      width: 400px;
+      height: 200px;
+      background-color: lightgray;
+      position: relative; /* Makes this container the reference point for absolute positioning */
+    }
+    .relative-box {
+      position: relative;  /* The box is positioned relative to its original position */
+      top: 30px;           /* Moves the box 30px down */
+      left: 40px;          /* Moves the box 40px to the right */
+      width: 150px;
+      height: 100px;
+      background-color: lightcoral;
+    }
+  </style>
+<div class="container">
+  <div class="relative-box">Relative Box</div>
+</div>
+</div> <br><br>
+<span style="color: magenta;font-size: xx-large;">
+Explanation of Example:</span> <br><br>
+<ul><li>
+The .relative-box is positioned relative to its original position inside the .container.
+</li><li>
+top: 30px; left: 40px; moves the .relative-box 30px down and 40px to the right from its natural position.
+</li><li>
+Even though it's moved, the space it would normally occupy (if it were static) still exists in the flow of the document. Therefore, other elements won't be positioned around the moved element as if it had been removed.</li></ul> <br><br><br>
+<span style="font-size: xx-large; color: yellow;">Combining position: relative with absolute Positioning:</span> <br><br>
+One of the most common uses of position: relative is to set a reference point for absolutely positioned child elements.
+<br><br><br>
+<span class="larger">3.Absolute:</span> <br><br>
+<span style="color: aqua;"> position: absolute </span>takes an element out of the normal document flow and positions it relative to its nearest positioned ancestor (an element with position: relative, absolute, fixed, or sticky). If there is no positioned ancestor, it will position itself relative to the initial containing block, which is usually the &lt;html> element (the viewport). <br>
+Here’s an example:
+<div class="example">
+<head>
+  &lt;style>
+    .container {
+      position: relative;
+      width: 400px;
+      height: 200px;
+      background-color: lightgray;
+    }
+    .absolute-box {
+      position: absolute;
+      top: 20px;  /* Positioned relative to the container */
+      left: 30px; /* Positioned relative to the container */
+      width: 150px;
+      height: 100px;
+      background-color: lightgreen;
+    }
+  &lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class="container">
+  &lt;div class="absolute-box">Absolute Box&lt;/div>
+&lt;/div>
+&lt;/body>
+</div> <br><br>
+Output: 
+<div class="example">
+   <style>
+    .container {
+      position: relative;
+      width: 400px;
+      height: 200px;
+      background-color: lightgray;
+    }
+    .absolute-box {
+      position: absolute;
+      top: 20px;  /* Positioned relative to the container */
+      left: 30px; /* Positioned relative to the container */
+      width: 150px;
+      height: 100px;
+      background-color: lightgreen;
+    }
+  </style>
+<div class="container">
+  <div class="absolute-box">Absolute Box</div>
+</div>
+</div> <br><br><br>
+<span style="color: magenta;font-size: xx-large;">
+Explanation:</span>
+<br>
+<br>
+<ul><li>
+The .container has position: relative, making it the reference point for the .absolute-box.
+</li><li>
+The .absolute-box is positioned absolutely within the .container, and its top-left corner is placed 20px from the top and 50px from the left of the container.
+</li><li>
+The element is removed from the document flow, meaning it doesn’t affect the position of any other elements in the layout.
+</li></ul> <br><br>
+<span style="color: coral;font-size: xx-large;">
+Characteristics of position: absolute: </span><br><br>
+<ul><li>
+Removed from Document Flow: An absolutely positioned element does not affect the layout of other elements. It is removed from the flow of the document, so other elements act as if it doesn’t exist.</li><li>
+Positioned Relative to an Ancestor: The element is positioned relative to its nearest positioned ancestor. If no ancestor has a positioning property set (like relative, absolute, fixed, or sticky), it will be positioned relative to the viewport (the browser window).
+</li><li>
+Uses Offsets: You can position the element with the top, right, bottom, and left properties to place it at specific coordinates relative to its containing block.</li></ul> <br><br>
+When to Use position: absolute?
+<ul><li>
+Positioning Modals, Dropdowns, Tooltips: To position elements like modals or dropdowns that should appear above other content without affecting the layout.
+</li><li>
+Absolute Layouts: When you want to place elements precisely at specific positions within a container or the viewport.
+</li><li>
+Overlays: Creating overlays like image captions, sticky buttons, or sticky navigation bars.</li></ul> <br><br>
+<span class="large">4.Fixed:</span> <br><br>
+position: fixed allows you to position an element relative to the viewport (the browser window), rather than its parent container or the document flow. An element with position: fixed will stay in a fixed position even when the page is scrolled.
+<br><br>
+<span style="color: coral;font-size: xx-large;">
+Characteristics of position: fixed: </span><br><br>
+<ul><li>
+    Fixed to the Viewport: The element is fixed relative to the browser window, meaning it will remain in the same position on the screen no matter how much the user scrolls.
+</li><li>
+Removed from Document Flow: Just like position: absolute, a fixed element is removed from the document flow, so it won't affect the positioning of other elements.
+</li><li>
+Uses Offsets: The top, right, bottom, and left properties are used to specify the exact location of the element relative to the viewport.
+</li><li>
+Sticky Behavior: It can be used to create sticky elements, like fixed navigation bars, buttons, or footers that remain visible even when scrolling.</li>
+</ul> <br><br>
+<span style="color: yellow;font-size: xx-large;">
+When to Use position: fixed?</span>
+<br><br>
+<ul><li>
+Fixed Navigation Bars: To create a navigation bar that stays at the top or bottom of the screen even when scrolling.
+</li><li>
+Sticky Headers or Footers: To keep headers or footers visible on the page at all times.
+</li><li>
+Floating Action Buttons (FAB): To keep buttons or icons fixed in a certain position on the screen, like "scroll to top" buttons.
+</li></ul> <br><br><br>
+<span style="color: red;">Example</span>
+<div class="example">
+&lt;head>
+  &lt;style>
+    body {
+      height: 2000px;  /* Make the body taller than the viewport to enable scrolling */
+    }
+    .fixed-box {
+      position: fixed;
+      top: 20px;   /* 20px from the top of the viewport */
+      right: 20px; /* 20px from the right of the viewport */
+      width: 150px;
+      height: 100px;
+      background-color: lightcoral;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  &lt;/style>
+&lt;/head>
+&lt;body>
+&lt;p>
+  The fixed box is appearing in the fixed position while you scroll down this page....&lt;/p>
+&lt;div class="fixed-box">Fixed Box&lt;/div>
+&lt;/body>
+
+</div> <br><br>
+<span style="color: red;">Output:</span>
+<div class="example">
+<style>
+    body {
+      height: 2000px;  /* Make the body taller than the viewport to enable scrolling */
+    }
+    .fixed-box {
+      position: fixed;
+      top: 20px;   /* 20px from the top of the viewport */
+      right: 20px; /* 20px from the right of the viewport */
+      width: 150px;
+      height: 100px;
+      background-color: lightcoral;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  </style>
+  The fixed box is appearing in the fixed position while you scroll down this page....
+<div class="fixed-box">Fixed Box</div>
+</div> <br><br>
+<span class="large">5.Sticky:</span> <br><br>
+<span style="color: aqua;">position: sticky</span> is a hybrid positioning property that allows an element to stick to a specified position within its scrollable container when the user scrolls past it, but only within the bounds of its parent container. Once the element reaches the end of its container, it "unsticks" and scrolls with the rest of the content. <br><br>
+<span style="color: coral;font-size: xx-large;">
+Characteristics of position: sticky:</span> <br><br>
+<ul><li>
+Scrolls Until a Threshold: The element behaves like position: relative until the user scrolls past it. Once the scroll position reaches a defined threshold (like top: 0 or top: 10px), it becomes fixed relative to the viewport.
+</li><li>
+Confined to its Parent Container: The sticky element remains confined within the bounds of its parent container. If the parent container is too short or doesn't have enough space, the sticky element may not appear to "stick".
+</li><li>
+Requires an Offset: To trigger the sticky behavior, you need to specify an offset (top, right, bottom, or left), typically top: 0 for elements like headers.
+</li><li>
+Works Only in Overflowing Containers: Sticky positioning works within the confines of a scrollable parent (e.g., when the parent has overflow: scroll or overflow: auto).</li></ul> <br><br>
+When to Use position: sticky? <br><br>
+<ul><li>
+Sticky Headers: Often used for table headers or navigation bars that remain visible as you scroll down a page.
+</li><li>
+Sticky Sidebars: Keeping side navigation or action buttons in view as the user scrolls through content.
+</li><li>
+Sticky Footers: Making the footer stick to the bottom of a container when the content is short.</li></ul> <br><br>
+<span style="color: red;font-size: xx-large;">Example:</span>
+<div class="example">
+&lt;head>
+  &lt;style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 2000px; /* Long body to enable scrolling */
+    }
+    header {
+      position: sticky;
+      top: 0;  /* Sticks the header to the top of the viewport */
+      background-color: #333;
+      color: white;
+      text-align: center;
+      z-index: 100; /* Ensures it appears above other content */
+    }
+    .content {
+      background-color: lightgray;
+    }
+  &lt;/style>
+&lt;/head>
+&lt;body>
+&lt;header>Sticky Header&lt;/header>
+&lt;div class="content">
+  &lt;h1>Scroll Down&lt;/h1>
+  &lt;p>This header will stick to the top of the screen as you scroll!&lt;/p>
+&lt;/div>
+&lt;/body>
+</div> <br><br>
+<span style="color: red;font-size: xx-large;">Output:</span>
+<div class="example">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 2000px; /* Long body to enable scrolling */
+    }
+    .header2 {
+      position: sticky;
+      top: 0;  /* Sticks the header to the top of the viewport */
+      background-color: #333;
+      color: white;
+      text-align: center;
+      z-index: 100; /* Ensures it appears above other content */
+    }
+    .content {
+      background-color: lightgray;
+    }
+  </style>
+<header class="header2">Sticky Header</header>
+<div class="content">
+  <h1>Scroll Down</h1>
+  <p>This header will stick to the top of the screen as you scroll!</p>
+</div>
+</div>
+<br><br><br>
+<span style="color: magenta;font-size: xx-large;">
+Explanation:</span>
+<br><br>
+<ul><li>
+The header has position: sticky and top: 0, so it sticks to the top of the viewport when you scroll.
+</li><li>
+The z-index: 100 ensures that the header will appear above any other content that might scroll under it.
+</li><li>
+As you scroll down, the header will stay fixed at the top of the page until you scroll past its parent container, if it's inside one.</li></ul> <br><br>
+
+
+
+
+</body> <br><br><br><br>
+
+<footer>
+<div class="footer-nav">
+        <button><a href="css-float.html">Next</a> 
+        </button>
+        <button><a href="css-grid.html">Previous</a> </button>  
+        <br>
+        <h3>CSS Topics</h3>
+          <nav>
+              <ol>
+                <li><a href="intro-to-css.html">Introduction to CSS</a></li>
+                <li><a href="css-syntax.html">CSS Syntax</a></li>
+                <li><a href="css-selectors.html">CSS Selectors</a></li>
+                <li><a href="css-pseudoclasses.html">CSS Pseudoclasses</a></li>
+                <li><a href="css-pseudoelements.html">CSS Pseudoelements</a></li>
+                <li><a href="css-boxmodel.html">CSS Box Model</a></li>
+                <li><a href="css-boxsizing.html">CSS Box Sizing</a></li>
+                <li><a href="css-display.html">CSS Display</a></li>
+                <li><a href="css-widthheight.html">CSS Width &amp; Height</a></li>
+                <li><a href="css-marginpadding.html">CSS Margin &amp; Padding</a></li>
+                <li><a href="css-overflow.html">CSS Overflow</a></li>
+                <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+                <li><a href="css-grid.html">CSS Grid</a></li>
+                <li><a href="css-positioning.html">CSS Positioning</a></li>
+                <li><a href="css-float.html">CSS Float</a></li>
+                <li><a href="css-colors.html">CSS Colors</a></li>
+                <li><a href="css-typography.html">CSS Typography</a></li>
+                <li><a href="css-borders.html">CSS Borders</a></li>
+                <li><a href="css-outline.html">CSS Outline</a></li>
+                <li><a href="css-transparency.html">CSS Transparency</a></li>
+                <li><a href="css-filters.html">CSS Filters</a></li>
+                <li><a href="css-navbar.html">CSS Navbar</a></li>
+                <li><a href="css-dropdown.html">CSS Dropdown</a></li>
+                <li><a href="css-buttons.html">CSS Buttons</a></li>
+                <li><a href="css-pagination.html">CSS Pagination</a></li>
+                <li><a href="css-viewport.html">CSS Viewport</a></li>
+                <li><a href="css-mediaqueries.html">CSS Media Queries</a></li>
+                <li><a href="css-relativeunits.html">CSS Relative Units</a></li>
+                <li><a href="css-responsiveimages.html">CSS Responsive Images</a></li>
+                <li><a href="css-transforms2d.html">CSS 2D Transforms</a></li>
+                <li><a href="css-transforms3d.html">CSS 3D Transforms</a></li>
+                <li><a href="css-transitions.html">CSS Transitions</a></li>
+                <li><a href="css-animations.html">CSS Animations</a></li>
+                <li><a href="css-customproperties.html">CSS Custom Properties</a></li>
+                <li><a href="css-functions.html">CSS Functions</a></li>
+              </ol>
+          </nav>
+      </div>
+
+      <div class="footer-bottom">
+          <p class="copyright">&copy; CODE WITH FAHIM 2025</p>
+          <div class="footer-links">
+              <a href="privacypolicy.html">Privacy Policy</a>
+              <a href="terms&conditions.html">Terms of Use</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+    
+</footer>
+
+</html>        
