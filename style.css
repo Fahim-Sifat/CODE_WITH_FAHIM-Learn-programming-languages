@@ -179,7 +179,6 @@ hr {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
-    max-height: 1200px;
 }
 
 .language-card {
@@ -189,8 +188,6 @@ hr {
     border: 1px solid var(--color-neon-primary);
     box-shadow: 0 0 15px var(--color-neon-glow-primary);
     transition: all 0.3s ease;
-    max-width: 100%;
-    height:auto;
 }
 
 .language-card:hover {
@@ -299,8 +296,42 @@ footer {
     }
 }
 
+@media (max-width: 480px) {
+    main {
+        padding: 1.5rem 4%; /* Reduced main padding */
+    }
 
+    section {
+        padding: 2rem 0; /* Reduced section padding */
+    }
 
+    /* Smaller fonts for tighter mobile screens */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-button {
+        padding: 12px 25px; /* Slightly smaller button */
+    }
+
+    /* Adjust language card and about list item padding for mobile */
+    .language-card {
+        padding: 20px;
+    }
+
+    .language-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    #about ul li {
+        padding: 15px;
+    }
+}
 
 
 /* 1. Default/Mobile Settings (Applies to ALL devices unless overridden) */
