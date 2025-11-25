@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Language Selection</title>
+
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Times New Roman', Times, serif,Georgia, 'Times New Roman', Times, serif,Arial, Helvetica, sans-serif,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000000;
+            color: #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh; 
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container for the content - Adjusted max-width for the long list */
+        .container {
+            background-color: aquamarine;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px; /* Wider to comfortably fit the long list */
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Header Styling */
+        h4 {
+            color: #007bff;
+            margin-bottom: 30px;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        
+        /* Quiz List Styling */
+        .quiz-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px; /* Slightly reduced gap for the longer list */
+            max-height: 70vh; /* Set a max height */
+            overflow-y: auto; /* Enable scrolling if the list is too long */
+            padding-right: 10px; /* Space for the scrollbar */
+        }
+        
+        /* Style for the scrollbar (Webkit browsers) */
+        .quiz-list::-webkit-scrollbar {
+            width: 8px;
+        }
+        .quiz-list::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 4px;
+        }
+
+        /* Paragraph/Link Container Styling */
+        p {
+            margin: 0;
+        }
+
+        /* Link Styling (The Quiz Button) */
+        a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 14px 25px; /* Slightly adjusted padding */
+            border-radius: 8px;
+            font-size: 1.05em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            text-transform: capitalize;
+            text-align: left;
+        }
+        
+        /* Special colors for differentiation */
+        .html-link { background-color: #e44d26; } /* HTML Orange */
+        .css-link { background-color: #2965f1; } /* CSS Blue */
+        .js-link { background-color: #f7df1e; color: #333; } /* JS Yellow with dark text */
+        .python-link { background-color: #306998; } /* Python Blue */
+        .java-link { background-color: #f8981d; } /* Java Orange */
+        .c-sharp-link { background-color: #68217a; } /* C# Purple */
+        .cpp-link { background-color: #004d99; } /* C++ Dark Blue */
+        .c-link { background-color: #a8b9c9; color: #333; } /* C Light Gray */
+        .rust-link { background-color: #dea584; color: #333; } /* Rust Orange/Brown */
+        .kotlin-link { background-color: #7f52ff; } /* Kotlin Violet */
+        .swift-link { background-color: #ff6000; } /* Swift Orange */
+        .php-link { background-color: #777bb4; } /* PHP Purple */
+        .framework-link { background-color: #008080; } /* Framework Teal/Cyan */
+
+        /* Link Hover Effect */
+        a:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        /* Link Active/Focus Effect */
+        a:active, a:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h4>SELECT A LANGUAGE OR FRAMEWORK</h4>
+        
+        <div class="quiz-list">
+            <p><a href="languages/html-quizes.html" class="html-link">HTML5 Quiz</a></p>
+            <p><a href="languages/css-quizes.html" class="css-link">CSS3 Quiz</a></p>
+            <p><a href="languages/javascript-quizes.html" class="js-link">JavaScript Quiz</a></p>
+            <p><a href="languages/python-quizes.html" class="python-link">Python Quiz</a></p>
+            <p><a href="languages/java-quizes.html" class="java-link">Java Quiz</a></p>
+            <p><a href="languages/csharp-quizes.html" class="c-sharp-link">C# Quiz</a></p>
+            <p><a href="languages/cpp-quizes.html" class="cpp-link">C++ Quiz</a></p>
+            <p><a href="languages/c-quizes.html" class="c-link">C Quiz</a></p>
+            <p><a href="languages/rust-quizes.html" class="rust-link">Rust Quiz</a></p>
+            <p><a href="languages/kotlin-quizes.html" class="kotlin-link">Kotlin Quiz</a></p>
+            <p><a href="languages/swift-quizes.html" class="swift-link">Swift Quiz</a></p>
+            <p><a href="languages/php-quizes.html" class="php-link">PHP Quiz</a></p>
+            <p><a href="frameworks/framework-quizes.html" class="framework-link">Other Frameworks Quizzes (e.g., React, Spring)</a></p>
+        </div>
+        
+    </div>
+</body>
+</html>
