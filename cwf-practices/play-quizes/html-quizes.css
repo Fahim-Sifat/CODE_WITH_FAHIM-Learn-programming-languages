@@ -26,7 +26,7 @@ body {
     color: var(--text-primary);
 }
 
-/* Main Layout using Flexbox */
+/* Main Layout using Flexbox (Desktop/Tablet) */
 .quiz-container {
     display: flex; 
     max-width: 1200px;
@@ -71,6 +71,12 @@ body {
     color: white; 
 }
 
+/* NEW: Completion Status Visual */
+#topic-list li a.completed {
+    color: var(--success-bg); /* Highlight completed topics in green */
+    font-weight: bold;
+}
+
 /* --- Main Content Styling --- */
 .main-content {
     flex-grow: 1; 
@@ -92,14 +98,37 @@ body {
     border-radius: 4px;
 }
 
-.question-card label {
-    display: block; 
-    margin: 8px 0;
-    color: var(--text-primary);
+/* Mobile-friendly option labels for better tap target */
+.question-card .option-label {
+    display: flex; /* Use flex to align input and text */
+    align-items: center;
+    margin: 10px 0;
+    padding: 8px; /* Increase padding for tap area */
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    cursor: pointer;
 }
 
+/* Add a subtle hover/focus effect to options */
+.question-card .option-label:hover {
+    background-color: rgba(255, 255, 255, 0.05); 
+}
+
+.question-card input[type="radio"] {
+    margin-right: 10px;
+    /* Increase radio button size for mobile clarity (optional but recommended) */
+    transform: scale(1.2); 
+}
 
 /* --- BUTTON STYLING --- */
+
+/* Group buttons together for mobile */
+#button-group {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-top: 15px; /* Add some space above the buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on very small screens */
+}
 
 /* Submit Button */
 button#submit-quiz {
@@ -111,28 +140,29 @@ button#submit-quiz {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
+    flex-grow: 1; /* Allow buttons to grow */
 }
 
 button#submit-quiz:hover {
     background-color: #43a047; 
 }
 
-/* NEW: Reset Button Styling */
+/* Reset Button Styling */
 button#reset-score {
     padding: 10px 20px;
-    background-color: var(--accent-color); /* Using the blue accent color */
+    background-color: var(--accent-color); 
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
+    flex-grow: 1; /* Allow buttons to grow */
 }
 
 button#reset-score:hover {
-    background-color: #4a89d9; /* Slightly darker blue on hover */
+    background-color: #4a89d9; 
 }
-
 
 /* --- RESULTS & FEEDBACK STYLING --- */
 
@@ -155,19 +185,19 @@ button#reset-score:hover {
 
 /* 1. Correct Answer */
 .question-card.correct {
-    background-color: rgba(76, 175, 80, 0.2); /* Light green tint */
+    background-color: rgba(76, 175, 80, 0.2); 
     border-left-color: var(--success-bg);
 }
 
 /* 2. Wrong Answer */
 .question-card.incorrect {
-    background-color: rgba(244, 67, 54, 0.2); /* Light red tint */
+    background-color: rgba(244, 67, 54, 0.2); 
     border-left-color: var(--error-bg);
 }
 
-/* 3. NEW: Skipped Question */
+/* 3. Skipped Question */
 .question-card.skipped {
-    background-color: rgba(255, 193, 7, 0.2); /* Light amber/yellow tint */
+    background-color: rgba(255, 193, 7, 0.2); 
     border-left-color: var(--warning-bg);
 }
 
@@ -179,4 +209,67 @@ button#reset-score:hover {
     color: var(--accent-color);
     border-radius: 3px;
     font-size: 0.9em;
+}
+
+/* --- MOBILE RESPONSIVENESS (Media Query) --- */
+@media (max-width: 768px) {
+    .quiz-container {
+        flex-direction: column; /* Stack the sidebar and main content */
+        margin: 0; /* Remove side margins for full screen use */
+        min-height: 100vh;
+        border: none;
+        box-shadow: none;
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar takes full width */
+        padding: 15px; /* Slightly less padding */
+        border-bottom: 2px solid var(--accent-color); /* Separator */
+    }
+    
+    /* Make the topic list scrollable horizontally/vertically to prevent huge lists */
+    #topic-list {
+        display: flex; /* Make links flow horizontally */
+        flex-wrap: wrap; /* Allow wrapping */
+        gap: 8px; /* Small gap between topic links */
+        margin-top: 10px;
+    }
+    
+    #topic-list li {
+        flex-basis: 48%; /* Roughly 2 items per row */
+    }
+    
+    #topic-list li a {
+        border-bottom: none; 
+        border: 1px solid var(--link-hover-bg);
+        border-radius: 4px;
+        padding: 8px 10px;
+        text-align: center;
+        font-size: 0.9em;
+    }
+    
+    .main-content {
+        padding: 15px; /* Adjust padding for mobile */
+    }
+    
+    .question-card {
+        padding: 10px;
+    }
+    
+    .main-content h1 {
+        font-size: 1.8em; /* Smaller main heading */
+    }
+    
+    .main-content h2 {
+        font-size: 1.4em; /* Smaller quiz heading */
+    }
+    
+    #cumulative-score-display {
+        padding: 10px;
+    }
+    
+    #button-group {
+        flex-direction: column; /* Stack buttons vertically on small screen */
+        gap: 10px;
+    }
 }
