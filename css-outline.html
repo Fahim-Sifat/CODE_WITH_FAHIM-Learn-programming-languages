@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://code-with-fahim.pages.dev/"/>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use CSS outline, box-shadow, and text-shadow to Create Eye-Catching UI Effects and Improve Accessibility"</title>
+    <link rel="stylesheet" href="css-outline.css"/>
+<!--GA4-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZ1JHY721H');
+</script>
+
+<!--Adsterra popunder cloudfare-->
+<script type='text/javascript' src='//underpantsjokeimmunity.com/0b/4a/60/0b4a6002649c1d813fccc6c06dfb190c.js'></script>
+
+
+</head>
+<body>
+<header>
+        <img src="header-logo.png" alt="header-logo"><h1>CODE WITH FAHIM</h1>
+        <h3>CSS Outline & Shadows</h3>
+    </header>
+    <div class="container">
+<br>
+<span style="color: chocolate;font-size: 3rem;">#CSS Outline Properties:</span> <br><br>
+The CSS outline property is used to draw a line around an element, outside of its border, without affecting the element's size or the overall document layout.
+<br><br>
+It's primarily used for accessibility, specifically to indicate the focus state of interactive elements (like links, buttons, and form fields) when a user navigates with a keyboard. <br><br>
+✔️ Key points:
+<br><br>
+<ul><li>
+Does not take up space: It sits on top of the layout and doesn’t shift surrounding elements.
+</li><li>
+Often used for focus styles (e.g., keyboard navigation).
+</li><li>
+Can be customized with color, style, and width.
+</li><li>
+Different from border: Borders affect element size; outlines do not.
+</li></ul><br><br>
+<span class="larger">#🛠️ Shorthand and Properties:</span> <br><br>
+The outline property is a shorthand for three individual properties. The outline-style is mandatory for the outline to be visible. <br><br>
+<ul><li>
+outline-width: Sets the thickness of the line (e.g., 2px, medium, thick).
+</li><li>
+.outline-style: Sets the appearance of the line (e.g., solid, dotted, dashed, double, groove).
+</li><li>
+outline-color: Sets the color of the outline.
+</li></ul><br><br>
+<span class="larger">#Basic Syntax:</span>
+<div class="example">
+    a:focus {
+  outline: 3px solid #ff9900;        /* width | style | color */
+  outline-offset: 2px;         /* Adds 2px of transparent space */
+}
+</div> <br><br>
+<span style="color: yellow;font-size: x-large;">Property & values:</span>
+<table>
+    <tr>
+        <th>Property</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>outline-color</td>
+        <td>Sets the outline color</td>
+    </tr>
+    <tr>
+        <td>outline-style</td>
+        <td>solid,dashed,dotted etc.</td>
+    </tr>
+    <tr>
+        <td>outline-width</td>
+        <td>thickness(in px,%,em,rem etc.)</td>
+    </tr>
+    <tr>
+        <td>outline-offset</td>
+        <td>Space between the border and outline</td>
+    </tr>
+</table> <br><br>
+Example:
+<div class="example">
+&lt;style>
+/* Button gets an outline when focused or clicked */
+button:focus {
+  outline: 3px solid #4a90e2;
+}
+/* Div shows outline on hover */
+.box {
+  width: 200px;
+  height: 80px;
+  background: #f0f0f0;
+  border: 2px solid #888;
+ }
+.box:hover {
+  outline: 4px dashed red;
+  outline-offset: 5px;
+}
+&lt;/style> 
+&lt;p>Click the button or hover the box:&lt;/p>
+&lt;button>Focus me!&lt;/button>
+&lt;div class="box">
+  Hover over me!
+&lt;/div>
+</div> <br><br>
+
+Output:
+<div class="example">
+<style>
+button:focus {
+  outline: 3px solid #4a90e2;
+}
+.box {
+  width: 200px;
+  height: 80px;
+  background: #f0f0f0;
+  border: 2px solid #888;
+  margin-top: 20px;
+}
+
+.box:hover {
+  outline: 4px dashed red;
+  outline-offset: 5px;
+}
+</style>
+<p>Click the button or hover the box:</p>
+<button>Focus me!</button>
+<div class="box">
+  Hover over me!
+</div>
+</div>
+<br><br>
+<br><br>
+<span style="color: chocolate;font-size: 3rem;">#CSS Shadows:</span>
+<br><br>
+In CSS, shadows are visual effects that create a sense of depth by adding blurred or offset shading to elements or text. There are two main types: <br><br>
+<span class="larger">1.Box-Shadow:</span>
+<br><br>
+box-shadow is a CSS property that adds shadow effects around an element’s box—such as &lt;div>, &lt;button>, &lt;img> and more. It can create soft, sharp, inner, or multiple shadows.
+<br><br>
+<span class="large">
+✅ Basic Syntax:</span>
+<div class="example">
+box-shadow: offset-x offset-y blur-radius spread-radius color inset;
+</div><br><br>
+
+Only offset-x and offset-y are required.Rest are optional.
+<br><br>
+<ul><li>
+offset-x → horizontal shadow position
+</li><li>
+offset-y → vertical shadow position
+</li><li>
+blur-radius → how soft the shadow looks
+</li><li>
+spread-radius → expands or shrinks the shadow
+</li><li>
+color → any CSS color
+</li><li>
+inset → makes the shadow appear inside the element
+</li></ul> <br><br>
+Example:
+<div class="example">
+&lt;style>
+.card {
+  width: 250px;
+  height: 120px;
+  background: red;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 25px 25px 25px rgba(72, 187, 18, 0.3);
+}
+&lt;/style>
+&lt;div class="card">
+  This box has a shadow.
+&lt;/div>
+</div> <br><br>
+Output:
+<div class="example">
+<style>
+.card {
+  width: 250px;
+  height: 120px;
+  background: red;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 25px 25px 25px rgba(72, 187, 18, 0.3);
+}
+</style>
+<div class="card">
+  This box has a shadow.
+</div>
+</div>
+<br><br>
+<span class="large">#Multiple box-shadows:</span> <br><br>
+You can apply multiple shadows to the same element using comma-separated box-shadow values. Each shadow is rendered in order (first = bottom layer, last = top layer).
+<div class="example">
+&lt;style>
+.card {
+  width: 260px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+
+  box-shadow:
+    0 6px 12px rgba(0,0,0,0.25),        /* main drop shadow */
+    0 0 12px rgba(0,150,255,0.5),       /* blue outer glow */
+    inset 0 3px 6px rgba(0,0,0,0.2);    /* inner soft shadow */
+}
+&lt;/style>
+&lt;div class="card">
+  This box has multiple shadows.
+&lt;/div>
+</div> <br><br>
+Output:
+<div class="example">
+<style>
+.card2 {
+  width: 260px;
+  padding: 20px;
+  background: rgb(226, 20, 20);
+  border-radius: 10px;
+  box-shadow:
+    20px 10px 12px rgba(253, 228, 5, 0.25), 
+    20px 6px 12px rgba(0,150,255,0.5),
+    inset 0 3px 6px rgba(221, 25, 179, 0.2);
+}
+</style>
+<div class="card2">
+  This box has multiple shadows.
+</div>
+</div> <br><br>
+<span class="larger">2.Text-Shadow:</span>
+<br><br>
+text-shadow is a CSS property that adds shadows behind text. You can use it to create depth, glow, neon effects, outlines, and more.
+<div class="example">
+✅ Basic Syntax
+text-shadow: offset-x offset-y blur-radius color;
+</div> <br><br>
+
+Only offset-x and offset-y are required.
+<br><br>
+Same as box shadow.... <br><br>
+Example:
+<div class="example">
+&lt;style>
+.neon {
+  font-size: 70px;
+  font-weight: bold;
+  color: #0ff;
+  text-shadow:
+    0 0 5px  #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff,
+    0 0 80px #0ff;
+}
+&lt;/style>
+&lt;p class="neon">NEON TEXT&lt;/p> 
+&lt;/div>
+</div>
+Output:
+<div class="example">
+ <style>
+.neon {
+  font-size: 70px;
+  font-weight: bold;
+  color: #0ff;
+  text-shadow:
+    0 0 5px  #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff,
+    0 0 40px #0ff,
+    0 0 80px #0ff;
+}
+</style>
+<p class="neon">NEON TEXT</p>
+  </div>
+<div class="example">
+    &lt;style>
+        .threeD{text-shadow:
+  3px 3px 0 #333,
+  6px 6px 0 #666,
+  9px 9px 0 #999;}
+    &lt;/style>
+    &lt;p class="threeD">3D TEXT&lt;/p>
+</div>
+Output:
+
+<div class="example">
+    <style>
+        .threeD{text-shadow:
+  3px 3px 0 red,
+  6px 6px 0 green,
+  9px 9px 0 yellow;}
+    </style>
+    <p class="threeD">3D TEXT</p>
+    </div>
+</body> <br><br><br><br>
+
+<footer>
+<div class="footer-nav">
+        <button><a href="css-transparency.html">Next</a> 
+        </button>
+        <button><a href="css-borders.html">Previous</a> </button>  
+        <br>
+        <h3>CSS Topics</h3>
+          <nav>
+              <ol>
+                <li><a href="intro-to-css.html">Introduction to CSS</a></li>
+                <li><a href="css-syntax.html">CSS Syntax</a></li>
+                <li><a href="css-selectors.html">CSS Selectors</a></li>
+                <li><a href="css-pseudoclasses.html">CSS Pseudoclasses</a></li>
+                <li><a href="css-pseudoelements.html">CSS Pseudoelements</a></li>
+                <li><a href="css-boxmodel.html">CSS Box Model</a></li>
+                <li><a href="css-boxsizing.html">CSS Box Sizing</a></li>
+                <li><a href="css-display.html">CSS Display</a></li>
+                <li><a href="css-widthheight.html">CSS Width &amp; Height</a></li>
+                <li><a href="css-marginpadding.html">CSS Margin &amp; Padding</a></li>
+                <li><a href="css-overflow.html">CSS Overflow</a></li>
+                <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+                <li><a href="css-grid.html">CSS Grid</a></li>
+                <li><a href="css-positioning.html">CSS Positioning</a></li>
+                <li><a href="css-float.html">CSS Float</a></li>
+                <li><a href="css-colors.html">CSS Colors</a></li>
+                <li><a href="css-typography.html">CSS Typography</a></li>
+                <li><a href="css-borders.html">CSS Borders</a></li>
+                <li><a href="css-outline.html">CSS Outline</a></li>
+                <li><a href="css-transparency.html">CSS Transparency</a></li>
+                <li><a href="css-filters.html">CSS Filters</a></li>
+                <li><a href="css-navbar.html">CSS Navbar</a></li>
+                <li><a href="css-dropdown.html">CSS Dropdown</a></li>
+                <li><a href="css-buttons.html">CSS Buttons</a></li>
+                <li><a href="css-pagination.html">CSS Pagination</a></li>
+                <li><a href="css-viewport.html">CSS Viewport</a></li>
+                <li><a href="css-mediaqueries.html">CSS Media Queries</a></li>
+                <li><a href="css-relativeunits.html">CSS Relative Units</a></li>
+                <li><a href="css-responsiveimages.html">CSS Responsive Images</a></li>
+                <li><a href="css-transforms2d.html">CSS 2D Transforms</a></li>
+                <li><a href="css-transforms3d.html">CSS 3D Transforms</a></li>
+                <li><a href="css-transitions.html">CSS Transitions</a></li>
+                <li><a href="css-animations.html">CSS Animations</a></li>
+                <li><a href="css-customproperties.html">CSS Custom Properties</a></li>
+                <li><a href="css-functions.html">CSS Functions</a></li>
+              </ol>
+          </nav>
+      </div>
+
+      <div class="footer-bottom">
+          <p class="copyright">&copy; CODE WITH FAHIM 2025</p>
+          <div class="footer-links">
+              <a href="privacypolicy.html">Privacy Policy</a>
+              <a href="terms&conditions.html">Terms of Use</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+    
+</footer>
+
+</html>        
+       
