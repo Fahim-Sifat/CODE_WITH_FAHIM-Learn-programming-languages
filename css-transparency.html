@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://code-with-fahim.pages.dev/"/>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS background opacity without affecting text</title>
+    <link rel="stylesheet" href="css-transparency.css"/>
+<!--GA4-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZ1JHY721H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZ1JHY721H');
+</script>
+
+
+</head>
+<body>
+<header>
+        <img src="header-logo.png" alt="header-logo"><h1>CODE WITH FAHIM</h1>
+        <h3>CSS Transparency</h3>
+    </header>
+    <div class="container">
+<br>
+You can control the transparency (or opacity) of an element in CSS using the following three primary methods: <br><br>
+<span class="larger">#The opacity property:</span> <br><br>
+The CSS opacity property is a measure of an element's transparency. It controls the degree to which an element, along with all its content and children, is visually hidden or see-through.
+<br><br>
+It is the opposite of transparency:
+<ul><li>
+High Opacity = Low Transparency (More visible, less see-through)
+</li><li>
+Low Opacity = High Transparency (Less visible, more see-through)
+</li></ul> <br><br>
+<span class="large">
+🎨 Value and Syntax:</span> <br><br>
+The opacity property accepts a value between 0.0 and 1.0: <br><br>
+<table>
+    <tr>
+        <th>Value</th>
+        <th>Meaning</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>1.0(Default)</td>
+        <td>Fully opaque</td>
+        <td>The element is 100% visible (solid).</td>
+    </tr>
+    <tr>
+        <td>0.5</td>
+        <td>Semi-transparent</td>
+        <td>The element is 50% visible, allowing content behind it to show through.</td>
+    </tr>
+    <tr>
+        <td>0.0</td>
+        <td>Fully transparent</td>
+        <td>The element is 0% visible (invisible). Note: The element still occupies space and responds to events like clicks.</td>
+    </tr>
+</table> <br><br>
+Example:
+<div class="example">
+&lt;style>
+    .background-content {
+    color: white;    
+    background-color: #000; 
+    text-align: center;
+}
+
+.box {
+    opacity: 1;
+    width: 200px;
+    height: 100px;
+    display: inline-block;
+    border: 1px solid black;
+    color: white; 
+}
+.opacity-demo {
+    background-color: #000000; 
+    opacity: 0.5; 
+}
+&lt;/style>
+
+    &lt;div class="background-content">
+        Background Text Layer
+    &lt;/div>
+    &lt;div class="box opacity-demo">
+        &lt;p>Text is also faded.&lt;/p>
+    &lt;/div>
+     <br>
+     </div>
+Output:
+<style>
+    .background-content {
+    color: white;    
+    background-color: #000; 
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.box {
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    border: 1px solid black;
+    color: white; 
+}
+.opacity-demo {
+    background-color: #000000; /* Solid Red */
+    opacity: 0.5; 
+}
+</style>
+<div class="example">
+    <div class="background-content">
+        Background Text Layer
+    </div>
+    <div class="box opacity-demo">
+        <p>Text is also faded.</p>
+    </div>
+    </div>
+<br><br>
+<span class="larger">
+    #RGBA (Red, Green, Blue, Alpha) 🔴🟢🔵
+</span> <br><br>
+rgba() is based on the additive color model used by electronic screens. Colors are created by mixing varying intensities of red, green, and blue light. <br><br>
+<table>
+    <tr>
+        <th>Component</th>
+        <th>Range</th>
+        <th>Purpose</th>
+    </tr>
+    <tr>
+        <td>R(Red)</td>
+        <td>0 to 255</td>
+        <td>Intensity of the red light.</td>
+    </tr>
+    <tr>
+        <td>G(Green)</td>
+        <td>0 to 255</td>
+        <td>Intensity of the green light.</td>
+    </tr>
+    <tr>
+        <td>B(Blue)</td>
+        <td>0 to 255</td>
+        <td>Intensity of the blue light.</td>
+    </tr>
+    <tr>
+        <td>A(Alpha)</td>
+        <td>0.0 to 1.0</td>
+        <td>The transparency level (0.0 is fully transparent; 1.0 is fully opaque).</td>
+    </tr>
+</table> <br><br>
+<div class="example">
+    &lt;style>
+   background-color: rgba(255, 100, 100, 0.7);
+    &lt;style>
+   &lt;div class="rgba"> A light-red background with 70% opacity (30% transparent)&lt;/div>
+</div>
+<br>
+Output:
+<div class="example">
+    <style>
+        .rgba{
+              background-color: rgba(255, 100, 100, 0.7);
+        }
+            </style>
+<div class="rgba"> A light-red background with 70% opacity (30% transparent)</div>
+</div> <br><br>
+<span class="larger">#HSLA</span>
+<br><br>
+HSLA stands for Hue, Saturation, Lightness, Alpha. It is a model for defining colors in CSS based on how humans perceive color, making it very intuitive for design work.
+<br><br>
+It is an extension of the HSL (Hue, Saturation, Lightness) model that includes an Alpha channel for transparency.
+<br><br>
+<span class="large">🌈 Components of HSLA:</span><br><br>
+The hsla() function takes four values to define the final color: <br><br>
+<table>
+    <tr>
+        <th>Component</th>
+        <th>Range</th>
+        <th>Unit</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>H(Hue)</td>
+        <td>0 to 360</td>
+        <td>Degrees (deg or unitless)</td>
+        <td>The actual color tone (position on the color wheel). 0 is Red, 120 is Green, 240 is Blue.</td>
+    </tr>
+    <tr>
+        <td>S(Saturation)</td>
+        <td>0% to 100%</td>
+        <td>%</td>
+        <td>The intensity or purity of the color. 100% is pure color; 0% is gray (grayscale).</td>
+    </tr>
+    <tr>
+        <td>L(Lightness)</td>
+        <td>0% to 100%</td>
+        <td>%</td>
+        <td>How light or dark the color is. 0% is pure black; 100% is pure white; 50% is the "normal" color.</td>
+    </tr>
+    <tr>
+        <td>A(Alpha)</td>
+        <td>0.0 to 1.0</td>
+        <td>Decimal</td>
+        <td>The transparency level. 1.0 is fully opaque (solid); 0.0 is fully transparent (invisible).</td>
+    </tr>
+</table> <br><br>
+Example:
+<div class="example">
+    &lt;style>
+    .main-color {
+  background-color: hsla(120, 100%, 50%, 1.0); 
+}
+
+.lighter-shade {
+  background-color: hsla(120, 100%, 75%, 1.0); 
+}
+
+.transparent-shade {
+  background-color: hsla(120, 100%, 50%, 0.4); 
+}
+&lt;/style>
+&lt;div class="main-color">Green: Hue 120, fully saturated 100%, normal lightness 50%, fully opaque 1.0 &lt;/div>
+&lt;div class="lighter-shade">Lighter Green: Same Hue (120), but Lightness increased to 75% 
+ &lt;/div>
+&lt;div class="transparent-shade"> Transparent Green: Same color, but Alpha reduced to 0.4 
+  &lt;/div>
+</div>
+Output:
+<div class="example">
+<style>
+.main-color {
+  background-color: hsla(120, 100%, 50%, 1.0); 
+}
+
+.lighter-shade {
+  background-color: hsla(120, 100%, 75%, 1.0); 
+}
+
+.transparent-shade {
+  background-color: hsla(120, 100%, 50%, 0.4); 
+}
+</style>
+<div class="main-color">Green: Hue 120, fully saturated 100%, normal lightness 50%, fully opaque 1.0 
+</div>
+<div class="lighter-shade"> Lighter Green: Same Hue (120), but Lightness increased to 75% 
+ </div>
+<div class="transparent-shade"> Transparent Green: Same color, but Alpha reduced to 0.4 
+  </div>
+
+</div>
+<br><br><br>
+<span style="color: yellow;font-size: x-large;">Transparency on images:</span>
+<br><br>
+When it comes to transparency on images in web development, we're typically talking about two main scenarios:
+<br><br>
+<ul><li>
+Making an image itself transparent (or semi-transparent).
+</li><li>
+Using images that already have transparency built into them (like PNGs with transparent backgrounds).
+</li></ul> <br><br>
+You can control the overall transparency of an entire &lt;img> element using the opacity CSS property. This works the same way it does for any other HTML element.
+<br><br>
+How it works: <br><br>
+<ul><li>
+The opacity property takes a value between 0.0 (fully transparent/invisible) and 1.0 (fully opaque/solid).
+</li><li>
+Setting opacity on an &lt;img> tag will make the entire image (all its pixels) fade.
+</li></ul> <br><br>
+Example:
+<div class="example">
+&lt;style>
+        /* Makes the image 50% transparent */
+.semi-transparent-image {
+  opacity: 0.5;
+}
+/* Makes the image completely invisible */
+.invisible-image {
+  opacity: 0;
+}
+    &lt;/style>
+Original Image: 
+&lt;img src="logo.png">
+Semi-transparent Image:  
+&lt;img src="logo.png"  class="semi-transparent-image">
+Invisible-image:    
+&lt;img src="logo.png" class="invisible-image">
+</div><br><br>
+Output:
+<div class="example">
+    <style>
+       .semi-transparent-image {
+  opacity: 0.5;
+}
+.invisible-image {
+  opacity: 0;
+}
+    </style>
+   Original image: <br><img src="header-logo.png" alt="CWF logo">
+   Semi transparent image: <br> <img src="header-logo.png" alt="CWF Logo" class="semi-transparent-image"> <br>
+   Invisible-image: <br>
+    <img src="header-logo.png" alt="CWF Logo" class="invisible-image">
+</div>
+
+</div>
+</body> <br><br><br><br>
+
+<footer>
+<div class="footer-nav">
+        <button><a href="css-filters.html">Next</a> 
+        </button>
+        <button><a href="css-outline.html">Previous</a> </button>  
+        <br>
+        <h3>CSS Topics</h3>
+          <nav>
+              <ol>
+                <li><a href="intro-to-css.html">Introduction to CSS</a></li>
+                <li><a href="css-syntax.html">CSS Syntax</a></li>
+                <li><a href="css-selectors.html">CSS Selectors</a></li>
+                <li><a href="css-pseudoclasses.html">CSS Pseudoclasses</a></li>
+                <li><a href="css-pseudoelements.html">CSS Pseudoelements</a></li>
+                <li><a href="css-boxmodel.html">CSS Box Model</a></li>
+                <li><a href="css-boxsizing.html">CSS Box Sizing</a></li>
+                <li><a href="css-display.html">CSS Display</a></li>
+                <li><a href="css-widthheight.html">CSS Width &amp; Height</a></li>
+                <li><a href="css-marginpadding.html">CSS Margin &amp; Padding</a></li>
+                <li><a href="css-overflow.html">CSS Overflow</a></li>
+                <li><a href="css-flexbox.html">CSS Flexbox</a></li>
+                <li><a href="css-grid.html">CSS Grid</a></li>
+                <li><a href="css-positioning.html">CSS Positioning</a></li>
+                <li><a href="css-float.html">CSS Float</a></li>
+                <li><a href="css-colors.html">CSS Colors</a></li>
+                <li><a href="css-typography.html">CSS Typography</a></li>
+                <li><a href="css-borders.html">CSS Borders</a></li>
+                <li><a href="css-outline.html">CSS Outline</a></li>
+                <li><a href="css-transparency.html">CSS Transparency</a></li>
+                <li><a href="css-filters.html">CSS Filters</a></li>
+                <li><a href="css-navbar.html">CSS Navbar</a></li>
+                <li><a href="css-dropdown.html">CSS Dropdown</a></li>
+                <li><a href="css-buttons.html">CSS Buttons</a></li>
+                <li><a href="css-pagination.html">CSS Pagination</a></li>
+                <li><a href="css-viewport.html">CSS Viewport</a></li>
+                <li><a href="css-mediaqueries.html">CSS Media Queries</a></li>
+                <li><a href="css-relativeunits.html">CSS Relative Units</a></li>
+                <li><a href="css-responsiveimages.html">CSS Responsive Images</a></li>
+                <li><a href="css-transforms2d.html">CSS 2D Transforms</a></li>
+                <li><a href="css-transforms3d.html">CSS 3D Transforms</a></li>
+                <li><a href="css-transitions.html">CSS Transitions</a></li>
+                <li><a href="css-animations.html">CSS Animations</a></li>
+                <li><a href="css-customproperties.html">CSS Custom Properties</a></li>
+                <li><a href="css-functions.html">CSS Functions</a></li>
+              </ol>
+          </nav>
+      </div>
+
+      <div class="footer-bottom">
+          <p class="copyright">&copy; CODE WITH FAHIM 2025</p>
+          <div class="footer-links">
+              <a href="privacypolicy.html">Privacy Policy</a>
+              <a href="terms&conditions.html">Terms of Use</a>
+              <a href="contact.html">Contact Us</a>
+          </div>
+      </div>
+    
+</footer>
+
+</html>        
+       
